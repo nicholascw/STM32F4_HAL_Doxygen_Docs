@@ -1,0 +1,653 @@
+.TH "inc/stm32f4xx_hal_adc.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_adc.h \- Header file containing functions prototypes of ADC HAL library\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_def\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_adc_ex\&.h'\fP
+.br
+
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBADC_InitTypeDef\fP"
+.br
+.RI "Structure definition of ADC and regular group initialization "
+.ti -1c
+.RI "struct \fBADC_ChannelConfTypeDef\fP"
+.br
+.RI "Structure definition of ADC channel for regular group 
+.br
+ "
+.ti -1c
+.RI "struct \fBADC_AnalogWDGConfTypeDef\fP"
+.br
+.RI "ADC Configuration multi-mode structure definition 
+.br
+ "
+.ti -1c
+.RI "struct \fBADC_HandleTypeDef\fP"
+.br
+.RI "ADC handle Structure definition "
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_RESET\fP   0x00000000U"
+.br
+.RI "HAL ADC state machine: ADC states definition (bitfields) "
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_READY\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_BUSY_INTERNAL\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_TIMEOUT\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_ERROR_INTERNAL\fP   0x00000010U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_ERROR_CONFIG\fP   0x00000020U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_ERROR_DMA\fP   0x00000040U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_REG_BUSY\fP   0x00000100U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_REG_EOC\fP   0x00000200U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_REG_OVR\fP   0x00000400U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_INJ_BUSY\fP   0x00001000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_INJ_EOC\fP   0x00002000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_AWD1\fP   0x00010000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_AWD2\fP   0x00020000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_AWD3\fP   0x00040000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_STATE_MULTIMODE_SLAVE\fP   0x00100000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_NONE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_INTERNAL\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_OVR\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_DMA\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCK_SYNC_PCLK_DIV2\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCK_SYNC_PCLK_DIV4\fP   ((uint32_t)ADC_CCR_ADCPRE_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCK_SYNC_PCLK_DIV6\fP   ((uint32_t)ADC_CCR_ADCPRE_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_CLOCK_SYNC_PCLK_DIV8\fP   ((uint32_t)ADC_CCR_ADCPRE)"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_5CYCLES\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_6CYCLES\fP   ((uint32_t)ADC_CCR_DELAY_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_7CYCLES\fP   ((uint32_t)ADC_CCR_DELAY_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_8CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_1 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_9CYCLES\fP   ((uint32_t)ADC_CCR_DELAY_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_10CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_2 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_11CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_2 | ADC_CCR_DELAY_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_12CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_2 | ADC_CCR_DELAY_1 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_13CYCLES\fP   ((uint32_t)ADC_CCR_DELAY_3)"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_14CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_15CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_16CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_1 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_17CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_2))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_18CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_2 | ADC_CCR_DELAY_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_19CYCLES\fP   ((uint32_t)(ADC_CCR_DELAY_3 | ADC_CCR_DELAY_2 | ADC_CCR_DELAY_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_TWOSAMPLINGDELAY_20CYCLES\fP   ((uint32_t)ADC_CCR_DELAY)"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_12B\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_10B\fP   ((uint32_t)ADC_CR1_RES_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_8B\fP   ((uint32_t)ADC_CR1_RES_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_6B\fP   ((uint32_t)ADC_CR1_RES)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONVEDGE_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONVEDGE_RISING\fP   ((uint32_t)ADC_CR2_EXTEN_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONVEDGE_FALLING\fP   ((uint32_t)ADC_CR2_EXTEN_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONVEDGE_RISINGFALLING\fP   ((uint32_t)ADC_CR2_EXTEN)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T1_CC1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T1_CC2\fP   ((uint32_t)ADC_CR2_EXTSEL_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T1_CC3\fP   ((uint32_t)ADC_CR2_EXTSEL_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T2_CC2\fP   ((uint32_t)(ADC_CR2_EXTSEL_1 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T2_CC3\fP   ((uint32_t)ADC_CR2_EXTSEL_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T2_CC4\fP   ((uint32_t)(ADC_CR2_EXTSEL_2 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T2_TRGO\fP   ((uint32_t)(ADC_CR2_EXTSEL_2 | ADC_CR2_EXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T3_CC1\fP   ((uint32_t)(ADC_CR2_EXTSEL_2 | ADC_CR2_EXTSEL_1 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T3_TRGO\fP   ((uint32_t)ADC_CR2_EXTSEL_3)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T4_CC4\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T5_CC1\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T5_CC2\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_1 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T5_CC3\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_2))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T8_CC1\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_2 | ADC_CR2_EXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_T8_TRGO\fP   ((uint32_t)(ADC_CR2_EXTSEL_3 | ADC_CR2_EXTSEL_2 | ADC_CR2_EXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGCONV_Ext_IT11\fP   ((uint32_t)ADC_CR2_EXTSEL)"
+.br
+.ti -1c
+.RI "#define \fBADC_SOFTWARE_START\fP   ((uint32_t)ADC_CR2_EXTSEL + 1U)"
+.br
+.ti -1c
+.RI "#define \fBADC_DATAALIGN_RIGHT\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_DATAALIGN_LEFT\fP   ((uint32_t)ADC_CR2_ALIGN)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_0\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_1\fP   ((uint32_t)ADC_CR1_AWDCH_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_2\fP   ((uint32_t)ADC_CR1_AWDCH_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_3\fP   ((uint32_t)(ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_4\fP   ((uint32_t)ADC_CR1_AWDCH_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_5\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_6\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_7\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_8\fP   ((uint32_t)ADC_CR1_AWDCH_3)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_9\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_10\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_11\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_12\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_13\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_14\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_15\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_16\fP   ((uint32_t)ADC_CR1_AWDCH_4)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_17\fP   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_18\fP   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_VREFINT\fP   ((uint32_t)\fBADC_CHANNEL_17\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_VBAT\fP   ((uint32_t)\fBADC_CHANNEL_18\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_3CYCLES\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_15CYCLES\fP   ((uint32_t)ADC_SMPR1_SMP10_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_28CYCLES\fP   ((uint32_t)ADC_SMPR1_SMP10_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_56CYCLES\fP   ((uint32_t)(ADC_SMPR1_SMP10_1 | ADC_SMPR1_SMP10_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_84CYCLES\fP   ((uint32_t)ADC_SMPR1_SMP10_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_112CYCLES\fP   ((uint32_t)(ADC_SMPR1_SMP10_2 | ADC_SMPR1_SMP10_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_144CYCLES\fP   ((uint32_t)(ADC_SMPR1_SMP10_2 | ADC_SMPR1_SMP10_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_SAMPLETIME_480CYCLES\fP   ((uint32_t)ADC_SMPR1_SMP10)"
+.br
+.ti -1c
+.RI "#define \fBADC_EOC_SEQ_CONV\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_EOC_SINGLE_CONV\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBADC_EOC_SINGLE_SEQ_CONV\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBADC_AWD_EVENT\fP   ((uint32_t)\fBADC_FLAG_AWD\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC_OVR_EVENT\fP   ((uint32_t)\fBADC_FLAG_OVR\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_REG\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_INJEC\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_REGINJEC\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_REG\fP   ((uint32_t)ADC_CR1_AWDEN)"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_INJEC\fP   ((uint32_t)ADC_CR1_JAWDEN)"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_REGINJEC\fP   ((uint32_t)(ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_IT_EOC\fP   ((uint32_t)ADC_CR1_EOCIE)"
+.br
+.ti -1c
+.RI "#define \fBADC_IT_AWD\fP   ((uint32_t)ADC_CR1_AWDIE)"
+.br
+.ti -1c
+.RI "#define \fBADC_IT_JEOC\fP   ((uint32_t)ADC_CR1_JEOCIE)"
+.br
+.ti -1c
+.RI "#define \fBADC_IT_OVR\fP   ((uint32_t)ADC_CR1_OVRIE)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_AWD\fP   ((uint32_t)ADC_SR_AWD)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_EOC\fP   ((uint32_t)ADC_SR_EOC)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_JEOC\fP   ((uint32_t)ADC_SR_JEOC)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_JSTRT\fP   ((uint32_t)ADC_SR_JSTRT)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_STRT\fP   ((uint32_t)ADC_SR_STRT)"
+.br
+.ti -1c
+.RI "#define \fBADC_FLAG_OVR\fP   ((uint32_t)ADC_SR_OVR)"
+.br
+.ti -1c
+.RI "#define \fBADC_ALL_CHANNELS\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBADC_REGULAR_CHANNELS\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBADC_INJECTED_CHANNELS\fP   0x00000003U"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_ADC_STATE_RESET\fP)"
+.br
+.RI "Reset ADC handle state "
+.ti -1c
+.RI "#define \fB__HAL_ADC_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 |=  ADC_CR2_ADON)"
+.br
+.RI "Enable the ADC peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 &=  ~ADC_CR2_ADON)"
+.br
+.RI "Disable the ADC peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) |= (__INTERRUPT__))"
+.br
+.RI "Enable the ADC end of conversion interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the ADC end of conversion interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1 & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check if the specified ADC interrupt source is enabled or disabled\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   (((__HANDLE__)\->Instance\->SR) = ~(__FLAG__))"
+.br
+.RI "Clear the ADC's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_FLAG\fP(__HANDLE__,  __FLAG__)   ((((__HANDLE__)\->Instance\->SR) & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Get the selected ADC's flag status\&. "
+.ti -1c
+.RI "#define \fBADC_STAB_DELAY_US\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBADC_TEMPSENSOR_DELAY_US\fP   10U"
+.br
+.ti -1c
+.RI "#define \fBADC_IS_ENABLE\fP(__HANDLE__)"
+.br
+.RI "Verification of ADC state: enabled or disabled "
+.ti -1c
+.RI "#define \fBADC_IS_SOFTWARE_START_REGULAR\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_EXTEN) == RESET)"
+.br
+.RI "Test if conversion trigger of regular group is software start or external trigger\&. "
+.ti -1c
+.RI "#define \fBADC_IS_SOFTWARE_START_INJECTED\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_JEXTEN) == RESET)"
+.br
+.RI "Test if conversion trigger of injected group is software start or external trigger\&. "
+.ti -1c
+.RI "#define \fBADC_STATE_CLR_SET\fP   MODIFY_REG"
+.br
+.RI "Simultaneously clears and sets specific bits of the handle State "
+.ti -1c
+.RI "#define \fBADC_CLEAR_ERRORCODE\fP(__HANDLE__)   ((__HANDLE__)\->ErrorCode = \fBHAL_ADC_ERROR_NONE\fP)"
+.br
+.RI "Clear ADC error code (set it to error code: 'no error') "
+.ti -1c
+.RI "#define \fBIS_ADC_CLOCKPRESCALER\fP(ADC_CLOCK)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_SAMPLING_DELAY\fP(DELAY)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_RESOLUTION\fP(RESOLUTION)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EXT_TRIG_EDGE\fP(EDGE)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EXT_TRIG\fP(REGTRIG)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_DATA_ALIGN\fP(ALIGN)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_SAMPLE_TIME\fP(TIME)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EOCSelection\fP(EOCSelection)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EVENT_TYPE\fP(EVENT)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_ANALOG_WATCHDOG\fP(WATCHDOG)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_CHANNELS_TYPE\fP(CHANNEL_TYPE)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_THRESHOLD\fP(THRESHOLD)   ((THRESHOLD) <= 0xFFFU)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_LENGTH\fP(LENGTH)   (((LENGTH) >= 1U) && ((LENGTH) <= 16U))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_RANK\fP(RANK)   (((RANK) >= 1U) && ((RANK) <= (16U)))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_DISC_NUMBER\fP(NUMBER)   (((NUMBER) >= 1U) && ((NUMBER) <= 8U))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_RANGE\fP(RESOLUTION,  ADC_VALUE)"
+.br
+.ti -1c
+.RI "#define \fBADC_SQR1\fP(_NbrOfConversion_)   (((_NbrOfConversion_) \- (uint8_t)1U) << 20U)"
+.br
+.RI "Set ADC Regular channel sequence length\&. "
+.ti -1c
+.RI "#define \fBADC_SMPR1\fP(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) << (3U * (((uint32_t)((uint16_t)(_CHANNELNB_))) \- 10U)))"
+.br
+.RI "Set the ADC's sample time for channel numbers between 10 and 18\&. "
+.ti -1c
+.RI "#define \fBADC_SMPR2\fP(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) << (3U * ((uint32_t)((uint16_t)(_CHANNELNB_)))))"
+.br
+.RI "Set the ADC's sample time for channel numbers between 0 and 9\&. "
+.ti -1c
+.RI "#define \fBADC_SQR3_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 1U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 1 and 6\&. "
+.ti -1c
+.RI "#define \fBADC_SQR2_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 7U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 7 and 12\&. "
+.ti -1c
+.RI "#define \fBADC_SQR1_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 13U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 13 and 16\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_CONTINUOUS\fP(_CONTINUOUS_MODE_)   ((_CONTINUOUS_MODE_) << 1U)"
+.br
+.RI "Enable ADC continuous conversion mode\&. "
+.ti -1c
+.RI "#define \fBADC_CR1_DISCONTINUOUS\fP(_NBR_DISCONTINUOUSCONV_)   (((_NBR_DISCONTINUOUSCONV_) \- 1U) << ADC_CR1_DISCNUM_Pos)"
+.br
+.RI "Configures the number of discontinuous conversions for the regular group channels\&. "
+.ti -1c
+.RI "#define \fBADC_CR1_SCANCONV\fP(_SCANCONV_MODE_)   ((_SCANCONV_MODE_) << 8U)"
+.br
+.RI "Enable ADC scan mode\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_EOCSelection\fP(_EOCSelection_MODE_)   ((_EOCSelection_MODE_) << 10U)"
+.br
+.RI "Enable the ADC end of conversion selection\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_DMAContReq\fP(_DMAContReq_MODE_)   ((_DMAContReq_MODE_) << 9U)"
+.br
+.RI "Enable the ADC DMA continuous request\&. "
+.ti -1c
+.RI "#define \fBADC_GET_RESOLUTION\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR1) & ADC_CR1_RES)"
+.br
+.RI "Return resolution bits in CR1 register\&. "
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Init\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_DeInit\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_MspInit\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_MspDeInit\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_PollForConversion\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_PollForEvent\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t EventType, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start_IT\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop_IT\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_IRQHandler\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start_DMA\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t *pData, uint32_t Length)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop_DMA\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_ADC_GetValue\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ConvCpltCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ConvHalfCpltCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_LevelOutOfWindowCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ErrorCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_ConfigChannel\fP (\fBADC_HandleTypeDef\fP *hadc, \fBADC_ChannelConfTypeDef\fP *sConfig)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_AnalogWDGConfig\fP (\fBADC_HandleTypeDef\fP *hadc, \fBADC_AnalogWDGConfTypeDef\fP *AnalogWDGConfig)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_ADC_GetState\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_ADC_GetError\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Header file containing functions prototypes of ADC HAL library\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_adc\&.h\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,8 @@
+<map id="inc/stm32f4xx_hal_pwr.h" name="inc/stm32f4xx_hal_pwr.h">
+<area shape="rect" id="node1" title="Header file of PWR HAL module." alt="" coords="141,5,325,32"/>
+<area shape="rect" id="node2" href="$stm32f4xx__hal__def_8h.html" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="154,155,313,181"/>
+<area shape="rect" id="node6" href="$stm32f4xx__hal__pwr__ex_8h.html" title="Header file of PWR HAL Extension module." alt="" coords="206,80,391,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,229,109,256"/>
+<area shape="rect" id="node4" href="$stm32__hal__legacy_8h.html" title="This file contains aliases definition for the STM32Cube HAL constants macros and functions maintained..." alt="" coords="133,229,333,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="357,229,432,256"/>
+</map>

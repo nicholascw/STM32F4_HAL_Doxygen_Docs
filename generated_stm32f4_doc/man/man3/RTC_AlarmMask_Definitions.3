@@ -1,0 +1,62 @@
+.TH "RTC_AlarmMask_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTC_AlarmMask_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_DATEWEEKDAY\fP   RTC_ALRMAR_MSK4"
+.br
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_HOURS\fP   RTC_ALRMAR_MSK3"
+.br
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_MINUTES\fP   RTC_ALRMAR_MSK2"
+.br
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_SECONDS\fP   RTC_ALRMAR_MSK1"
+.br
+.ti -1c
+.RI "#define \fBRTC_ALARMMASK_ALL\fP   0x80808080U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define RTC_ALARMMASK_ALL   0x80808080U"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 355 行定义\&.
+.SS "#define RTC_ALARMMASK_DATEWEEKDAY   RTC_ALRMAR_MSK4"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 351 行定义\&.
+.SS "#define RTC_ALARMMASK_HOURS   RTC_ALRMAR_MSK3"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 352 行定义\&.
+.SS "#define RTC_ALARMMASK_MINUTES   RTC_ALRMAR_MSK2"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 353 行定义\&.
+.SS "#define RTC_ALARMMASK_NONE   0x00000000U"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 350 行定义\&.
+.SS "#define RTC_ALARMMASK_SECONDS   RTC_ALRMAR_MSK1"
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 354 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

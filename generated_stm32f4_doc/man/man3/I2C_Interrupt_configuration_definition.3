@@ -1,0 +1,48 @@
+.TH "I2C_Interrupt_configuration_definition" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2C_Interrupt_configuration_definition \- I2C Interrupt definition Elements values convention: 0xXXXXXXXX  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2C_IT_BUF\fP   I2C_CR2_ITBUFEN"
+.br
+.ti -1c
+.RI "#define \fBI2C_IT_EVT\fP   I2C_CR2_ITEVTEN"
+.br
+.ti -1c
+.RI "#define \fBI2C_IT_ERR\fP   I2C_CR2_ITERREN"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+I2C Interrupt definition Elements values convention: 0xXXXXXXXX 
+
+
+.IP "\(bu" 2
+XXXXXXXX : Interrupt control mask 
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define I2C_IT_BUF   I2C_CR2_ITBUFEN"
+
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 371 行定义\&.
+.SS "#define I2C_IT_ERR   I2C_CR2_ITERREN"
+
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 373 行定义\&.
+.SS "#define I2C_IT_EVT   I2C_CR2_ITEVTEN"
+
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 372 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

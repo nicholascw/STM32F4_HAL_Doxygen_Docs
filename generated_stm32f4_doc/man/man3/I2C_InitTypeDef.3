@@ -1,0 +1,79 @@
+.TH "I2C_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2C_InitTypeDef
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_i2c\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBClockSpeed\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDutyCycle\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBOwnAddress1\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAddressingMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDualAddressMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBOwnAddress2\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBGeneralCallMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBNoStretchMode\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+在文件 stm32f4xx_hal_i2c\&.h 第 48 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t AddressingMode"
+Specifies if 7-bit or 10-bit addressing mode is selected\&. This parameter can be a value of \fBI2C addressing mode\fP 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 59 行定义\&.
+.SS "uint32_t ClockSpeed"
+Specifies the clock frequency\&. This parameter must be set to a value lower than 400kHz 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 50 行定义\&.
+.SS "uint32_t DualAddressMode"
+Specifies if dual addressing mode is selected\&. This parameter can be a value of \fBI2C dual addressing mode\fP 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 62 行定义\&.
+.SS "uint32_t DutyCycle"
+Specifies the I2C fast mode duty cycle\&. This parameter can be a value of \fBI2C duty cycle in fast mode\fP 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 53 行定义\&.
+.SS "uint32_t GeneralCallMode"
+Specifies if general call mode is selected\&. This parameter can be a value of \fBI2C general call addressing mode\fP 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 68 行定义\&.
+.SS "uint32_t NoStretchMode"
+Specifies if nostretch mode is selected\&. This parameter can be a value of \fBI2C nostretch mode\fP 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 71 行定义\&.
+.SS "uint32_t OwnAddress1"
+Specifies the first device own address\&. This parameter can be a 7-bit or 10-bit address\&. 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 56 行定义\&.
+.SS "uint32_t OwnAddress2"
+Specifies the second device own address if dual addressing mode is selected This parameter can be a 7-bit address\&. 
+.PP
+在文件 stm32f4xx_hal_i2c\&.h 第 65 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

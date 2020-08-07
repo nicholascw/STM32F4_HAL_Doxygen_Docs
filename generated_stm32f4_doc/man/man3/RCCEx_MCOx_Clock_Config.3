@@ -1,0 +1,113 @@
+.TH "RCCEx_MCOx_Clock_Config" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCCEx_MCOx_Clock_Config
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_MCO1_CONFIG\fP(__MCOCLKSOURCE__,  __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO1 | RCC_CFGR_MCO1PRE), ((__MCOCLKSOURCE__) | (__MCODIV__)))"
+.br
+.RI "Macro to configure the MCO1 clock\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_MCO2_CONFIG\fP(__MCOCLKSOURCE__,  __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO2 | RCC_CFGR_MCO2PRE), ((__MCOCLKSOURCE__) | ((__MCODIV__) << 3U)));"
+.br
+.RI "Macro to configure the MCO2 clock\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_MCO1_CONFIG(__MCOCLKSOURCE__, __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO1 | RCC_CFGR_MCO1PRE), ((__MCOCLKSOURCE__) | (__MCODIV__)))"
+
+.PP
+Macro to configure the MCO1 clock\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>MCOCLKSOURCE</strong>\fP specifies the MCO clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_MCO1SOURCE_HSI: HSI clock selected as MCO1 source 
+.IP "\(bu" 2
+RCC_MCO1SOURCE_LSE: LSE clock selected as MCO1 source 
+.IP "\(bu" 2
+RCC_MCO1SOURCE_HSE: HSE clock selected as MCO1 source 
+.IP "\(bu" 2
+RCC_MCO1SOURCE_PLLCLK: main PLL clock selected as MCO1 source 
+.PP
+.br
+\fI<strong>MCODIV</strong>\fP specifies the MCO clock prescaler\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_MCODIV_1: no division applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_2: division by 2 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_3: division by 3 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_4: division by 4 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_5: division by 5 applied to MCOx clock 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1121 行定义\&.
+.SS "#define __HAL_RCC_MCO2_CONFIG(__MCOCLKSOURCE__, __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO2 | RCC_CFGR_MCO2PRE), ((__MCOCLKSOURCE__) | ((__MCODIV__) << 3U)));"
+
+.PP
+Macro to configure the MCO2 clock\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>MCOCLKSOURCE</strong>\fP specifies the MCO clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_MCO2SOURCE_SYSCLK: System clock (SYSCLK) selected as MCO2 source 
+.IP "\(bu" 2
+RCC_MCO2SOURCE_PLLI2SCLK: PLLI2S clock selected as MCO2 source, available for all STM32F4 devices except STM32F410xx 
+.IP "\(bu" 2
+RCC_MCO2SOURCE_I2SCLK: I2SCLK clock selected as MCO2 source, available only for STM32F410Rx devices 
+.IP "\(bu" 2
+RCC_MCO2SOURCE_HSE: HSE clock selected as MCO2 source 
+.IP "\(bu" 2
+RCC_MCO2SOURCE_PLLCLK: main PLL clock selected as MCO2 source 
+.PP
+.br
+\fI<strong>MCODIV</strong>\fP specifies the MCO clock prescaler\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_MCODIV_1: no division applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_2: division by 2 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_3: division by 3 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_4: division by 4 applied to MCOx clock 
+.IP "\(bu" 2
+RCC_MCODIV_5: division by 5 applied to MCOx clock 
+.PP
+.RE
+.PP
+\fB注解\fP
+.RS 4
+For STM32F410Rx devices, to output I2SCLK clock on MCO2, you should have at least one of the SPI clocks enabled (SPI1, SPI2 or SPI5)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1142 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,132 @@
+\hypertarget{group__UTILS__LL__EF__DELAY}{}\doxysection{D\+E\+L\+AY}
+\label{group__UTILS__LL__EF__DELAY}\index{DELAY@{DELAY}}
+D\+E\+L\+AY 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{group__UTILS__LL__EF__DELAY}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850}{L\+L\+\_\+\+Init\+Tick}} (uint32\+\_\+t H\+C\+L\+K\+Frequency, uint32\+\_\+t Ticks)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source of the time base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick}} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}{L\+L\+\_\+m\+Delay}} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}\label{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}} 
+\index{DELAY@{DELAY}!LL\_Init1msTick@{LL\_Init1msTick}}
+\index{LL\_Init1msTick@{LL\_Init1msTick}!DELAY@{DELAY}}
+\doxysubsubsection{\texorpdfstring{LL\_Init1msTick()}{LL\_Init1msTick()}}
+{\footnotesize\ttfamily void L\+L\+\_\+\+Init1ms\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. 
+
+\begin{DoxyNote}{注解}
+When a R\+T\+OS is used, it is recommended to avoid changing the Systick configuration by calling this function, for a delay use rather os\+Delay R\+T\+OS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+H\+C\+LK frequency can be calculated thanks to R\+CC helper macro or function L\+L\+\_\+\+R\+C\+C\+\_\+\+Get\+System\+Clocks\+Freq 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 259 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850}\label{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850}} 
+\index{DELAY@{DELAY}!LL\_InitTick@{LL\_InitTick}}
+\index{LL\_InitTick@{LL\_InitTick}!DELAY@{DELAY}}
+\doxysubsubsection{\texorpdfstring{LL\_InitTick()}{LL\_InitTick()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+S\+T\+A\+T\+I\+C\+\_\+\+I\+N\+L\+I\+NE void L\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency,  }\item[{uint32\+\_\+t}]{Ticks }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source of the time base. 
+
+
+\begin{DoxyParams}{参数}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz (can be calculated thanks to R\+CC helper macro) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+When a R\+T\+OS is used, it is recommended to avoid changing the Sys\+Tick configuration by calling this function, for a delay use rather os\+Delay R\+T\+OS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Ticks} & Number of ticks \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+h 第 261 行定义.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{group__UTILS__LL__EF__DELAY_ga170d1d651b46544daf571fb6b4e3b850_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}\label{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}} 
+\index{DELAY@{DELAY}!LL\_mDelay@{LL\_mDelay}}
+\index{LL\_mDelay@{LL\_mDelay}!DELAY@{DELAY}}
+\doxysubsubsection{\texorpdfstring{LL\_mDelay()}{LL\_mDelay()}}
+{\footnotesize\ttfamily void L\+L\+\_\+m\+Delay (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Delay }\end{DoxyParamCaption})}
+
+
+
+This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag 
+
+\begin{DoxyNote}{注解}
+When a R\+T\+OS is used, it is recommended to avoid using blocking delay and use rather os\+Delay service. 
+
+To respect 1ms timebase, user should call \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick}} function which will configure Systick to 1ms 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Delay} & specifies the delay time length, in milliseconds. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 275 行定义.
+

@@ -1,0 +1,83 @@
+.TH "inc/stm32f4xx_hal_rcc_ex.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_rcc_ex.h \- Header file of RCC HAL Extension module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_def\&.h'\fP
+.br
+
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBRCC_PLLInitTypeDef\fP"
+.br
+.RI "RCC PLL configuration structure definition "
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_CONFIG\fP(__RCC_PLLSource__,  __PLLM__,  __PLLN__,  __PLLP__,  __PLLQ__)"
+.br
+.RI "Macro to configure the main PLL clock source, multiplication and division factors\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLLI2S_CONFIG\fP(__PLLI2SN__,  __PLLI2SR__)"
+.br
+.RI "Macro to configure the PLLI2S clock multiplication and division factors \&. "
+.ti -1c
+.RI "#define \fBRCC_CFGR_OFFSET\fP   (\fBRCC_OFFSET\fP + 0x08U)"
+.br
+.ti -1c
+.RI "#define \fBPLL_TIMEOUT_VALUE\fP   2U  /* 2 ms */"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLN_VALUE\fP(VALUE)   ((50U <= (VALUE)) && ((VALUE) <= 432U))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLI2SN_VALUE\fP(VALUE)   ((50U <= (VALUE)) && ((VALUE) <= 432U))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLI2SR_VALUE\fP(VALUE)   ((2U <= (VALUE)) && ((VALUE) <= 7U))"
+.br
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RCCEx_PeriphCLKConfig\fP (RCC_PeriphCLKInitTypeDef *PeriphClkInit)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCCEx_GetPeriphCLKConfig\fP (RCC_PeriphCLKInitTypeDef *PeriphClkInit)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCCEx_GetPeriphCLKFreq\fP (uint32_t PeriphClk)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Header file of RCC HAL Extension module\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_rcc_ex\&.h\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

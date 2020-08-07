@@ -1,0 +1,39 @@
+.TH "DMA_Memory_incremented_mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Memory_incremented_mode \- DMA memory incremented mode  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_MINC_ENABLE\fP   ((uint32_t)DMA_SxCR_MINC)"
+.br
+.ti -1c
+.RI "#define \fBDMA_MINC_DISABLE\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA memory incremented mode 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define DMA_MINC_DISABLE   0x00000000U"
+Memory increment mode disable 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 251 行定义\&.
+.SS "#define DMA_MINC_ENABLE   ((uint32_t)DMA_SxCR_MINC)"
+Memory increment mode enable 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 250 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

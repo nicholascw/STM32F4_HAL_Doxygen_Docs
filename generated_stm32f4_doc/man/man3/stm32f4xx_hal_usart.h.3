@@ -1,0 +1,395 @@
+.TH "inc/stm32f4xx_hal_usart.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_usart.h \- Header file of USART HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_def\&.h'\fP
+.br
+
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBUSART_InitTypeDef\fP"
+.br
+.RI "USART Init Structure definition "
+.ti -1c
+.RI "struct \fB__USART_HandleTypeDef\fP"
+.br
+.RI "USART handle Structure definition "
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_PE\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_NE\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_FE\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_ORE\fP   0x00000008U"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_ERROR_DMA\fP   0x00000010U"
+.br
+.ti -1c
+.RI "#define \fBUSART_WORDLENGTH_8B\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_WORDLENGTH_9B\fP   ((uint32_t)USART_CR1_M)"
+.br
+.ti -1c
+.RI "#define \fBUSART_STOPBITS_1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_STOPBITS_0_5\fP   ((uint32_t)USART_CR2_STOP_0)"
+.br
+.ti -1c
+.RI "#define \fBUSART_STOPBITS_2\fP   ((uint32_t)USART_CR2_STOP_1)"
+.br
+.ti -1c
+.RI "#define \fBUSART_STOPBITS_1_5\fP   ((uint32_t)(USART_CR2_STOP_0 | USART_CR2_STOP_1))"
+.br
+.ti -1c
+.RI "#define \fBUSART_PARITY_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_PARITY_EVEN\fP   ((uint32_t)USART_CR1_PCE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_PARITY_ODD\fP   ((uint32_t)(USART_CR1_PCE | USART_CR1_PS))"
+.br
+.ti -1c
+.RI "#define \fBUSART_MODE_RX\fP   ((uint32_t)USART_CR1_RE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_MODE_TX\fP   ((uint32_t)USART_CR1_TE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_MODE_TX_RX\fP   ((uint32_t)(USART_CR1_TE | USART_CR1_RE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_CLOCK_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_CLOCK_ENABLE\fP   ((uint32_t)USART_CR2_CLKEN)"
+.br
+.ti -1c
+.RI "#define \fBUSART_POLARITY_LOW\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_POLARITY_HIGH\fP   ((uint32_t)USART_CR2_CPOL)"
+.br
+.ti -1c
+.RI "#define \fBUSART_PHASE_1EDGE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_PHASE_2EDGE\fP   ((uint32_t)USART_CR2_CPHA)"
+.br
+.ti -1c
+.RI "#define \fBUSART_LASTBIT_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_LASTBIT_ENABLE\fP   ((uint32_t)USART_CR2_LBCL)"
+.br
+.ti -1c
+.RI "#define \fBUSART_NACK_ENABLE\fP   ((uint32_t)USART_CR3_NACK)"
+.br
+.ti -1c
+.RI "#define \fBUSART_NACK_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_TXE\fP   ((uint32_t)USART_SR_TXE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_TC\fP   ((uint32_t)USART_SR_TC)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_RXNE\fP   ((uint32_t)USART_SR_RXNE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_IDLE\fP   ((uint32_t)USART_SR_IDLE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_ORE\fP   ((uint32_t)USART_SR_ORE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_NE\fP   ((uint32_t)USART_SR_NE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_FE\fP   ((uint32_t)USART_SR_FE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_PE\fP   ((uint32_t)USART_SR_PE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_PE\fP   ((uint32_t)(\fBUSART_CR1_REG_INDEX\fP << 28U | USART_CR1_PEIE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_TXE\fP   ((uint32_t)(\fBUSART_CR1_REG_INDEX\fP << 28U | USART_CR1_TXEIE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_TC\fP   ((uint32_t)(\fBUSART_CR1_REG_INDEX\fP << 28U | USART_CR1_TCIE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_RXNE\fP   ((uint32_t)(\fBUSART_CR1_REG_INDEX\fP << 28U | USART_CR1_RXNEIE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_IDLE\fP   ((uint32_t)(\fBUSART_CR1_REG_INDEX\fP << 28U | USART_CR1_IDLEIE))"
+.br
+.ti -1c
+.RI "#define \fBUSART_IT_ERR\fP   ((uint32_t)(\fBUSART_CR3_REG_INDEX\fP << 28U | USART_CR3_EIE))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USART_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_USART_STATE_RESET\fP)"
+.br
+.RI "Reset USART handle state "
+.ti -1c
+.RI "#define \fB__HAL_USART_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((__HANDLE__)\->Instance\->SR & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Check whether the specified USART flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->SR = ~(__FLAG__))"
+.br
+.RI "Clear the specified USART pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_PEFLAG\fP(__HANDLE__)"
+.br
+.RI "Clear the USART PE pending flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_FEFLAG\fP(__HANDLE__)   \fB__HAL_USART_CLEAR_PEFLAG\fP(__HANDLE__)"
+.br
+.RI "Clear the USART FE pending flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_NEFLAG\fP(__HANDLE__)   \fB__HAL_USART_CLEAR_PEFLAG\fP(__HANDLE__)"
+.br
+.RI "Clear the USART NE pending flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_OREFLAG\fP(__HANDLE__)   \fB__HAL_USART_CLEAR_PEFLAG\fP(__HANDLE__)"
+.br
+.RI "Clear the USART ORE pending flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_CLEAR_IDLEFLAG\fP(__HANDLE__)   \fB__HAL_USART_CLEAR_PEFLAG\fP(__HANDLE__)"
+.br
+.RI "Clear the USART IDLE pending flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.RI "Enables or disables the specified USART interrupts\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_USART_GET_IT_SOURCE\fP(__HANDLE__,  __IT__)"
+.br
+.RI "Checks whether the specified USART interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_USART_ONE_BIT_SAMPLE_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR3 |= USART_CR3_ONEBIT)"
+.br
+.RI "Macro to enable the USART's one bit sample method "
+.ti -1c
+.RI "#define \fB__HAL_USART_ONE_BIT_SAMPLE_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR3 &= (uint16_t)~((uint16_t)USART_CR3_ONEBIT))"
+.br
+.RI "Macro to disable the USART's one bit sample method "
+.ti -1c
+.RI "#define \fB__HAL_USART_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1 |= USART_CR1_UE)"
+.br
+.RI "Enable USART "
+.ti -1c
+.RI "#define \fB__HAL_USART_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR1 &= ~USART_CR1_UE)"
+.br
+.RI "Disable USART "
+.ti -1c
+.RI "#define \fBUSART_IT_MASK\fP"
+.br
+.RI "USART interruptions flag mask "
+.ti -1c
+.RI "#define \fBUSART_CR1_REG_INDEX\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBUSART_CR2_REG_INDEX\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBUSART_CR3_REG_INDEX\fP   3U"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_NACK_STATE\fP(NACK)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_LASTBIT\fP(LASTBIT)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_PHASE\fP(CPHA)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_POLARITY\fP(CPOL)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_CLOCK\fP(CLOCK)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_WORD_LENGTH\fP(LENGTH)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_STOPBITS\fP(STOPBITS)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_PARITY\fP(PARITY)"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_MODE\fP(MODE)   ((((MODE) & (~((uint32_t)\fBUSART_MODE_TX_RX\fP))) == 0x00U) && ((MODE) != 0x00U))"
+.br
+.ti -1c
+.RI "#define \fBIS_USART_BAUDRATE\fP(BAUDRATE)   ((BAUDRATE) <= 12500000U)"
+.br
+.ti -1c
+.RI "#define \fBUSART_DIV\fP(_PCLK_,  _BAUD_)   (((_PCLK_)*25U)/(2U*(_BAUD_)))"
+.br
+.ti -1c
+.RI "#define \fBUSART_DIVMANT\fP(_PCLK_,  _BAUD_)   (\fBUSART_DIV\fP((_PCLK_), (_BAUD_))/100U)"
+.br
+.ti -1c
+.RI "#define \fBUSART_DIVFRAQ\fP(_PCLK_,  _BAUD_)   (((\fBUSART_DIV\fP((_PCLK_), (_BAUD_)) \- (\fBUSART_DIVMANT\fP((_PCLK_), (_BAUD_)) * 100U)) * 16U + 50U) / 100U)"
+.br
+.ti -1c
+.RI "#define \fBUSART_BRR\fP(_PCLK_,  _BAUD_)   ((\fBUSART_DIVMANT\fP((_PCLK_), (_BAUD_)) << 4U)|(\fBUSART_DIVFRAQ\fP((_PCLK_), (_BAUD_)) & 0x0FU))"
+.br
+.in -1c
+.SS "类型定义"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__USART_HandleTypeDef\fP \fBUSART_HandleTypeDef\fP"
+.br
+.RI "USART handle Structure definition "
+.in -1c
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_USART_StateTypeDef\fP { \fBHAL_USART_STATE_RESET\fP = 0x00U, \fBHAL_USART_STATE_READY\fP = 0x01U, \fBHAL_USART_STATE_BUSY\fP = 0x02U, \fBHAL_USART_STATE_BUSY_TX\fP = 0x12U, \fBHAL_USART_STATE_BUSY_RX\fP = 0x22U, \fBHAL_USART_STATE_BUSY_TX_RX\fP = 0x32U, \fBHAL_USART_STATE_TIMEOUT\fP = 0x03U, \fBHAL_USART_STATE_ERROR\fP = 0x04U }"
+.br
+.RI "HAL State structures definition "
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Init\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_DeInit\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_MspInit\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_MspDeInit\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Transmit\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Receive\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_TransmitReceive\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Transmit_IT\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Receive_IT\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pRxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_TransmitReceive_IT\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Transmit_DMA\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Receive_DMA\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pRxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_TransmitReceive_DMA\fP (\fBUSART_HandleTypeDef\fP *husart, uint8_t *pTxData, uint8_t *pRxData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_DMAPause\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_DMAResume\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_DMAStop\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Abort\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_USART_Abort_IT\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_IRQHandler\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_TxCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_TxHalfCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_RxCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_RxHalfCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_TxRxCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_ErrorCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "void \fBHAL_USART_AbortCpltCallback\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "\fBHAL_USART_StateTypeDef\fP \fBHAL_USART_GetState\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_USART_GetError\fP (\fBUSART_HandleTypeDef\fP *husart)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Header file of USART HAL module\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_usart\&.h\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

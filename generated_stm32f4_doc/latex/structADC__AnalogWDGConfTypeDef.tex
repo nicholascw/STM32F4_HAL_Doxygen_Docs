@@ -1,0 +1,103 @@
+\hypertarget{structADC__AnalogWDGConfTypeDef}{}\doxysection{A\+D\+C\+\_\+\+Analog\+W\+D\+G\+Conf\+Type\+Def结构体 参考}
+\label{structADC__AnalogWDGConfTypeDef}\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+
+
+A\+DC Configuration multi-\/mode structure definition ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+adc.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_a13924e920be2454c955a2139e2c3eb1a}{Watchdog\+Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_a5c3a76d9a8ac84c537e7df10b0315e5a}{High\+Threshold}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_a018c772cad96f1f0493ec0019ecc08f9}{Low\+Threshold}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_ae82bf9242a014164f9f6907f29782c44}{Channel}}
+\item 
+Functional\+State \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_a8eb71d040cef0d56f25d29aa57ba5d3d}{I\+T\+Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structADC__AnalogWDGConfTypeDef_a316457f389072f7a80b62e2b3c8fdef4}{Watchdog\+Number}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+A\+DC Configuration multi-\/mode structure definition ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 136 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_ae82bf9242a014164f9f6907f29782c44}\label{structADC__AnalogWDGConfTypeDef_ae82bf9242a014164f9f6907f29782c44}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!Channel@{Channel}}
+\index{Channel@{Channel}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{Channel}{Channel}}
+{\footnotesize\ttfamily uint32\+\_\+t Channel}
+
+Configures A\+DC channel for the analog watchdog. This parameter has an effect only if watchdog mode is configured on single channel This parameter can be a value of \mbox{\hyperlink{group__ADC__channels}{A\+DC Common Channels}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 144 行定义.
+
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_a5c3a76d9a8ac84c537e7df10b0315e5a}\label{structADC__AnalogWDGConfTypeDef_a5c3a76d9a8ac84c537e7df10b0315e5a}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!HighThreshold@{HighThreshold}}
+\index{HighThreshold@{HighThreshold}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{HighThreshold}{HighThreshold}}
+{\footnotesize\ttfamily uint32\+\_\+t High\+Threshold}
+
+Configures the A\+DC analog watchdog High threshold value. This parameter must be a 12-\/bit value. 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 140 行定义.
+
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_a8eb71d040cef0d56f25d29aa57ba5d3d}\label{structADC__AnalogWDGConfTypeDef_a8eb71d040cef0d56f25d29aa57ba5d3d}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!ITMode@{ITMode}}
+\index{ITMode@{ITMode}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{ITMode}{ITMode}}
+{\footnotesize\ttfamily Functional\+State I\+T\+Mode}
+
+Specifies whether the analog watchdog is configured is interrupt mode or in polling mode. This parameter can be set to E\+N\+A\+B\+LE or D\+I\+S\+A\+B\+LE 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 147 行定义.
+
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_a018c772cad96f1f0493ec0019ecc08f9}\label{structADC__AnalogWDGConfTypeDef_a018c772cad96f1f0493ec0019ecc08f9}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!LowThreshold@{LowThreshold}}
+\index{LowThreshold@{LowThreshold}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{LowThreshold}{LowThreshold}}
+{\footnotesize\ttfamily uint32\+\_\+t Low\+Threshold}
+
+Configures the A\+DC analog watchdog High threshold value. This parameter must be a 12-\/bit value. 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 142 行定义.
+
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_a13924e920be2454c955a2139e2c3eb1a}\label{structADC__AnalogWDGConfTypeDef_a13924e920be2454c955a2139e2c3eb1a}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!WatchdogMode@{WatchdogMode}}
+\index{WatchdogMode@{WatchdogMode}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{WatchdogMode}{WatchdogMode}}
+{\footnotesize\ttfamily uint32\+\_\+t Watchdog\+Mode}
+
+Configures the A\+DC analog watchdog mode. This parameter can be a value of \mbox{\hyperlink{group__ADC__analog__watchdog__selection}{A\+DC Analog Watchdog Selection}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 138 行定义.
+
+\mbox{\Hypertarget{structADC__AnalogWDGConfTypeDef_a316457f389072f7a80b62e2b3c8fdef4}\label{structADC__AnalogWDGConfTypeDef_a316457f389072f7a80b62e2b3c8fdef4}} 
+\index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!WatchdogNumber@{WatchdogNumber}}
+\index{WatchdogNumber@{WatchdogNumber}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
+\doxysubsubsection{\texorpdfstring{WatchdogNumber}{WatchdogNumber}}
+{\footnotesize\ttfamily uint32\+\_\+t Watchdog\+Number}
+
+Reserved for future use, can be set to 0 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+adc.\+h 第 150 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__adc_8h}{stm32f4xx\+\_\+hal\+\_\+adc.\+h}}\end{DoxyCompactItemize}

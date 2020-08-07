@@ -1,0 +1,76 @@
+.TH "TIM_HandleTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_HandleTypeDef \- TIM Time Base Handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_tim\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "TIM_TypeDef * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBTIM_Base_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "\fBHAL_TIM_ActiveChannel\fP \fBChannel\fP"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdma\fP [7]"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_TIM_StateTypeDef\fP \fBState\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+TIM Time Base Handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 310 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "\fBHAL_TIM_ActiveChannel\fP Channel"
+Active channel 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 315 行定义\&.
+.SS "\fBDMA_HandleTypeDef\fP* hdma[7]"
+DMA Handlers array This array is accessed by a \fBTIM DMA Handle Index\fP 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 316 行定义\&.
+.SS "\fBTIM_Base_InitTypeDef\fP Init"
+TIM Time Base required parameters 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 314 行定义\&.
+.SS "TIM_TypeDef* Instance"
+Register base address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 313 行定义\&.
+.SS "\fBHAL_LockTypeDef\fP Lock"
+Locking object 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 318 行定义\&.
+.SS "__IO \fBHAL_TIM_StateTypeDef\fP State"
+TIM operation state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 319 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

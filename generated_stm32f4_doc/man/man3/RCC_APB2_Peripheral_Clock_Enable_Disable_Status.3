@@ -1,0 +1,142 @@
+.TH "RCC_APB2_Peripheral_Clock_Enable_Disable_Status" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB2_Peripheral_Clock_Enable_Disable_Status \- Get the enable or disable status of the APB2 peripheral clock\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) == RESET)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Get the enable or disable status of the APB2 peripheral clock\&. 
+
+
+.PP
+\fB注解\fP
+.RS 4
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it\&. 
+.RE
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_ADC1_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 653 行定义\&.
+.SS "#define __HAL_RCC_ADC1_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 644 行定义\&.
+.SS "#define __HAL_RCC_SPI1_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 654 行定义\&.
+.SS "#define __HAL_RCC_SPI1_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 645 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 655 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 646 行定义\&.
+.SS "#define __HAL_RCC_TIM11_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 657 行定义\&.
+.SS "#define __HAL_RCC_TIM11_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 648 行定义\&.
+.SS "#define __HAL_RCC_TIM1_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 650 行定义\&.
+.SS "#define __HAL_RCC_TIM1_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 641 行定义\&.
+.SS "#define __HAL_RCC_TIM9_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 656 行定义\&.
+.SS "#define __HAL_RCC_TIM9_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 647 行定义\&.
+.SS "#define __HAL_RCC_USART1_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 651 行定义\&.
+.SS "#define __HAL_RCC_USART1_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 642 行定义\&.
+.SS "#define __HAL_RCC_USART6_IS_CLK_DISABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) == RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 652 行定义\&.
+.SS "#define __HAL_RCC_USART6_IS_CLK_ENABLED()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) != RESET)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 643 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

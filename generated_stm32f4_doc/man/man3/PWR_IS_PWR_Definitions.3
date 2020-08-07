@@ -1,0 +1,74 @@
+.TH "PWR_IS_PWR_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWR_IS_PWR_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_LEVEL\fP(LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_PVD_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_REGULATOR\fP(REGULATOR)"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_SLEEP_ENTRY\fP(ENTRY)   (((ENTRY) == \fBPWR_SLEEPENTRY_WFI\fP) || ((ENTRY) == \fBPWR_SLEEPENTRY_WFE\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_PWR_STOP_ENTRY\fP(ENTRY)   (((ENTRY) == \fBPWR_STOPENTRY_WFI\fP) || ((ENTRY) == \fBPWR_STOPENTRY_WFE\fP))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define IS_PWR_PVD_LEVEL(LEVEL)"
+\fB值:\fP
+.PP
+.nf
+                                 (((LEVEL) == PWR_PVDLEVEL_0) || ((LEVEL) == PWR_PVDLEVEL_1)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_2) || ((LEVEL) == PWR_PVDLEVEL_3)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_4) || ((LEVEL) == PWR_PVDLEVEL_5)|| \
+                                 ((LEVEL) == PWR_PVDLEVEL_6) || ((LEVEL) == PWR_PVDLEVEL_7))
+.fi
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 396 行定义\&.
+.SS "#define IS_PWR_PVD_MODE(MODE)"
+\fB值:\fP
+.PP
+.nf
+                              (((MODE) == PWR_PVD_MODE_IT_RISING)|| ((MODE) == PWR_PVD_MODE_IT_FALLING) || \
+                              ((MODE) == PWR_PVD_MODE_IT_RISING_FALLING) || ((MODE) == PWR_PVD_MODE_EVENT_RISING) || \
+                              ((MODE) == PWR_PVD_MODE_EVENT_FALLING) || ((MODE) == PWR_PVD_MODE_EVENT_RISING_FALLING) || \
+                              ((MODE) == PWR_PVD_MODE_NORMAL))
+.fi
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 400 行定义\&.
+.SS "#define IS_PWR_REGULATOR(REGULATOR)"
+\fB值:\fP
+.PP
+.nf
+                                     (((REGULATOR) == PWR_MAINREGULATOR_ON) || \
+                                     ((REGULATOR) == PWR_LOWPOWERREGULATOR_ON))
+.fi
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 404 行定义\&.
+.SS "#define IS_PWR_SLEEP_ENTRY(ENTRY)   (((ENTRY) == \fBPWR_SLEEPENTRY_WFI\fP) || ((ENTRY) == \fBPWR_SLEEPENTRY_WFE\fP))"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 406 行定义\&.
+.SS "#define IS_PWR_STOP_ENTRY(ENTRY)   (((ENTRY) == \fBPWR_STOPENTRY_WFI\fP) || ((ENTRY) == \fBPWR_STOPENTRY_WFE\fP))"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 407 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,41 @@
+.TH "RTCEx_Smooth_calib_period_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Smooth_calib_period_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRTC_SMOOTHCALIB_PERIOD_32SEC\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRTC_SMOOTHCALIB_PERIOD_16SEC\fP   0x00002000U"
+.br
+.ti -1c
+.RI "#define \fBRTC_SMOOTHCALIB_PERIOD_8SEC\fP   0x00004000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define RTC_SMOOTHCALIB_PERIOD_16SEC   0x00002000U"
+If RTCCLK = 32768 Hz, Smooth calibration period is 16s, else 2exp19 RTCCLK seconds 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 266 行定义\&.
+.SS "#define RTC_SMOOTHCALIB_PERIOD_32SEC   0x00000000U"
+If RTCCLK = 32768 Hz, Smooth calibration period is 32s, else 2exp20 RTCCLK seconds 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 264 行定义\&.
+.SS "#define RTC_SMOOTHCALIB_PERIOD_8SEC   0x00004000U"
+If RTCCLK = 32768 Hz, Smooth calibration period is 8s, else 2exp18 RTCCLK seconds 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 268 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

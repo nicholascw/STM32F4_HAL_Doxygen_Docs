@@ -1,0 +1,57 @@
+.TH "DMA_FIFO_threshold_level" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_FIFO_threshold_level \- DMA FIFO level  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_FIFO_THRESHOLD_1QUARTERFULL\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBDMA_FIFO_THRESHOLD_HALFFULL\fP   ((uint32_t)DMA_SxFCR_FTH_0)"
+.br
+.ti -1c
+.RI "#define \fBDMA_FIFO_THRESHOLD_3QUARTERSFULL\fP   ((uint32_t)DMA_SxFCR_FTH_1)"
+.br
+.ti -1c
+.RI "#define \fBDMA_FIFO_THRESHOLD_FULL\fP   ((uint32_t)DMA_SxFCR_FTH)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA FIFO level 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define DMA_FIFO_THRESHOLD_1QUARTERFULL   0x00000000U"
+FIFO threshold 1 quart full configuration 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 315 行定义\&.
+.SS "#define DMA_FIFO_THRESHOLD_3QUARTERSFULL   ((uint32_t)DMA_SxFCR_FTH_1)"
+FIFO threshold 3 quarts full configuration 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 317 行定义\&.
+.SS "#define DMA_FIFO_THRESHOLD_FULL   ((uint32_t)DMA_SxFCR_FTH)"
+FIFO threshold full configuration 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 318 行定义\&.
+.SS "#define DMA_FIFO_THRESHOLD_HALFFULL   ((uint32_t)DMA_SxFCR_FTH_0)"
+FIFO threshold half full configuration 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 316 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,282 @@
+.TH "RTCEx_IS_RTC_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_IS_RTC_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_RTC_BKP\fP(BKP)"
+.br
+.ti -1c
+.RI "#define \fBIS_TIMESTAMP_EDGE\fP(EDGE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER\fP(TAMPER)   ((((TAMPER) & ((uint32_t)!(RTC_TAFCR_TAMP1E | RTC_TAFCR_TAMP2E))) == 0x00U) && ((TAMPER) != (uint32_t)RESET))"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_PIN\fP(PIN)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TIMESTAMP_PIN\fP(PIN)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_TRIGGER\fP(TRIGGER)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_FILTER\fP(FILTER)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_SAMPLING_FREQ\fP(FREQ)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_PRECHARGE_DURATION\fP(DURATION)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_TIMESTAMPONTAMPER_DETECTION\fP(DETECTION)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_TAMPER_PULLUP_STATE\fP(STATE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_WAKEUP_CLOCK\fP(CLOCK)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_WAKEUP_COUNTER\fP(COUNTER)   ((COUNTER) <= 0xFFFFU)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_CALIB_SIGN\fP(SIGN)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_CALIB_VALUE\fP(VALUE)   ((VALUE) < 0x20U)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_SMOOTH_CALIB_PERIOD\fP(PERIOD)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_SMOOTH_CALIB_PLUS\fP(PLUS)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_SMOOTH_CALIB_MINUS\fP(VALUE)   ((VALUE) <= 0x000001FFU)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_SHIFT_ADD1S\fP(SEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_SHIFT_SUBFS\fP(FS)   ((FS) <= 0x00007FFFU)"
+.br
+.ti -1c
+.RI "#define \fBIS_RTC_CALIB_OUTPUT\fP(OUTPUT)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define IS_RTC_BKP(BKP)"
+\fB值:\fP
+.PP
+.nf
+                                           (((BKP) == RTC_BKP_DR0)  || \
+                                           ((BKP) == RTC_BKP_DR1)  || \
+                                           ((BKP) == RTC_BKP_DR2)  || \
+                                           ((BKP) == RTC_BKP_DR3)  || \
+                                           ((BKP) == RTC_BKP_DR4)  || \
+                                           ((BKP) == RTC_BKP_DR5)  || \
+                                           ((BKP) == RTC_BKP_DR6)  || \
+                                           ((BKP) == RTC_BKP_DR7)  || \
+                                           ((BKP) == RTC_BKP_DR8)  || \
+                                           ((BKP) == RTC_BKP_DR9)  || \
+                                           ((BKP) == RTC_BKP_DR10) || \
+                                           ((BKP) == RTC_BKP_DR11) || \
+                                           ((BKP) == RTC_BKP_DR12) || \
+                                           ((BKP) == RTC_BKP_DR13) || \
+                                           ((BKP) == RTC_BKP_DR14) || \
+                                           ((BKP) == RTC_BKP_DR15) || \
+                                           ((BKP) == RTC_BKP_DR16) || \
+                                           ((BKP) == RTC_BKP_DR17) || \
+                                           ((BKP) == RTC_BKP_DR18) || \
+                                           ((BKP) == RTC_BKP_DR19))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 899 行定义\&.
+.SS "#define IS_RTC_CALIB_OUTPUT(OUTPUT)"
+\fB值:\fP
+.PP
+.nf
+                                      (((OUTPUT) == RTC_CALIBOUTPUT_512HZ) || \
+                                      ((OUTPUT) == RTC_CALIBOUTPUT_1HZ))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 988 行定义\&.
+.SS "#define IS_RTC_CALIB_SIGN(SIGN)"
+\fB值:\fP
+.PP
+.nf
+                                 (((SIGN) == RTC_CALIBSIGN_POSITIVE) || \
+                                 ((SIGN) == RTC_CALIBSIGN_NEGATIVE))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 973 行定义\&.
+.SS "#define IS_RTC_CALIB_VALUE(VALUE)   ((VALUE) < 0x20U)"
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 976 行定义\&.
+.SS "#define IS_RTC_SHIFT_ADD1S(SEL)"
+\fB值:\fP
+.PP
+.nf
+                                 (((SEL) == RTC_SHIFTADD1S_RESET) || \
+                                 ((SEL) == RTC_SHIFTADD1S_SET))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 985 行定义\&.
+.SS "#define IS_RTC_SHIFT_SUBFS(FS)   ((FS) <= 0x00007FFFU)"
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 987 行定义\&.
+.SS "#define IS_RTC_SMOOTH_CALIB_MINUS(VALUE)   ((VALUE) <= 0x000001FFU)"
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 984 行定义\&.
+.SS "#define IS_RTC_SMOOTH_CALIB_PERIOD(PERIOD)"
+\fB值:\fP
+.PP
+.nf
+                                            (((PERIOD) == RTC_SMOOTHCALIB_PERIOD_32SEC) || \
+                                            ((PERIOD) == RTC_SMOOTHCALIB_PERIOD_16SEC) || \
+                                            ((PERIOD) == RTC_SMOOTHCALIB_PERIOD_8SEC))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 978 行定义\&.
+.SS "#define IS_RTC_SMOOTH_CALIB_PLUS(PLUS)"
+\fB值:\fP
+.PP
+.nf
+                                        (((PLUS) == RTC_SMOOTHCALIB_PLUSPULSES_SET) || \
+                                        ((PLUS) == RTC_SMOOTHCALIB_PLUSPULSES_RESET))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 981 行定义\&.
+.SS "#define IS_RTC_TAMPER(TAMPER)   ((((TAMPER) & ((uint32_t)!(RTC_TAFCR_TAMP1E | RTC_TAFCR_TAMP2E))) == 0x00U) && ((TAMPER) != (uint32_t)RESET))"
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 925 行定义\&.
+.SS "#define IS_RTC_TAMPER_FILTER(FILTER)"
+\fB值:\fP
+.PP
+.nf
+                                       (((FILTER) == RTC_TAMPERFILTER_DISABLE) || \
+                                       ((FILTER) == RTC_TAMPERFILTER_2SAMPLE) || \
+                                       ((FILTER) == RTC_TAMPERFILTER_4SAMPLE) || \
+                                       ((FILTER) == RTC_TAMPERFILTER_8SAMPLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 945 行定义\&.
+.SS "#define IS_RTC_TAMPER_PIN(PIN)"
+\fB值:\fP
+.PP
+.nf
+                                (((PIN) == RTC_TAMPERPIN_DEFAULT) || \
+                                ((PIN) == RTC_TAMPERPIN_POS1))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 931 行定义\&.
+.SS "#define IS_RTC_TAMPER_PRECHARGE_DURATION(DURATION)"
+\fB值:\fP
+.PP
+.nf
+                                                    (((DURATION) == RTC_TAMPERPRECHARGEDURATION_1RTCCLK) || \
+                                                    ((DURATION) == RTC_TAMPERPRECHARGEDURATION_2RTCCLK) || \
+                                                    ((DURATION) == RTC_TAMPERPRECHARGEDURATION_4RTCCLK) || \
+                                                    ((DURATION) == RTC_TAMPERPRECHARGEDURATION_8RTCCLK))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 957 行定义\&.
+.SS "#define IS_RTC_TAMPER_PULLUP_STATE(STATE)"
+\fB值:\fP
+.PP
+.nf
+                                           (((STATE) == RTC_TAMPER_PULLUP_ENABLE) || \
+                                           ((STATE) == RTC_TAMPER_PULLUP_DISABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 963 行定义\&.
+.SS "#define IS_RTC_TAMPER_SAMPLING_FREQ(FREQ)"
+\fB值:\fP
+.PP
+.nf
+                                           (((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV32768)|| \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV16384)|| \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV8192) || \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV4096) || \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV2048) || \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV1024) || \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV512)  || \
+                                           ((FREQ) == RTC_TAMPERSAMPLINGFREQ_RTCCLK_DIV256))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 949 行定义\&.
+.SS "#define IS_RTC_TAMPER_TIMESTAMPONTAMPER_DETECTION(DETECTION)"
+\fB值:\fP
+.PP
+.nf
+                                                              (((DETECTION) == RTC_TIMESTAMPONTAMPERDETECTION_ENABLE) || \
+                                                              ((DETECTION) == RTC_TIMESTAMPONTAMPERDETECTION_DISABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 961 行定义\&.
+.SS "#define IS_RTC_TAMPER_TRIGGER(TRIGGER)"
+\fB值:\fP
+.PP
+.nf
+                                        (((TRIGGER) == RTC_TAMPERTRIGGER_RISINGEDGE) || \
+                                        ((TRIGGER) == RTC_TAMPERTRIGGER_FALLINGEDGE) || \
+                                        ((TRIGGER) == RTC_TAMPERTRIGGER_LOWLEVEL) || \
+                                        ((TRIGGER) == RTC_TAMPERTRIGGER_HIGHLEVEL))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 941 行定义\&.
+.SS "#define IS_RTC_TIMESTAMP_PIN(PIN)"
+\fB值:\fP
+.PP
+.nf
+                                   (((PIN) == RTC_TIMESTAMPPIN_DEFAULT) || \
+                                   ((PIN) == RTC_TIMESTAMPPIN_POS1))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 938 行定义\&.
+.SS "#define IS_RTC_WAKEUP_CLOCK(CLOCK)"
+\fB值:\fP
+.PP
+.nf
+                                    (((CLOCK) == RTC_WAKEUPCLOCK_RTCCLK_DIV16)   || \
+                                    ((CLOCK) == RTC_WAKEUPCLOCK_RTCCLK_DIV8)    || \
+                                    ((CLOCK) == RTC_WAKEUPCLOCK_RTCCLK_DIV4)    || \
+                                    ((CLOCK) == RTC_WAKEUPCLOCK_RTCCLK_DIV2)    || \
+                                    ((CLOCK) == RTC_WAKEUPCLOCK_CK_SPRE_16BITS) || \
+                                    ((CLOCK) == RTC_WAKEUPCLOCK_CK_SPRE_17BITS))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 965 行定义\&.
+.SS "#define IS_RTC_WAKEUP_COUNTER(COUNTER)   ((COUNTER) <= 0xFFFFU)"
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 972 行定义\&.
+.SS "#define IS_TIMESTAMP_EDGE(EDGE)"
+\fB值:\fP
+.PP
+.nf
+                                 (((EDGE) == RTC_TIMESTAMPEDGE_RISING) || \
+                                 ((EDGE) == RTC_TIMESTAMPEDGE_FALLING))
+.fi
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 919 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

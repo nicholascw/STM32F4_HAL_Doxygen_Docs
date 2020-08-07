@@ -1,0 +1,128 @@
+.TH "UTILS_EF_DEVICE_ELECTRONIC_SIGNATURE" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UTILS_EF_DEVICE_ELECTRONIC_SIGNATURE
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_GetUID_Word0\fP (void)"
+.br
+.RI "Get Word0 of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_GetUID_Word1\fP (void)"
+.br
+.RI "Get Word1 of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_GetUID_Word2\fP (void)"
+.br
+.RI "Get Word2 of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_GetFlashSize\fP (void)"
+.br
+.RI "Get Flash memory size "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_GetPackageType\fP (void)"
+.br
+.RI "Get Package type "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "__STATIC_INLINE uint32_t LL_GetFlashSize (void)"
+
+.PP
+Get Flash memory size 
+.PP
+\fB注解\fP
+.RS 4
+This bitfield indicates the size of the device Flash memory expressed in Kbytes\&. As an example, 0x040 corresponds to 64 Kbytes\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIFLASH_SIZE[15:0]\fP Flash memory size 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 222 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_GetPackageType (void)"
+
+.PP
+Get Package type 
+.PP
+\fB返回值\fP
+.RS 4
+\fIReturned\fP value can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_WLCSP36_UFQFPN48_LQFP64\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_WLCSP168_FBGA169_LQFP100_LQFP64_UFQFPN48\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_WLCSP64_WLCSP81_LQFP176_UFBGA176\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_LQFP144_UFBGA144_UFBGA144_UFBGA100\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_LQFP100_LQFP208_TFBGA216\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_LQFP208_TFBGA216\fP (*) 
+.IP "\(bu" 2
+\fBLL_UTILS_PACKAGETYPE_TQFP64_UFBGA144_LQFP144\fP (*)
+.PP
+(*) value not defined in all devices\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 240 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_GetUID_Word0 (void)"
+
+.PP
+Get Word0 of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIUID[31:0]\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 193 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_GetUID_Word1 (void)"
+
+.PP
+Get Word1 of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIUID[63:32]\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 202 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_GetUID_Word2 (void)"
+
+.PP
+Get Word2 of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIUID[95:64]\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 211 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

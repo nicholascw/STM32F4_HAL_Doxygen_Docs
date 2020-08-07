@@ -1,0 +1,208 @@
+\hypertarget{struct____I2S__HandleTypeDef}{}\doxysection{\+\_\+\+\_\+\+I2\+S\+\_\+\+Handle\+Type\+Def结构体 参考}
+\label{struct____I2S__HandleTypeDef}\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+
+
+I2S handle Structure definition  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+i2s.\+h$>$}
+
+
+
+\+\_\+\+\_\+\+I2\+S\+\_\+\+Handle\+Type\+Def 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{struct____I2S__HandleTypeDef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+S\+P\+I\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_aa5c715deaf693cc2dbfa90f40681ee1d}{Instance}}
+\item 
+\mbox{\hyperlink{structI2S__InitTypeDef}{I2\+S\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{struct____I2S__HandleTypeDef_a578c0cfc11e016a6ea29e052a9f652c7}{Init}}
+\item 
+uint16\+\_\+t $\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_a18ef962d60fea84ef86146de2f90d883}{p\+Tx\+Buff\+Ptr}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____I2S__HandleTypeDef_a1d38bf13df64f7bd58b6722b1fd8c2ab}{Tx\+Xfer\+Size}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____I2S__HandleTypeDef_a1823437fbed80bdd1510782ced4e5532}{Tx\+Xfer\+Count}}
+\item 
+uint16\+\_\+t $\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_a5d6fc2bd3b9dae2d28fb939b32867a77}{p\+Rx\+Buff\+Ptr}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____I2S__HandleTypeDef_a0c194e8f6f444cce318dbd261e1d8ba4}{Rx\+Xfer\+Size}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____I2S__HandleTypeDef_ad95a26d6b12b7087bba3d1b769175db2}{Rx\+Xfer\+Count}}
+\item 
+void($\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_aed7b18dc763064a4e581ee381b38dc2d}{Irq\+Handler\+I\+SR}} )(struct \mbox{\hyperlink{struct____I2S__HandleTypeDef}{\+\_\+\+\_\+\+I2\+S\+\_\+\+Handle\+Type\+Def}} $\ast$hi2s)
+\item 
+\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}{hdmatx}}
+\item 
+\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct____I2S__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}{hdmarx}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct____I2S__HandleTypeDef_a2fcaf7965ee94947d34e5dc6eb75c313}{Lock}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{group__I2S__Exported__Types_ga2588a0c71baf7cd6d2c1b9b11120bef0}{H\+A\+L\+\_\+\+I2\+S\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{struct____I2S__HandleTypeDef_af312c98864464dac5591cbfe1b32bde3}{State}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2S__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{Error\+Code}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+I2S handle Structure definition 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 91 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}\label{struct____I2S__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Error\+Code}
+
+I2S Error code This parameter can be a value of \mbox{\hyperlink{group__I2S__Error}{I2S Error}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 123 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}\label{struct____I2S__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!hdmarx@{hdmarx}}
+\index{hdmarx@{hdmarx}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{hdmarx}{hdmarx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}}$\ast$ hdmarx}
+
+I2S Rx D\+MA handle parameters 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 117 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}\label{struct____I2S__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!hdmatx@{hdmatx}}
+\index{hdmatx@{hdmatx}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{hdmatx}{hdmatx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}}$\ast$ hdmatx}
+
+I2S Tx D\+MA handle parameters 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 115 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a578c0cfc11e016a6ea29e052a9f652c7}\label{struct____I2S__HandleTypeDef_a578c0cfc11e016a6ea29e052a9f652c7}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structI2S__InitTypeDef}{I2\+S\+\_\+\+Init\+Type\+Def}} Init}
+
+I2S communication parameters 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 95 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_aa5c715deaf693cc2dbfa90f40681ee1d}\label{struct____I2S__HandleTypeDef_aa5c715deaf693cc2dbfa90f40681ee1d}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily S\+P\+I\+\_\+\+Type\+Def$\ast$ Instance}
+
+I2S registers base address 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 93 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_aed7b18dc763064a4e581ee381b38dc2d}\label{struct____I2S__HandleTypeDef_aed7b18dc763064a4e581ee381b38dc2d}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!IrqHandlerISR@{IrqHandlerISR}}
+\index{IrqHandlerISR@{IrqHandlerISR}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{IrqHandlerISR}{IrqHandlerISR}}
+{\footnotesize\ttfamily void($\ast$ Irq\+Handler\+I\+SR) (struct \mbox{\hyperlink{struct____I2S__HandleTypeDef}{\+\_\+\+\_\+\+I2\+S\+\_\+\+Handle\+Type\+Def}} $\ast$hi2s)}
+
+I2S function pointer on Irq\+Handler ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 113 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a2fcaf7965ee94947d34e5dc6eb75c313}\label{struct____I2S__HandleTypeDef_a2fcaf7965ee94947d34e5dc6eb75c313}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} Lock}
+
+I2S locking object 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 119 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a5d6fc2bd3b9dae2d28fb939b32867a77}\label{struct____I2S__HandleTypeDef_a5d6fc2bd3b9dae2d28fb939b32867a77}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!pRxBuffPtr@{pRxBuffPtr}}
+\index{pRxBuffPtr@{pRxBuffPtr}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{pRxBuffPtr}{pRxBuffPtr}}
+{\footnotesize\ttfamily uint16\+\_\+t$\ast$ p\+Rx\+Buff\+Ptr}
+
+Pointer to I2S Rx transfer buffer 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 103 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a18ef962d60fea84ef86146de2f90d883}\label{struct____I2S__HandleTypeDef_a18ef962d60fea84ef86146de2f90d883}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!pTxBuffPtr@{pTxBuffPtr}}
+\index{pTxBuffPtr@{pTxBuffPtr}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{pTxBuffPtr}{pTxBuffPtr}}
+{\footnotesize\ttfamily uint16\+\_\+t$\ast$ p\+Tx\+Buff\+Ptr}
+
+Pointer to I2S Tx transfer buffer 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 97 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_ad95a26d6b12b7087bba3d1b769175db2}\label{struct____I2S__HandleTypeDef_ad95a26d6b12b7087bba3d1b769175db2}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!RxXferCount@{RxXferCount}}
+\index{RxXferCount@{RxXferCount}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{RxXferCount}{RxXferCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Rx\+Xfer\+Count}
+
+I2S Rx transfer counter (This field is initialized at the same value as transfer size at the beginning of the transfer and decremented when a sample is received Nb\+Samples\+Received = Rx\+Buffer\+Size-\/\+Rx\+Buffer\+Count) 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 107 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a0c194e8f6f444cce318dbd261e1d8ba4}\label{struct____I2S__HandleTypeDef_a0c194e8f6f444cce318dbd261e1d8ba4}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!RxXferSize@{RxXferSize}}
+\index{RxXferSize@{RxXferSize}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{RxXferSize}{RxXferSize}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Rx\+Xfer\+Size}
+
+I2S Rx transfer size 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 105 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_af312c98864464dac5591cbfe1b32bde3}\label{struct____I2S__HandleTypeDef_af312c98864464dac5591cbfe1b32bde3}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!State@{State}}
+\index{State@{State}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{group__I2S__Exported__Types_ga2588a0c71baf7cd6d2c1b9b11120bef0}{H\+A\+L\+\_\+\+I2\+S\+\_\+\+State\+Type\+Def}} State}
+
+I2S communication state 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 121 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a1823437fbed80bdd1510782ced4e5532}\label{struct____I2S__HandleTypeDef_a1823437fbed80bdd1510782ced4e5532}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!TxXferCount@{TxXferCount}}
+\index{TxXferCount@{TxXferCount}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{TxXferCount}{TxXferCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Tx\+Xfer\+Count}
+
+I2S Tx transfer Counter 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 101 行定义.
+
+\mbox{\Hypertarget{struct____I2S__HandleTypeDef_a1d38bf13df64f7bd58b6722b1fd8c2ab}\label{struct____I2S__HandleTypeDef_a1d38bf13df64f7bd58b6722b1fd8c2ab}} 
+\index{\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}!TxXferSize@{TxXferSize}}
+\index{TxXferSize@{TxXferSize}!\_\_I2S\_HandleTypeDef@{\_\_I2S\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{TxXferSize}{TxXferSize}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Tx\+Xfer\+Size}
+
+I2S Tx transfer size 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2s.\+h 第 99 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__i2s_8h}{stm32f4xx\+\_\+hal\+\_\+i2s.\+h}}\end{DoxyCompactItemize}

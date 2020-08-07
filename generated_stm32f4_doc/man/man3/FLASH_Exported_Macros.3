@@ -1,0 +1,367 @@
+.TH "FLASH_Exported_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_FLASH_SET_LATENCY\fP(__LATENCY__)   (*(__IO uint8_t *)\fBACR_BYTE0_ADDRESS\fP = (uint8_t)(__LATENCY__))"
+.br
+.RI "Set the FLASH Latency\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_GET_LATENCY\fP()   (READ_BIT((FLASH\->ACR), FLASH_ACR_LATENCY))"
+.br
+.RI "Get the FLASH Latency\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_ENABLE\fP()   (FLASH\->ACR |= FLASH_ACR_PRFTEN)"
+.br
+.RI "Enable the FLASH prefetch buffer\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_PREFETCH_BUFFER_DISABLE\fP()   (FLASH\->ACR &= (~FLASH_ACR_PRFTEN))"
+.br
+.RI "Disable the FLASH prefetch buffer\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_INSTRUCTION_CACHE_ENABLE\fP()   (FLASH\->ACR |= FLASH_ACR_ICEN)"
+.br
+.RI "Enable the FLASH instruction cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_INSTRUCTION_CACHE_DISABLE\fP()   (FLASH\->ACR &= (~FLASH_ACR_ICEN))"
+.br
+.RI "Disable the FLASH instruction cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_DATA_CACHE_ENABLE\fP()   (FLASH\->ACR |= FLASH_ACR_DCEN)"
+.br
+.RI "Enable the FLASH data cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_DATA_CACHE_DISABLE\fP()   (FLASH\->ACR &= (~FLASH_ACR_DCEN))"
+.br
+.RI "Disable the FLASH data cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_INSTRUCTION_CACHE_RESET\fP()"
+.br
+.RI "Resets the FLASH instruction Cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_DATA_CACHE_RESET\fP()"
+.br
+.RI "Resets the FLASH data Cache\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_ENABLE_IT\fP(__INTERRUPT__)   (FLASH\->CR |= (__INTERRUPT__))"
+.br
+.RI "Enable the specified FLASH interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_DISABLE_IT\fP(__INTERRUPT__)   (FLASH\->CR &= ~(uint32_t)(__INTERRUPT__))"
+.br
+.RI "Disable the specified FLASH interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_GET_FLAG\fP(__FLAG__)   ((FLASH\->SR & (__FLAG__)))"
+.br
+.RI "Get the specified FLASH flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_FLASH_CLEAR_FLAG\fP(__FLAG__)   (FLASH\->SR = (__FLAG__))"
+.br
+.RI "Clear the specified FLASH flags\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_FLASH_CLEAR_FLAG(__FLAG__)   (FLASH\->SR = (__FLAG__))"
+
+.PP
+Clear the specified FLASH flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the FLASH flags to clear\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+FLASH_FLAG_EOP : FLASH End of Operation flag 
+.IP "\(bu" 2
+FLASH_FLAG_OPERR : FLASH operation Error flag 
+.IP "\(bu" 2
+FLASH_FLAG_WRPERR: FLASH Write protected error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGAERR: FLASH Programming Alignment error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag 
+.IP "\(bu" 2
+FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) (*) (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 292 行定义\&.
+.SS "#define __HAL_FLASH_DATA_CACHE_DISABLE()   (FLASH\->ACR &= (~FLASH_ACR_DCEN))"
+
+.PP
+Disable the FLASH data cache\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 222 行定义\&.
+.SS "#define __HAL_FLASH_DATA_CACHE_ENABLE()   (FLASH\->ACR |= FLASH_ACR_DCEN)"
+
+.PP
+Enable the FLASH data cache\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 216 行定义\&.
+.SS "#define __HAL_FLASH_DATA_CACHE_RESET()"
+\fB值:\fP
+.PP
+.nf
+                                           do {FLASH->ACR |= FLASH_ACR_DCRST;  \
+                                           FLASH->ACR &= ~FLASH_ACR_DCRST; \
+                                          }while(0U)
+.fi
+.PP
+Resets the FLASH data Cache\&. 
+.PP
+\fB注解\fP
+.RS 4
+This function must be used only when the data Cache is disabled\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 238 行定义\&.
+.SS "#define __HAL_FLASH_DISABLE_IT(__INTERRUPT__)   (FLASH\->CR &= ~(uint32_t)(__INTERRUPT__))"
+
+.PP
+Disable the specified FLASH interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP FLASH interrupt This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+FLASH_IT_EOP: End of FLASH Operation Interrupt 
+.IP "\(bu" 2
+FLASH_IT_ERR: Error Interrupt 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 259 行定义\&.
+.SS "#define __HAL_FLASH_ENABLE_IT(__INTERRUPT__)   (FLASH\->CR |= (__INTERRUPT__))"
+
+.PP
+Enable the specified FLASH interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP FLASH interrupt This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+FLASH_IT_EOP: End of FLASH Operation Interrupt 
+.IP "\(bu" 2
+FLASH_IT_ERR: Error Interrupt 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 249 行定义\&.
+.SS "#define __HAL_FLASH_GET_FLAG(__FLAG__)   ((FLASH\->SR & (__FLAG__)))"
+
+.PP
+Get the specified FLASH flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the FLASH flags to check\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+FLASH_FLAG_EOP : FLASH End of Operation flag 
+.IP "\(bu" 2
+FLASH_FLAG_OPERR : FLASH operation Error flag 
+.IP "\(bu" 2
+FLASH_FLAG_WRPERR: FLASH Write protected error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGAERR: FLASH Programming Alignment error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGPERR: FLASH Programming Parallelism error flag 
+.IP "\(bu" 2
+FLASH_FLAG_PGSERR: FLASH Programming Sequence error flag 
+.IP "\(bu" 2
+FLASH_FLAG_RDERR : FLASH Read Protection error flag (PCROP) (*) 
+.IP "\(bu" 2
+FLASH_FLAG_BSY : FLASH Busy flag (*) FLASH_FLAG_RDERR is not available for STM32F405xx/407xx/415xx/417xx devices 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (SET or RESET)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 276 行定义\&.
+.SS "#define __HAL_FLASH_GET_LATENCY()   (READ_BIT((FLASH\->ACR), FLASH_ACR_LATENCY))"
+
+.PP
+Get the FLASH Latency\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fIFLASH\fP Latency The value of this parameter depend on device used within the same series 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 186 行定义\&.
+.SS "#define __HAL_FLASH_INSTRUCTION_CACHE_DISABLE()   (FLASH\->ACR &= (~FLASH_ACR_ICEN))"
+
+.PP
+Disable the FLASH instruction cache\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 210 行定义\&.
+.SS "#define __HAL_FLASH_INSTRUCTION_CACHE_ENABLE()   (FLASH\->ACR |= FLASH_ACR_ICEN)"
+
+.PP
+Enable the FLASH instruction cache\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 204 行定义\&.
+.SS "#define __HAL_FLASH_INSTRUCTION_CACHE_RESET()"
+\fB值:\fP
+.PP
+.nf
+                                                  do {FLASH->ACR |= FLASH_ACR_ICRST;  \
+                                                  FLASH->ACR &= ~FLASH_ACR_ICRST; \
+                                                 }while(0U)
+.fi
+.PP
+Resets the FLASH instruction Cache\&. 
+.PP
+\fB注解\fP
+.RS 4
+This function must be used only when the Instruction Cache is disabled\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 229 行定义\&.
+.SS "#define __HAL_FLASH_PREFETCH_BUFFER_DISABLE()   (FLASH\->ACR &= (~FLASH_ACR_PRFTEN))"
+
+.PP
+Disable the FLASH prefetch buffer\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 198 行定义\&.
+.SS "#define __HAL_FLASH_PREFETCH_BUFFER_ENABLE()   (FLASH\->ACR |= FLASH_ACR_PRFTEN)"
+
+.PP
+Enable the FLASH prefetch buffer\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 192 行定义\&.
+.SS "#define __HAL_FLASH_SET_LATENCY(__LATENCY__)   (*(__IO uint8_t *)\fBACR_BYTE0_ADDRESS\fP = (uint8_t)(__LATENCY__))"
+
+.PP
+Set the FLASH Latency\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>LATENCY</strong>\fP FLASH Latency The value of this parameter depend on device used within the same series 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fInone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 179 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

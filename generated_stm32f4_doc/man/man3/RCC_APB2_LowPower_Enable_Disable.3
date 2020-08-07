@@ -1,0 +1,146 @@
+.TH "RCC_APB2_LowPower_Enable_Disable" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB2_LowPower_Enable_Disable \- Enable or disable the APB2 peripheral clock during Low Power (Sleep) mode\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART6LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_ADC1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SPI1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SYSCFGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM9LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM11LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART6LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_ADC1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SPI1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SYSCFGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM9LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM11LPEN))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Enable or disable the APB2 peripheral clock during Low Power (Sleep) mode\&. 
+
+
+.PP
+\fB注解\fP
+.RS 4
+Peripheral clock gating in SLEEP mode can be used to further reduce power consumption\&. 
+.PP
+After wake-up from SLEEP mode, the peripheral clock is enabled again\&. 
+.PP
+By default, all peripheral clocks are enabled during SLEEP mode\&. 
+.RE
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_ADC1_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_ADC1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 809 行定义\&.
+.SS "#define __HAL_RCC_ADC1_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_ADC1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 800 行定义\&.
+.SS "#define __HAL_RCC_SPI1_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SPI1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 810 行定义\&.
+.SS "#define __HAL_RCC_SPI1_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SPI1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 801 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SYSCFGLPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 811 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SYSCFGLPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 802 行定义\&.
+.SS "#define __HAL_RCC_TIM11_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM11LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 813 行定义\&.
+.SS "#define __HAL_RCC_TIM11_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM11LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 804 行定义\&.
+.SS "#define __HAL_RCC_TIM1_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 806 行定义\&.
+.SS "#define __HAL_RCC_TIM1_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 797 行定义\&.
+.SS "#define __HAL_RCC_TIM9_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM9LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 812 行定义\&.
+.SS "#define __HAL_RCC_TIM9_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM9LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 803 行定义\&.
+.SS "#define __HAL_RCC_USART1_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 807 行定义\&.
+.SS "#define __HAL_RCC_USART1_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART1LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 798 行定义\&.
+.SS "#define __HAL_RCC_USART6_CLK_SLEEP_DISABLE()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART6LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 808 行定义\&.
+.SS "#define __HAL_RCC_USART6_CLK_SLEEP_ENABLE()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART6LPEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 799 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

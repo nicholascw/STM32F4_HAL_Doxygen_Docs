@@ -1,0 +1,131 @@
+\hypertarget{group__CRC__Exported__Macros}{}\doxysection{C\+RC Exported Macros}
+\label{group__CRC__Exported__Macros}\index{CRC Exported Macros@{CRC Exported Macros}}
+C\+RC Exported Macros 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{group__CRC__Exported__Macros}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_gab6ec5d74fdff177143f4b22652a18114}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}})
+\begin{DoxyCompactList}\small\item\em Reset C\+RC handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga0007a05fb01806007181e12eedc14d28}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+D\+R\+\_\+\+R\+E\+S\+ET}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= C\+R\+C\+\_\+\+C\+R\+\_\+\+R\+E\+S\+ET)
+\begin{DoxyCompactList}\small\item\em Reset C\+RC Data Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga1d890aa6f337f97fb9a3e8537f1bbc72}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+E\+T\+\_\+\+I\+DR}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~(W\+R\+I\+T\+E\+\_\+\+R\+EG((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR, (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Store data in the Independent Data (ID) register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga028e074ed7a9505ea0ac48a16489c5d0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+G\+E\+T\+\_\+\+I\+DR}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR) \& C\+R\+C\+\_\+\+I\+D\+R\+\_\+\+I\+DR)
+\begin{DoxyCompactList}\small\item\em Return the data stored in the Independent Data (ID) register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{group__CRC__Exported__Macros_ga0007a05fb01806007181e12eedc14d28}\label{group__CRC__Exported__Macros_ga0007a05fb01806007181e12eedc14d28}} 
+\index{CRC Exported Macros@{CRC Exported Macros}!\_\_HAL\_CRC\_DR\_RESET@{\_\_HAL\_CRC\_DR\_RESET}}
+\index{\_\_HAL\_CRC\_DR\_RESET@{\_\_HAL\_CRC\_DR\_RESET}!CRC Exported Macros@{CRC Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_CRC\_DR\_RESET}{\_\_HAL\_CRC\_DR\_RESET}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+D\+R\+\_\+\+R\+E\+S\+ET(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= C\+R\+C\+\_\+\+C\+R\+\_\+\+R\+E\+S\+ET)}
+
+
+
+Reset C\+RC Data Register. 
+
+
+\begin{DoxyParams}{参数}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & C\+RC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+crc.\+h 第 99 行定义.
+
+\mbox{\Hypertarget{group__CRC__Exported__Macros_ga028e074ed7a9505ea0ac48a16489c5d0}\label{group__CRC__Exported__Macros_ga028e074ed7a9505ea0ac48a16489c5d0}} 
+\index{CRC Exported Macros@{CRC Exported Macros}!\_\_HAL\_CRC\_GET\_IDR@{\_\_HAL\_CRC\_GET\_IDR}}
+\index{\_\_HAL\_CRC\_GET\_IDR@{\_\_HAL\_CRC\_GET\_IDR}!CRC Exported Macros@{CRC Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_CRC\_GET\_IDR}{\_\_HAL\_CRC\_GET\_IDR}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+G\+E\+T\+\_\+\+I\+DR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR) \& C\+R\+C\+\_\+\+I\+D\+R\+\_\+\+I\+DR)}
+
+
+
+Return the data stored in the Independent Data (ID) register. 
+
+
+\begin{DoxyParams}{参数}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & C\+RC handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+Refer to the Reference Manual to get the authorized {\bfseries{V\+A\+L\+UE}} length in bits 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em Value} & of the ID register \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+crc.\+h 第 116 行定义.
+
+\mbox{\Hypertarget{group__CRC__Exported__Macros_gab6ec5d74fdff177143f4b22652a18114}\label{group__CRC__Exported__Macros_gab6ec5d74fdff177143f4b22652a18114}} 
+\index{CRC Exported Macros@{CRC Exported Macros}!\_\_HAL\_CRC\_RESET\_HANDLE\_STATE@{\_\_HAL\_CRC\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_CRC\_RESET\_HANDLE\_STATE@{\_\_HAL\_CRC\_RESET\_HANDLE\_STATE}!CRC Exported Macros@{CRC Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_CRC\_RESET\_HANDLE\_STATE}{\_\_HAL\_CRC\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}})}
+
+
+
+Reset C\+RC handle state. 
+
+
+\begin{DoxyParams}{参数}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & C\+RC handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+crc.\+h 第 92 行定义.
+
+\mbox{\Hypertarget{group__CRC__Exported__Macros_ga1d890aa6f337f97fb9a3e8537f1bbc72}\label{group__CRC__Exported__Macros_ga1d890aa6f337f97fb9a3e8537f1bbc72}} 
+\index{CRC Exported Macros@{CRC Exported Macros}!\_\_HAL\_CRC\_SET\_IDR@{\_\_HAL\_CRC\_SET\_IDR}}
+\index{\_\_HAL\_CRC\_SET\_IDR@{\_\_HAL\_CRC\_SET\_IDR}!CRC Exported Macros@{CRC Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_CRC\_SET\_IDR}{\_\_HAL\_CRC\_SET\_IDR}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+E\+T\+\_\+\+I\+DR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+ }\end{DoxyParamCaption})~(W\+R\+I\+T\+E\+\_\+\+R\+EG((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR, (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)))}
+
+
+
+Store data in the Independent Data (ID) register. 
+
+
+\begin{DoxyParams}{参数}
+{\em $<$strong$>$\+H\+A\+N\+D\+L\+E$<$/strong$>$} & C\+RC handle \\
+\hline
+{\em $<$strong$>$\+V\+A\+L\+U\+E$<$/strong$>$} & Value to be stored in the ID register \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{注解}
+Refer to the Reference Manual to get the authorized {\bfseries{V\+A\+L\+UE}} length in bits 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+crc.\+h 第 108 行定义.
+

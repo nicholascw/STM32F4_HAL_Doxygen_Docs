@@ -1,0 +1,48 @@
+.TH "Channel_CC_State" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Channel_CC_State
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_CCx_ENABLE\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBTIM_CCx_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_CCxN_ENABLE\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBTIM_CCxN_DISABLE\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_CCx_DISABLE   0x00000000U"
+Input or output channel is disabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 961 行定义\&.
+.SS "#define TIM_CCx_ENABLE   0x00000001U"
+Input or output channel is enabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 960 行定义\&.
+.SS "#define TIM_CCxN_DISABLE   0x00000000U"
+Complementary output channel is enabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 963 行定义\&.
+.SS "#define TIM_CCxN_ENABLE   0x00000004U"
+Complementary output channel is enabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 962 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

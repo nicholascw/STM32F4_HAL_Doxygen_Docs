@@ -1,0 +1,115 @@
+.TH "SMARTCARD_Exported_Functions_Group2" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SMARTCARD_Exported_Functions_Group2
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Transmit\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Receive\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Transmit_IT\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Receive_IT\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Transmit_DMA\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Receive_DMA\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Abort\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_AbortTransmit\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_AbortReceive\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_Abort_IT\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_AbortTransmit_IT\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMARTCARD_AbortReceive_IT\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_IRQHandler\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_TxCpltCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_RxCpltCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_ErrorCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_AbortCpltCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_AbortTransmitCpltCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.ti -1c
+.RI "void \fBHAL_SMARTCARD_AbortReceiveCpltCallback\fP (\fBSMARTCARD_HandleTypeDef\fP *hsc)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Abort (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Abort_IT (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "void HAL_SMARTCARD_AbortCpltCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_AbortReceive (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_AbortReceive_IT (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "void HAL_SMARTCARD_AbortReceiveCpltCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_AbortTransmit (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_AbortTransmit_IT (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "void HAL_SMARTCARD_AbortTransmitCpltCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "void HAL_SMARTCARD_ErrorCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "void HAL_SMARTCARD_IRQHandler (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Receive (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Receive_DMA (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Receive_IT (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size)"
+
+.SS "void HAL_SMARTCARD_RxCpltCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Transmit (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Transmit_DMA (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMARTCARD_Transmit_IT (\fBSMARTCARD_HandleTypeDef\fP * hsc, uint8_t * pData, uint16_t Size)"
+
+.SS "void HAL_SMARTCARD_TxCpltCallback (\fBSMARTCARD_HandleTypeDef\fP * hsc)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

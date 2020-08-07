@@ -1,0 +1,81 @@
+.TH "IRDA_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IRDA_InitTypeDef \- IRDA Init Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_irda\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBBaudRate\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBWordLength\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBParity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBPrescaler\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBIrDAMode\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+IRDA Init Structure definition 
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 46 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t BaudRate"
+This member configures the IRDA communication baud rate\&. The baud rate is computed using the following formula:
+.IP "\(bu" 2
+IntegerDivider = ((PCLKx) / (8 * (hirda->Init\&.BaudRate)))
+.IP "\(bu" 2
+FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 8) + 0\&.5 
+.PP
+
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 48 行定义\&.
+.SS "uint32_t IrDAMode"
+Specifies the IrDA mode This parameter can be a value of \fBIRDA Low Power\fP 
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 71 行定义\&.
+.SS "uint32_t Mode"
+Specifies whether the Receive or Transmit mode is enabled or disabled\&. This parameter can be a value of \fBIRDA Transfer Mode\fP 
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 63 行定义\&.
+.SS "uint32_t Parity"
+Specifies the parity mode\&. This parameter can be a value of \fBIRDA Parity\fP 
+.PP
+\fB注解\fP
+.RS 4
+When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 56 行定义\&.
+.SS "uint8_t Prescaler"
+Specifies the Prescaler value to be programmed in the IrDA low-power Baud Register, for defining pulse width on which burst acceptance/rejection will be decided\&. This value is used as divisor of system clock to achieve required pulse width\&. 
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 66 行定义\&.
+.SS "uint32_t WordLength"
+Specifies the number of data bits transmitted or received in a frame\&. This parameter can be a value of \fBIRDA Word Length\fP 
+.PP
+在文件 stm32f4xx_hal_irda\&.h 第 53 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

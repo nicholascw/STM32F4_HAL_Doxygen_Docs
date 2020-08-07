@@ -1,0 +1,616 @@
+.TH "DMA" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA \- DMA HAL module driver  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "模块"
+
+.in +1c
+.ti -1c
+.RI "\fBDMA Exported Types\fP"
+.br
+.RI "DMA Exported Types "
+.ti -1c
+.RI "\fBDMA Exported Constants\fP"
+.br
+.RI "DMA Exported constants "
+.ti -1c
+.RI "\fBDMA Exported Functions\fP"
+.br
+.RI "DMA Exported functions "
+.ti -1c
+.RI "\fBDMA Private Constants\fP"
+.br
+.RI "DMA private defines and constants "
+.ti -1c
+.RI "\fBDMA Private Macros\fP"
+.br
+.RI "DMA private macros "
+.ti -1c
+.RI "\fBDMA Private Functions\fP"
+.br
+.RI "DMA private functions "
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DMA_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_DMA_STATE_RESET\fP)"
+.br
+.RI "Reset DMA handle state "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_FS\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->FCR & (DMA_SxFCR_FS)))"
+.br
+.RI "Return the current DMA Stream FIFO filled level\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |=  DMA_SxCR_EN)"
+.br
+.RI "Enable the specified DMA Stream\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &=  ~DMA_SxCR_EN)"
+.br
+.RI "Disable the specified DMA Stream\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_TC_FLAG_INDEX\fP(__HANDLE__)"
+.br
+.RI "Return the current DMA Stream transfer complete flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_HT_FLAG_INDEX\fP(__HANDLE__)"
+.br
+.RI "Return the current DMA Stream half transfer complete flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_TE_FLAG_INDEX\fP(__HANDLE__)"
+.br
+.RI "Return the current DMA Stream transfer error flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_FE_FLAG_INDEX\fP(__HANDLE__)"
+.br
+.RI "Return the current DMA Stream FIFO error flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_DME_FLAG_INDEX\fP(__HANDLE__)"
+.br
+.RI "Return the current DMA Stream direct mode error flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_FLAG\fP(__HANDLE__,  __FLAG__)"
+.br
+.RI "Get the DMA Stream pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)"
+.br
+.RI "Clear the DMA Stream pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.RI "Enable the specified DMA Stream interrupts\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.RI "Disable the specified DMA Stream interrupts\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)"
+.br
+.RI "Check whether the specified DMA Stream interrupt is enabled or disabled\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_SET_COUNTER\fP(__HANDLE__,  __COUNTER__)   ((__HANDLE__)\->Instance\->NDTR = (uint16_t)(__COUNTER__))"
+.br
+.RI "Writes the number of data units to be transferred on the DMA Stream\&. "
+.ti -1c
+.RI "#define \fB__HAL_DMA_GET_COUNTER\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->NDTR)"
+.br
+.RI "Returns the number of remaining data units in the current DMAy Streamx transfer\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+DMA HAL module driver 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_DMA_CLEAR_FLAG(__HANDLE__, __FLAG__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA2_Stream3)? (DMA2->HIFCR = (__FLAG__)) :\
+ ((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA1_Stream7)? (DMA2->LIFCR = (__FLAG__)) :\
+ ((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA1_Stream3)? (DMA1->HIFCR = (__FLAG__)) : (DMA1->LIFCR = (__FLAG__)))
+.fi
+.PP
+Clear the DMA Stream pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>FLAG</strong>\fP specifies the flag to clear\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_FLAG_TCIFx: Transfer complete flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_HTIFx: Half transfer complete flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_TEIFx: Transfer error flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_DMEIFx: Direct mode error flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_FEIFx: FIFO error flag\&. Where x can be 0_4, 1_5, 2_6 or 3_7 to select the DMA Stream flag\&. 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 561 行定义\&.
+.SS "#define __HAL_DMA_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &=  ~DMA_SxCR_EN)"
+
+.PP
+Disable the specified DMA Stream\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 426 行定义\&.
+.SS "#define __HAL_DMA_DISABLE_IT(__HANDLE__, __INTERRUPT__)"
+\fB值:\fP
+.PP
+.nf
+(((__INTERRUPT__) != DMA_IT_FE)? \
+((__HANDLE__)->Instance->CR &= ~(__INTERRUPT__)) : ((__HANDLE__)->Instance->FCR &= ~(__INTERRUPT__)))
+.fi
+.PP
+Disable the specified DMA Stream interrupts\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_FE: FIFO error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_DME: Direct mode error interrupt\&. 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 593 行定义\&.
+.SS "#define __HAL_DMA_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |=  DMA_SxCR_EN)"
+
+.PP
+Enable the specified DMA Stream\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 419 行定义\&.
+.SS "#define __HAL_DMA_ENABLE_IT(__HANDLE__, __INTERRUPT__)"
+\fB值:\fP
+.PP
+.nf
+(((__INTERRUPT__) != DMA_IT_FE)? \
+((__HANDLE__)->Instance->CR |= (__INTERRUPT__)) : ((__HANDLE__)->Instance->FCR |= (__INTERRUPT__)))
+.fi
+.PP
+Enable the specified DMA Stream interrupts\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_FE: FIFO error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_DME: Direct mode error interrupt\&. 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 578 行定义\&.
+.SS "#define __HAL_DMA_GET_COUNTER(__HANDLE__)   ((__HANDLE__)\->Instance\->NDTR)"
+
+.PP
+Returns the number of remaining data units in the current DMAy Streamx transfer\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP number of remaining data units in the current DMA Stream transfer\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 637 行定义\&.
+.SS "#define __HAL_DMA_GET_DME_FLAG_INDEX(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream0))? DMA_FLAG_DMEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream0))? DMA_FLAG_DMEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream4))? DMA_FLAG_DMEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream4))? DMA_FLAG_DMEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream1))? DMA_FLAG_DMEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream1))? DMA_FLAG_DMEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream5))? DMA_FLAG_DMEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream5))? DMA_FLAG_DMEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream2))? DMA_FLAG_DMEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream2))? DMA_FLAG_DMEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream6))? DMA_FLAG_DMEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream6))? DMA_FLAG_DMEIF2_6 :\
+   DMA_FLAG_DMEIF3_7)
+.fi
+.PP
+Return the current DMA Stream direct mode error flag\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP specified direct mode error flag index\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 515 行定义\&.
+.SS "#define __HAL_DMA_GET_FE_FLAG_INDEX(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream0))? DMA_FLAG_FEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream0))? DMA_FLAG_FEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream4))? DMA_FLAG_FEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream4))? DMA_FLAG_FEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream1))? DMA_FLAG_FEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream1))? DMA_FLAG_FEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream5))? DMA_FLAG_FEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream5))? DMA_FLAG_FEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream2))? DMA_FLAG_FEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream2))? DMA_FLAG_FEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream6))? DMA_FLAG_FEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream6))? DMA_FLAG_FEIF2_6 :\
+   DMA_FLAG_FEIF3_7)
+.fi
+.PP
+Return the current DMA Stream FIFO error flag\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP specified FIFO error flag index\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 495 行定义\&.
+.SS "#define __HAL_DMA_GET_FLAG(__HANDLE__, __FLAG__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA2_Stream3)? (DMA2->HISR & (__FLAG__)) :\
+ ((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA1_Stream7)? (DMA2->LISR & (__FLAG__)) :\
+ ((uint32_t)((__HANDLE__)->Instance) > (uint32_t)DMA1_Stream3)? (DMA1->HISR & (__FLAG__)) : (DMA1->LISR & (__FLAG__)))
+.fi
+.PP
+Get the DMA Stream pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>FLAG</strong>\fP Get the specified flag\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_FLAG_TCIFx: Transfer complete flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_HTIFx: Half transfer complete flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_TEIFx: Transfer error flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_DMEIFx: Direct mode error flag\&. 
+.IP "\(bu" 2
+DMA_FLAG_FEIFx: FIFO error flag\&. Where x can be 0_4, 1_5, 2_6 or 3_7 to select the DMA Stream flag\&. 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP state of FLAG (SET or RESET)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 543 行定义\&.
+.SS "#define __HAL_DMA_GET_FS(__HANDLE__)   (((__HANDLE__)\->Instance\->FCR & (DMA_SxFCR_FS)))"
+
+.PP
+Return the current DMA Stream FIFO filled level\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP FIFO filling state\&.
+.IP "\(bu" 2
+DMA_FIFOStatus_Less1QuarterFull: when FIFO is less than 1 quarter-full and not empty\&.
+.IP "\(bu" 2
+DMA_FIFOStatus_1QuarterFull: if more than 1 quarter-full\&.
+.IP "\(bu" 2
+DMA_FIFOStatus_HalfFull: if more than 1 half-full\&.
+.IP "\(bu" 2
+DMA_FIFOStatus_3QuartersFull: if more than 3 quarters-full\&.
+.IP "\(bu" 2
+DMA_FIFOStatus_Empty: when FIFO is empty
+.IP "\(bu" 2
+DMA_FIFOStatus_Full: when FIFO is full 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 412 行定义\&.
+.SS "#define __HAL_DMA_GET_HT_FLAG_INDEX(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream0))? DMA_FLAG_HTIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream0))? DMA_FLAG_HTIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream4))? DMA_FLAG_HTIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream4))? DMA_FLAG_HTIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream1))? DMA_FLAG_HTIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream1))? DMA_FLAG_HTIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream5))? DMA_FLAG_HTIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream5))? DMA_FLAG_HTIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream2))? DMA_FLAG_HTIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream2))? DMA_FLAG_HTIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream6))? DMA_FLAG_HTIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream6))? DMA_FLAG_HTIF2_6 :\
+   DMA_FLAG_HTIF3_7)
+.fi
+.PP
+Return the current DMA Stream half transfer complete flag\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP specified half transfer complete flag index\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 455 行定义\&.
+.SS "#define __HAL_DMA_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)"
+\fB值:\fP
+.PP
+.nf
+                                                        (((__INTERRUPT__) != DMA_IT_FE)? \
+                                                        ((__HANDLE__)->Instance->CR & (__INTERRUPT__)) : \
+                                                        ((__HANDLE__)->Instance->FCR & (__INTERRUPT__)))
+.fi
+.PP
+Check whether the specified DMA Stream interrupt is enabled or disabled\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the DMA interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+DMA_IT_TC: Transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_HT: Half transfer complete interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_TE: Transfer error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_FE: FIFO error interrupt mask\&. 
+.IP "\(bu" 2
+DMA_IT_DME: Direct mode error interrupt\&. 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP state of DMA_IT\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 608 行定义\&.
+.SS "#define __HAL_DMA_GET_TC_FLAG_INDEX(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream0))? DMA_FLAG_TCIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream0))? DMA_FLAG_TCIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream4))? DMA_FLAG_TCIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream4))? DMA_FLAG_TCIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream1))? DMA_FLAG_TCIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream1))? DMA_FLAG_TCIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream5))? DMA_FLAG_TCIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream5))? DMA_FLAG_TCIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream2))? DMA_FLAG_TCIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream2))? DMA_FLAG_TCIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream6))? DMA_FLAG_TCIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream6))? DMA_FLAG_TCIF2_6 :\
+   DMA_FLAG_TCIF3_7)
+.fi
+.PP
+Return the current DMA Stream transfer complete flag\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP specified transfer complete flag index\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 435 行定义\&.
+.SS "#define __HAL_DMA_GET_TE_FLAG_INDEX(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+(((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream0))? DMA_FLAG_TEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream0))? DMA_FLAG_TEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream4))? DMA_FLAG_TEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream4))? DMA_FLAG_TEIF0_4 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream1))? DMA_FLAG_TEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream1))? DMA_FLAG_TEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream5))? DMA_FLAG_TEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream5))? DMA_FLAG_TEIF1_5 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream2))? DMA_FLAG_TEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream2))? DMA_FLAG_TEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA1_Stream6))? DMA_FLAG_TEIF2_6 :\
+ ((uint32_t)((__HANDLE__)->Instance) == ((uint32_t)DMA2_Stream6))? DMA_FLAG_TEIF2_6 :\
+   DMA_FLAG_TEIF3_7)
+.fi
+.PP
+Return the current DMA Stream transfer error flag\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP specified transfer error flag index\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 475 行定义\&.
+.SS "#define __HAL_DMA_RESET_HANDLE_STATE(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_DMA_STATE_RESET\fP)"
+
+.PP
+Reset DMA handle state 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the DMA handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 398 行定义\&.
+.SS "#define __HAL_DMA_SET_COUNTER(__HANDLE__, __COUNTER__)   ((__HANDLE__)\->Instance\->NDTR = (uint16_t)(__COUNTER__))"
+
+.PP
+Writes the number of data units to be transferred on the DMA Stream\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP DMA handle 
+.br
+\fI<strong>COUNTER</strong>\fP Number of data units to be transferred (from 0 to 65535) Number of data items depends only on the Peripheral data format\&.
+.RE
+.PP
+\fB注解\fP
+.RS 4
+If Peripheral data format is Bytes: number of data units is equal to total number of bytes to be transferred\&.
+.PP
+If Peripheral data format is Half-Word: number of data units is 
+.br
+ equal to total number of bytes to be transferred / 2\&.
+.PP
+If Peripheral data format is Word: number of data units is equal to total number of bytes to be transferred / 4\&.
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP number of remaining data units in the current DMAy Streamx transfer\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 629 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

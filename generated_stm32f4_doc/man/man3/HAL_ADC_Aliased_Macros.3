@@ -1,0 +1,517 @@
+.TH "HAL_ADC_Aliased_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_ADC_Aliased_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__ADC_ENABLE\fP   \fB__HAL_ADC_ENABLE\fP"
+.br
+.ti -1c
+.RI "#define \fB__ADC_DISABLE\fP   \fB__HAL_ADC_DISABLE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_ENABLING_CONDITIONS\fP   ADC_ENABLING_CONDITIONS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_DISABLING_CONDITIONS\fP   ADC_DISABLING_CONDITIONS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_ENABLED\fP   \fBADC_IS_ENABLE\fP"
+.br
+.ti -1c
+.RI "#define \fB__ADC_IS_ENABLED\fP   \fBADC_IS_ENABLE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_SOFTWARE_START_REGULAR\fP   \fBADC_IS_SOFTWARE_START_REGULAR\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_SOFTWARE_START_INJECTED\fP   \fBADC_IS_SOFTWARE_START_INJECTED\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_CONVERSION_ONGOING_REGULAR_INJECTED\fP   ADC_IS_CONVERSION_ONGOING_REGULAR_INJECTED"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_CONVERSION_ONGOING_REGULAR\fP   ADC_IS_CONVERSION_ONGOING_REGULAR"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_CONVERSION_ONGOING_INJECTED\fP   ADC_IS_CONVERSION_ONGOING_INJECTED"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_IS_CONVERSION_ONGOING\fP   ADC_IS_CONVERSION_ONGOING"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CLEAR_ERRORCODE\fP   \fBADC_CLEAR_ERRORCODE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_RESOLUTION\fP   \fBADC_GET_RESOLUTION\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_JSQR_RK\fP   ADC_JSQR_RK"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_AWD1CH\fP   ADC_CFGR_AWD1CH_SHIFT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_AWD23CR\fP   ADC_CFGR_AWD23CR"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_INJECT_AUTO_CONVERSION\fP   ADC_CFGR_INJECT_AUTO_CONVERSION"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_INJECT_CONTEXT_QUEUE\fP   ADC_CFGR_INJECT_CONTEXT_QUEUE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_INJECT_DISCCONTINUOUS\fP   ADC_CFGR_INJECT_DISCCONTINUOUS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_REG_DISCCONTINUOUS\fP   ADC_CFGR_REG_DISCCONTINUOUS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_DISCONTINUOUS_NUM\fP   ADC_CFGR_DISCONTINUOUS_NUM"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_AUTOWAIT\fP   ADC_CFGR_AUTOWAIT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_CONTINUOUS\fP   ADC_CFGR_CONTINUOUS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_OVERRUN\fP   ADC_CFGR_OVERRUN"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_DMACONTREQ\fP   ADC_CFGR_DMACONTREQ"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR_EXTSEL\fP   ADC_CFGR_EXTSEL_SET"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_JSQR_JEXTSEL\fP   ADC_JSQR_JEXTSEL_SET"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_OFR_CHANNEL\fP   ADC_OFR_CHANNEL"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_DIFSEL_CHANNEL\fP   ADC_DIFSEL_CHANNEL"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CALFACT_DIFF_SET\fP   ADC_CALFACT_DIFF_SET"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CALFACT_DIFF_GET\fP   ADC_CALFACT_DIFF_GET"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_TRX_HIGHTHRESHOLD\fP   ADC_TRX_HIGHTHRESHOLD"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_OFFSET_SHIFT_RESOLUTION\fP   ADC_OFFSET_SHIFT_RESOLUTION"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_AWD1THRESHOLD_SHIFT_RESOLUTION\fP   ADC_AWD1THRESHOLD_SHIFT_RESOLUTION"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_AWD23THRESHOLD_SHIFT_RESOLUTION\fP   ADC_AWD23THRESHOLD_SHIFT_RESOLUTION"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_COMMON_REGISTER\fP   \fBADC_COMMON_REGISTER\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_COMMON_CCR_MULTI\fP   ADC_COMMON_CCR_MULTI"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_MULTIMODE_IS_ENABLED\fP   ADC_MULTIMODE_IS_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__ADC_MULTIMODE_IS_ENABLED\fP   ADC_MULTIMODE_IS_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_NONMULTIMODE_OR_MULTIMODEMASTER\fP   ADC_NONMULTIMODE_OR_MULTIMODEMASTER"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_COMMON_ADC_OTHER\fP   ADC_COMMON_ADC_OTHER"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_MULTI_SLAVE\fP   ADC_MULTI_SLAVE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SQR1_L\fP   ADC_SQR1_L_SHIFT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_JSQR_JL\fP   ADC_JSQR_JL_SHIFT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_JSQR_RK_JL\fP   ADC_JSQR_RK_JL"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR1_DISCONTINUOUS_NUM\fP   ADC_CR1_DISCONTINUOUS_NUM"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR1_SCAN\fP   ADC_CR1_SCAN_SET"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CONVCYCLES_MAX_RANGE\fP   ADC_CONVCYCLES_MAX_RANGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CLOCK_PRESCALER_RANGE\fP   ADC_CLOCK_PRESCALER_RANGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_CLOCK_PRESCALER\fP   ADC_GET_CLOCK_PRESCALER"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SQR1\fP   \fBADC_SQR1\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SMPR1\fP   \fBADC_SMPR1\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SMPR2\fP   \fBADC_SMPR2\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SQR3_RK\fP   \fBADC_SQR3_RK\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SQR2_RK\fP   \fBADC_SQR2_RK\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_SQR1_RK\fP   \fBADC_SQR1_RK\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR2_CONTINUOUS\fP   \fBADC_CR2_CONTINUOUS\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR1_DISCONTINUOUS\fP   \fBADC_CR1_DISCONTINUOUS\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR1_SCANCONV\fP   \fBADC_CR1_SCANCONV\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR2_EOCSelection\fP   \fBADC_CR2_EOCSelection\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CR2_DMAContReq\fP   \fBADC_CR2_DMAContReq\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_JSQR\fP   \fBADC_JSQR\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CHSELR_CHANNEL\fP   ADC_CHSELR_CHANNEL"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_REG_DISCCONTINUOUS\fP   ADC_CFGR1_REG_DISCCONTINUOUS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_AUTOOFF\fP   ADC_CFGR1_AUTOOFF"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_AUTOWAIT\fP   ADC_CFGR1_AUTOWAIT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_CONTINUOUS\fP   ADC_CFGR1_CONTINUOUS"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_OVERRUN\fP   ADC_CFGR1_OVERRUN"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_SCANDIR\fP   ADC_CFGR1_SCANDIR"
+.br
+.ti -1c
+.RI "#define \fB__HAL_ADC_CFGR1_DMACONTREQ\fP   ADC_CFGR1_DMACONTREQ"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __ADC_DISABLE   \fB__HAL_ADC_DISABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1439 行定义\&.
+.SS "#define __ADC_ENABLE   \fB__HAL_ADC_ENABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1438 行定义\&.
+.SS "#define __ADC_IS_ENABLED   \fBADC_IS_ENABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1443 行定义\&.
+.SS "#define __ADC_MULTIMODE_IS_ENABLED   ADC_MULTIMODE_IS_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1479 行定义\&.
+.SS "#define __HAL_ADC_AWD1THRESHOLD_SHIFT_RESOLUTION   ADC_AWD1THRESHOLD_SHIFT_RESOLUTION"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1474 行定义\&.
+.SS "#define __HAL_ADC_AWD23THRESHOLD_SHIFT_RESOLUTION   ADC_AWD23THRESHOLD_SHIFT_RESOLUTION"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1475 行定义\&.
+.SS "#define __HAL_ADC_CALFACT_DIFF_GET   ADC_CALFACT_DIFF_GET"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1470 行定义\&.
+.SS "#define __HAL_ADC_CALFACT_DIFF_SET   ADC_CALFACT_DIFF_SET"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1469 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_AUTOOFF   ADC_CFGR1_AUTOOFF"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1508 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_AUTOWAIT   ADC_CFGR1_AUTOWAIT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1509 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_CONTINUOUS   ADC_CFGR1_CONTINUOUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1510 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_DMACONTREQ   ADC_CFGR1_DMACONTREQ"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1513 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_OVERRUN   ADC_CFGR1_OVERRUN"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1511 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_REG_DISCCONTINUOUS   ADC_CFGR1_REG_DISCCONTINUOUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1507 行定义\&.
+.SS "#define __HAL_ADC_CFGR1_SCANDIR   ADC_CFGR1_SCANDIR"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1512 行定义\&.
+.SS "#define __HAL_ADC_CFGR_AUTOWAIT   ADC_CFGR_AUTOWAIT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1461 行定义\&.
+.SS "#define __HAL_ADC_CFGR_AWD1CH   ADC_CFGR_AWD1CH_SHIFT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1454 行定义\&.
+.SS "#define __HAL_ADC_CFGR_AWD23CR   ADC_CFGR_AWD23CR"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1455 行定义\&.
+.SS "#define __HAL_ADC_CFGR_CONTINUOUS   ADC_CFGR_CONTINUOUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1462 行定义\&.
+.SS "#define __HAL_ADC_CFGR_DISCONTINUOUS_NUM   ADC_CFGR_DISCONTINUOUS_NUM"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1460 行定义\&.
+.SS "#define __HAL_ADC_CFGR_DMACONTREQ   ADC_CFGR_DMACONTREQ"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1464 行定义\&.
+.SS "#define __HAL_ADC_CFGR_EXTSEL   ADC_CFGR_EXTSEL_SET"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1465 行定义\&.
+.SS "#define __HAL_ADC_CFGR_INJECT_AUTO_CONVERSION   ADC_CFGR_INJECT_AUTO_CONVERSION"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1456 行定义\&.
+.SS "#define __HAL_ADC_CFGR_INJECT_CONTEXT_QUEUE   ADC_CFGR_INJECT_CONTEXT_QUEUE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1457 行定义\&.
+.SS "#define __HAL_ADC_CFGR_INJECT_DISCCONTINUOUS   ADC_CFGR_INJECT_DISCCONTINUOUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1458 行定义\&.
+.SS "#define __HAL_ADC_CFGR_OVERRUN   ADC_CFGR_OVERRUN"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1463 行定义\&.
+.SS "#define __HAL_ADC_CFGR_REG_DISCCONTINUOUS   ADC_CFGR_REG_DISCCONTINUOUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1459 行定义\&.
+.SS "#define __HAL_ADC_CHSELR_CHANNEL   ADC_CHSELR_CHANNEL"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1506 行定义\&.
+.SS "#define __HAL_ADC_CLEAR_ERRORCODE   \fBADC_CLEAR_ERRORCODE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1450 行定义\&.
+.SS "#define __HAL_ADC_CLOCK_PRESCALER_RANGE   ADC_CLOCK_PRESCALER_RANGE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1490 行定义\&.
+.SS "#define __HAL_ADC_COMMON_ADC_OTHER   ADC_COMMON_ADC_OTHER"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1481 行定义\&.
+.SS "#define __HAL_ADC_COMMON_CCR_MULTI   ADC_COMMON_CCR_MULTI"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1477 行定义\&.
+.SS "#define __HAL_ADC_COMMON_REGISTER   \fBADC_COMMON_REGISTER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1476 行定义\&.
+.SS "#define __HAL_ADC_CONVCYCLES_MAX_RANGE   ADC_CONVCYCLES_MAX_RANGE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1489 行定义\&.
+.SS "#define __HAL_ADC_CR1_DISCONTINUOUS   \fBADC_CR1_DISCONTINUOUS\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1500 行定义\&.
+.SS "#define __HAL_ADC_CR1_DISCONTINUOUS_NUM   ADC_CR1_DISCONTINUOUS_NUM"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1487 行定义\&.
+.SS "#define __HAL_ADC_CR1_SCAN   ADC_CR1_SCAN_SET"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1488 行定义\&.
+.SS "#define __HAL_ADC_CR1_SCANCONV   \fBADC_CR1_SCANCONV\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1501 行定义\&.
+.SS "#define __HAL_ADC_CR2_CONTINUOUS   \fBADC_CR2_CONTINUOUS\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1499 行定义\&.
+.SS "#define __HAL_ADC_CR2_DMAContReq   \fBADC_CR2_DMAContReq\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1503 行定义\&.
+.SS "#define __HAL_ADC_CR2_EOCSelection   \fBADC_CR2_EOCSelection\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1502 行定义\&.
+.SS "#define __HAL_ADC_DIFSEL_CHANNEL   ADC_DIFSEL_CHANNEL"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1468 行定义\&.
+.SS "#define __HAL_ADC_DISABLING_CONDITIONS   ADC_DISABLING_CONDITIONS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1441 行定义\&.
+.SS "#define __HAL_ADC_ENABLING_CONDITIONS   ADC_ENABLING_CONDITIONS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1440 行定义\&.
+.SS "#define __HAL_ADC_GET_CLOCK_PRESCALER   ADC_GET_CLOCK_PRESCALER"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1491 行定义\&.
+.SS "#define __HAL_ADC_GET_RESOLUTION   \fBADC_GET_RESOLUTION\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1452 行定义\&.
+.SS "#define __HAL_ADC_IS_CONVERSION_ONGOING   ADC_IS_CONVERSION_ONGOING"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1449 行定义\&.
+.SS "#define __HAL_ADC_IS_CONVERSION_ONGOING_INJECTED   ADC_IS_CONVERSION_ONGOING_INJECTED"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1448 行定义\&.
+.SS "#define __HAL_ADC_IS_CONVERSION_ONGOING_REGULAR   ADC_IS_CONVERSION_ONGOING_REGULAR"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1447 行定义\&.
+.SS "#define __HAL_ADC_IS_CONVERSION_ONGOING_REGULAR_INJECTED   ADC_IS_CONVERSION_ONGOING_REGULAR_INJECTED"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1446 行定义\&.
+.SS "#define __HAL_ADC_IS_ENABLED   \fBADC_IS_ENABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1442 行定义\&.
+.SS "#define __HAL_ADC_IS_SOFTWARE_START_INJECTED   \fBADC_IS_SOFTWARE_START_INJECTED\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1445 行定义\&.
+.SS "#define __HAL_ADC_IS_SOFTWARE_START_REGULAR   \fBADC_IS_SOFTWARE_START_REGULAR\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1444 行定义\&.
+.SS "#define __HAL_ADC_JSQR   \fBADC_JSQR\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1504 行定义\&.
+.SS "#define __HAL_ADC_JSQR_JEXTSEL   ADC_JSQR_JEXTSEL_SET"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1466 行定义\&.
+.SS "#define __HAL_ADC_JSQR_JL   ADC_JSQR_JL_SHIFT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1485 行定义\&.
+.SS "#define __HAL_ADC_JSQR_RK   ADC_JSQR_RK"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1453 行定义\&.
+.SS "#define __HAL_ADC_JSQR_RK_JL   ADC_JSQR_RK_JL"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1486 行定义\&.
+.SS "#define __HAL_ADC_MULTI_SLAVE   ADC_MULTI_SLAVE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1482 行定义\&.
+.SS "#define __HAL_ADC_MULTIMODE_IS_ENABLED   ADC_MULTIMODE_IS_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1478 行定义\&.
+.SS "#define __HAL_ADC_NONMULTIMODE_OR_MULTIMODEMASTER   ADC_NONMULTIMODE_OR_MULTIMODEMASTER"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1480 行定义\&.
+.SS "#define __HAL_ADC_OFFSET_SHIFT_RESOLUTION   ADC_OFFSET_SHIFT_RESOLUTION"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1473 行定义\&.
+.SS "#define __HAL_ADC_OFR_CHANNEL   ADC_OFR_CHANNEL"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1467 行定义\&.
+.SS "#define __HAL_ADC_SMPR1   \fBADC_SMPR1\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1494 行定义\&.
+.SS "#define __HAL_ADC_SMPR2   \fBADC_SMPR2\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1495 行定义\&.
+.SS "#define __HAL_ADC_SQR1   \fBADC_SQR1\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1493 行定义\&.
+.SS "#define __HAL_ADC_SQR1_L   ADC_SQR1_L_SHIFT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1484 行定义\&.
+.SS "#define __HAL_ADC_SQR1_RK   \fBADC_SQR1_RK\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1498 行定义\&.
+.SS "#define __HAL_ADC_SQR2_RK   \fBADC_SQR2_RK\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1497 行定义\&.
+.SS "#define __HAL_ADC_SQR3_RK   \fBADC_SQR3_RK\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1496 行定义\&.
+.SS "#define __HAL_ADC_TRX_HIGHTHRESHOLD   ADC_TRX_HIGHTHRESHOLD"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1471 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

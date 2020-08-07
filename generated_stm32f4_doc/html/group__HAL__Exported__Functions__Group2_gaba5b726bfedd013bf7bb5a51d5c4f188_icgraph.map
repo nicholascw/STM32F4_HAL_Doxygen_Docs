@@ -1,0 +1,6 @@
+<map id="HAL_IncTick" name="HAL_IncTick">
+<area shape="rect" id="node1" title="This function is called to increment a global variable &quot;uwTick&quot; used as application time base." alt="" coords="288,64,389,91"/>
+<area shape="rect" id="node2" href="$group__HAL__TimeBase__RTC__Alarm__Template.html#ga11aeff83fd498cddbed3bcddcf017e0a" title="ALARM A Event Callback in non blocking mode" alt="" coords="9,5,236,32"/>
+<area shape="rect" id="node3" href="$group__HAL__TimeBase__RTC__WakeUp__Template.html#gac9ed5d6224b5c86f2845a9c1af7d94de" title="Wake Up Timer Event Callback in non blocking mode" alt="" coords="7,57,238,98"/>
+<area shape="rect" id="node4" href="$group__HAL__TimeBase__TIM.html#ga8a3b0ad512a6e6c6157440b68d395eac" title="Period elapsed callback in non blocking mode" alt="" coords="5,123,240,149"/>
+</map>

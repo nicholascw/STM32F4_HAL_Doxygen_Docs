@@ -1,0 +1,83 @@
+\hypertarget{stm32f4xx__hal__crc_8h}{}\doxysection{inc/stm32f4xx\+\_\+hal\+\_\+crc.h 文件参考}
+\label{stm32f4xx__hal__crc_8h}\index{inc/stm32f4xx\_hal\_crc.h@{inc/stm32f4xx\_hal\_crc.h}}
+
+
+Header file of C\+RC H\+AL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+stm32f4xx\+\_\+hal\+\_\+crc.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__hal__crc_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{stm32f4xx__hal__crc_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{结构体}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em C\+RC Handle Structure definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_gab6ec5d74fdff177143f4b22652a18114}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+R\+E\+S\+E\+T\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+S\+T\+A\+TE}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}})
+\begin{DoxyCompactList}\small\item\em Reset C\+RC handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga0007a05fb01806007181e12eedc14d28}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+D\+R\+\_\+\+R\+E\+S\+ET}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$CR $\vert$= C\+R\+C\+\_\+\+C\+R\+\_\+\+R\+E\+S\+ET)
+\begin{DoxyCompactList}\small\item\em Reset C\+RC Data Register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga1d890aa6f337f97fb9a3e8537f1bbc72}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+E\+T\+\_\+\+I\+DR}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+,  \+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~(W\+R\+I\+T\+E\+\_\+\+R\+EG((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR, (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Store data in the Independent Data (ID) register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__CRC__Exported__Macros_ga028e074ed7a9505ea0ac48a16489c5d0}{\+\_\+\+\_\+\+H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+G\+E\+T\+\_\+\+I\+DR}}(\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+\_\+)-\/$>$Instance-\/$>$I\+DR) \& C\+R\+C\+\_\+\+I\+D\+R\+\_\+\+I\+DR)
+\begin{DoxyCompactList}\small\item\em Return the data stored in the Independent Data (ID) register. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{枚举}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group__CRC__Exported__Types_ga1021d6f27a072d45f6f3b233eefd8bbe}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+State\+Type\+Def}} \{ \newline
+\mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea313bbe8353f8a8b48fbd129261266a97}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+S\+ET}} = 0x00U, 
+\mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbeaa47f50129543b87fac3a83df1a634474}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+R\+E\+A\+DY}} = 0x01U, 
+\mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea9d03b0c1d233e87e35b9c5c8353a4b70}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+U\+SY}} = 0x02U, 
+\mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbea5d803dcd1d578edb76b57e3d34adc5a8}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+T\+I\+M\+E\+O\+UT}} = 0x03U, 
+\newline
+\mbox{\hyperlink{group__CRC__Exported__Types_gga1021d6f27a072d45f6f3b233eefd8bbeadb51c35f7716430bb0c893069466a1b2}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+R\+R\+OR}} = 0x04U
+ \}
+\begin{DoxyCompactList}\small\item\em C\+RC H\+AL State Structure definition \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__CRC__Exported__Functions__Group1_ga23e7df2eaecf59615e13b2cad8b7185f}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Init}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc)
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__CRC__Exported__Functions__Group1_gac600b9a1785f2372ca40ed5449c23739}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+De\+Init}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc)
+\item 
+void \mbox{\hyperlink{group__CRC__Exported__Functions__Group1_ga5167ffd293de5d86f5873910416b36d0}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Msp\+Init}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc)
+\item 
+void \mbox{\hyperlink{group__CRC__Exported__Functions__Group1_gac19b8df939b3490e690bdf1e1e04ead3}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Msp\+De\+Init}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CRC__Exported__Functions__Group2_ga124a77d595e4982ad6e9a64c22f28b7b}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Accumulate}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc, uint32\+\_\+t p\+Buffer\mbox{[}$\,$\mbox{]}, uint32\+\_\+t Buffer\+Length)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group__CRC__Exported__Functions__Group2_ga298593a6fb0bbd109cdbed3851806371}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Calculate}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc, uint32\+\_\+t p\+Buffer\mbox{[}$\,$\mbox{]}, uint32\+\_\+t Buffer\+Length)
+\item 
+\mbox{\hyperlink{group__CRC__Exported__Types_ga1021d6f27a072d45f6f3b233eefd8bbe}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{group__CRC__Exported__Functions__Group3_ga4fb3d3460bd83853c28215bc5e14babe}{H\+A\+L\+\_\+\+C\+R\+C\+\_\+\+Get\+State}} (\mbox{\hyperlink{structCRC__HandleTypeDef}{C\+R\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hcrc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+Header file of C\+RC H\+AL module. 
+
+\begin{DoxyAuthor}{作者}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

@@ -1,0 +1,5 @@
+<map id="src/stm32f4xx_hal_sdram.c" name="src/stm32f4xx_hal_sdram.c">
+<area shape="rect" id="node1" title="SDRAM HAL module driver. This file provides a generic firmware to drive SDRAM memories mounted as ext..." alt="" coords="5,5,207,32"/>
+<area shape="rect" id="node2" href="$stm32f4xx__hal_8h.html" title="This file contains all the functions prototypes for the HAL module driver." alt="" coords="41,80,171,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="23,155,189,181"/>
+</map>

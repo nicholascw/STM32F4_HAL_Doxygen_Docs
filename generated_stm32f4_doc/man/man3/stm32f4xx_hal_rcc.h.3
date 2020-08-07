@@ -1,0 +1,1221 @@
+.TH "inc/stm32f4xx_hal_rcc.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_rcc.h \- Header file of RCC HAL module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_def\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_rcc_ex\&.h'\fP
+.br
+
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBRCC_OscInitTypeDef\fP"
+.br
+.RI "RCC Internal/External Oscillator (HSE, HSI, LSE and LSI) configuration structure definition "
+.ti -1c
+.RI "struct \fBRCC_ClkInitTypeDef\fP"
+.br
+.RI "RCC System, AHB and APB busses clock configuration structure definition "
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_OSCILLATORTYPE_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_OSCILLATORTYPE_HSE\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBRCC_OSCILLATORTYPE_HSI\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBRCC_OSCILLATORTYPE_LSE\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBRCC_OSCILLATORTYPE_LSI\fP   0x00000008U"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_OFF\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_ON\fP   RCC_CR_HSEON"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSE_BYPASS\fP   ((uint32_t)(RCC_CR_HSEBYP | RCC_CR_HSEON))"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSE_OFF\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSE_ON\fP   RCC_BDCR_LSEON"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSE_BYPASS\fP   ((uint32_t)(RCC_BDCR_LSEBYP | RCC_BDCR_LSEON))"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSI_OFF\fP   ((uint8_t)0x00)"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSI_ON\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSICALIBRATION_DEFAULT\fP   0x10U         /* Default HSI calibration trimming value */"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSI_OFF\fP   ((uint8_t)0x00)"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSI_ON\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_NONE\fP   ((uint8_t)0x00)"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_OFF\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLL_ON\fP   ((uint8_t)0x02)"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLP_DIV2\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLP_DIV4\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLP_DIV6\fP   0x00000006U"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLP_DIV8\fP   0x00000008U"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLSOURCE_HSI\fP   RCC_PLLCFGR_PLLSRC_HSI"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLSOURCE_HSE\fP   RCC_PLLCFGR_PLLSRC_HSE"
+.br
+.ti -1c
+.RI "#define \fBRCC_CLOCKTYPE_SYSCLK\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CLOCKTYPE_HCLK\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CLOCKTYPE_PCLK1\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CLOCKTYPE_PCLK2\fP   0x00000008U"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_HSI\fP   RCC_CFGR_SW_HSI"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_HSE\fP   RCC_CFGR_SW_HSE"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_PLLCLK\fP   RCC_CFGR_SW_PLL"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_PLLRCLK\fP   ((uint32_t)(RCC_CFGR_SW_0 | RCC_CFGR_SW_1))"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_STATUS_HSI\fP   RCC_CFGR_SWS_HSI"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_STATUS_HSE\fP   RCC_CFGR_SWS_HSE"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_STATUS_PLLCLK\fP   RCC_CFGR_SWS_PLL"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_STATUS_PLLRCLK\fP   ((uint32_t)(RCC_CFGR_SWS_0 | RCC_CFGR_SWS_1))"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV1\fP   RCC_CFGR_HPRE_DIV1"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV2\fP   RCC_CFGR_HPRE_DIV2"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV4\fP   RCC_CFGR_HPRE_DIV4"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV8\fP   RCC_CFGR_HPRE_DIV8"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV16\fP   RCC_CFGR_HPRE_DIV16"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV64\fP   RCC_CFGR_HPRE_DIV64"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV128\fP   RCC_CFGR_HPRE_DIV128"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV256\fP   RCC_CFGR_HPRE_DIV256"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLK_DIV512\fP   RCC_CFGR_HPRE_DIV512"
+.br
+.ti -1c
+.RI "#define \fBRCC_HCLK_DIV1\fP   RCC_CFGR_PPRE1_DIV1"
+.br
+.ti -1c
+.RI "#define \fBRCC_HCLK_DIV2\fP   RCC_CFGR_PPRE1_DIV2"
+.br
+.ti -1c
+.RI "#define \fBRCC_HCLK_DIV4\fP   RCC_CFGR_PPRE1_DIV4"
+.br
+.ti -1c
+.RI "#define \fBRCC_HCLK_DIV8\fP   RCC_CFGR_PPRE1_DIV8"
+.br
+.ti -1c
+.RI "#define \fBRCC_HCLK_DIV16\fP   RCC_CFGR_PPRE1_DIV16"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_NO_CLK\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_LSE\fP   0x00000100U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_LSI\fP   0x00000200U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIVX\fP   0x00000300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV2\fP   0x00020300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV3\fP   0x00030300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV4\fP   0x00040300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV5\fP   0x00050300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV6\fP   0x00060300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV7\fP   0x00070300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV8\fP   0x00080300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV9\fP   0x00090300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV10\fP   0x000A0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV11\fP   0x000B0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV12\fP   0x000C0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV13\fP   0x000D0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV14\fP   0x000E0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV15\fP   0x000F0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV16\fP   0x00100300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV17\fP   0x00110300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV18\fP   0x00120300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV19\fP   0x00130300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV20\fP   0x00140300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV21\fP   0x00150300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV22\fP   0x00160300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV23\fP   0x00170300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV24\fP   0x00180300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV25\fP   0x00190300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV26\fP   0x001A0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV27\fP   0x001B0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV28\fP   0x001C0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV29\fP   0x001D0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV30\fP   0x001E0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCCLKSOURCE_HSE_DIV31\fP   0x001F0300U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO2\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_HSI\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_LSE\fP   RCC_CFGR_MCO1_0"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_HSE\fP   RCC_CFGR_MCO1_1"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCO1SOURCE_PLLCLK\fP   RCC_CFGR_MCO1"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCODIV_1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCODIV_2\fP   RCC_CFGR_MCO1PRE_2"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCODIV_3\fP   ((uint32_t)RCC_CFGR_MCO1PRE_0 | RCC_CFGR_MCO1PRE_2)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCODIV_4\fP   ((uint32_t)RCC_CFGR_MCO1PRE_1 | RCC_CFGR_MCO1PRE_2)"
+.br
+.ti -1c
+.RI "#define \fBRCC_MCODIV_5\fP   RCC_CFGR_MCO1PRE"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_LSIRDY\fP   ((uint8_t)0x01)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_LSERDY\fP   ((uint8_t)0x02)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_HSIRDY\fP   ((uint8_t)0x04)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_HSERDY\fP   ((uint8_t)0x08)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_PLLRDY\fP   ((uint8_t)0x10)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_PLLI2SRDY\fP   ((uint8_t)0x20)"
+.br
+.ti -1c
+.RI "#define \fBRCC_IT_CSS\fP   ((uint8_t)0x80)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSIRDY\fP   ((uint8_t)0x21)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_HSERDY\fP   ((uint8_t)0x31)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PLLRDY\fP   ((uint8_t)0x39)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PLLI2SRDY\fP   ((uint8_t)0x3B)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSERDY\fP   ((uint8_t)0x41)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LSIRDY\fP   ((uint8_t)0x61)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_BORRST\fP   ((uint8_t)0x79)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PINRST\fP   ((uint8_t)0x7A)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_PORRST\fP   ((uint8_t)0x7B)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_SFTRST\fP   ((uint8_t)0x7C)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_IWDGRST\fP   ((uint8_t)0x7D)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_WWDGRST\fP   ((uint8_t)0x7E)"
+.br
+.ti -1c
+.RI "#define \fBRCC_FLAG_LPWRRST\fP   ((uint8_t)0x7F)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_GPIOAEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_GPIOBEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_GPIOCEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_GPIOHEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_DMA1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_CLK_DISABLE\fP()   (RCC\->AHB1ENR &= ~(RCC_AHB1ENR_DMA2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOAEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOBEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOCEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOHEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_DMA1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_IS_CLK_ENABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_DMA2EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOAEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOBEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOCEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_GPIOHEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_DMA1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_IS_CLK_DISABLED\fP()   ((RCC\->AHB1ENR &(RCC_AHB1ENR_DMA2EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_TIM5EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_WWDGEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_SPI2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_USART2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_PWREN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_TIM5EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_WWDGEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_SPI2EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_USART2EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_I2C1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_I2C2EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_IS_CLK_ENABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_PWREN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_TIM5EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_WWDGEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_SPI2EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_USART2EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_I2C1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_I2C2EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_IS_CLK_DISABLED\fP()   ((RCC\->APB1ENR & (RCC_APB1ENR_PWREN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_TIM1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_USART1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_USART6EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_ADC1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_SPI1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_SYSCFGEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_TIM9EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_DISABLE\fP()   (RCC\->APB2ENR &= ~(RCC_APB2ENR_TIM11EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_IS_CLK_ENABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) != RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_USART6EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_ADC1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SPI1EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_SYSCFGEN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM9EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_IS_CLK_DISABLED\fP()   ((RCC\->APB2ENR & (RCC_APB2ENR_TIM11EN)) == RESET)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AHB1_FORCE_RESET\fP()   (RCC\->AHB1RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOARST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOBRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOHRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AHB1_RELEASE_RESET\fP()   (RCC\->AHB1RSTR = 0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOARST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOBRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOHRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB1_FORCE_RESET\fP()   (RCC\->APB1RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_TIM5RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_WWDGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_SPI2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_USART2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_I2C1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_I2C2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_FORCE_RESET\fP()   (RCC\->APB1RSTR |= (RCC_APB1RSTR_PWRRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB1_RELEASE_RESET\fP()   (RCC\->APB1RSTR = 0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_TIM5RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_WWDGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_SPI2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_USART2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_I2C1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_I2C2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_RELEASE_RESET\fP()   (RCC\->APB1RSTR &= ~(RCC_APB1RSTR_PWRRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_FORCE_RESET\fP()   (RCC\->APB2RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART6RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_ADCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SPI1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SYSCFGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM9RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM11RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_RELEASE_RESET\fP()   (RCC\->APB2RSTR = 0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART6RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_ADCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SPI1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SYSCFGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM9RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM11RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_GPIOALPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_GPIOBLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_GPIOCLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_GPIOHLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_DMA1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_CLK_SLEEP_ENABLE\fP()   (RCC\->AHB1LPENR |= (RCC_AHB1LPENR_DMA2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_GPIOALPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_GPIOBLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_GPIOCLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_GPIOHLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_DMA1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_CLK_SLEEP_DISABLE\fP()   (RCC\->AHB1LPENR &= ~(RCC_AHB1LPENR_DMA2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_TIM5LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_WWDGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_SPI2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_USART2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_I2C1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_I2C2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_SLEEP_ENABLE\fP()   (RCC\->APB1LPENR |= (RCC_APB1LPENR_PWRLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_TIM5LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_WWDGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_SPI2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_USART2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_I2C1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_I2C2LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_SLEEP_DISABLE\fP()   (RCC\->APB1LPENR &= ~(RCC_APB1LPENR_PWRLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_USART6LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_ADC1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SPI1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_SYSCFGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM9LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_SLEEP_ENABLE\fP()   (RCC\->APB2LPENR |= (RCC_APB2LPENR_TIM11LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_USART6LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_ADC1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SPI1LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_SYSCFGLPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM9LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_CLK_SLEEP_DISABLE\fP()   (RCC\->APB2LPENR &= ~(RCC_APB2LPENR_TIM11LPEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSI_ENABLE\fP()   (*(__IO uint32_t *) \fBRCC_CR_HSION_BB\fP = ENABLE)"
+.br
+.RI "Macros to enable or disable the Internal High Speed oscillator (HSI)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSI_DISABLE\fP()   (*(__IO uint32_t *) \fBRCC_CR_HSION_BB\fP = DISABLE)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSI_CALIBRATIONVALUE_ADJUST\fP(__HSICalibrationValue__)"
+.br
+.RI "Macro to adjust the Internal High Speed oscillator (HSI) calibration value\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSI_ENABLE\fP()   (*(__IO uint32_t *) \fBRCC_CSR_LSION_BB\fP = ENABLE)"
+.br
+.RI "Macros to enable or disable the Internal Low Speed oscillator (LSI)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSI_DISABLE\fP()   (*(__IO uint32_t *) \fBRCC_CSR_LSION_BB\fP = DISABLE)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_HSE_CONFIG\fP(__STATE__)"
+.br
+.RI "Macro to configure the External High Speed oscillator (HSE)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_LSE_CONFIG\fP(__STATE__)"
+.br
+.RI "Macro to configure the External Low Speed oscillator (LSE)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_RTC_ENABLE\fP()   (*(__IO uint32_t *) \fBRCC_BDCR_RTCEN_BB\fP = ENABLE)"
+.br
+.RI "Macros to enable or disable the RTC clock\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_RTC_DISABLE\fP()   (*(__IO uint32_t *) \fBRCC_BDCR_RTCEN_BB\fP = DISABLE)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_RTC_CLKPRESCALER\fP(__RTCCLKSource__)"
+.br
+.RI "Macros to configure the RTC clock (RTCCLK)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_RTC_CONFIG\fP(__RTCCLKSource__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_RTC_SOURCE\fP()   (READ_BIT(RCC\->BDCR, RCC_BDCR_RTCSEL))"
+.br
+.RI "Macro to get the RTC clock source\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_RTC_HSE_PRESCALER\fP()   (READ_BIT(RCC\->CFGR, RCC_CFGR_RTCPRE) | RCC_BDCR_RTCSEL)"
+.br
+.RI "Get the RTC and HSE clock divider (RTCPRE)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_BACKUPRESET_FORCE\fP()   (*(__IO uint32_t *) \fBRCC_BDCR_BDRST_BB\fP = ENABLE)"
+.br
+.RI "Macros to force or release the Backup domain reset\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_BACKUPRESET_RELEASE\fP()   (*(__IO uint32_t *) \fBRCC_BDCR_BDRST_BB\fP = DISABLE)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_ENABLE\fP()   (*(__IO uint32_t *) \fBRCC_CR_PLLON_BB\fP = ENABLE)"
+.br
+.RI "Macros to enable or disable the main PLL\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_DISABLE\fP()   (*(__IO uint32_t *) \fBRCC_CR_PLLON_BB\fP = DISABLE)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_PLLSOURCE_CONFIG\fP(__PLLSOURCE__)   MODIFY_REG(RCC\->PLLCFGR, RCC_PLLCFGR_PLLSRC, (__PLLSOURCE__))"
+.br
+.RI "Macro to configure the PLL clock source\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_PLLM_CONFIG\fP(__PLLM__)   MODIFY_REG(RCC\->PLLCFGR, RCC_PLLCFGR_PLLM, (__PLLM__))"
+.br
+.RI "Macro to configure the PLL multiplication factor\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCLK_CONFIG\fP(__RCC_SYSCLKSOURCE__)   MODIFY_REG(RCC\->CFGR, RCC_CFGR_SW, (__RCC_SYSCLKSOURCE__))"
+.br
+.RI "Macro to configure the system clock source\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_SYSCLK_SOURCE\fP()   (RCC\->CFGR & RCC_CFGR_SWS)"
+.br
+.RI "Macro to get the clock source used as system clock\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_PLL_OSCSOURCE\fP()   ((uint32_t)(RCC\->PLLCFGR & RCC_PLLCFGR_PLLSRC))"
+.br
+.RI "Macro to get the oscillator used as PLL clock source\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_MCO1_CONFIG\fP(__MCOCLKSOURCE__,  __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO1 | RCC_CFGR_MCO1PRE), ((__MCOCLKSOURCE__) | (__MCODIV__)))"
+.br
+.RI "Macro to configure the MCO1 clock\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_MCO2_CONFIG\fP(__MCOCLKSOURCE__,  __MCODIV__)   MODIFY_REG(RCC\->CFGR, (RCC_CFGR_MCO2 | RCC_CFGR_MCO2PRE), ((__MCOCLKSOURCE__) | ((__MCODIV__) << 3U)));"
+.br
+.RI "Macro to configure the MCO2 clock\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_ENABLE_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP |= (__INTERRUPT__))"
+.br
+.RI "Enable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to enable the selected interrupts)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_DISABLE_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP &= (uint8_t)(~(__INTERRUPT__)))"
+.br
+.RI "Disable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to disable the selected interrupts)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE2_ADDRESS\fP = (__INTERRUPT__))"
+.br
+.RI "Clear the RCC's interrupt pending bits (Perform Byte access to RCC_CIR[23:16] bits to clear the selected interrupt pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_IT\fP(__INTERRUPT__)   ((RCC\->CIR & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check the RCC's interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_RESET_FLAGS\fP()   (RCC\->CSR |= RCC_CSR_RMVF)"
+.br
+.RI "Set RMVF bit to clear the reset flags: RCC_FLAG_PINRST, RCC_FLAG_PORRST, RCC_FLAG_SFTRST, RCC_FLAG_IWDGRST, RCC_FLAG_WWDGRST and RCC_FLAG_LPWRRST\&. "
+.ti -1c
+.RI "#define \fBRCC_FLAG_MASK\fP   ((uint8_t)0x1FU)"
+.br
+.RI "Check RCC flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_FLAG\fP(__FLAG__)   (((((((__FLAG__) >> 5U) == 1U)? RCC\->CR :((((__FLAG__) >> 5U) == 2U) ? RCC\->BDCR :((((__FLAG__) >> 5U) == 3U)? RCC\->CSR :RCC\->CIR))) & (1U << ((__FLAG__) & \fBRCC_FLAG_MASK\fP)))!= 0U)? 1U : 0U)"
+.br
+.ti -1c
+.RI "#define \fBRCC_OFFSET\fP   (RCC_BASE \- PERIPH_BASE)"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_OFFSET\fP   (\fBRCC_OFFSET\fP + 0x00U)"
+.br
+.ti -1c
+.RI "#define \fBRCC_HSION_BIT_NUMBER\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_HSION_BB\fP   (PERIPH_BB_BASE + (\fBRCC_CR_OFFSET\fP * 32U) + (\fBRCC_HSION_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSSON_BIT_NUMBER\fP   0x13U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_CSSON_BB\fP   (PERIPH_BB_BASE + (\fBRCC_CR_OFFSET\fP * 32U) + (\fBRCC_CSSON_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_PLLON_BIT_NUMBER\fP   0x18U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_PLLON_BB\fP   (PERIPH_BB_BASE + (\fBRCC_CR_OFFSET\fP * 32U) + (\fBRCC_PLLON_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_OFFSET\fP   (\fBRCC_OFFSET\fP + 0x70U)"
+.br
+.ti -1c
+.RI "#define \fBRCC_RTCEN_BIT_NUMBER\fP   0x0FU"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_RTCEN_BB\fP   (PERIPH_BB_BASE + (\fBRCC_BDCR_OFFSET\fP * 32U) + (\fBRCC_RTCEN_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDRST_BIT_NUMBER\fP   0x10U"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_BDRST_BB\fP   (PERIPH_BB_BASE + (\fBRCC_BDCR_OFFSET\fP * 32U) + (\fBRCC_BDRST_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSR_OFFSET\fP   (\fBRCC_OFFSET\fP + 0x74U)"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSION_BIT_NUMBER\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CSR_LSION_BB\fP   (PERIPH_BB_BASE + (\fBRCC_CSR_OFFSET\fP * 32U) + (\fBRCC_LSION_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CR_BYTE2_ADDRESS\fP   0x40023802U"
+.br
+.ti -1c
+.RI "#define \fBRCC_CIR_BYTE1_ADDRESS\fP   ((uint32_t)(RCC_BASE + 0x0CU + 0x01U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_CIR_BYTE2_ADDRESS\fP   ((uint32_t)(RCC_BASE + 0x0CU + 0x02U))"
+.br
+.ti -1c
+.RI "#define \fBRCC_BDCR_BYTE0_ADDRESS\fP   (PERIPH_BASE + \fBRCC_BDCR_OFFSET\fP)"
+.br
+.ti -1c
+.RI "#define \fBRCC_DBP_TIMEOUT_VALUE\fP   2U"
+.br
+.ti -1c
+.RI "#define \fBRCC_LSE_TIMEOUT_VALUE\fP   \fBLSE_STARTUP_TIMEOUT\fP"
+.br
+.ti -1c
+.RI "#define \fBHSE_TIMEOUT_VALUE\fP   \fBHSE_STARTUP_TIMEOUT\fP"
+.br
+.ti -1c
+.RI "#define \fBHSI_TIMEOUT_VALUE\fP   2U  /* 2 ms */"
+.br
+.ti -1c
+.RI "#define \fBLSI_TIMEOUT_VALUE\fP   2U  /* 2 ms */"
+.br
+.ti -1c
+.RI "#define \fBCLOCKSWITCH_TIMEOUT_VALUE\fP   5000U /* 5 s */"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_OSCILLATORTYPE\fP(OSCILLATOR)   ((OSCILLATOR) <= 15U)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_HSE\fP(HSE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_LSE\fP(LSE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_HSI\fP(HSI)   (((HSI) == \fBRCC_HSI_OFF\fP) || ((HSI) == \fBRCC_HSI_ON\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_LSI\fP(LSI)   (((LSI) == \fBRCC_LSI_OFF\fP) || ((LSI) == \fBRCC_LSI_ON\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLL\fP(PLL)   (((PLL) == \fBRCC_PLL_NONE\fP) ||((PLL) == \fBRCC_PLL_OFF\fP) || ((PLL) == \fBRCC_PLL_ON\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLSOURCE\fP(SOURCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_SYSCLKSOURCE\fP(SOURCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_RTCCLKSOURCE\fP(__SOURCE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLM_VALUE\fP(VALUE)   ((VALUE) <= 63U)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLP_VALUE\fP(VALUE)   (((VALUE) == 2U) || ((VALUE) == 4U) || ((VALUE) == 6U) || ((VALUE) == 8U))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PLLQ_VALUE\fP(VALUE)   ((2U <= (VALUE)) && ((VALUE) <= 15U))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_HCLK\fP(HCLK)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_CLOCKTYPE\fP(CLK)   ((1U <= (CLK)) && ((CLK) <= 15U))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_PCLK\fP(PCLK)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_MCO\fP(MCOx)   (((MCOx) == \fBRCC_MCO1\fP) || ((MCOx) == \fBRCC_MCO2\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_MCO1SOURCE\fP(SOURCE)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_MCODIV\fP(DIV)"
+.br
+.ti -1c
+.RI "#define \fBIS_RCC_CALIBRATION_VALUE\fP(VALUE)   ((VALUE) <= 0x1FU)"
+.br
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RCC_DeInit\fP (void)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RCC_OscConfig\fP (\fBRCC_OscInitTypeDef\fP *RCC_OscInitStruct)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RCC_ClockConfig\fP (\fBRCC_ClkInitTypeDef\fP *RCC_ClkInitStruct, uint32_t FLatency)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_MCOConfig\fP (uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_MCODiv)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_EnableCSS\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_DisableCSS\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCC_GetSysClockFreq\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCC_GetHCLKFreq\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCC_GetPCLK1Freq\fP (void)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RCC_GetPCLK2Freq\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_GetOscConfig\fP (\fBRCC_OscInitTypeDef\fP *RCC_OscInitStruct)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_GetClockConfig\fP (\fBRCC_ClkInitTypeDef\fP *RCC_ClkInitStruct, uint32_t *pFLatency)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_NMI_IRQHandler\fP (void)"
+.br
+.ti -1c
+.RI "void \fBHAL_RCC_CSSCallback\fP (void)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Header file of RCC HAL module\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_rcc\&.h\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

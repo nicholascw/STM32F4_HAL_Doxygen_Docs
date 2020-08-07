@@ -1,0 +1,158 @@
+.TH "DMA_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_InitTypeDef \- DMA Configuration Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_dma\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBChannel\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDirection\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPeriphInc\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMemInc\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPeriphDataAlignment\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMemDataAlignment\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPriority\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBFIFOMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBFIFOThreshold\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMemBurst\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPeriphBurst\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA Configuration Structure definition 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 49 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t Channel"
+Specifies the channel used for the specified stream\&. This parameter can be a value of \fBDMA Channel selection\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 51 行定义\&.
+.SS "uint32_t Direction"
+Specifies if the data will be transferred from memory to peripheral, from memory to memory or from peripheral to memory\&. This parameter can be a value of \fBDMA Data transfer direction\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 54 行定义\&.
+.SS "uint32_t FIFOMode"
+Specifies if the FIFO mode or Direct mode will be used for the specified stream\&. This parameter can be a value of \fBDMA FIFO direct mode\fP 
+.PP
+\fB注解\fP
+.RS 4
+The Direct mode (FIFO mode disabled) cannot be used if the memory-to-memory data transfer is configured on the selected stream 
+.br
+ 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 78 行定义\&.
+.SS "uint32_t FIFOThreshold"
+Specifies the FIFO threshold level\&. This parameter can be a value of \fBDMA FIFO threshold level\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 83 行定义\&.
+.SS "uint32_t MemBurst"
+Specifies the Burst transfer configuration for the memory transfers\&. It specifies the amount of data to be transferred in a single non interruptible transaction\&. This parameter can be a value of \fBDMA Memory burst\fP 
+.PP
+\fB注解\fP
+.RS 4
+The burst mode is possible only if the address Increment mode is enabled\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 86 行定义\&.
+.SS "uint32_t MemDataAlignment"
+Specifies the Memory data width\&. This parameter can be a value of \fBDMA Memory data size\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 67 行定义\&.
+.SS "uint32_t MemInc"
+Specifies whether the memory address register should be incremented or not\&. This parameter can be a value of \fBDMA Memory incremented mode\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 61 行定义\&.
+.SS "uint32_t Mode"
+Specifies the operation mode of the DMAy Streamx\&. This parameter can be a value of \fBDMA mode\fP 
+.PP
+\fB注解\fP
+.RS 4
+The circular buffer mode cannot be used if the memory-to-memory data transfer is configured on the selected Stream 
+.br
+ 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 70 行定义\&.
+.SS "uint32_t PeriphBurst"
+Specifies the Burst transfer configuration for the peripheral transfers\&. It specifies the amount of data to be transferred in a single non interruptible transaction\&. This parameter can be a value of \fBDMA Peripheral burst\fP 
+.PP
+\fB注解\fP
+.RS 4
+The burst mode is possible only if the address Increment mode is enabled\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 92 行定义\&.
+.SS "uint32_t PeriphDataAlignment"
+Specifies the Peripheral data width\&. This parameter can be a value of \fBDMA Peripheral data size\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 64 行定义\&.
+.SS "uint32_t PeriphInc"
+Specifies whether the Peripheral address register should be incremented or not\&. This parameter can be a value of \fBDMA Peripheral incremented mode\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 58 行定义\&.
+.SS "uint32_t Priority"
+Specifies the software priority for the DMAy Streamx\&. This parameter can be a value of \fBDMA Priority level\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 75 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

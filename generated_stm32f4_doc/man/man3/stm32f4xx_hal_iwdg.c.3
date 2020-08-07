@@ -1,0 +1,103 @@
+.TH "src/stm32f4xx_hal_iwdg.c" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stm32f4xx_hal_iwdg.c \- IWDG HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Independent Watchdog (IWDG) peripheral:  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+
+.SH "详细描述"
+.PP 
+IWDG HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Independent Watchdog (IWDG) peripheral: 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team
+.IP "\(bu" 2
+Initialization and Start functions
+.IP "\(bu" 2
+IO operation functions
+.PP
+.RE
+.PP
+.PP
+.nf
+==============================================================================
+                  ##### IWDG Generic features #####
+==============================================================================
+[..]
+  (+) The IWDG can be started by either software or hardware (configurable
+      through option byte).
+
+  (+) The IWDG is clocked by Low-Speed clock (LSI) and thus stays active even
+      if the main clock fails.
+
+  (+) Once the IWDG is started, the LSI is forced ON and both can not be
+      disabled. The counter starts counting down from the reset value (0xFFF).
+      When it reaches the end of count value (0x000) a reset signal is
+      generated (IWDG reset).
+
+  (+) Whenever the key value 0x0000 AAAA is written in the IWDG_KR register,
+      the IWDG_RLR value is reloaded in the counter and the watchdog reset is
+      prevented.
+
+  (+) The IWDG is implemented in the VDD voltage domain that is still functional
+      in STOP and STANDBY mode (IWDG reset can wake-up from STANDBY).
+      IWDGRST flag in RCC_CSR register can be used to inform when an IWDG
+      reset occurs.
+
+  (+) Debug mode : When the microcontroller enters debug mode (core halted),
+      the IWDG counter either continues to work normally or stops, depending
+      on DBG_IWDG_STOP configuration bit in DBG module, accessible through
+      __HAL_DBGMCU_FREEZE_IWDG() and __HAL_DBGMCU_UNFREEZE_IWDG() macros.
+
+  [..] Min-max timeout value @32KHz (LSI): ~125us / ~32.7s
+       The IWDG timeout may vary due to LSI frequency dispersion. STM32F4xx
+       devices provide the capability to measure the LSI frequency (LSI clock
+       connected internally to TIM5 CH4 input capture). The measured value
+       can be used to have an IWDG timeout with an acceptable accuracy.
+
+                   ##### How to use this driver #####
+==============================================================================
+[..]
+  (#) Use IWDG using HAL_IWDG_Init() function to :
+    (+) Enable instance by writing Start keyword in IWDG_KEY register. LSI
+         clock is forced ON and IWDG counter starts counting down.
+    (+) Enable write access to configuration registers:
+        IWDG_PR and IWDG_RLR.
+    (+) Configure the IWDG prescaler and counter reload value. This reload
+         value will be loaded in the IWDG counter each time the watchdog is
+         reloaded, then the IWDG will start counting down from this value.
+    (+) Wait for status flags to be reset.
+
+  (#) Then the application program must refresh the IWDG counter at regular
+      intervals during normal operation to prevent an MCU reset, using
+      HAL_IWDG_Refresh() function.
+
+   *** IWDG HAL driver macros list ***
+   ====================================
+   [..]
+     Below the list of most used macros in IWDG HAL driver:
+    (+) __HAL_IWDG_START: Enable the IWDG peripheral
+    (+) __HAL_IWDG_RELOAD_COUNTER: Reloads IWDG counter with value defined in
+        the reload register.fi
+.PP
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_iwdg\&.c\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

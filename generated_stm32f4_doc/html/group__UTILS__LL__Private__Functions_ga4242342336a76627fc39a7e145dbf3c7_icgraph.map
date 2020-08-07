@@ -1,0 +1,5 @@
+<map id="UTILS_PLL_IsBusy" name="UTILS_PLL_IsBusy">
+<area shape="rect" id="node1" title="Function to check that PLL can be modified" alt="" coords="284,31,423,57"/>
+<area shape="rect" id="node2" href="$group__UTILS__EF__SYSTEM.html#gaf6c8553d03464d4646b63321b97d25e2" title="This function configures system clock with HSE as clock source of the PLL" alt="" coords="5,5,236,32"/>
+<area shape="rect" id="node3" href="$group__UTILS__EF__SYSTEM.html#ga7ada5e4210f6ef80ef9f55bf9dd048c6" title="This function configures system clock at maximum frequency with HSI as clock source of the PLL" alt="" coords="7,56,234,83"/>
+</map>

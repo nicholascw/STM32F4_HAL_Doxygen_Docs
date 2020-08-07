@@ -1,0 +1,80 @@
+.TH "RTCEx_Exported_Functions_Group3" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Exported_Functions_Group3
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_RTCEx_BKUPWrite\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t BackupRegister, uint32_t Data)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RTCEx_BKUPRead\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t BackupRegister)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetCoarseCalib\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t CalibSign, uint32_t Value)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_DeactivateCoarseCalib\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetSmoothCalib\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t SmoothCalibPeriod, uint32_t SmoothCalibPlusPulses, uint32_t SmouthCalibMinusPulsesValue)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetSynchroShift\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t ShiftAdd1S, uint32_t ShiftSubFS)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetCalibrationOutPut\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t CalibOutput)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_DeactivateCalibrationOutPut\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetRefClock\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_DeactivateRefClock\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_EnableBypassShadow\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_DisableBypassShadow\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "uint32_t HAL_RTCEx_BKUPRead (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t BackupRegister)"
+
+.SS "void HAL_RTCEx_BKUPWrite (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t BackupRegister, uint32_t Data)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_DeactivateCalibrationOutPut (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_DeactivateCoarseCalib (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_DeactivateRefClock (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_DisableBypassShadow (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_EnableBypassShadow (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetCalibrationOutPut (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t CalibOutput)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetCoarseCalib (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t CalibSign, uint32_t Value)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetRefClock (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetSmoothCalib (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t SmoothCalibPeriod, uint32_t SmoothCalibPlusPulses, uint32_t SmouthCalibMinusPulsesValue)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetSynchroShift (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t ShiftAdd1S, uint32_t ShiftSubFS)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

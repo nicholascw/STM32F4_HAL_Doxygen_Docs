@@ -1,0 +1,139 @@
+.TH "RCCEx_Exported_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCCEx_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLL_CONFIG\fP(__RCC_PLLSource__,  __PLLM__,  __PLLN__,  __PLLP__,  __PLLQ__)"
+.br
+.RI "Macro to configure the main PLL clock source, multiplication and division factors\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_PLLI2S_CONFIG\fP(__PLLI2SN__,  __PLLI2SR__)"
+.br
+.RI "Macro to configure the PLLI2S clock multiplication and division factors \&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_PLL_CONFIG(__RCC_PLLSource__, __PLLM__, __PLLN__, __PLLP__, __PLLQ__)"
+\fB值:\fP
+.PP
+.nf
+                            (RCC->PLLCFGR = (0x20000000U | (__RCC_PLLSource__) | (__PLLM__)| \
+                            ((__PLLN__) << RCC_PLLCFGR_PLLN_Pos)                | \
+                            ((((__PLLP__) >> 1U) -1U) << RCC_PLLCFGR_PLLP_Pos)    | \
+                            ((__PLLQ__) << RCC_PLLCFGR_PLLQ_Pos)))
+.fi
+.PP
+Macro to configure the main PLL clock source, multiplication and division factors\&. 
+.PP
+\fB注解\fP
+.RS 4
+This function must be used only when the main PLL is disabled\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>RCC_PLLSource</strong>\fP specifies the PLL entry clock source\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_PLLSOURCE_HSI: HSI oscillator clock selected as PLL clock entry 
+.IP "\(bu" 2
+RCC_PLLSOURCE_HSE: HSE oscillator clock selected as PLL clock entry 
+.PP
+.RE
+.PP
+\fB注解\fP
+.RS 4
+This clock source (RCC_PLLSource) is common for the main PLL and PLLI2S\&. 
+.br
+ 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>PLLM</strong>\fP specifies the division factor for PLL VCO input clock This parameter must be a number between Min_Data = 2 and Max_Data = 63\&. 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+You have to set the PLLM parameter correctly to ensure that the VCO input frequency ranges from 1 to 2 MHz\&. It is recommended to select a frequency of 2 MHz to limit PLL jitter\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>PLLN</strong>\fP specifies the multiplication factor for PLL VCO output clock This parameter must be a number between Min_Data = 50 and Max_Data = 432 Except for STM32F411xE devices where Min_Data = 192\&. 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+You have to set the PLLN parameter correctly to ensure that the VCO output frequency is between 100 and 432 MHz, Except for STM32F411xE devices where frequency is between 192 and 432 MHz\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>PLLP</strong>\fP specifies the division factor for main system clock (SYSCLK) This parameter must be a number in the range {2, 4, 6, or 8}\&.
+.br
+\fI<strong>PLLQ</strong>\fP specifies the division factor for OTG FS, SDIO and RNG clocks This parameter must be a number between Min_Data = 2 and Max_Data = 15\&. 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+If the USB OTG FS is used in your application, you have to set the PLLQ parameter correctly to have 48 MHz clock for the USB\&. However, the SDIO and RNG need a frequency lower than or equal to 48 MHz to work correctly\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc_ex\&.h 第 5811 行定义\&.
+.SS "#define __HAL_RCC_PLLI2S_CONFIG(__PLLI2SN__, __PLLI2SR__)"
+\fB值:\fP
+.PP
+.nf
+                               (RCC->PLLI2SCFGR = (((__PLLI2SN__) << RCC_PLLI2SCFGR_PLLI2SN_Pos)  |\
+                               ((__PLLI2SR__) << RCC_PLLI2SCFGR_PLLI2SR_Pos)))
+.fi
+.PP
+Macro to configure the PLLI2S clock multiplication and division factors \&. 
+.PP
+\fB注解\fP
+.RS 4
+This macro must be used only when the PLLI2S is disabled\&. 
+.PP
+PLLI2S clock source is common with the main PLL (configured in \fBHAL_RCC_ClockConfig()\fP API)\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>PLLI2SN</strong>\fP specifies the multiplication factor for PLLI2S VCO output clock This parameter must be a number between Min_Data = 50 and Max_Data = 432\&. 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+You have to set the PLLI2SN parameter correctly to ensure that the VCO output frequency is between Min_Data = 100 and Max_Data = 432 MHz\&.
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>PLLI2SR</strong>\fP specifies the division factor for I2S clock This parameter must be a number between Min_Data = 2 and Max_Data = 7\&. 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+You have to set the PLLI2SR parameter correctly to not exceed 192 MHz on the I2S clock frequency\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc_ex\&.h 第 5915 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,206 @@
+.TH "ADC_Exported_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_ADC_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_ADC_STATE_RESET\fP)"
+.br
+.RI "Reset ADC handle state "
+.ti -1c
+.RI "#define \fB__HAL_ADC_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 |=  ADC_CR2_ADON)"
+.br
+.RI "Enable the ADC peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 &=  ~ADC_CR2_ADON)"
+.br
+.RI "Disable the ADC peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) |= (__INTERRUPT__))"
+.br
+.RI "Enable the ADC end of conversion interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the ADC end of conversion interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1 & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check if the specified ADC interrupt source is enabled or disabled\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   (((__HANDLE__)\->Instance\->SR) = ~(__FLAG__))"
+.br
+.RI "Clear the ADC's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_ADC_GET_FLAG\fP(__HANDLE__,  __FLAG__)   ((((__HANDLE__)\->Instance\->SR) & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Get the selected ADC's flag status\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_ADC_CLEAR_FLAG(__HANDLE__, __FLAG__)   (((__HANDLE__)\->Instance\->SR) = ~(__FLAG__))"
+
+.PP
+Clear the ADC's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the ADC Handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP ADC flag\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 538 行定义\&.
+.SS "#define __HAL_ADC_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 &=  ~ADC_CR2_ADON)"
+
+.PP
+Disable the ADC peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 507 行定义\&.
+.SS "#define __HAL_ADC_DISABLE_IT(__HANDLE__, __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) &= ~(__INTERRUPT__))"
+
+.PP
+Disable the ADC end of conversion interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the ADC Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP ADC interrupt\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 523 行定义\&.
+.SS "#define __HAL_ADC_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR2 |=  ADC_CR2_ADON)"
+
+.PP
+Enable the ADC peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 500 行定义\&.
+.SS "#define __HAL_ADC_ENABLE_IT(__HANDLE__, __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1) |= (__INTERRUPT__))"
+
+.PP
+Enable the ADC end of conversion interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the ADC Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP ADC Interrupt\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 515 行定义\&.
+.SS "#define __HAL_ADC_GET_FLAG(__HANDLE__, __FLAG__)   ((((__HANDLE__)\->Instance\->SR) & (__FLAG__)) == (__FLAG__))"
+
+.PP
+Get the selected ADC's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the ADC Handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP ADC flag\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 546 行定义\&.
+.SS "#define __HAL_ADC_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((__HANDLE__)\->Instance\->CR1 & (__INTERRUPT__)) == (__INTERRUPT__))"
+
+.PP
+Check if the specified ADC interrupt source is enabled or disabled\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the ADC Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the ADC interrupt source to check\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of \fBIT\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 530 行定义\&.
+.SS "#define __HAL_ADC_RESET_HANDLE_STATE(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_ADC_STATE_RESET\fP)"
+
+.PP
+Reset ADC handle state 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 491 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,238 @@
+\hypertarget{group__USART__Private__Macros}{}\doxysection{U\+S\+A\+RT Private Macros}
+\label{group__USART__Private__Macros}\index{USART Private Macros@{USART Private Macros}}
+U\+S\+A\+RT Private Macros 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{group__USART__Private__Macros}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga92c8c26cb4d4f8f20c67a85c2d457797}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+N\+A\+C\+K\+\_\+\+S\+T\+A\+TE}}(N\+A\+CK)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_gaa941695e5612b53e9c2aca6a9fa0d695}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT}}(L\+A\+S\+T\+B\+IT)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga6ea3d074e9204eb593472e03452e537b}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE}}(C\+P\+HA)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga365cbaaf0cc68a8c689b4ee418cd287d}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY}}(C\+P\+OL)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga0f1e1ba37690b21b7338ed3b06614cf6}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK}}(C\+L\+O\+CK)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga5b07b29ee91f0bea4c10ec0fd74fbc04}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH}}(L\+E\+N\+G\+TH)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga6f9153c1fbee1058ba26ec88f0f20828}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS}}(S\+T\+O\+P\+B\+I\+TS)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_gaa87b2e338e0ccc42887d3c56901bee87}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY}}(P\+A\+R\+I\+TY)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_gae9140e5ca405d2377fe0e82c79e136a2}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE}}(M\+O\+DE)~((((M\+O\+DE) \& ($\sim$((uint32\+\_\+t)\mbox{\hyperlink{group__USART__Mode_ga82418ff60ab8dac647eb7a6ba6db1284}{U\+S\+A\+R\+T\+\_\+\+M\+O\+D\+E\+\_\+\+T\+X\+\_\+\+RX}}))) == 0x00U) \&\& ((M\+O\+DE) != 0x00U))
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga9dc365e0a1e01031a8e0757a34b9d420}{I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE}}(B\+A\+U\+D\+R\+A\+TE)~((B\+A\+U\+D\+R\+A\+TE) $<$= 12500000U)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}{U\+S\+A\+R\+T\+\_\+\+D\+IV}}(\+\_\+\+P\+C\+L\+K\+\_\+,  \+\_\+\+B\+A\+U\+D\+\_\+)~(((\+\_\+\+P\+C\+L\+K\+\_\+)$\ast$25U)/(2U$\ast$(\+\_\+\+B\+A\+U\+D\+\_\+)))
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT}}(\+\_\+\+P\+C\+L\+K\+\_\+,  \+\_\+\+B\+A\+U\+D\+\_\+)~(\mbox{\hyperlink{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}{U\+S\+A\+R\+T\+\_\+\+D\+IV}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+))/100U)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga00df975ff1f97cde5c9aff11decf858b}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+F\+R\+AQ}}(\+\_\+\+P\+C\+L\+K\+\_\+,  \+\_\+\+B\+A\+U\+D\+\_\+)~(((\mbox{\hyperlink{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}{U\+S\+A\+R\+T\+\_\+\+D\+IV}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) -\/ (\mbox{\hyperlink{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Macros_ga783dc52032f468497a8affe268751909}{U\+S\+A\+R\+T\+\_\+\+B\+RR}}(\+\_\+\+P\+C\+L\+K\+\_\+,  \+\_\+\+B\+A\+U\+D\+\_\+)~((\mbox{\hyperlink{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) $<$$<$ 4U)$\vert$(\mbox{\hyperlink{group__USART__Private__Macros_ga00df975ff1f97cde5c9aff11decf858b}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+F\+R\+AQ}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) \& 0x0\+FU))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{group__USART__Private__Macros_ga9dc365e0a1e01031a8e0757a34b9d420}\label{group__USART__Private__Macros_ga9dc365e0a1e01031a8e0757a34b9d420}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_BAUDRATE@{IS\_USART\_BAUDRATE}}
+\index{IS\_USART\_BAUDRATE@{IS\_USART\_BAUDRATE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_BAUDRATE}{IS\_USART\_BAUDRATE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+B\+A\+U\+D\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{B\+A\+U\+D\+R\+A\+TE }\end{DoxyParamCaption})~((B\+A\+U\+D\+R\+A\+TE) $<$= 12500000U)}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 605 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga0f1e1ba37690b21b7338ed3b06614cf6}\label{group__USART__Private__Macros_ga0f1e1ba37690b21b7338ed3b06614cf6}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_CLOCK@{IS\_USART\_CLOCK}}
+\index{IS\_USART\_CLOCK@{IS\_USART\_CLOCK}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_CLOCK}{IS\_USART\_CLOCK}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+C\+L\+O\+CK(\begin{DoxyParamCaption}\item[{}]{C\+L\+O\+CK }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((CLOCK) == \mbox{\hyperlink{group__USART__Clock_ga7c889a9b9716214fc680eb75ca18c009}{USART\_CLOCK\_DISABLE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((CLOCK) == \mbox{\hyperlink{group__USART__Clock_gac055ca6ca9647277e3f89a5df9529730}{USART\_CLOCK\_ENABLE}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 588 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_gaa941695e5612b53e9c2aca6a9fa0d695}\label{group__USART__Private__Macros_gaa941695e5612b53e9c2aca6a9fa0d695}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_LASTBIT@{IS\_USART\_LASTBIT}}
+\index{IS\_USART\_LASTBIT@{IS\_USART\_LASTBIT}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_LASTBIT}{IS\_USART\_LASTBIT}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+L\+A\+S\+T\+B\+IT(\begin{DoxyParamCaption}\item[{}]{L\+A\+S\+T\+B\+IT }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((LASTBIT) == \mbox{\hyperlink{group__USART__Last__Bit_gac96499244ffa44ff6fa739da9cc9d53f}{USART\_LASTBIT\_DISABLE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((LASTBIT) == \mbox{\hyperlink{group__USART__Last__Bit_gae851e2151668c666028dc10f20f4f676}{USART\_LASTBIT\_ENABLE}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 579 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_gae9140e5ca405d2377fe0e82c79e136a2}\label{group__USART__Private__Macros_gae9140e5ca405d2377fe0e82c79e136a2}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_MODE@{IS\_USART\_MODE}}
+\index{IS\_USART\_MODE@{IS\_USART\_MODE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_MODE}{IS\_USART\_MODE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+M\+O\+DE(\begin{DoxyParamCaption}\item[{}]{M\+O\+DE }\end{DoxyParamCaption})~((((M\+O\+DE) \& ($\sim$((uint32\+\_\+t)\mbox{\hyperlink{group__USART__Mode_ga82418ff60ab8dac647eb7a6ba6db1284}{U\+S\+A\+R\+T\+\_\+\+M\+O\+D\+E\+\_\+\+T\+X\+\_\+\+RX}}))) == 0x00U) \&\& ((M\+O\+DE) != 0x00U))}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 603 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga92c8c26cb4d4f8f20c67a85c2d457797}\label{group__USART__Private__Macros_ga92c8c26cb4d4f8f20c67a85c2d457797}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_NACK\_STATE@{IS\_USART\_NACK\_STATE}}
+\index{IS\_USART\_NACK\_STATE@{IS\_USART\_NACK\_STATE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_NACK\_STATE}{IS\_USART\_NACK\_STATE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+N\+A\+C\+K\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{N\+A\+CK }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((NACK) == \mbox{\hyperlink{group__USART__NACK__State_ga89002469e32e3a236d534eac7db048eb}{USART\_NACK\_ENABLE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((NACK) == \mbox{\hyperlink{group__USART__NACK__State_gac92ccec5e433d1707f71f51f49a6ccc7}{USART\_NACK\_DISABLE}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 576 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_gaa87b2e338e0ccc42887d3c56901bee87}\label{group__USART__Private__Macros_gaa87b2e338e0ccc42887d3c56901bee87}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_PARITY@{IS\_USART\_PARITY}}
+\index{IS\_USART\_PARITY@{IS\_USART\_PARITY}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_PARITY}{IS\_USART\_PARITY}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+A\+R\+I\+TY(\begin{DoxyParamCaption}\item[{}]{P\+A\+R\+I\+TY }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((PARITY) == \mbox{\hyperlink{group__USART__Parity_ga85bfcbeb5ba1c34bbcda3f3e3b994846}{USART\_PARITY\_NONE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((PARITY) == \mbox{\hyperlink{group__USART__Parity_gae7630824c78a39366b7e5b4c55996200}{USART\_PARITY\_EVEN}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((PARITY) == \mbox{\hyperlink{group__USART__Parity_ga184f3e22cb30ea94b797b02e94e774a1}{USART\_PARITY\_ODD}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 599 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga6ea3d074e9204eb593472e03452e537b}\label{group__USART__Private__Macros_ga6ea3d074e9204eb593472e03452e537b}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_PHASE@{IS\_USART\_PHASE}}
+\index{IS\_USART\_PHASE@{IS\_USART\_PHASE}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_PHASE}{IS\_USART\_PHASE}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+H\+A\+SE(\begin{DoxyParamCaption}\item[{}]{C\+P\+HA }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((CPHA) == \mbox{\hyperlink{group__USART__Clock__Phase_gab050873df3eb3844f973e61681e02e6a}{USART\_PHASE\_1EDGE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((CPHA) == \mbox{\hyperlink{group__USART__Clock__Phase_ga080cff411c6cefbb511162fcc91c43ec}{USART\_PHASE\_2EDGE}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 582 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga365cbaaf0cc68a8c689b4ee418cd287d}\label{group__USART__Private__Macros_ga365cbaaf0cc68a8c689b4ee418cd287d}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_POLARITY@{IS\_USART\_POLARITY}}
+\index{IS\_USART\_POLARITY@{IS\_USART\_POLARITY}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_POLARITY}{IS\_USART\_POLARITY}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+P\+O\+L\+A\+R\+I\+TY(\begin{DoxyParamCaption}\item[{}]{C\+P\+OL }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((CPOL) == \mbox{\hyperlink{group__USART__Clock__Polarity_ga5afb62c05704ca0e750ca8f4bb5ccc7d}{USART\_POLARITY\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((CPOL) == \mbox{\hyperlink{group__USART__Clock__Polarity_ga3b3e3d798d4797a220346f6b14d257ee}{USART\_POLARITY\_HIGH}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 585 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga6f9153c1fbee1058ba26ec88f0f20828}\label{group__USART__Private__Macros_ga6f9153c1fbee1058ba26ec88f0f20828}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_STOPBITS@{IS\_USART\_STOPBITS}}
+\index{IS\_USART\_STOPBITS@{IS\_USART\_STOPBITS}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_STOPBITS}{IS\_USART\_STOPBITS}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+S\+T\+O\+P\+B\+I\+TS(\begin{DoxyParamCaption}\item[{}]{S\+T\+O\+P\+B\+I\+TS }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((STOPBITS) == \mbox{\hyperlink{group__USART__Stop__Bits_ga82aae3118e9cd59bb270c028e21c23b4}{USART\_STOPBITS\_1}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((STOPBITS) == \mbox{\hyperlink{group__USART__Stop__Bits_gaa6e5782774150ff935df3fc06d9ec0c4}{USART\_STOPBITS\_0\_5}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((STOPBITS) == \mbox{\hyperlink{group__USART__Stop__Bits_ga5b799017a5d9ab7de71a49c625f87532}{USART\_STOPBITS\_1\_5}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((STOPBITS) == \mbox{\hyperlink{group__USART__Stop__Bits_gaf8d022e62f55ceb7b5e03eea336b5c45}{USART\_STOPBITS\_2}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 594 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga5b07b29ee91f0bea4c10ec0fd74fbc04}\label{group__USART__Private__Macros_ga5b07b29ee91f0bea4c10ec0fd74fbc04}} 
+\index{USART Private Macros@{USART Private Macros}!IS\_USART\_WORD\_LENGTH@{IS\_USART\_WORD\_LENGTH}}
+\index{IS\_USART\_WORD\_LENGTH@{IS\_USART\_WORD\_LENGTH}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_USART\_WORD\_LENGTH}{IS\_USART\_WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define I\+S\+\_\+\+U\+S\+A\+R\+T\+\_\+\+W\+O\+R\+D\+\_\+\+L\+E\+N\+G\+TH(\begin{DoxyParamCaption}\item[{}]{L\+E\+N\+G\+TH }\end{DoxyParamCaption})}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((LENGTH) == \mbox{\hyperlink{group__USART__Word__Length_gae2978458689a31bed9a8a3e66ed84f50}{USART\_WORDLENGTH\_8B}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((LENGTH) == \mbox{\hyperlink{group__USART__Word__Length_ga3a8363f7dccf85ccb52d698e0900f347}{USART\_WORDLENGTH\_9B}}))}
+
+\end{DoxyCode}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 591 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga783dc52032f468497a8affe268751909}\label{group__USART__Private__Macros_ga783dc52032f468497a8affe268751909}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_BRR@{USART\_BRR}}
+\index{USART\_BRR@{USART\_BRR}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{USART\_BRR}{USART\_BRR}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+B\+RR(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+P\+C\+L\+K\+\_\+,  }\item[{}]{\+\_\+\+B\+A\+U\+D\+\_\+ }\end{DoxyParamCaption})~((\mbox{\hyperlink{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) $<$$<$ 4U)$\vert$(\mbox{\hyperlink{group__USART__Private__Macros_ga00df975ff1f97cde5c9aff11decf858b}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+F\+R\+AQ}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) \& 0x0\+FU))}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 613 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}\label{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIV@{USART\_DIV}}
+\index{USART\_DIV@{USART\_DIV}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{USART\_DIV}{USART\_DIV}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+D\+IV(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+P\+C\+L\+K\+\_\+,  }\item[{}]{\+\_\+\+B\+A\+U\+D\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+P\+C\+L\+K\+\_\+)$\ast$25U)/(2U$\ast$(\+\_\+\+B\+A\+U\+D\+\_\+)))}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 607 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_ga00df975ff1f97cde5c9aff11decf858b}\label{group__USART__Private__Macros_ga00df975ff1f97cde5c9aff11decf858b}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIVFRAQ@{USART\_DIVFRAQ}}
+\index{USART\_DIVFRAQ@{USART\_DIVFRAQ}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{USART\_DIVFRAQ}{USART\_DIVFRAQ}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+F\+R\+AQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+P\+C\+L\+K\+\_\+,  }\item[{}]{\+\_\+\+B\+A\+U\+D\+\_\+ }\end{DoxyParamCaption})~(((\mbox{\hyperlink{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}{U\+S\+A\+R\+T\+\_\+\+D\+IV}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) -\/ (\mbox{\hyperlink{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}{U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+)) $\ast$ 100U)) $\ast$ 16U + 50U) / 100U)}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 611 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}\label{group__USART__Private__Macros_gaa2c98efc6728b5c725cb8d0105e877a5}} 
+\index{USART Private Macros@{USART Private Macros}!USART\_DIVMANT@{USART\_DIVMANT}}
+\index{USART\_DIVMANT@{USART\_DIVMANT}!USART Private Macros@{USART Private Macros}}
+\doxysubsubsection{\texorpdfstring{USART\_DIVMANT}{USART\_DIVMANT}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+D\+I\+V\+M\+A\+NT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+P\+C\+L\+K\+\_\+,  }\item[{}]{\+\_\+\+B\+A\+U\+D\+\_\+ }\end{DoxyParamCaption})~(\mbox{\hyperlink{group__USART__Private__Macros_ga97e94c06b8493c8eafac36cb787dcb26}{U\+S\+A\+R\+T\+\_\+\+D\+IV}}((\+\_\+\+P\+C\+L\+K\+\_\+), (\+\_\+\+B\+A\+U\+D\+\_\+))/100U)}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 609 行定义.
+

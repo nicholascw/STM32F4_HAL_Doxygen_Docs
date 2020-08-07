@@ -1,0 +1,216 @@
+.TH "WWDG_Exported_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WWDG_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_WWDG_ENABLE\fP(__HANDLE__)   SET_BIT((__HANDLE__)\->Instance\->CR, WWDG_CR_WDGA)"
+.br
+.RI "Enable the WWDG peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   SET_BIT((__HANDLE__)\->Instance\->CFR, (__INTERRUPT__))"
+.br
+.RI "Enable the WWDG early wakeup interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_GET_IT\fP(__HANDLE__,  __INTERRUPT__)   \fB__HAL_WWDG_GET_FLAG\fP((__HANDLE__),(__INTERRUPT__))"
+.br
+.RI "Check whether the selected WWDG interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_CLEAR_IT\fP(__HANDLE__,  __INTERRUPT__)   \fB__HAL_WWDG_CLEAR_FLAG\fP((__HANDLE__), (__INTERRUPT__))"
+.br
+.RI "Clear the WWDG interrupt pending bits\&. bits to clear the selected interrupt pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((__HANDLE__)\->Instance\->SR & (__FLAG__)) == (__FLAG__))"
+.br
+.RI "Check whether the specified WWDG flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->SR = ~(__FLAG__))"
+.br
+.RI "Clear the WWDG's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_WWDG_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((__HANDLE__)\->Instance\->CFR & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check whether the specified WWDG interrupt source is enabled or not\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_WWDG_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->SR = ~(__FLAG__))"
+
+.PP
+Clear the WWDG's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.br
+\fI<strong>FLAG</strong>\fP specifies the flag to clear\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_FLAG_EWIF: Early wakeup interrupt flag 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 234 行定义\&.
+.SS "#define __HAL_WWDG_CLEAR_IT(__HANDLE__, __INTERRUPT__)   \fB__HAL_WWDG_CLEAR_FLAG\fP((__HANDLE__), (__INTERRUPT__))"
+
+.PP
+Clear the WWDG interrupt pending bits\&. bits to clear the selected interrupt pending bits\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the interrupt pending bit to clear\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_FLAG_EWIF: Early wakeup interrupt flag 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 214 行定义\&.
+.SS "#define __HAL_WWDG_ENABLE(__HANDLE__)   SET_BIT((__HANDLE__)\->Instance\->CR, WWDG_CR_WDGA)"
+
+.PP
+Enable the WWDG peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 184 行定义\&.
+.SS "#define __HAL_WWDG_ENABLE_IT(__HANDLE__, __INTERRUPT__)   SET_BIT((__HANDLE__)\->Instance\->CFR, (__INTERRUPT__))"
+
+.PP
+Enable the WWDG early wakeup interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the interrupt to enable\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_IT_EWI: Early wakeup interrupt 
+.PP
+.RE
+.PP
+\fB注解\fP
+.RS 4
+Once enabled this interrupt cannot be disabled except by a system reset\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 195 行定义\&.
+.SS "#define __HAL_WWDG_GET_FLAG(__HANDLE__, __FLAG__)   (((__HANDLE__)\->Instance\->SR & (__FLAG__)) == (__FLAG__))"
+
+.PP
+Check whether the specified WWDG flag is set or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.br
+\fI<strong>FLAG</strong>\fP specifies the flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_FLAG_EWIF: Early wakeup interrupt flag 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of WWDG_FLAG (SET or RESET)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 224 行定义\&.
+.SS "#define __HAL_WWDG_GET_IT(__HANDLE__, __INTERRUPT__)   \fB__HAL_WWDG_GET_FLAG\fP((__HANDLE__),(__INTERRUPT__))"
+
+.PP
+Check whether the selected WWDG interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG handle 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the it to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_FLAG_EWIF: Early wakeup interrupt IT 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of WWDG_FLAG (SET or RESET)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 205 行定义\&.
+.SS "#define __HAL_WWDG_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((__HANDLE__)\->Instance\->CFR & (__INTERRUPT__)) == (__INTERRUPT__))"
+
+.PP
+Check whether the specified WWDG interrupt source is enabled or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP WWDG Handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the WWDG interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+WWDG_IT_EWI: Early Wakeup Interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIstate\fP of \fBINTERRUPT\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 243 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,468 @@
+.TH "HAL_Exported_Functions_Group2" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_Exported_Functions_Group2 \- HAL Control functions  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBHAL_IncTick\fP (void)"
+.br
+.RI "This function is called to increment a global variable 'uwTick' used as application time base\&. "
+.ti -1c
+.RI "void \fBHAL_Delay\fP (uint32_t Delay)"
+.br
+.RI "This function provides minimum delay (in milliseconds) based on variable incremented\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetTick\fP (void)"
+.br
+.RI "Provides a tick value in millisecond\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetTickPrio\fP (void)"
+.br
+.RI "This function returns a tick priority\&. "
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SetTickFreq\fP (\fBHAL_TickFreqTypeDef\fP Freq)"
+.br
+.RI "Set new tick Freq\&. "
+.ti -1c
+.RI "\fBHAL_TickFreqTypeDef\fP \fBHAL_GetTickFreq\fP (void)"
+.br
+.RI "Return tick frequency\&. "
+.ti -1c
+.RI "void \fBHAL_SuspendTick\fP (void)"
+.br
+.RI "Suspend Tick increment\&. "
+.ti -1c
+.RI "void \fBHAL_ResumeTick\fP (void)"
+.br
+.RI "Resume Tick increment\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetHalVersion\fP (void)"
+.br
+.RI "Returns the HAL revision "
+.ti -1c
+.RI "uint32_t \fBHAL_GetREVID\fP (void)"
+.br
+.RI "Returns the device revision identifier\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetDEVID\fP (void)"
+.br
+.RI "Returns the device identifier\&. "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGSleepMode\fP (void)"
+.br
+.RI "Enable the Debug Module during SLEEP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGSleepMode\fP (void)"
+.br
+.RI "Disable the Debug Module during SLEEP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGStopMode\fP (void)"
+.br
+.RI "Enable the Debug Module during STOP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGStopMode\fP (void)"
+.br
+.RI "Disable the Debug Module during STOP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGStandbyMode\fP (void)"
+.br
+.RI "Enable the Debug Module during STANDBY mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGStandbyMode\fP (void)"
+.br
+.RI "Disable the Debug Module during STANDBY mode "
+.ti -1c
+.RI "void \fBHAL_EnableCompensationCell\fP (void)"
+.br
+.RI "Enables the I/O Compensation Cell\&. "
+.ti -1c
+.RI "void \fBHAL_DisableCompensationCell\fP (void)"
+.br
+.RI "Power-down the I/O Compensation Cell\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw0\fP (void)"
+.br
+.RI "Returns first word of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw1\fP (void)"
+.br
+.RI "Returns second word of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw2\fP (void)"
+.br
+.RI "Returns third word of the unique device identifier (UID based on 96 bits) "
+.in -1c
+.SH "详细描述"
+.PP 
+HAL Control functions 
+
+
+.PP
+.nf
+ ===============================================================================
+                      ##### HAL Control functions #####
+ ===============================================================================
+    [..]  This section provides functions allowing to:
+      (+) Provide a tick value in millisecond
+      (+) Provide a blocking delay in millisecond
+      (+) Suspend the time base source interrupt
+      (+) Resume the time base source interrupt
+      (+) Get the HAL API driver version
+      (+) Get the device identifier
+      (+) Get the device revision identifier
+      (+) Enable/Disable Debug module during SLEEP mode
+      (+) Enable/Disable Debug module during STOP mode
+      (+) Enable/Disable Debug module during STANDBY mode
+.fi
+.PP
+ 
+.SH "函数说明"
+.PP 
+.SS "void HAL_DBGMCU_DisableDBGSleepMode (void)"
+
+.PP
+Disable the Debug Module during SLEEP mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 465 行定义\&.
+.SS "void HAL_DBGMCU_DisableDBGStandbyMode (void)"
+
+.PP
+Disable the Debug Module during STANDBY mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 501 行定义\&.
+.SS "void HAL_DBGMCU_DisableDBGStopMode (void)"
+
+.PP
+Disable the Debug Module during STOP mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 483 行定义\&.
+.SS "void HAL_DBGMCU_EnableDBGSleepMode (void)"
+
+.PP
+Enable the Debug Module during SLEEP mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 456 行定义\&.
+.SS "void HAL_DBGMCU_EnableDBGStandbyMode (void)"
+
+.PP
+Enable the Debug Module during STANDBY mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 492 行定义\&.
+.SS "void HAL_DBGMCU_EnableDBGStopMode (void)"
+
+.PP
+Enable the Debug Module during STOP mode 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 474 行定义\&.
+.SS "__weak void HAL_Delay (uint32_t Delay)"
+
+.PP
+This function provides minimum delay (in milliseconds) based on variable incremented\&. 
+.PP
+\fB注解\fP
+.RS 4
+In the default implementation , SysTick timer is the source of time base\&. It is used to generate interrupts at regular time intervals where uwTick is incremented\&. 
+.PP
+This function is declared as __weak to be overwritten in case of other implementations in user file\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fIDelay\fP specifies the delay time length, in milliseconds\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 377 行定义\&.
+.SS "void HAL_DisableCompensationCell (void)"
+
+.PP
+Power-down the I/O Compensation Cell\&. 
+.PP
+\fB注解\fP
+.RS 4
+The I/O compensation cell can be used only when the device supply voltage ranges from 2\&.4 to 3\&.6 V\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 523 行定义\&.
+.SS "void HAL_EnableCompensationCell (void)"
+
+.PP
+Enables the I/O Compensation Cell\&. 
+.PP
+\fB注解\fP
+.RS 4
+The I/O compensation cell can be used only when the device supply voltage ranges from 2\&.4 to 3\&.6 V\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 512 行定义\&.
+.SS "uint32_t HAL_GetDEVID (void)"
+
+.PP
+Returns the device identifier\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fIDevice\fP identifier 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 447 行定义\&.
+.SS "uint32_t HAL_GetHalVersion (void)"
+
+.PP
+Returns the HAL revision 
+.PP
+\fB返回值\fP
+.RS 4
+\fIversion\fP : 0xXYZR (8bits for each decimal, R for RC) 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 429 行定义\&.
+.SS "uint32_t HAL_GetREVID (void)"
+
+.PP
+Returns the device revision identifier\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fIDevice\fP revision identifier 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 438 行定义\&.
+.SS "__weak uint32_t HAL_GetTick (void)"
+
+.PP
+Provides a tick value in millisecond\&. 
+.PP
+\fB注解\fP
+.RS 4
+This function is declared as __weak to be overwritten in case of other implementations in user file\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fItick\fP value 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 323 行定义\&.
+.SS "\fBHAL_TickFreqTypeDef\fP HAL_GetTickFreq (void)"
+
+.PP
+Return tick frequency\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fItick\fP period in Hz 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 361 行定义\&.
+.SS "uint32_t HAL_GetTickPrio (void)"
+
+.PP
+This function returns a tick priority\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fItick\fP priority 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 332 行定义\&.
+.SS "uint32_t HAL_GetUIDw0 (void)"
+
+.PP
+Returns first word of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIDevice\fP identifier 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 532 行定义\&.
+.SS "uint32_t HAL_GetUIDw1 (void)"
+
+.PP
+Returns second word of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIDevice\fP identifier 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 541 行定义\&.
+.SS "uint32_t HAL_GetUIDw2 (void)"
+
+.PP
+Returns third word of the unique device identifier (UID based on 96 bits) 
+.PP
+\fB返回值\fP
+.RS 4
+\fIDevice\fP identifier 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 550 行定义\&.
+.SS "__weak void HAL_IncTick (void)"
+
+.PP
+This function is called to increment a global variable 'uwTick' used as application time base\&. 
+.PP
+\fB注解\fP
+.RS 4
+In the default implementation, this variable is incremented each 1ms in SysTick ISR\&. 
+.PP
+This function is declared as __weak to be overwritten in case of other implementations in user file\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 312 行定义\&.
+.SS "__weak void HAL_ResumeTick (void)"
+
+.PP
+Resume Tick increment\&. 
+.PP
+\fB注解\fP
+.RS 4
+In the default implementation , SysTick timer is the source of time base\&. It is used to generate interrupts at regular time intervals\&. Once \fBHAL_ResumeTick()\fP is called, the SysTick interrupt will be enabled and so Tick increment is resumed\&. 
+.PP
+This function is declared as __weak to be overwritten in case of other implementations in user file\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 419 行定义\&.
+.SS "\fBHAL_StatusTypeDef\fP HAL_SetTickFreq (\fBHAL_TickFreqTypeDef\fP Freq)"
+
+.PP
+Set new tick Freq\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fIStatus\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 341 行定义\&.
+.SS "__weak void HAL_SuspendTick (void)"
+
+.PP
+Suspend Tick increment\&. 
+.PP
+\fB注解\fP
+.RS 4
+In the default implementation , SysTick timer is the source of time base\&. It is used to generate interrupts at regular time intervals\&. Once \fBHAL_SuspendTick()\fP is called, the SysTick interrupt will be disabled and so Tick increment is suspended\&. 
+.PP
+This function is declared as __weak to be overwritten in case of other implementations in user file\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 403 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

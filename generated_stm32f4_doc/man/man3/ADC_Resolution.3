@@ -1,0 +1,48 @@
+.TH "ADC_Resolution" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Resolution
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_12B\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_10B\fP   ((uint32_t)ADC_CR1_RES_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_8B\fP   ((uint32_t)ADC_CR1_RES_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_RESOLUTION_6B\fP   ((uint32_t)ADC_CR1_RES)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define ADC_RESOLUTION_10B   ((uint32_t)ADC_CR1_RES_0)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 306 行定义\&.
+.SS "#define ADC_RESOLUTION_12B   0x00000000U"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 305 行定义\&.
+.SS "#define ADC_RESOLUTION_6B   ((uint32_t)ADC_CR1_RES)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 308 行定义\&.
+.SS "#define ADC_RESOLUTION_8B   ((uint32_t)ADC_CR1_RES_1)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 307 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

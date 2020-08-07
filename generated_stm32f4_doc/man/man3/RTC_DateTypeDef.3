@@ -1,0 +1,54 @@
+.TH "RTC_DateTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTC_DateTypeDef \- RTC Date structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_rtc\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBWeekDay\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBMonth\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBDate\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBYear\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+RTC Date structure definition 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 119 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint8_t Date"
+Specifies the RTC Date\&. This parameter must be a number between Min_Data = 1 and Max_Data = 31 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 127 行定义\&.
+.SS "uint8_t Month"
+Specifies the RTC Date Month (in BCD format)\&. This parameter can be a value of \fBRTC Month Date Definitions\fP 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 124 行定义\&.
+.SS "uint8_t WeekDay"
+Specifies the RTC Date WeekDay\&. This parameter can be a value of \fBRTC WeekDay Definitions\fP 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 121 行定义\&.
+.SS "uint8_t Year"
+Specifies the RTC Date Year\&. This parameter must be a number between Min_Data = 0 and Max_Data = 99 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 130 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

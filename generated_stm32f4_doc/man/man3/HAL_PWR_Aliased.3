@@ -1,0 +1,286 @@
+.TH "HAL_PWR_Aliased" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_PWR_Aliased
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_PWR_PVDConfig\fP   \fBHAL_PWR_ConfigPVD\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableBkUpReg\fP   \fBHAL_PWREx_DisableBkUpReg\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableFlashPowerDown\fP   \fBHAL_PWREx_DisableFlashPowerDown\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_DisableVddio2Monitor\fP   HAL_PWREx_DisableVddio2Monitor"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableBkUpReg\fP   \fBHAL_PWREx_EnableBkUpReg\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableFlashPowerDown\fP   \fBHAL_PWREx_EnableFlashPowerDown\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_EnableVddio2Monitor\fP   HAL_PWREx_EnableVddio2Monitor"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_PVD_PVM_IRQHandler\fP   HAL_PWREx_PVD_PVM_IRQHandler"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_PVDLevelConfig\fP   \fBHAL_PWR_ConfigPVD\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_Vddio2Monitor_IRQHandler\fP   HAL_PWREx_Vddio2Monitor_IRQHandler"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_Vddio2MonitorCallback\fP   HAL_PWREx_Vddio2MonitorCallback"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_ActivateOverDrive\fP   HAL_PWREx_EnableOverDrive"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_DeactivateOverDrive\fP   HAL_PWREx_DisableOverDrive"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_DisableSDADCAnalog\fP   HAL_PWREx_DisableSDADC"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_EnableSDADCAnalog\fP   HAL_PWREx_EnableSDADC"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWREx_PVMConfig\fP   HAL_PWREx_ConfigPVM"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_NORMAL\fP   \fBPWR_PVD_MODE_NORMAL\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_RISING\fP   \fBPWR_PVD_MODE_IT_RISING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_FALLING\fP   \fBPWR_PVD_MODE_IT_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_IT_RISING_FALLING\fP   \fBPWR_PVD_MODE_IT_RISING_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_RISING\fP   \fBPWR_PVD_MODE_EVENT_RISING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_FALLING\fP   \fBPWR_PVD_MODE_EVENT_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVENT_RISING_FALLING\fP   \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP"
+.br
+.ti -1c
+.RI "#define \fBCR_OFFSET_BB\fP   \fBPWR_CR_OFFSET_BB\fP"
+.br
+.ti -1c
+.RI "#define \fBCSR_OFFSET_BB\fP   \fBPWR_CSR_OFFSET_BB\fP"
+.br
+.ti -1c
+.RI "#define \fBPMODE_BIT_NUMBER\fP   \fBVOS_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBCR_PMODE_BB\fP   \fBCR_VOS_BB\fP"
+.br
+.ti -1c
+.RI "#define \fBDBP_BitNumber\fP   \fBDBP_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBPVDE_BitNumber\fP   \fBPVDE_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBPMODE_BitNumber\fP   \fBPMODE_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBEWUP_BitNumber\fP   \fBEWUP_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBFPDS_BitNumber\fP   \fBFPDS_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBODEN_BitNumber\fP   \fBODEN_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBODSWEN_BitNumber\fP   \fBODSWEN_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBMRLVDS_BitNumber\fP   \fBMRLVDS_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBLPLVDS_BitNumber\fP   \fBLPLVDS_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBBRE_BitNumber\fP   \fBBRE_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBPWR_MODE_EVT\fP   \fBPWR_PVD_MODE_NORMAL\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define BRE_BitNumber   \fBBRE_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1321 行定义\&.
+.SS "#define CR_OFFSET_BB   \fBPWR_CR_OFFSET_BB\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1307 行定义\&.
+.SS "#define CR_PMODE_BB   \fBCR_VOS_BB\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1310 行定义\&.
+.SS "#define CSR_OFFSET_BB   \fBPWR_CSR_OFFSET_BB\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1308 行定义\&.
+.SS "#define DBP_BitNumber   \fBDBP_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1312 行定义\&.
+.SS "#define EWUP_BitNumber   \fBEWUP_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1315 行定义\&.
+.SS "#define FPDS_BitNumber   \fBFPDS_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1316 行定义\&.
+.SS "#define HAL_PWR_DisableBkUpReg   \fBHAL_PWREx_DisableBkUpReg\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1283 行定义\&.
+.SS "#define HAL_PWR_DisableFlashPowerDown   \fBHAL_PWREx_DisableFlashPowerDown\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1284 行定义\&.
+.SS "#define HAL_PWR_DisableVddio2Monitor   HAL_PWREx_DisableVddio2Monitor"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1285 行定义\&.
+.SS "#define HAL_PWR_EnableBkUpReg   \fBHAL_PWREx_EnableBkUpReg\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1286 行定义\&.
+.SS "#define HAL_PWR_EnableFlashPowerDown   \fBHAL_PWREx_EnableFlashPowerDown\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1287 行定义\&.
+.SS "#define HAL_PWR_EnableVddio2Monitor   HAL_PWREx_EnableVddio2Monitor"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1288 行定义\&.
+.SS "#define HAL_PWR_PVD_PVM_IRQHandler   HAL_PWREx_PVD_PVM_IRQHandler"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1289 行定义\&.
+.SS "#define HAL_PWR_PVDConfig   \fBHAL_PWR_ConfigPVD\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1282 行定义\&.
+.SS "#define HAL_PWR_PVDLevelConfig   \fBHAL_PWR_ConfigPVD\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1290 行定义\&.
+.SS "#define HAL_PWR_Vddio2Monitor_IRQHandler   HAL_PWREx_Vddio2Monitor_IRQHandler"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1291 行定义\&.
+.SS "#define HAL_PWR_Vddio2MonitorCallback   HAL_PWREx_Vddio2MonitorCallback"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1292 行定义\&.
+.SS "#define HAL_PWREx_ActivateOverDrive   HAL_PWREx_EnableOverDrive"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1293 行定义\&.
+.SS "#define HAL_PWREx_DeactivateOverDrive   HAL_PWREx_DisableOverDrive"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1294 行定义\&.
+.SS "#define HAL_PWREx_DisableSDADCAnalog   HAL_PWREx_DisableSDADC"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1295 行定义\&.
+.SS "#define HAL_PWREx_EnableSDADCAnalog   HAL_PWREx_EnableSDADC"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1296 行定义\&.
+.SS "#define HAL_PWREx_PVMConfig   HAL_PWREx_ConfigPVM"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1297 行定义\&.
+.SS "#define LPLVDS_BitNumber   \fBLPLVDS_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1320 行定义\&.
+.SS "#define MRLVDS_BitNumber   \fBMRLVDS_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1319 行定义\&.
+.SS "#define ODEN_BitNumber   \fBODEN_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1317 行定义\&.
+.SS "#define ODSWEN_BitNumber   \fBODSWEN_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1318 行定义\&.
+.SS "#define PMODE_BIT_NUMBER   \fBVOS_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1309 行定义\&.
+.SS "#define PMODE_BitNumber   \fBPMODE_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1314 行定义\&.
+.SS "#define PVDE_BitNumber   \fBPVDE_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1313 行定义\&.
+.SS "#define PWR_MODE_EVENT_FALLING   \fBPWR_PVD_MODE_EVENT_FALLING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1304 行定义\&.
+.SS "#define PWR_MODE_EVENT_RISING   \fBPWR_PVD_MODE_EVENT_RISING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1303 行定义\&.
+.SS "#define PWR_MODE_EVENT_RISING_FALLING   \fBPWR_PVD_MODE_EVENT_RISING_FALLING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1305 行定义\&.
+.SS "#define PWR_MODE_EVT   \fBPWR_PVD_MODE_NORMAL\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1323 行定义\&.
+.SS "#define PWR_MODE_IT_FALLING   \fBPWR_PVD_MODE_IT_FALLING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1301 行定义\&.
+.SS "#define PWR_MODE_IT_RISING   \fBPWR_PVD_MODE_IT_RISING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1300 行定义\&.
+.SS "#define PWR_MODE_IT_RISING_FALLING   \fBPWR_PVD_MODE_IT_RISING_FALLING\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1302 行定义\&.
+.SS "#define PWR_MODE_NORMAL   \fBPWR_PVD_MODE_NORMAL\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1299 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,58 @@
+.TH "inc/stm32f4xx_hal_dma_ex.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_dma_ex.h \- Header file of DMA HAL extension module\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_def\&.h'\fP
+.br
+
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_DMA_MemoryTypeDef\fP { \fBMEMORY0\fP = 0x00U, \fBMEMORY1\fP = 0x01U }"
+.br
+.RI "HAL DMA Memory definition 
+.br
+ "
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_MultiBufferStart\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_MultiBufferStart_IT\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_ChangeMemory\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t Address, \fBHAL_DMA_MemoryTypeDef\fP memory)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Header file of DMA HAL extension module\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_dma_ex\&.h\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

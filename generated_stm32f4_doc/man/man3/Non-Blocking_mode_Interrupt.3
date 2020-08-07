@@ -1,0 +1,65 @@
+.TH "Non-Blocking_mode_Interrupt" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Non-Blocking_mode_Interrupt
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_Master_Transmit_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_Master_Receive_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus, uint16_t DevAddress, uint8_t *pData, uint16_t Size, uint32_t XferOptions)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_Master_Abort_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus, uint16_t DevAddress)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_Slave_Transmit_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus, uint8_t *pData, uint16_t Size, uint32_t XferOptions)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_Slave_Receive_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus, uint8_t *pData, uint16_t Size, uint32_t XferOptions)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_EnableAlert_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_DisableAlert_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_EnableListen_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SMBUS_DisableListen_IT\fP (\fBSMBUS_HandleTypeDef\fP *hsmbus)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_DisableAlert_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_DisableListen_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_EnableAlert_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_EnableListen_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_Master_Abort_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus, uint16_t DevAddress)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_Master_Receive_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus, uint16_t DevAddress, uint8_t * pData, uint16_t Size, uint32_t XferOptions)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_Master_Transmit_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus, uint16_t DevAddress, uint8_t * pData, uint16_t Size, uint32_t XferOptions)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_Slave_Receive_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus, uint8_t * pData, uint16_t Size, uint32_t XferOptions)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_SMBUS_Slave_Transmit_IT (\fBSMBUS_HandleTypeDef\fP * hsmbus, uint8_t * pData, uint16_t Size, uint32_t XferOptions)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

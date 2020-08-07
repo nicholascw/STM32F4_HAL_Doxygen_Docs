@@ -1,0 +1,641 @@
+.TH "ADC_Private_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Private_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_IS_ENABLE\fP(__HANDLE__)"
+.br
+.RI "Verification of ADC state: enabled or disabled "
+.ti -1c
+.RI "#define \fBADC_IS_SOFTWARE_START_REGULAR\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_EXTEN) == RESET)"
+.br
+.RI "Test if conversion trigger of regular group is software start or external trigger\&. "
+.ti -1c
+.RI "#define \fBADC_IS_SOFTWARE_START_INJECTED\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_JEXTEN) == RESET)"
+.br
+.RI "Test if conversion trigger of injected group is software start or external trigger\&. "
+.ti -1c
+.RI "#define \fBADC_STATE_CLR_SET\fP   MODIFY_REG"
+.br
+.RI "Simultaneously clears and sets specific bits of the handle State "
+.ti -1c
+.RI "#define \fBADC_CLEAR_ERRORCODE\fP(__HANDLE__)   ((__HANDLE__)\->ErrorCode = \fBHAL_ADC_ERROR_NONE\fP)"
+.br
+.RI "Clear ADC error code (set it to error code: 'no error') "
+.ti -1c
+.RI "#define \fBIS_ADC_CLOCKPRESCALER\fP(ADC_CLOCK)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_SAMPLING_DELAY\fP(DELAY)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_RESOLUTION\fP(RESOLUTION)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EXT_TRIG_EDGE\fP(EDGE)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EXT_TRIG\fP(REGTRIG)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_DATA_ALIGN\fP(ALIGN)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_SAMPLE_TIME\fP(TIME)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EOCSelection\fP(EOCSelection)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_EVENT_TYPE\fP(EVENT)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_ANALOG_WATCHDOG\fP(WATCHDOG)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_CHANNELS_TYPE\fP(CHANNEL_TYPE)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_THRESHOLD\fP(THRESHOLD)   ((THRESHOLD) <= 0xFFFU)"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_LENGTH\fP(LENGTH)   (((LENGTH) >= 1U) && ((LENGTH) <= 16U))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_RANK\fP(RANK)   (((RANK) >= 1U) && ((RANK) <= (16U)))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_REGULAR_DISC_NUMBER\fP(NUMBER)   (((NUMBER) >= 1U) && ((NUMBER) <= 8U))"
+.br
+.ti -1c
+.RI "#define \fBIS_ADC_RANGE\fP(RESOLUTION,  ADC_VALUE)"
+.br
+.ti -1c
+.RI "#define \fBADC_SQR1\fP(_NbrOfConversion_)   (((_NbrOfConversion_) \- (uint8_t)1U) << 20U)"
+.br
+.RI "Set ADC Regular channel sequence length\&. "
+.ti -1c
+.RI "#define \fBADC_SMPR1\fP(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) << (3U * (((uint32_t)((uint16_t)(_CHANNELNB_))) \- 10U)))"
+.br
+.RI "Set the ADC's sample time for channel numbers between 10 and 18\&. "
+.ti -1c
+.RI "#define \fBADC_SMPR2\fP(_SAMPLETIME_,  _CHANNELNB_)   ((_SAMPLETIME_) << (3U * ((uint32_t)((uint16_t)(_CHANNELNB_)))))"
+.br
+.RI "Set the ADC's sample time for channel numbers between 0 and 9\&. "
+.ti -1c
+.RI "#define \fBADC_SQR3_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 1U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 1 and 6\&. "
+.ti -1c
+.RI "#define \fBADC_SQR2_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 7U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 7 and 12\&. "
+.ti -1c
+.RI "#define \fBADC_SQR1_RK\fP(_CHANNELNB_,  _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 13U)))"
+.br
+.RI "Set the selected regular channel rank for rank between 13 and 16\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_CONTINUOUS\fP(_CONTINUOUS_MODE_)   ((_CONTINUOUS_MODE_) << 1U)"
+.br
+.RI "Enable ADC continuous conversion mode\&. "
+.ti -1c
+.RI "#define \fBADC_CR1_DISCONTINUOUS\fP(_NBR_DISCONTINUOUSCONV_)   (((_NBR_DISCONTINUOUSCONV_) \- 1U) << ADC_CR1_DISCNUM_Pos)"
+.br
+.RI "Configures the number of discontinuous conversions for the regular group channels\&. "
+.ti -1c
+.RI "#define \fBADC_CR1_SCANCONV\fP(_SCANCONV_MODE_)   ((_SCANCONV_MODE_) << 8U)"
+.br
+.RI "Enable ADC scan mode\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_EOCSelection\fP(_EOCSelection_MODE_)   ((_EOCSelection_MODE_) << 10U)"
+.br
+.RI "Enable the ADC end of conversion selection\&. "
+.ti -1c
+.RI "#define \fBADC_CR2_DMAContReq\fP(_DMAContReq_MODE_)   ((_DMAContReq_MODE_) << 9U)"
+.br
+.RI "Enable the ADC DMA continuous request\&. "
+.ti -1c
+.RI "#define \fBADC_GET_RESOLUTION\fP(__HANDLE__)   (((__HANDLE__)\->Instance\->CR1) & ADC_CR1_RES)"
+.br
+.RI "Return resolution bits in CR1 register\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define ADC_CLEAR_ERRORCODE(__HANDLE__)   ((__HANDLE__)\->ErrorCode = \fBHAL_ADC_ERROR_NONE\fP)"
+
+.PP
+Clear ADC error code (set it to error code: 'no error') 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 696 行定义\&.
+.SS "#define ADC_CR1_DISCONTINUOUS(_NBR_DISCONTINUOUSCONV_)   (((_NBR_DISCONTINUOUSCONV_) \- 1U) << ADC_CR1_DISCNUM_Pos)"
+
+.PP
+Configures the number of discontinuous conversions for the regular group channels\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>NBR_DISCONTINUOUSCONV</em>\fP Number of discontinuous conversions\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 840 行定义\&.
+.SS "#define ADC_CR1_SCANCONV(_SCANCONV_MODE_)   ((_SCANCONV_MODE_) << 8U)"
+
+.PP
+Enable ADC scan mode\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>SCANCONV_MODE</em>\fP Scan conversion mode\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 847 行定义\&.
+.SS "#define ADC_CR2_CONTINUOUS(_CONTINUOUS_MODE_)   ((_CONTINUOUS_MODE_) << 1U)"
+
+.PP
+Enable ADC continuous conversion mode\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>CONTINUOUS_MODE</em>\fP Continuous mode\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 833 行定义\&.
+.SS "#define ADC_CR2_DMAContReq(_DMAContReq_MODE_)   ((_DMAContReq_MODE_) << 9U)"
+
+.PP
+Enable the ADC DMA continuous request\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>DMAContReq_MODE</em>\fP DMA continuous request mode\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 861 行定义\&.
+.SS "#define ADC_CR2_EOCSelection(_EOCSelection_MODE_)   ((_EOCSelection_MODE_) << 10U)"
+
+.PP
+Enable the ADC end of conversion selection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>EOCSelection_MODE</em>\fP End of conversion selection mode\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 854 行定义\&.
+.SS "#define ADC_GET_RESOLUTION(__HANDLE__)   (((__HANDLE__)\->Instance\->CR1) & ADC_CR1_RES)"
+
+.PP
+Return resolution bits in CR1 register\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 868 行定义\&.
+.SS "#define ADC_IS_ENABLE(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+  ((( ((__HANDLE__)->Instance->SR & ADC_SR_ADONS) == ADC_SR_ADONS )            \
+  ) ? SET : RESET)
+.fi
+.PP
+Verification of ADC state: enabled or disabled 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fISET\fP (ADC enabled) or RESET (ADC disabled) 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 660 行定义\&.
+.SS "#define ADC_IS_SOFTWARE_START_INJECTED(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_JEXTEN) == RESET)"
+
+.PP
+Test if conversion trigger of injected group is software start or external trigger\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fISET\fP (software start) or RESET (external trigger) 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 679 行定义\&.
+.SS "#define ADC_IS_SOFTWARE_START_REGULAR(__HANDLE__)   (((__HANDLE__)\->Instance\->CR2 & ADC_CR2_EXTEN) == RESET)"
+
+.PP
+Test if conversion trigger of regular group is software start or external trigger\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP ADC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fISET\fP (software start) or RESET (external trigger) 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 670 行定义\&.
+.SS "#define ADC_SMPR1(_SAMPLETIME_, _CHANNELNB_)   ((_SAMPLETIME_) << (3U * (((uint32_t)((uint16_t)(_CHANNELNB_))) \- 10U)))"
+
+.PP
+Set the ADC's sample time for channel numbers between 10 and 18\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>SAMPLETIME</em>\fP Sample time parameter\&. 
+.br
+\fI<em>CHANNELNB</em>\fP Channel number\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 794 行定义\&.
+.SS "#define ADC_SMPR2(_SAMPLETIME_, _CHANNELNB_)   ((_SAMPLETIME_) << (3U * ((uint32_t)((uint16_t)(_CHANNELNB_)))))"
+
+.PP
+Set the ADC's sample time for channel numbers between 0 and 9\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>SAMPLETIME</em>\fP Sample time parameter\&. 
+.br
+\fI<em>CHANNELNB</em>\fP Channel number\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 802 行定义\&.
+.SS "#define ADC_SQR1(_NbrOfConversion_)   (((_NbrOfConversion_) \- (uint8_t)1U) << 20U)"
+
+.PP
+Set ADC Regular channel sequence length\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>NbrOfConversion</em>\fP Regular channel sequence length\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 786 行定义\&.
+.SS "#define ADC_SQR1_RK(_CHANNELNB_, _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 13U)))"
+
+.PP
+Set the selected regular channel rank for rank between 13 and 16\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>CHANNELNB</em>\fP Channel number\&. 
+.br
+\fI<em>RANKNB</em>\fP Rank number\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 826 行定义\&.
+.SS "#define ADC_SQR2_RK(_CHANNELNB_, _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 7U)))"
+
+.PP
+Set the selected regular channel rank for rank between 7 and 12\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>CHANNELNB</em>\fP Channel number\&. 
+.br
+\fI<em>RANKNB</em>\fP Rank number\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 818 行定义\&.
+.SS "#define ADC_SQR3_RK(_CHANNELNB_, _RANKNB_)   (((uint32_t)((uint16_t)(_CHANNELNB_))) << (5U * ((_RANKNB_) \- 1U)))"
+
+.PP
+Set the selected regular channel rank for rank between 1 and 6\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<em>CHANNELNB</em>\fP Channel number\&. 
+.br
+\fI<em>RANKNB</em>\fP Rank number\&. 
+.br
+ 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 810 行定义\&.
+.SS "#define ADC_STATE_CLR_SET   MODIFY_REG"
+
+.PP
+Simultaneously clears and sets specific bits of the handle State 
+.PP
+\fB注解\fP
+.RS 4
+: \fBADC_STATE_CLR_SET()\fP macro is merely aliased to generic macro MODIFY_REG(), the first parameter is the ADC handle State, the second parameter is the bit field to clear, the third and last parameter is the bit field to set\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 689 行定义\&.
+.SS "#define IS_ADC_ANALOG_WATCHDOG(WATCHDOG)"
+\fB值:\fP
+.PP
+.nf
+                                          (((WATCHDOG) == ADC_ANALOGWATCHDOG_SINGLE_REG)        || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_SINGLE_INJEC)      || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_SINGLE_REGINJEC)   || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_ALL_REG)           || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_ALL_INJEC)         || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_ALL_REGINJEC)      || \
+                                          ((WATCHDOG) == ADC_ANALOGWATCHDOG_NONE))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 760 行定义\&.
+.SS "#define IS_ADC_CHANNELS_TYPE(CHANNEL_TYPE)"
+\fB值:\fP
+.PP
+.nf
+                                            (((CHANNEL_TYPE) == ADC_ALL_CHANNELS) || \
+                                            ((CHANNEL_TYPE) == ADC_REGULAR_CHANNELS) || \
+                                            ((CHANNEL_TYPE) == ADC_INJECTED_CHANNELS))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 767 行定义\&.
+.SS "#define IS_ADC_CLOCKPRESCALER(ADC_CLOCK)"
+\fB值:\fP
+.PP
+.nf
+                                              (((ADC_CLOCK) == ADC_CLOCK_SYNC_PCLK_DIV2) || \
+                                              ((ADC_CLOCK) == ADC_CLOCK_SYNC_PCLK_DIV4) || \
+                                              ((ADC_CLOCK) == ADC_CLOCK_SYNC_PCLK_DIV6) || \
+                                              ((ADC_CLOCK) == ADC_CLOCK_SYNC_PCLK_DIV8))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 700 行定义\&.
+.SS "#define IS_ADC_DATA_ALIGN(ALIGN)"
+\fB值:\fP
+.PP
+.nf
+                                  (((ALIGN) == ADC_DATAALIGN_RIGHT) || \
+                                  ((ALIGN) == ADC_DATAALIGN_LEFT))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 745 行定义\&.
+.SS "#define IS_ADC_EOCSelection(EOCSelection)"
+\fB值:\fP
+.PP
+.nf
+                                           (((EOCSelection) == ADC_EOC_SINGLE_CONV)   || \
+                                           ((EOCSelection) == ADC_EOC_SEQ_CONV)  || \
+                                           ((EOCSelection) == ADC_EOC_SINGLE_SEQ_CONV))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 755 行定义\&.
+.SS "#define IS_ADC_EVENT_TYPE(EVENT)"
+\fB值:\fP
+.PP
+.nf
+                                  (((EVENT) == ADC_AWD_EVENT) || \
+                                  ((EVENT) == ADC_OVR_EVENT))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 758 行定义\&.
+.SS "#define IS_ADC_EXT_TRIG(REGTRIG)"
+\fB值:\fP
+.PP
+.nf
+                                  (((REGTRIG) == ADC_EXTERNALTRIGCONV_T1_CC1)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T1_CC2)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T1_CC3)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T2_CC2)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T2_CC3)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T2_CC4)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T2_TRGO) || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T3_CC1)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T3_TRGO) || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T4_CC4)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T5_CC1)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T5_CC2)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T5_CC3)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T8_CC1)  || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_T8_TRGO) || \
+                                  ((REGTRIG) == ADC_EXTERNALTRIGCONV_Ext_IT11)|| \
+                                  ((REGTRIG) == ADC_SOFTWARE_START))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 728 行定义\&.
+.SS "#define IS_ADC_EXT_TRIG_EDGE(EDGE)"
+\fB值:\fP
+.PP
+.nf
+                                    (((EDGE) == ADC_EXTERNALTRIGCONVEDGE_NONE)    || \
+                                    ((EDGE) == ADC_EXTERNALTRIGCONVEDGE_RISING)  || \
+                                    ((EDGE) == ADC_EXTERNALTRIGCONVEDGE_FALLING) || \
+                                    ((EDGE) == ADC_EXTERNALTRIGCONVEDGE_RISINGFALLING))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 724 行定义\&.
+.SS "#define IS_ADC_RANGE(RESOLUTION, ADC_VALUE)"
+\fB值:\fP
+.PP
+.nf
+   ((((RESOLUTION) == ADC_RESOLUTION_12B) && ((ADC_VALUE) <= 0x0FFFU)) || \
+    (((RESOLUTION) == ADC_RESOLUTION_10B) && ((ADC_VALUE) <= 0x03FFU)) || \
+    (((RESOLUTION) == ADC_RESOLUTION_8B)  && ((ADC_VALUE) <= 0x00FFU)) || \
+    (((RESOLUTION) == ADC_RESOLUTION_6B)  && ((ADC_VALUE) <= 0x003FU)))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 775 行定义\&.
+.SS "#define IS_ADC_REGULAR_DISC_NUMBER(NUMBER)   (((NUMBER) >= 1U) && ((NUMBER) <= 8U))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 774 行定义\&.
+.SS "#define IS_ADC_REGULAR_LENGTH(LENGTH)   (((LENGTH) >= 1U) && ((LENGTH) <= 16U))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 772 行定义\&.
+.SS "#define IS_ADC_REGULAR_RANK(RANK)   (((RANK) >= 1U) && ((RANK) <= (16U)))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 773 行定义\&.
+.SS "#define IS_ADC_RESOLUTION(RESOLUTION)"
+\fB值:\fP
+.PP
+.nf
+                                       (((RESOLUTION) == ADC_RESOLUTION_12B) || \
+                                       ((RESOLUTION) == ADC_RESOLUTION_10B) || \
+                                       ((RESOLUTION) == ADC_RESOLUTION_8B)  || \
+                                       ((RESOLUTION) == ADC_RESOLUTION_6B))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 720 行定义\&.
+.SS "#define IS_ADC_SAMPLE_TIME(TIME)"
+\fB值:\fP
+.PP
+.nf
+                                  (((TIME) == ADC_SAMPLETIME_3CYCLES)   || \
+                                  ((TIME) == ADC_SAMPLETIME_15CYCLES)  || \
+                                  ((TIME) == ADC_SAMPLETIME_28CYCLES)  || \
+                                  ((TIME) == ADC_SAMPLETIME_56CYCLES)  || \
+                                  ((TIME) == ADC_SAMPLETIME_84CYCLES)  || \
+                                  ((TIME) == ADC_SAMPLETIME_112CYCLES) || \
+                                  ((TIME) == ADC_SAMPLETIME_144CYCLES) || \
+                                  ((TIME) == ADC_SAMPLETIME_480CYCLES))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 747 行定义\&.
+.SS "#define IS_ADC_SAMPLING_DELAY(DELAY)"
+\fB值:\fP
+.PP
+.nf
+                                      (((DELAY) == ADC_TWOSAMPLINGDELAY_5CYCLES)  || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_6CYCLES)  || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_7CYCLES)  || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_8CYCLES)  || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_9CYCLES)  || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_10CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_11CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_12CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_13CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_14CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_15CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_16CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_17CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_18CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_19CYCLES) || \
+                                      ((DELAY) == ADC_TWOSAMPLINGDELAY_20CYCLES))
+.fi
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 704 行定义\&.
+.SS "#define IS_ADC_THRESHOLD(THRESHOLD)   ((THRESHOLD) <= 0xFFFU)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 770 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,38 @@
+.TH "DMAEx_Exported_Functions_Group1" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMAEx_Exported_Functions_Group1 \- Extended features functions  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_MultiBufferStart\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_MultiBufferStart_IT\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DMAEx_ChangeMemory\fP (\fBDMA_HandleTypeDef\fP *hdma, uint32_t Address, \fBHAL_DMA_MemoryTypeDef\fP memory)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Extended features functions 
+
+
+.SH "函数说明"
+.PP 
+.SS "\fBHAL_StatusTypeDef\fP HAL_DMAEx_ChangeMemory (\fBDMA_HandleTypeDef\fP * hdma, uint32_t Address, \fBHAL_DMA_MemoryTypeDef\fP memory)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_DMAEx_MultiBufferStart (\fBDMA_HandleTypeDef\fP * hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_DMAEx_MultiBufferStart_IT (\fBDMA_HandleTypeDef\fP * hdma, uint32_t SrcAddress, uint32_t DstAddress, uint32_t SecondMemAddress, uint32_t DataLength)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

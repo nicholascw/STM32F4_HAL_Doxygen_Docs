@@ -1,0 +1,54 @@
+.TH "TIM_ClockConfigTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_ClockConfigTypeDef \- Clock Configuration Handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_tim\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBClockSource\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockPolarity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockPrescaler\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBClockFilter\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Clock Configuration Handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 197 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t ClockFilter"
+TIM clock filter This parameter can be a number between Min_Data = 0x0 and Max_Data = 0xF 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 205 行定义\&.
+.SS "uint32_t ClockPolarity"
+TIM clock polarity This parameter can be a value of \fBTIM Clock Polarity\fP 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 201 行定义\&.
+.SS "uint32_t ClockPrescaler"
+TIM clock prescaler This parameter can be a value of \fBTIM Clock Prescaler\fP 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 203 行定义\&.
+.SS "uint32_t ClockSource"
+TIM clock sources This parameter can be a value of \fBTIM Clock Source\fP 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 199 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

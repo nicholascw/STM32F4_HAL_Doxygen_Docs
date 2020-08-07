@@ -1,0 +1,148 @@
+.TH "__DMA_HandleTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__DMA_HandleTypeDef \- DMA handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_dma\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "DMA_Stream_TypeDef * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBDMA_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_DMA_StateTypeDef\fP \fBState\fP"
+.br
+.ti -1c
+.RI "void * \fBParent\fP"
+.br
+.ti -1c
+.RI "void(* \fBXferCpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferHalfCpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferM1CpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferM1HalfCpltCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferErrorCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void(* \fBXferAbortCallback\fP )(struct \fB__DMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBErrorCode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBStreamBaseAddress\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBStreamIndex\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 139 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "__IO uint32_t ErrorCode"
+DMA Error code 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 163 行定义\&.
+.SS "\fBDMA_InitTypeDef\fP Init"
+DMA communication parameters 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 143 行定义\&.
+.SS "DMA_Stream_TypeDef* Instance"
+Register base address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 141 行定义\&.
+.SS "\fBHAL_LockTypeDef\fP Lock"
+DMA locking object 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 145 行定义\&.
+.SS "void* Parent"
+Parent object state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 149 行定义\&.
+.SS "__IO \fBHAL_DMA_StateTypeDef\fP State"
+DMA transfer state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 147 行定义\&.
+.SS "uint32_t StreamBaseAddress"
+DMA Stream Base Address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 165 行定义\&.
+.SS "uint32_t StreamIndex"
+DMA Stream Index 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 167 行定义\&.
+.SS "void(* XferAbortCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer Abort callback 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 161 行定义\&.
+.SS "void(* XferCpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer complete callback 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 151 行定义\&.
+.SS "void(* XferErrorCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer error callback 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 159 行定义\&.
+.SS "void(* XferHalfCpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA Half transfer complete callback 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 153 行定义\&.
+.SS "void(* XferM1CpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer complete Memory1 callback 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 155 行定义\&.
+.SS "void(* XferM1HalfCpltCallback) (struct \fB__DMA_HandleTypeDef\fP *hdma)"
+DMA transfer Half complete Memory1 callback 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 157 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

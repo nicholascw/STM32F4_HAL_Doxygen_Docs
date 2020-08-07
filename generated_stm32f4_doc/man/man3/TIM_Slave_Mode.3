@@ -1,0 +1,65 @@
+.TH "TIM_Slave_Mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Slave_Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_SLAVEMODE_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_SLAVEMODE_RESET\fP   TIM_SMCR_SMS_2"
+.br
+.ti -1c
+.RI "#define \fBTIM_SLAVEMODE_GATED\fP   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_0)"
+.br
+.ti -1c
+.RI "#define \fBTIM_SLAVEMODE_TRIGGER\fP   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1)"
+.br
+.ti -1c
+.RI "#define \fBTIM_SLAVEMODE_EXTERNAL1\fP   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1 | TIM_SMCR_SMS_0)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_SLAVEMODE_DISABLE   0x00000000U"
+Slave mode disabled 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 846 行定义\&.
+.SS "#define TIM_SLAVEMODE_EXTERNAL1   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1 | TIM_SMCR_SMS_0)"
+External Clock Mode 1 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 850 行定义\&.
+.SS "#define TIM_SLAVEMODE_GATED   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_0)"
+Gated Mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 848 行定义\&.
+.SS "#define TIM_SLAVEMODE_RESET   TIM_SMCR_SMS_2"
+Reset Mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 847 行定义\&.
+.SS "#define TIM_SLAVEMODE_TRIGGER   (TIM_SMCR_SMS_2 | TIM_SMCR_SMS_1)"
+Trigger Mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 849 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

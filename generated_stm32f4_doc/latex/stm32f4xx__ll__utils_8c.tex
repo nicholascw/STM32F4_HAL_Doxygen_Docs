@@ -1,0 +1,111 @@
+\hypertarget{stm32f4xx__ll__utils_8c}{}\doxysection{src/stm32f4xx\+\_\+ll\+\_\+utils.c 文件参考}
+\label{stm32f4xx__ll__utils_8c}\index{src/stm32f4xx\_ll\_utils.c@{src/stm32f4xx\_ll\_utils.c}}
+
+
+U\+T\+I\+LS LL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+ll\+\_\+utils.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+ll\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+ll\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+ll\+\_\+pwr.\+h\char`\"{}}\newline
+stm32f4xx\+\_\+ll\+\_\+utils.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stm32f4xx__ll__utils_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__ll__utils_8c_a631dea7b230e600555f979c62af1de21}{assert\+\_\+param}}(expr)~((void)0U)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gafc90436876554749a18b195f784d44e7}{U\+T\+I\+L\+S\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+S\+C\+A\+L\+E2}}~R\+C\+C\+\_\+\+M\+A\+X\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+S\+C\+A\+L\+E2
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga776642cb2822104e8a9193e7ca3d1cc1}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+IN}}~R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+IN
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga29fdfce018e42333c3888bc2aefaa53d}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+AX}}~R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+AX
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gab380368eb5dd359345da7c94ff6d7e78}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN}}~R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gabe3e2f20a8a4de8c188fa93c47af39e8}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX}}~R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga7bc514193367ab0d598fe4c3bedd6066}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+IN}}~4000000U
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gae3407ef407af85f72bbba3db982a1826}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+AX}}~26000000U
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gae7a1078f03761d050f427c815de08587}{U\+T\+I\+L\+S\+\_\+\+S\+C\+A\+L\+E2\+\_\+\+L\+A\+T\+E\+N\+C\+Y1\+\_\+\+F\+R\+EQ}}~F\+L\+A\+S\+H\+\_\+\+S\+C\+A\+L\+E2\+\_\+\+L\+A\+T\+E\+N\+C\+Y1\+\_\+\+F\+R\+EQ
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gaf426c804635665b5a604019150142aa8}{U\+T\+I\+L\+S\+\_\+\+S\+C\+A\+L\+E2\+\_\+\+L\+A\+T\+E\+N\+C\+Y2\+\_\+\+F\+R\+EQ}}~F\+L\+A\+S\+H\+\_\+\+S\+C\+A\+L\+E2\+\_\+\+L\+A\+T\+E\+N\+C\+Y2\+\_\+\+F\+R\+EQ
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_ga7ec625ff40cf96c750c2658bb1edc8af}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+S\+Y\+S\+C\+L\+K\+\_\+\+D\+IV}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gae6050c11fe88d273e3af9bfc4c55e016}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+A\+P\+B1\+\_\+\+D\+IV}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gaa8e8df04206b96c1a43e6c8490c6d886}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+A\+P\+B2\+\_\+\+D\+IV}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_ga91ea262b042009bc1e643c46c22781e2}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+M\+\_\+\+V\+A\+L\+UE}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_ga36a7ad9e5c92c5ba4a3830b8464db095}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+N\+\_\+\+V\+A\+L\+UE}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~((R\+C\+C\+\_\+\+P\+L\+L\+N\+\_\+\+M\+I\+N\+\_\+\+V\+A\+L\+UE $<$= (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+) $<$= R\+C\+C\+\_\+\+P\+L\+L\+N\+\_\+\+M\+A\+X\+\_\+\+V\+A\+L\+UE))
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gad03371464c475dd992ba17382321dac9}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+P\+\_\+\+V\+A\+L\+UE}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_ga29c015fb741169112226ec25033ca68f}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+UT}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~((\mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga776642cb2822104e8a9193e7ca3d1cc1}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+IN}} $<$= (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+) $<$= \mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga29fdfce018e42333c3888bc2aefaa53d}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+AX}}))
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gae2da9f27ac22cd72e6bdead77bba5fe6}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+UT}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)~((\mbox{\hyperlink{group__UTILS__LL__Private__Constants_gab380368eb5dd359345da7c94ff6d7e78}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN}} $<$= (\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+) $<$= \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gabe3e2f20a8a4de8c188fa93c47af39e8}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX}}))
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gafdc929d67ee197e1e27a26d5474bca63}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}(\+\_\+\+\_\+\+V\+A\+L\+U\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_gaf41394221ce505e0bc7c9ef54e0b2d61}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+B\+Y\+P\+A\+SS}}(\+\_\+\+\_\+\+S\+T\+A\+T\+E\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group__UTILS__LL__Private__Macros_ga731945d8182d85f4912bac7b43be267e}{I\+S\+\_\+\+L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}(\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+) $>$= \mbox{\hyperlink{group__UTILS__LL__Private__Constants_ga7bc514193367ab0d598fe4c3bedd6066}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+IN}}) \&\& ((\+\_\+\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+\_\+) $<$= \mbox{\hyperlink{group__UTILS__LL__Private__Constants_gae3407ef407af85f72bbba3db982a1826}{U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+C\+Y\+\_\+\+M\+AX}}))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{group__UTILS__LL__Private__Functions_gae40ed31572a8b64837e7f6d8eda0f4e2}{U\+T\+I\+L\+S\+\_\+\+Get\+P\+L\+L\+Output\+Frequency}} (uint32\+\_\+t P\+L\+L\+\_\+\+Input\+Frequency, \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Function to check that P\+LL can be modified \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_gadea8d69f206dca8aa02fa08920a8be0e}{U\+T\+I\+L\+S\+\_\+\+Set\+Flash\+Latency}} (uint32\+\_\+t H\+C\+L\+K\+\_\+\+Frequency)
+\begin{DoxyCompactList}\small\item\em Update number of Flash wait states in line with new frequency and current voltage range. \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0}{U\+T\+I\+L\+S\+\_\+\+Enable\+P\+L\+L\+And\+Switch\+System}} (uint32\+\_\+t S\+Y\+S\+C\+L\+K\+\_\+\+Frequency, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Function to enable P\+LL and switch system clock to P\+LL \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_ga4242342336a76627fc39a7e145dbf3c7}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+Is\+Busy}} (void)
+\begin{DoxyCompactList}\small\item\em Function to check that P\+LL can be modified \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga485805c708e3aa0820454523782d4de4}{L\+L\+\_\+\+Init1ms\+Tick}} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source to have 1ms time base. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__LL__EF__DELAY_ga7b7ca6d9cbec320c3e9f326b203807aa}{L\+L\+\_\+m\+Delay}} (uint32\+\_\+t Delay)
+\begin{DoxyCompactList}\small\item\em This function provides accurate delay (in milliseconds) based on Sys\+Tick counter flag \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__UTILS__EF__SYSTEM_ga5af902d59c4c2d9dc5e189df0bc71ecd}{L\+L\+\_\+\+Set\+System\+Core\+Clock}} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. \end{DoxyCompactList}\item 
+Error\+Status \mbox{\hyperlink{group__UTILS__EF__SYSTEM_ga7ada5e4210f6ef80ef9f55bf9dd048c6}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI}} (\mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock at maximum frequency with H\+SI as clock source of the P\+LL \end{DoxyCompactList}\item 
+Error\+Status \mbox{\hyperlink{group__UTILS__EF__SYSTEM_gaf6c8553d03464d4646b63321b97d25e2}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE}} (uint32\+\_\+t H\+S\+E\+Frequency, uint32\+\_\+t H\+S\+E\+Bypass, \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SE as clock source of the P\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+U\+T\+I\+LS LL module driver. 
+
+\begin{DoxyAuthor}{作者}
+M\+CD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{stm32f4xx__ll__utils_8c_a631dea7b230e600555f979c62af1de21}\label{stm32f4xx__ll__utils_8c_a631dea7b230e600555f979c62af1de21}} 
+\index{stm32f4xx\_ll\_utils.c@{stm32f4xx\_ll\_utils.c}!assert\_param@{assert\_param}}
+\index{assert\_param@{assert\_param}!stm32f4xx\_ll\_utils.c@{stm32f4xx\_ll\_utils.c}}
+\doxysubsubsection{\texorpdfstring{assert\_param}{assert\_param}}
+{\footnotesize\ttfamily \#define assert\+\_\+param(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})~((void)0U)}
+
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 28 行定义.
+

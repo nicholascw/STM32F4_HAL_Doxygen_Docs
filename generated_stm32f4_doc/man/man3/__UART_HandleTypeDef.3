@@ -1,0 +1,144 @@
+.TH "__UART_HandleTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__UART_HandleTypeDef \- UART handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_uart\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "USART_TypeDef * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBUART_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBpTxBuffPtr\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBTxXferSize\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBTxXferCount\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBpRxBuffPtr\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBRxXferSize\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBRxXferCount\fP"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdmatx\fP"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdmarx\fP"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_UART_StateTypeDef\fP \fBgState\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_UART_StateTypeDef\fP \fBRxState\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBErrorCode\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+UART handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 141 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "__IO uint32_t ErrorCode"
+UART Error code 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 172 行定义\&.
+.SS "__IO \fBHAL_UART_StateTypeDef\fP gState"
+UART state information related to global Handle management and also related to Tx operations\&. This parameter can be a value of \fBHAL_UART_StateTypeDef\fP 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 165 行定义\&.
+.SS "\fBDMA_HandleTypeDef\fP* hdmarx"
+UART Rx DMA Handle parameters 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 161 行定义\&.
+.SS "\fBDMA_HandleTypeDef\fP* hdmatx"
+UART Tx DMA Handle parameters 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 159 行定义\&.
+.SS "\fBUART_InitTypeDef\fP Init"
+UART communication parameters 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 145 行定义\&.
+.SS "USART_TypeDef* Instance"
+UART registers base address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 143 行定义\&.
+.SS "\fBHAL_LockTypeDef\fP Lock"
+Locking object 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 163 行定义\&.
+.SS "uint8_t* pRxBuffPtr"
+Pointer to UART Rx transfer Buffer 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 153 行定义\&.
+.SS "uint8_t* pTxBuffPtr"
+Pointer to UART Tx transfer Buffer 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 147 行定义\&.
+.SS "__IO \fBHAL_UART_StateTypeDef\fP RxState"
+UART state information related to Rx operations\&. This parameter can be a value of \fBHAL_UART_StateTypeDef\fP 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 169 行定义\&.
+.SS "__IO uint16_t RxXferCount"
+UART Rx Transfer Counter 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 157 行定义\&.
+.SS "uint16_t RxXferSize"
+UART Rx Transfer size 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 155 行定义\&.
+.SS "__IO uint16_t TxXferCount"
+UART Tx Transfer Counter 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 151 行定义\&.
+.SS "uint16_t TxXferSize"
+UART Tx Transfer size 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 149 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

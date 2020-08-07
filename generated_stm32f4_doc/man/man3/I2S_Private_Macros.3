@@ -1,0 +1,214 @@
+.TH "I2S_Private_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2S_Private_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBI2S_CHECK_FLAG\fP(__SR__,  __FLAG__)   ((((__SR__) & ((__FLAG__) & \fBI2S_FLAG_MASK\fP)) == ((__FLAG__) & \fBI2S_FLAG_MASK\fP)) ? SET : RESET)"
+.br
+.RI "Check whether the specified SPI flag is set or not\&. "
+.ti -1c
+.RI "#define \fBI2S_CHECK_IT_SOURCE\fP(__CR2__,  __INTERRUPT__)   ((((__CR2__) & (__INTERRUPT__)) == (__INTERRUPT__)) ? SET : RESET)"
+.br
+.RI "Check whether the specified SPI Interrupt is set or not\&. "
+.ti -1c
+.RI "#define \fBIS_I2S_MODE\fP(__MODE__)"
+.br
+.RI "Checks if I2S Mode parameter is in allowed range\&. "
+.ti -1c
+.RI "#define \fBIS_I2S_STANDARD\fP(__STANDARD__)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2S_DATA_FORMAT\fP(__FORMAT__)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2S_MCLK_OUTPUT\fP(__OUTPUT__)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2S_AUDIO_FREQ\fP(__FREQ__)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2S_FULLDUPLEX_MODE\fP(MODE)"
+.br
+.ti -1c
+.RI "#define \fBIS_I2S_CPOL\fP(__CPOL__)"
+.br
+.RI "Checks if I2S Serial clock steady state parameter is in allowed range\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define I2S_CHECK_FLAG(__SR__, __FLAG__)   ((((__SR__) & ((__FLAG__) & \fBI2S_FLAG_MASK\fP)) == ((__FLAG__) & \fBI2S_FLAG_MASK\fP)) ? SET : RESET)"
+
+.PP
+Check whether the specified SPI flag is set or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>SR</strong>\fP copy of I2S SR regsiter\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+I2S_FLAG_RXNE: Receive buffer not empty flag 
+.IP "\(bu" 2
+I2S_FLAG_TXE: Transmit buffer empty flag 
+.IP "\(bu" 2
+I2S_FLAG_UDR: Underrun error flag 
+.IP "\(bu" 2
+I2S_FLAG_OVR: Overrun flag 
+.IP "\(bu" 2
+I2S_FLAG_CHSIDE: Channel side flag 
+.IP "\(bu" 2
+I2S_FLAG_BSY: Busy flag 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fISET\fP or RESET\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 526 行定义\&.
+.SS "#define I2S_CHECK_IT_SOURCE(__CR2__, __INTERRUPT__)   ((((__CR2__) & (__INTERRUPT__)) == (__INTERRUPT__)) ? SET : RESET)"
+
+.PP
+Check whether the specified SPI Interrupt is set or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>CR2</strong>\fP copy of I2S CR2 regsiter\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the SPI interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+I2S_IT_TXE: Tx buffer empty interrupt enable 
+.IP "\(bu" 2
+I2S_IT_RXNE: RX buffer not empty interrupt enable 
+.IP "\(bu" 2
+I2S_IT_ERR: Error interrupt enable 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fISET\fP or RESET\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 537 行定义\&.
+.SS "#define IS_I2S_AUDIO_FREQ(__FREQ__)"
+\fB值:\fP
+.PP
+.nf
+                                      ((((__FREQ__) >= I2S_AUDIOFREQ_8K)    && \
+                                      ((__FREQ__) <= I2S_AUDIOFREQ_192K)) || \
+                                      ((__FREQ__) == I2S_AUDIOFREQ_DEFAULT))
+.fi
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 563 行定义\&.
+.SS "#define IS_I2S_CPOL(__CPOL__)"
+\fB值:\fP
+.PP
+.nf
+                           (((__CPOL__) == I2S_CPOL_LOW) || \
+                           ((__CPOL__) == I2S_CPOL_HIGH))
+.fi
+.PP
+Checks if I2S Serial clock steady state parameter is in allowed range\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>CPOL</strong>\fP specifies the I2S serial clock steady state\&. This parameter can be a value of \fBI2S Clock Polarity\fP 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 575 行定义\&.
+.SS "#define IS_I2S_DATA_FORMAT(__FORMAT__)"
+\fB值:\fP
+.PP
+.nf
+                                        (((__FORMAT__) == I2S_DATAFORMAT_16B)          || \
+                                        ((__FORMAT__) == I2S_DATAFORMAT_16B_EXTENDED) || \
+                                        ((__FORMAT__) == I2S_DATAFORMAT_24B)          || \
+                                        ((__FORMAT__) == I2S_DATAFORMAT_32B))
+.fi
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 555 行定义\&.
+.SS "#define IS_I2S_FULLDUPLEX_MODE(MODE)"
+\fB值:\fP
+.PP
+.nf
+                                      (((MODE) == I2S_FULLDUPLEXMODE_DISABLE) || \
+                                      ((MODE) == I2S_FULLDUPLEXMODE_ENABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 567 行定义\&.
+.SS "#define IS_I2S_MCLK_OUTPUT(__OUTPUT__)"
+\fB值:\fP
+.PP
+.nf
+                                        (((__OUTPUT__) == I2S_MCLKOUTPUT_ENABLE) || \
+                                        ((__OUTPUT__) == I2S_MCLKOUTPUT_DISABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 560 行定义\&.
+.SS "#define IS_I2S_MODE(__MODE__)"
+\fB值:\fP
+.PP
+.nf
+                               (((__MODE__) == I2S_MODE_SLAVE_TX)  || \
+                               ((__MODE__) == I2S_MODE_SLAVE_RX)  || \
+                               ((__MODE__) == I2S_MODE_MASTER_TX) || \
+                               ((__MODE__) == I2S_MODE_MASTER_RX))
+.fi
+.PP
+Checks if I2S Mode parameter is in allowed range\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>MODE</strong>\fP specifies the I2S Mode\&. This parameter can be a value of \fBI2S Mode\fP 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 544 行定义\&.
+.SS "#define IS_I2S_STANDARD(__STANDARD__)"
+\fB值:\fP
+.PP
+.nf
+                                       (((__STANDARD__) == I2S_STANDARD_PHILIPS)   || \
+                                       ((__STANDARD__) == I2S_STANDARD_MSB)       || \
+                                       ((__STANDARD__) == I2S_STANDARD_LSB)       || \
+                                       ((__STANDARD__) == I2S_STANDARD_PCM_SHORT) || \
+                                       ((__STANDARD__) == I2S_STANDARD_PCM_LONG))
+.fi
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 549 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

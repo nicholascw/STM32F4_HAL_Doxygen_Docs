@@ -1,0 +1,153 @@
+.TH "HAL_Aliased_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_Aliased_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_GET_BOOT_MODE\fP   __HAL_SYSCFG_GET_BOOT_MODE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_FLASH\fP   \fB__HAL_SYSCFG_REMAPMEMORY_FLASH\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_SYSTEMFLASH\fP   \fB__HAL_SYSCFG_REMAPMEMORY_SYSTEMFLASH\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_SRAM\fP   \fB__HAL_SYSCFG_REMAPMEMORY_SRAM\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_FMC\fP   __HAL_SYSCFG_REMAPMEMORY_FMC"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_FMC_SDRAM\fP   __HAL_SYSCFG_REMAPMEMORY_FMC_SDRAM"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_FSMC\fP   __HAL_SYSCFG_REMAPMEMORY_FSMC"
+.br
+.ti -1c
+.RI "#define \fB__HAL_REMAPMEMORY_QUADSPI\fP   __HAL_SYSCFG_REMAPMEMORY_QUADSPI"
+.br
+.ti -1c
+.RI "#define \fB__HAL_FMC_BANK\fP   __HAL_SYSCFG_FMC_BANK"
+.br
+.ti -1c
+.RI "#define \fB__HAL_GET_FLAG\fP   __HAL_SYSCFG_GET_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_CLEAR_FLAG\fP   __HAL_SYSCFG_CLEAR_FLAG"
+.br
+.ti -1c
+.RI "#define \fB__HAL_VREFINT_OUT_ENABLE\fP   __HAL_SYSCFG_VREFINT_OUT_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_VREFINT_OUT_DISABLE\fP   __HAL_SYSCFG_VREFINT_OUT_DISABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_SYSCFG_SRAM2_WRP_ENABLE\fP   __HAL_SYSCFG_SRAM2_WRP_0_31_ENABLE"
+.br
+.ti -1c
+.RI "#define \fBSYSCFG_FLAG_VREF_READY\fP   SYSCFG_FLAG_VREFINT_READY"
+.br
+.ti -1c
+.RI "#define \fBSYSCFG_FLAG_RC48\fP   RCC_FLAG_HSI48"
+.br
+.ti -1c
+.RI "#define \fBIS_SYSCFG_FASTMODEPLUS_CONFIG\fP   IS_I2C_FASTMODEPLUS"
+.br
+.ti -1c
+.RI "#define \fBUFB_MODE_BitNumber\fP   \fBUFB_MODE_BIT_NUMBER\fP"
+.br
+.ti -1c
+.RI "#define \fBCMP_PD_BitNumber\fP   \fBCMP_PD_BIT_NUMBER\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_CLEAR_FLAG   __HAL_SYSCFG_CLEAR_FLAG"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1419 行定义\&.
+.SS "#define __HAL_FMC_BANK   __HAL_SYSCFG_FMC_BANK"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1417 行定义\&.
+.SS "#define __HAL_GET_BOOT_MODE   __HAL_SYSCFG_GET_BOOT_MODE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1409 行定义\&.
+.SS "#define __HAL_GET_FLAG   __HAL_SYSCFG_GET_FLAG"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1418 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_FLASH   \fB__HAL_SYSCFG_REMAPMEMORY_FLASH\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1410 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_FMC   __HAL_SYSCFG_REMAPMEMORY_FMC"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1413 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_FMC_SDRAM   __HAL_SYSCFG_REMAPMEMORY_FMC_SDRAM"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1414 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_FSMC   __HAL_SYSCFG_REMAPMEMORY_FSMC"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1415 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_QUADSPI   __HAL_SYSCFG_REMAPMEMORY_QUADSPI"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1416 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_SRAM   \fB__HAL_SYSCFG_REMAPMEMORY_SRAM\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1412 行定义\&.
+.SS "#define __HAL_REMAPMEMORY_SYSTEMFLASH   \fB__HAL_SYSCFG_REMAPMEMORY_SYSTEMFLASH\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1411 行定义\&.
+.SS "#define __HAL_SYSCFG_SRAM2_WRP_ENABLE   __HAL_SYSCFG_SRAM2_WRP_0_31_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1422 行定义\&.
+.SS "#define __HAL_VREFINT_OUT_DISABLE   __HAL_SYSCFG_VREFINT_OUT_DISABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1421 行定义\&.
+.SS "#define __HAL_VREFINT_OUT_ENABLE   __HAL_SYSCFG_VREFINT_OUT_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1420 行定义\&.
+.SS "#define CMP_PD_BitNumber   \fBCMP_PD_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1428 行定义\&.
+.SS "#define IS_SYSCFG_FASTMODEPLUS_CONFIG   IS_I2C_FASTMODEPLUS"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1426 行定义\&.
+.SS "#define SYSCFG_FLAG_RC48   RCC_FLAG_HSI48"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1425 行定义\&.
+.SS "#define SYSCFG_FLAG_VREF_READY   SYSCFG_FLAG_VREFINT_READY"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1424 行定义\&.
+.SS "#define UFB_MODE_BitNumber   \fBUFB_MODE_BIT_NUMBER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1427 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

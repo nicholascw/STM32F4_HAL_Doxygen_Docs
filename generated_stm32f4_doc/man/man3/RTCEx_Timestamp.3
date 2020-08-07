@@ -1,0 +1,246 @@
+.TH "RTCEx_Timestamp" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Timestamp
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_TSE))"
+.br
+.RI "Enable the RTC TimeStamp peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_TSE))"
+.br
+.RI "Disable the RTC TimeStamp peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+.br
+.RI "Enable the RTC TimeStamp interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the RTC TimeStamp interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_GET_IT\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+.br
+.RI "Check whether the specified RTC TimeStamp interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Time Stamp interrupt has been enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+.br
+.RI "Get the selected RTC TimeStamp's flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TIMESTAMP_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+.br
+.RI "Clear the RTC Time Stamp's pending flags\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_TIMESTAMP_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+
+.PP
+Clear the RTC Time Stamp's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Alarm Flag sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_TSF 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 558 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_TSE))"
+
+.PP
+Disable the RTC TimeStamp peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 497 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_DISABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+
+.PP
+Disable the RTC TimeStamp interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC TimeStamp interrupt sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TS: TimeStamp interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 517 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_TSE))"
+
+.PP
+Enable the RTC TimeStamp peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 490 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_ENABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+
+.PP
+Enable the RTC TimeStamp interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC TimeStamp interrupt sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TS: TimeStamp interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 507 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_GET_FLAG(__HANDLE__, __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+
+.PP
+Get the selected RTC TimeStamp's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC TimeStamp flag to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_TSF 
+.br
+ 
+.IP "\(bu" 2
+RTC_FLAG_TSOVF 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 548 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_GET_IT(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+
+.PP
+Check whether the specified RTC TimeStamp interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC TimeStamp interrupt to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TS: TimeStamp interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 527 行定义\&.
+.SS "#define __HAL_RTC_TIMESTAMP_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+
+.PP
+Check whether the specified RTC Time Stamp interrupt has been enabled or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Time Stamp interrupt source to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TS: TimeStamp interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 537 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

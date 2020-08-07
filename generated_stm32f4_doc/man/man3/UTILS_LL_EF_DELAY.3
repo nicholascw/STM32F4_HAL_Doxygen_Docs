@@ -1,0 +1,113 @@
+.TH "UTILS_LL_EF_DELAY" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UTILS_LL_EF_DELAY
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_InitTick\fP (uint32_t HCLKFrequency, uint32_t Ticks)"
+.br
+.RI "This function configures the Cortex-M SysTick source of the time base\&. "
+.ti -1c
+.RI "void \fBLL_Init1msTick\fP (uint32_t HCLKFrequency)"
+.br
+.RI "This function configures the Cortex-M SysTick source to have 1ms time base\&. "
+.ti -1c
+.RI "void \fBLL_mDelay\fP (uint32_t Delay)"
+.br
+.RI "This function provides accurate delay (in milliseconds) based on SysTick counter flag "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "void LL_Init1msTick (uint32_t HCLKFrequency)"
+
+.PP
+This function configures the Cortex-M SysTick source to have 1ms time base\&. 
+.PP
+\fB注解\fP
+.RS 4
+When a RTOS is used, it is recommended to avoid changing the Systick configuration by calling this function, for a delay use rather osDelay RTOS service\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fIHCLKFrequency\fP HCLK frequency in Hz 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+HCLK frequency can be calculated thanks to RCC helper macro or function \fBLL_RCC_GetSystemClocksFreq\fP 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 259 行定义\&.
+.SS "__STATIC_INLINE void LL_InitTick (uint32_t HCLKFrequency, uint32_t Ticks)"
+
+.PP
+This function configures the Cortex-M SysTick source of the time base\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fIHCLKFrequency\fP HCLK frequency in Hz (can be calculated thanks to RCC helper macro) 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+When a RTOS is used, it is recommended to avoid changing the SysTick configuration by calling this function, for a delay use rather osDelay RTOS service\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fITicks\fP Number of ticks 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 261 行定义\&.
+.SS "void LL_mDelay (uint32_t Delay)"
+
+.PP
+This function provides accurate delay (in milliseconds) based on SysTick counter flag 
+.PP
+\fB注解\fP
+.RS 4
+When a RTOS is used, it is recommended to avoid using blocking delay and use rather osDelay service\&. 
+.PP
+To respect 1ms timebase, user should call \fBLL_Init1msTick\fP function which will configure Systick to 1ms 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fIDelay\fP specifies the delay time length, in milliseconds\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 275 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

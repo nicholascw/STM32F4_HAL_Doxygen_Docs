@@ -1,0 +1,4 @@
+<map id="HAL_RCCEx_PeriphCLKConfig" name="HAL_RCCEx_PeriphCLKConfig">
+<area shape="rect" id="node1" title=" " alt="" coords="156,5,367,32"/>
+<area shape="rect" id="node2" href="$group__HAL__TimeBase__RTC__Alarm__Template.html#ga879cdb21ef051eb81ec51c18147397d5" title="This function configures the RTC_ALARMA as a time base source. The time source is configured to have ..." alt="" coords="5,5,108,32"/>
+</map>

@@ -1,0 +1,36 @@
+.TH "RTCEx_Tamper_TimeStampOnTamperDetection_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Tamper_TimeStampOnTamperDetection_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRTC_TIMESTAMPONTAMPERDETECTION_ENABLE\fP   ((uint32_t)RTC_TAFCR_TAMPTS)"
+.br
+.ti -1c
+.RI "#define \fBRTC_TIMESTAMPONTAMPERDETECTION_DISABLE\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define RTC_TIMESTAMPONTAMPERDETECTION_DISABLE   0x00000000U"
+TimeStamp on Tamper Detection event is not saved 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 224 行定义\&.
+.SS "#define RTC_TIMESTAMPONTAMPERDETECTION_ENABLE   ((uint32_t)RTC_TAFCR_TAMPTS)"
+TimeStamp on Tamper Detection event saved 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 223 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

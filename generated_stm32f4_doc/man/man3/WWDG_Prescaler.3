@@ -1,0 +1,48 @@
+.TH "WWDG_Prescaler" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+WWDG_Prescaler
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBWWDG_PRESCALER_1\fP   0x00000000u"
+.br
+.ti -1c
+.RI "#define \fBWWDG_PRESCALER_2\fP   WWDG_CFR_WDGTB_0"
+.br
+.ti -1c
+.RI "#define \fBWWDG_PRESCALER_4\fP   WWDG_CFR_WDGTB_1"
+.br
+.ti -1c
+.RI "#define \fBWWDG_PRESCALER_8\fP   (WWDG_CFR_WDGTB_1 | WWDG_CFR_WDGTB_0)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define WWDG_PRESCALER_1   0x00000000u"
+WWDG counter clock = (PCLK1/4096)/1 
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 131 行定义\&.
+.SS "#define WWDG_PRESCALER_2   WWDG_CFR_WDGTB_0"
+WWDG counter clock = (PCLK1/4096)/2 
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 132 行定义\&.
+.SS "#define WWDG_PRESCALER_4   WWDG_CFR_WDGTB_1"
+WWDG counter clock = (PCLK1/4096)/4 
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 133 行定义\&.
+.SS "#define WWDG_PRESCALER_8   (WWDG_CFR_WDGTB_1 | WWDG_CFR_WDGTB_0)"
+WWDG counter clock = (PCLK1/4096)/8 
+.PP
+在文件 stm32f4xx_hal_wwdg\&.h 第 134 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

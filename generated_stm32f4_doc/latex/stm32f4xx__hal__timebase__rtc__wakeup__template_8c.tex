@@ -1,0 +1,83 @@
+\hypertarget{stm32f4xx__hal__timebase__rtc__wakeup__template_8c}{}\doxysection{src/stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+wakeup\+\_\+template.c 文件参考}
+\label{stm32f4xx__hal__timebase__rtc__wakeup__template_8c}\index{src/stm32f4xx\_hal\_timebase\_rtc\_wakeup\_template.c@{src/stm32f4xx\_hal\_timebase\_rtc\_wakeup\_template.c}}
+
+
+H\+AL time base based on the hardware R\+T\+C\+\_\+\+W\+A\+K\+E\+UP Template.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+wakeup\+\_\+template.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{stm32f4xx__hal__timebase__rtc__wakeup__template_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga5da1cd82e5ae713267918a9c85b4dc77}{R\+T\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_gac483fb44f1611ddb407a4aacec7ae4e7}{R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}}~99U
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga433a49865e4af2e0972e6bbbea894d51}{R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}}~9U
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_gad4aef0e3572ec727de3815fcff26220a}{R\+C\+C\+\_\+\+R\+T\+C\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+1\+M\+HZ}}~((uint32\+\_\+t)((uint32\+\_\+t)R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+S\+EL $\vert$ (uint32\+\_\+t)((\mbox{\hyperlink{stm32f4xx__hal__conf__template_8h_aeafcff4f57440c60e64812dddd13e7cb}{H\+S\+E\+\_\+\+V\+A\+L\+UE}}/1000000U) $<$$<$ 16U)))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga53a3fe340e323e2fec8d851cd2e83554}{R\+T\+C\+\_\+\+W\+K\+U\+P\+\_\+\+I\+R\+Q\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles W\+A\+KE UP T\+I\+M\+ER interrupt request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the R\+T\+C\+\_\+\+W\+K\+UP as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. Wakeup Time base = ((R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1) $\ast$ (R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV + 1)) / R\+T\+C\+\_\+\+C\+L\+O\+CK = 1ms Wakeup Time = Wakeup\+Timebase $\ast$ Wake\+Up\+Counter (0 + 1) = 1 ms \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_gac9ed5d6224b5c86f2845a9c1af7d94de}{H\+A\+L\+\_\+\+R\+T\+C\+Ex\+\_\+\+Wake\+Up\+Timer\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em Wake Up Timer Event Callback in non blocking mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__RTC__WakeUp__Template_ga66edbb38f0b45759c28ecd5aede14478}{h\+R\+T\+C\+\_\+\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+H\+AL time base based on the hardware R\+T\+C\+\_\+\+W\+A\+K\+E\+UP Template. 
+
+\begin{DoxyAuthor}{作者}
+M\+CD Application Team \begin{DoxyVerb}     This file overrides the native HAL time base functions (defined as weak)
+     to use the RTC WAKEUP for the time base generation:
+      + Intializes the RTC peripheral and configures the wakeup timer to be
+        incremented each 1ms
+      + The wakeup feature is configured to assert an interrupt each 1ms 
+      + HAL_IncTick is called inside the HAL_RTCEx_WakeUpTimerEventCallback
+      + HSE (default), LSE or LSI can be selected as RTC clock source
+\end{DoxyVerb}
+ \begin{DoxyVerb} ==============================================================================
+                       ##### How to use this driver #####
+ ==============================================================================
+   [..]
+   This file must be copied to the application folder and modified as follows:
+   (#) Rename it to 'stm32f4xx_hal_timebase_rtc_wakeup.c'
+   (#) Add this file and the RTC HAL drivers to your project and uncomment
+      HAL_RTC_MODULE_ENABLED define in stm32f4xx_hal_conf.h 
+
+   [..]
+   (@) HAL RTC alarm and HAL RTC wakeup drivers can�t be used with low power modes:
+       The wake up capability of the RTC may be intrusive in case of prior low power mode
+       configuration requiring different wake up sources.
+       Application/Example behavior is no more guaranteed 
+   (@) The stm32f4xx_hal_timebase_tim use is recommended for the Applications/Examples
+         requiring low power modes\end{DoxyVerb}
+
+\end{DoxyAuthor}
+\begin{DoxyAttention}{注意}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2017 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

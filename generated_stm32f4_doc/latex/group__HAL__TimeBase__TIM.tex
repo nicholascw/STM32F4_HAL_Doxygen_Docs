@@ -1,0 +1,188 @@
+\hypertarget{group__HAL__TimeBase__TIM}{}\doxysection{H\+A\+L\+\_\+\+Time\+Base\+\_\+\+T\+IM}
+\label{group__HAL__TimeBase__TIM}\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+H\+A\+L\+\_\+\+Time\+Base\+\_\+\+T\+IM 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__TIM}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__TIM_ga0839a45f331c4c067939b9c4533bbf4d}{T\+I\+M6\+\_\+\+D\+A\+C\+\_\+\+I\+R\+Q\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles T\+IM interrupt request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__TIM_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the T\+I\+M6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__TIM_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__TIM_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__TIM_ga8a3b0ad512a6e6c6157440b68d395eac}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{structTIM__HandleTypeDef}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structTIM__HandleTypeDef}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__TIM_gaad0e79d89de05e8451c9b6ac5d88109d}{Tim\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_ga879cdb21ef051eb81ec51c18147397d5}\label{group__HAL__TimeBase__TIM_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!HAL\_InitTick@{HAL\_InitTick}}
+\index{HAL\_InitTick@{HAL\_InitTick}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{HAL\_InitTick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} H\+A\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the T\+I\+M6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{注解}
+This function is called automatically at the beginning of program after reset by \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gaecac54d350c3730e6831eb404e557dc4}{H\+A\+L\+\_\+\+Init()}} or at any time when clock is configured, by \mbox{\hyperlink{group__RCC__Exported__Functions__Group1_gad0a4b5c7459219fafc15f3f867563ef3}{H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config()}}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em H\+AL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 55 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{group__HAL__TimeBase__TIM_ga879cdb21ef051eb81ec51c18147397d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_ga24e0ee9dae1ec0f9d19200f5575ff790}\label{group__HAL__TimeBase__TIM_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!HAL\_ResumeTick@{HAL\_ResumeTick}}
+\index{HAL\_ResumeTick@{HAL\_ResumeTick}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{HAL\_ResumeTick()}{HAL\_ResumeTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{注解}
+Enable the tick increment by Enabling T\+I\+M6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 130 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_gaaf651af2afe688a991c657f64f8fa5f9}\label{group__HAL__TimeBase__TIM_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!HAL\_SuspendTick@{HAL\_SuspendTick}}
+\index{HAL\_SuspendTick@{HAL\_SuspendTick}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{HAL\_SuspendTick()}{HAL\_SuspendTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{注解}
+Disable the tick increment by disabling T\+I\+M6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 119 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_ga8a3b0ad512a6e6c6157440b68d395eac}\label{group__HAL__TimeBase__TIM_ga8a3b0ad512a6e6c6157440b68d395eac}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTIM__HandleTypeDef}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode 
+
+\begin{DoxyNote}{注解}
+This function is called when T\+I\+M6 interrupt took place, inside \mbox{\hyperlink{group__TIM__Exported__Functions__Group7_ga2dc3ef34340412aa8a01d734d2ff8f88}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+I\+R\+Q\+Handler()}}. It makes a direct call to \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaba5b726bfedd013bf7bb5a51d5c4f188}{H\+A\+L\+\_\+\+Inc\+Tick()}} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em htim} & T\+IM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 144 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__TIM_ga8a3b0ad512a6e6c6157440b68d395eac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_ga0839a45f331c4c067939b9c4533bbf4d}\label{group__HAL__TimeBase__TIM_ga0839a45f331c4c067939b9c4533bbf4d}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!TIM6\_DAC\_IRQHandler@{TIM6\_DAC\_IRQHandler}}
+\index{TIM6\_DAC\_IRQHandler@{TIM6\_DAC\_IRQHandler}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{TIM6\_DAC\_IRQHandler()}{TIM6\_DAC\_IRQHandler()}}
+{\footnotesize\ttfamily void T\+I\+M6\+\_\+\+D\+A\+C\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles T\+IM interrupt request. 
+
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 153 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__TIM_ga0839a45f331c4c067939b9c4533bbf4d_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{group__HAL__TimeBase__TIM_gaad0e79d89de05e8451c9b6ac5d88109d}\label{group__HAL__TimeBase__TIM_gaad0e79d89de05e8451c9b6ac5d88109d}} 
+\index{HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}!TimHandle@{TimHandle}}
+\index{TimHandle@{TimHandle}!HAL\_TimeBase\_TIM@{HAL\_TimeBase\_TIM}}
+\doxysubsubsection{\texorpdfstring{TimHandle}{TimHandle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTIM__HandleTypeDef}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} Tim\+Handle}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+tim\+\_\+template.\+c 第 41 行定义.
+

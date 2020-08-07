@@ -1,0 +1,228 @@
+.TH "RCC_Flags_Interrupts_Management" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_Flags_Interrupts_Management \- macros to manage the specified RCC Flags and interrupts\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_ENABLE_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP |= (__INTERRUPT__))"
+.br
+.RI "Enable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to enable the selected interrupts)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_DISABLE_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP &= (uint8_t)(~(__INTERRUPT__)))"
+.br
+.RI "Disable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to disable the selected interrupts)\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_IT\fP(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE2_ADDRESS\fP = (__INTERRUPT__))"
+.br
+.RI "Clear the RCC's interrupt pending bits (Perform Byte access to RCC_CIR[23:16] bits to clear the selected interrupt pending bits\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_IT\fP(__INTERRUPT__)   ((RCC\->CIR & (__INTERRUPT__)) == (__INTERRUPT__))"
+.br
+.RI "Check the RCC's interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_CLEAR_RESET_FLAGS\fP()   (RCC\->CSR |= RCC_CSR_RMVF)"
+.br
+.RI "Set RMVF bit to clear the reset flags: RCC_FLAG_PINRST, RCC_FLAG_PORRST, RCC_FLAG_SFTRST, RCC_FLAG_IWDGRST, RCC_FLAG_WWDGRST and RCC_FLAG_LPWRRST\&. "
+.ti -1c
+.RI "#define \fBRCC_FLAG_MASK\fP   ((uint8_t)0x1FU)"
+.br
+.RI "Check RCC flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RCC_GET_FLAG\fP(__FLAG__)   (((((((__FLAG__) >> 5U) == 1U)? RCC\->CR :((((__FLAG__) >> 5U) == 2U) ? RCC\->BDCR :((((__FLAG__) >> 5U) == 3U)? RCC\->CSR :RCC\->CIR))) & (1U << ((__FLAG__) & \fBRCC_FLAG_MASK\fP)))!= 0U)? 1U : 0U)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+macros to manage the specified RCC Flags and interrupts\&. 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_CLEAR_IT(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE2_ADDRESS\fP = (__INTERRUPT__))"
+
+.PP
+Clear the RCC's interrupt pending bits (Perform Byte access to RCC_CIR[23:16] bits to clear the selected interrupt pending bits\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the interrupt pending bit to clear\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_IT_LSIRDY: LSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_LSERDY: LSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSIRDY: HSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSERDY: HSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLRDY: Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLI2SRDY: PLLI2S ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_CSS: Clock Security System interrupt 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1191 行定义\&.
+.SS "#define __HAL_RCC_CLEAR_RESET_FLAGS()   (RCC\->CSR |= RCC_CSR_RMVF)"
+
+.PP
+Set RMVF bit to clear the reset flags: RCC_FLAG_PINRST, RCC_FLAG_PORRST, RCC_FLAG_SFTRST, RCC_FLAG_IWDGRST, RCC_FLAG_WWDGRST and RCC_FLAG_LPWRRST\&. 
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1210 行定义\&.
+.SS "#define __HAL_RCC_DISABLE_IT(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP &= (uint8_t)(~(__INTERRUPT__)))"
+
+.PP
+Disable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to disable the selected interrupts)\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt sources to be disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_IT_LSIRDY: LSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_LSERDY: LSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSIRDY: HSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSERDY: HSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLRDY: Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLI2SRDY: PLLI2S ready interrupt\&. 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1177 行定义\&.
+.SS "#define __HAL_RCC_ENABLE_IT(__INTERRUPT__)   (*(__IO uint8_t *) \fBRCC_CIR_BYTE1_ADDRESS\fP |= (__INTERRUPT__))"
+
+.PP
+Enable RCC interrupt (Perform Byte access to RCC_CIR[14:8] bits to enable the selected interrupts)\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt sources to be enabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_IT_LSIRDY: LSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_LSERDY: LSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSIRDY: HSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSERDY: HSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLRDY: Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLI2SRDY: PLLI2S ready interrupt\&. 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1164 行定义\&.
+.SS "#define __HAL_RCC_GET_FLAG(__FLAG__)   (((((((__FLAG__) >> 5U) == 1U)? RCC\->CR :((((__FLAG__) >> 5U) == 2U) ? RCC\->BDCR :((((__FLAG__) >> 5U) == 3U)? RCC\->CSR :RCC\->CIR))) & (1U << ((__FLAG__) & \fBRCC_FLAG_MASK\fP)))!= 0U)? 1U : 0U)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1231 行定义\&.
+.SS "#define __HAL_RCC_GET_IT(__INTERRUPT__)   ((RCC\->CIR & (__INTERRUPT__)) == (__INTERRUPT__))"
+
+.PP
+Check the RCC's interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>INTERRUPT</strong>\fP specifies the RCC interrupt source to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_IT_LSIRDY: LSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_LSERDY: LSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSIRDY: HSI ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_HSERDY: HSE ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLRDY: Main PLL ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_PLLI2SRDY: PLLI2S ready interrupt\&. 
+.IP "\(bu" 2
+RCC_IT_CSS: Clock Security System interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of \fBINTERRUPT\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1205 行定义\&.
+.SS "#define RCC_FLAG_MASK   ((uint8_t)0x1FU)"
+
+.PP
+Check RCC flag is set or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>FLAG</strong>\fP specifies the flag to check\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RCC_FLAG_HSIRDY: HSI oscillator clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_HSERDY: HSE oscillator clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_PLLRDY: Main PLL clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_PLLI2SRDY: PLLI2S clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_LSERDY: LSE oscillator clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_LSIRDY: LSI oscillator clock ready\&. 
+.IP "\(bu" 2
+RCC_FLAG_BORRST: POR/PDR or BOR reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_PINRST: Pin reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_PORRST: POR/PDR reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_SFTRST: Software reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_IWDGRST: Independent Watchdog reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_WWDGRST: Window Watchdog reset\&. 
+.IP "\(bu" 2
+RCC_FLAG_LPWRRST: Low Power reset\&. 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIThe\fP new state of \fBFLAG\fP (TRUE or FALSE)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 1230 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

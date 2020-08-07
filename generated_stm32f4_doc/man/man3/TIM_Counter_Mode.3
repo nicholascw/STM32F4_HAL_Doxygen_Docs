@@ -1,0 +1,63 @@
+.TH "TIM_Counter_Mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Counter_Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_COUNTERMODE_UP\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_COUNTERMODE_DOWN\fP   TIM_CR1_DIR"
+.br
+.ti -1c
+.RI "#define \fBTIM_COUNTERMODE_CENTERALIGNED1\fP   TIM_CR1_CMS_0"
+.br
+.ti -1c
+.RI "#define \fBTIM_COUNTERMODE_CENTERALIGNED2\fP   TIM_CR1_CMS_1"
+.br
+.ti -1c
+.RI "#define \fBTIM_COUNTERMODE_CENTERALIGNED3\fP   TIM_CR1_CMS"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_COUNTERMODE_CENTERALIGNED1   TIM_CR1_CMS_0"
+Center-aligned mode 1 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 492 行定义\&.
+.SS "#define TIM_COUNTERMODE_CENTERALIGNED2   TIM_CR1_CMS_1"
+Center-aligned mode 2 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 493 行定义\&.
+.SS "#define TIM_COUNTERMODE_CENTERALIGNED3   TIM_CR1_CMS"
+Center-aligned mode 3 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 494 行定义\&.
+.SS "#define TIM_COUNTERMODE_DOWN   TIM_CR1_DIR"
+Counter used as down-counter 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 491 行定义\&.
+.SS "#define TIM_COUNTERMODE_UP   0x00000000U"
+Counter used as up-counter 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 490 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

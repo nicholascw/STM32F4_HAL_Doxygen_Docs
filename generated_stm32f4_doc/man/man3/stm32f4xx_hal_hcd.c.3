@@ -1,0 +1,80 @@
+.TH "src/stm32f4xx_hal_hcd.c" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stm32f4xx_hal_hcd.c \- HCD HAL module driver\&. This file provides firmware functions to manage the following functionalities of the USB Peripheral Controller:  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+
+.SH "详细描述"
+.PP 
+HCD HAL module driver\&. This file provides firmware functions to manage the following functionalities of the USB Peripheral Controller: 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team
+.IP "\(bu" 2
+Initialization and de-initialization functions
+.IP "\(bu" 2
+IO operation functions
+.IP "\(bu" 2
+Peripheral Control functions
+.IP "\(bu" 2
+Peripheral State functions
+.PP
+.RE
+.PP
+.PP
+.nf
+==============================================================================
+                  ##### How to use this driver #####
+==============================================================================
+[..]
+  (#)Declare a HCD_HandleTypeDef handle structure, for example:
+     HCD_HandleTypeDef  hhcd;
+
+  (#)Fill parameters of Init structure in HCD handle
+
+  (#)Call HAL_HCD_Init() API to initialize the HCD peripheral (Core, Host core, ...)
+
+  (#)Initialize the HCD low level resources through the HAL_HCD_MspInit() API:
+      (##) Enable the HCD/USB Low Level interface clock using the following macros
+           (+++) __HAL_RCC_USB_OTG_FS_CLK_ENABLE();
+           (+++) __HAL_RCC_USB_OTG_HS_CLK_ENABLE(); (For High Speed Mode)
+           (+++) __HAL_RCC_USB_OTG_HS_ULPI_CLK_ENABLE(); (For High Speed Mode)
+
+      (##) Initialize the related GPIO clocks
+      (##) Configure HCD pin-out
+      (##) Configure HCD NVIC interrupt
+
+  (#)Associate the Upper USB Host stack to the HAL HCD Driver:
+      (##) hhcd.pData = phost;
+
+  (#)Enable HCD transmission and reception:
+      (##) HAL_HCD_Start();.fi
+.PP
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) COPYRIGHT(c) 2016 STMicroelectronics"
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) YYYY STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_hcd\&.c\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

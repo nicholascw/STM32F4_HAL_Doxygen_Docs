@@ -1,0 +1,121 @@
+.TH "RCC_AHB1_Force_Release_Reset" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_AHB1_Force_Release_Reset \- Force or release AHB1 peripheral reset\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_AHB1_FORCE_RESET\fP()   (RCC\->AHB1RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOARST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOBRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOHRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_FORCE_RESET\fP()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA2RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_AHB1_RELEASE_RESET\fP()   (RCC\->AHB1RSTR = 0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOA_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOARST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOB_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOBRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOC_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_GPIOH_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOHRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA1_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_DMA2_RELEASE_RESET\fP()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA2RST))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Force or release AHB1 peripheral reset\&. 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_AHB1_FORCE_RESET()   (RCC\->AHB1RSTR = 0xFFFFFFFFU)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 666 行定义\&.
+.SS "#define __HAL_RCC_AHB1_RELEASE_RESET()   (RCC\->AHB1RSTR = 0x00U)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 674 行定义\&.
+.SS "#define __HAL_RCC_DMA1_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 671 行定义\&.
+.SS "#define __HAL_RCC_DMA1_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 679 行定义\&.
+.SS "#define __HAL_RCC_DMA2_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_DMA2RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 672 行定义\&.
+.SS "#define __HAL_RCC_DMA2_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_DMA2RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 680 行定义\&.
+.SS "#define __HAL_RCC_GPIOA_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOARST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 667 行定义\&.
+.SS "#define __HAL_RCC_GPIOA_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOARST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 675 行定义\&.
+.SS "#define __HAL_RCC_GPIOB_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOBRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 668 行定义\&.
+.SS "#define __HAL_RCC_GPIOB_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOBRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 676 行定义\&.
+.SS "#define __HAL_RCC_GPIOC_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOCRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 669 行定义\&.
+.SS "#define __HAL_RCC_GPIOC_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOCRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 677 行定义\&.
+.SS "#define __HAL_RCC_GPIOH_FORCE_RESET()   (RCC\->AHB1RSTR |= (RCC_AHB1RSTR_GPIOHRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 670 行定义\&.
+.SS "#define __HAL_RCC_GPIOH_RELEASE_RESET()   (RCC\->AHB1RSTR &= ~(RCC_AHB1RSTR_GPIOHRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 678 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,39 @@
+.TH "DMA_FIFO_direct_mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_FIFO_direct_mode \- DMA FIFO direct mode  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_FIFOMODE_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBDMA_FIFOMODE_ENABLE\fP   ((uint32_t)DMA_SxFCR_DMDIS)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA FIFO direct mode 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define DMA_FIFOMODE_DISABLE   0x00000000U"
+FIFO mode disable 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 305 行定义\&.
+.SS "#define DMA_FIFOMODE_ENABLE   ((uint32_t)DMA_SxFCR_DMDIS)"
+FIFO mode enable 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 306 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

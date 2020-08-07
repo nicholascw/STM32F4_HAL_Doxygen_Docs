@@ -1,0 +1,58 @@
+.TH "DMA_interrupt_enable_definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_interrupt_enable_definitions \- DMA interrupts definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_IT_TC\fP   ((uint32_t)DMA_SxCR_TCIE)"
+.br
+.ti -1c
+.RI "#define \fBDMA_IT_HT\fP   ((uint32_t)DMA_SxCR_HTIE)"
+.br
+.ti -1c
+.RI "#define \fBDMA_IT_TE\fP   ((uint32_t)DMA_SxCR_TEIE)"
+.br
+.ti -1c
+.RI "#define \fBDMA_IT_DME\fP   ((uint32_t)DMA_SxCR_DMEIE)"
+.br
+.ti -1c
+.RI "#define \fBDMA_IT_FE\fP   0x00000080U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA interrupts definition 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define DMA_IT_DME   ((uint32_t)DMA_SxCR_DMEIE)"
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 354 行定义\&.
+.SS "#define DMA_IT_FE   0x00000080U"
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 355 行定义\&.
+.SS "#define DMA_IT_HT   ((uint32_t)DMA_SxCR_HTIE)"
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 352 行定义\&.
+.SS "#define DMA_IT_TC   ((uint32_t)DMA_SxCR_TCIE)"
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 351 行定义\&.
+.SS "#define DMA_IT_TE   ((uint32_t)DMA_SxCR_TEIE)"
+
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 353 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,389 @@
+.TH "src 目录参考" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src 目录参考
+.SH SYNOPSIS
+.br
+.PP
+.SS "目录"
+
+.in +1c
+.ti -1c
+.RI "目录 \fBLegacy\fP"
+.br
+.in -1c
+.SS "文件"
+
+.in +1c
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal\&.c\fP"
+.br
+.RI "HAL module driver\&. This is the common part of the HAL initialization "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_adc\&.c\fP"
+.br
+.RI "This file provides firmware functions to manage the following functionalities of the Analog to Digital Convertor (ADC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_adc_ex\&.c\fP"
+.br
+.RI "This file provides firmware functions to manage the following functionalities of the ADC extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_can\&.c\fP"
+.br
+.RI "CAN HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Controller Area Network (CAN) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_cec\&.c\fP"
+.br
+.RI "CEC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the High Definition Multimedia Interface Consumer Electronics Control Peripheral (CEC)\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_cortex\&.c\fP"
+.br
+.RI "CORTEX HAL module driver\&. This file provides firmware functions to manage the following functionalities of the CORTEX: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_crc\&.c\fP"
+.br
+.RI "CRC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Cyclic Redundancy Check (CRC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_cryp\&.c\fP"
+.br
+.RI "CRYP HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Cryptography (CRYP) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_cryp_ex\&.c\fP"
+.br
+.RI "Extended CRYP HAL module driver This file provides firmware functions to manage the following functionalities of CRYP extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dac\&.c\fP"
+.br
+.RI "DAC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Digital to Analog Converter (DAC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dac_ex\&.c\fP"
+.br
+.RI "DAC HAL module driver\&. This file provides firmware functions to manage the following functionalities of DAC extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dcmi\&.c\fP"
+.br
+.RI "DCMI HAL module driver This file provides firmware functions to manage the following functionalities of the Digital Camera Interface (DCMI) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dcmi_ex\&.c\fP"
+.br
+.RI "DCMI Extension HAL module driver This file provides firmware functions to manage the following functionalities of DCMI extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dfsdm\&.c\fP"
+.br
+.RI "This file provides firmware functions to manage the following functionalities of the Digital Filter for Sigma-Delta Modulators (DFSDM) peripherals: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dma\&.c\fP"
+.br
+.RI "DMA HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dma2d\&.c\fP"
+.br
+.RI "DMA2D HAL module driver\&. This file provides firmware functions to manage the following functionalities of the DMA2D peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dma_ex\&.c\fP"
+.br
+.RI "DMA Extension HAL module driver This file provides firmware functions to manage the following functionalities of the DMA Extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_dsi\&.c\fP"
+.br
+.RI "DSI HAL module driver\&. This file provides firmware functions to manage the following functionalities of the DSI peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_eth\&.c\fP"
+.br
+.RI "ETH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Ethernet (ETH) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_exti\&.c\fP"
+.br
+.RI "EXTI HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Extended Interrupts and events controller (EXTI) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_flash\&.c\fP"
+.br
+.RI "FLASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the internal FLASH memory: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_flash_ex\&.c\fP"
+.br
+.RI "Extended FLASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the FLASH extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_flash_ramfunc\&.c\fP"
+.br
+.RI "FLASH RAMFUNC module driver\&. This file provides a FLASH firmware functions which should be executed from internal SRAM "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_fmpi2c\&.c\fP"
+.br
+.RI "FMPI2C HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Inter Integrated Circuit (FMPI2C) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_fmpi2c_ex\&.c\fP"
+.br
+.RI "FMPI2C Extended HAL module driver\&. This file provides firmware functions to manage the following functionalities of FMPI2C Extended peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_gpio\&.c\fP"
+.br
+.RI "GPIO HAL module driver\&. This file provides firmware functions to manage the following functionalities of the General Purpose Input/Output (GPIO) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_hash\&.c\fP"
+.br
+.RI "HASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the HASH peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_hash_ex\&.c\fP"
+.br
+.RI "Extended HASH HAL module driver\&. This file provides firmware functions to manage the following functionalities of the HASH peripheral for SHA-224 and SHA-256 alogrithms: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_hcd\&.c\fP"
+.br
+.RI "HCD HAL module driver\&. This file provides firmware functions to manage the following functionalities of the USB Peripheral Controller: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_i2c\&.c\fP"
+.br
+.RI "I2C HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Inter Integrated Circuit (I2C) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_i2c_ex\&.c\fP"
+.br
+.RI "I2C Extension HAL module driver\&. This file provides firmware functions to manage the following functionalities of I2C extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_i2s\&.c\fP"
+.br
+.RI "I2S HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Integrated Interchip Sound (I2S) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_i2s_ex\&.c\fP"
+.br
+.RI "I2S HAL module driver\&. This file provides firmware functions to manage the following functionalities of I2S extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_irda\&.c\fP"
+.br
+.RI "IRDA HAL module driver\&. This file provides firmware functions to manage the following functionalities of the IrDA SIR ENDEC block (IrDA): "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_iwdg\&.c\fP"
+.br
+.RI "IWDG HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Independent Watchdog (IWDG) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_lptim\&.c\fP"
+.br
+.RI "LPTIM HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Low Power Timer (LPTIM) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_ltdc\&.c\fP"
+.br
+.RI "LTDC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the LTDC peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_ltdc_ex\&.c\fP"
+.br
+.RI "LTDC Extension HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_mmc\&.c\fP"
+.br
+.RI "MMC card HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Secure Digital (MMC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_msp_template\&.c\fP"
+.br
+.RI "This file contains the HAL System and Peripheral (PPP) MSP initialization and de-initialization functions\&. It should be copied to the application folder and renamed into 'stm32f4xx_hal_msp\&.c'\&. 
+.br
+ "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_nand\&.c\fP"
+.br
+.RI "NAND HAL module driver\&. This file provides a generic firmware to drive NAND memories mounted as external device\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_nor\&.c\fP"
+.br
+.RI "NOR HAL module driver\&. This file provides a generic firmware to drive NOR memories mounted as external device\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_pccard\&.c\fP"
+.br
+.RI "PCCARD HAL module driver\&. This file provides a generic firmware to drive PCCARD memories mounted as external device\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_pcd\&.c\fP"
+.br
+.RI "PCD HAL module driver\&. This file provides firmware functions to manage the following functionalities of the USB Peripheral Controller: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_pcd_ex\&.c\fP"
+.br
+.RI "PCD Extended HAL module driver\&. This file provides firmware functions to manage the following functionalities of the USB Peripheral Controller: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_pwr\&.c\fP"
+.br
+.RI "PWR HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Power Controller (PWR) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_pwr_ex\&.c\fP"
+.br
+.RI "Extended PWR HAL module driver\&. This file provides firmware functions to manage the following functionalities of PWR extension peripheral: 
+.br
+ "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_qspi\&.c\fP"
+.br
+.RI "QSPI HAL module driver\&. This file provides firmware functions to manage the following functionalities of the QuadSPI interface (QSPI)\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_rcc\&.c\fP"
+.br
+.RI "RCC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Reset and Clock Control (RCC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_rcc_ex\&.c\fP"
+.br
+.RI "Extension RCC HAL module driver\&. This file provides firmware functions to manage the following functionalities RCC extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_rng\&.c\fP"
+.br
+.RI "RNG HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Random Number Generator (RNG) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_rtc\&.c\fP"
+.br
+.RI "RTC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_rtc_ex\&.c\fP"
+.br
+.RI "RTC HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Real Time Clock (RTC) Extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_sai\&.c\fP"
+.br
+.RI "SAI HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Serial Audio Interface (SAI) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_sai_ex\&.c\fP"
+.br
+.RI "SAI Extension HAL module driver\&. This file provides firmware functions to manage the following functionalities of SAI extension peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_sd\&.c\fP"
+.br
+.RI "SD card HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Secure Digital (SD) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_sdram\&.c\fP"
+.br
+.RI "SDRAM HAL module driver\&. This file provides a generic firmware to drive SDRAM memories mounted as external device\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_smartcard\&.c\fP"
+.br
+.RI "SMARTCARD HAL module driver\&. This file provides firmware functions to manage the following functionalities of the SMARTCARD peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_smbus\&.c\fP"
+.br
+.RI "SMBUS HAL module driver\&. This file provides firmware functions to manage the following functionalities of the System Management Bus (SMBus) peripheral, based on SMBUS principals of operation : "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_spdifrx\&.c\fP"
+.br
+.RI "This file provides firmware functions to manage the following functionalities of the SPDIFRX audio interface: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_spi\&.c\fP"
+.br
+.RI "SPI HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Serial Peripheral Interface (SPI) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_sram\&.c\fP"
+.br
+.RI "SRAM HAL module driver\&. This file provides a generic firmware to drive SRAM memories 
+.br
+ mounted as external device\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_tim\&.c\fP"
+.br
+.RI "TIM HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Timer (TIM) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_tim_ex\&.c\fP"
+.br
+.RI "TIM HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Timer Extended peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_timebase_rtc_alarm_template\&.c\fP"
+.br
+.RI "HAL time base based on the hardware RTC_ALARM Template\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_timebase_rtc_wakeup_template\&.c\fP"
+.br
+.RI "HAL time base based on the hardware RTC_WAKEUP Template\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_timebase_tim_template\&.c\fP"
+.br
+.RI "HAL time base based on the hardware TIM Template\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_uart\&.c\fP"
+.br
+.RI "UART HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Universal Asynchronous Receiver Transmitter Peripheral (UART)\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_usart\&.c\fP"
+.br
+.RI "USART HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Universal Synchronous/Asynchronous Receiver Transmitter Peripheral (USART)\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_hal_wwdg\&.c\fP"
+.br
+.RI "WWDG HAL module driver\&. This file provides firmware functions to manage the following functionalities of the Window Watchdog (WWDG) peripheral: "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_adc\&.c\fP"
+.br
+.RI "ADC LL module driver "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_crc\&.c\fP"
+.br
+.RI "CRC LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_dac\&.c\fP"
+.br
+.RI "DAC LL module driver "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_dma\&.c\fP"
+.br
+.RI "DMA LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_dma2d\&.c\fP"
+.br
+.RI "DMA2D LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_exti\&.c\fP"
+.br
+.RI "EXTI LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_fmc\&.c\fP"
+.br
+.RI "FMC Low Layer HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_fsmc\&.c\fP"
+.br
+.RI "FSMC Low Layer HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_gpio\&.c\fP"
+.br
+.RI "GPIO LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_i2c\&.c\fP"
+.br
+.RI "I2C LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_lptim\&.c\fP"
+.br
+.RI "LPTIM LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_pwr\&.c\fP"
+.br
+.RI "PWR LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_rcc\&.c\fP"
+.br
+.RI "RCC LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_rng\&.c\fP"
+.br
+.RI "RNG LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_rtc\&.c\fP"
+.br
+.RI "RTC LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_sdmmc\&.c\fP"
+.br
+.RI "SDMMC Low Layer HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_spi\&.c\fP"
+.br
+.RI "SPI LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_tim\&.c\fP"
+.br
+.RI "TIM LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_usart\&.c\fP"
+.br
+.RI "USART LL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_usb\&.c\fP"
+.br
+.RI "USB Low Layer HAL module driver\&. "
+.ti -1c
+.RI "文件 \fBstm32f4xx_ll_utils\&.c\fP"
+.br
+.RI "UTILS LL module driver\&. "
+.in -1c

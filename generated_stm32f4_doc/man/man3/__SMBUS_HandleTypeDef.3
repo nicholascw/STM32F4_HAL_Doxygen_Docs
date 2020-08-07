@@ -1,0 +1,152 @@
+.TH "__SMBUS_HandleTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__SMBUS_HandleTypeDef \- SMBUS handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_smbus\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "I2C_TypeDef * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBSMBUS_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "uint8_t * \fBpBuffPtr\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBXferSize\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBXferCount\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBXferOptions\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBPreviousState\fP"
+.br
+.ti -1c
+.RI "\fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_SMBUS_StateTypeDef\fP \fBState\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_SMBUS_ModeTypeDef\fP \fBMode\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBErrorCode\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBDevaddress\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBEventCount\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBXferPEC\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+SMBUS handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 152 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "__IO uint32_t Devaddress"
+SMBUS Target device address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 178 行定义\&.
+.SS "__IO uint32_t ErrorCode"
+SMBUS Error code 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 176 行定义\&.
+.SS "__IO uint32_t EventCount"
+SMBUS Event counter 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 180 行定义\&.
+.SS "\fBSMBUS_InitTypeDef\fP Init"
+SMBUS communication parameters 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 156 行定义\&.
+.SS "I2C_TypeDef* Instance"
+SMBUS registers base address 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 154 行定义\&.
+.SS "\fBHAL_LockTypeDef\fP Lock"
+SMBUS locking object 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 170 行定义\&.
+.SS "__IO \fBHAL_SMBUS_ModeTypeDef\fP Mode"
+SMBUS communication mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 174 行定义\&.
+.SS "uint8_t* pBuffPtr"
+Pointer to SMBUS transfer buffer 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 158 行定义\&.
+.SS "__IO uint32_t PreviousState"
+SMBUS communication Previous state and mode context for internal usage 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 167 行定义\&.
+.SS "__IO \fBHAL_SMBUS_StateTypeDef\fP State"
+SMBUS communication state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 172 行定义\&.
+.SS "__IO uint16_t XferCount"
+SMBUS transfer counter 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 162 行定义\&.
+.SS "__IO uint32_t XferOptions"
+SMBUS transfer options this parameter can be a value of \fBSMBUS_OPTIONS\fP 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 164 行定义\&.
+.SS "uint8_t XferPEC"
+SMBUS PEC data in reception mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 182 行定义\&.
+.SS "uint16_t XferSize"
+SMBUS transfer size 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 160 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

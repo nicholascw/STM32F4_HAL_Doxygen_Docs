@@ -1,0 +1,62 @@
+.TH "TIMEx_Remap" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIMEx_Remap
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_TIM5_GPIO\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_TIM5_LSI\fP   TIM_OR_TI4_RMP_0"
+.br
+.ti -1c
+.RI "#define \fBTIM_TIM5_LSE\fP   TIM_OR_TI4_RMP_1"
+.br
+.ti -1c
+.RI "#define \fBTIM_TIM5_RTC\fP   (TIM_OR_TI4_RMP_1 | TIM_OR_TI4_RMP_0)"
+.br
+.ti -1c
+.RI "#define \fBTIM_TIM11_GPIO\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_TIM11_HSE\fP   TIM_OR_TI1_RMP_1"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_TIM11_GPIO   0x00000000U"
+TIM11 TI1 is connected to GPIO 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 91 行定义\&.
+.SS "#define TIM_TIM11_HSE   TIM_OR_TI1_RMP_1"
+TIM11 TI1 is connected to HSE_RTC clock 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 92 行定义\&.
+.SS "#define TIM_TIM5_GPIO   0x00000000U"
+TIM5 TI4 is connected to GPIO 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 86 行定义\&.
+.SS "#define TIM_TIM5_LSE   TIM_OR_TI4_RMP_1"
+TIM5 TI4 is connected to LSE 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 88 行定义\&.
+.SS "#define TIM_TIM5_LSI   TIM_OR_TI4_RMP_0"
+TIM5 TI4 is connected to LSI 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 87 行定义\&.
+.SS "#define TIM_TIM5_RTC   (TIM_OR_TI4_RMP_1 | TIM_OR_TI4_RMP_0)"
+TIM5 TI4 is connected to the RTC wakeup interrupt 
+.PP
+在文件 stm32f4xx_hal_tim_ex\&.h 第 89 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

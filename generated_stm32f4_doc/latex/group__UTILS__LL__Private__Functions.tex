@@ -1,0 +1,177 @@
+\hypertarget{group__UTILS__LL__Private__Functions}{}\doxysection{U\+T\+I\+LS Private functions}
+\label{group__UTILS__LL__Private__Functions}\index{UTILS Private functions@{UTILS Private functions}}
+U\+T\+I\+LS Private functions 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{group__UTILS__LL__Private__Functions}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+static uint32\+\_\+t \mbox{\hyperlink{group__UTILS__LL__Private__Functions_gae40ed31572a8b64837e7f6d8eda0f4e2}{U\+T\+I\+L\+S\+\_\+\+Get\+P\+L\+L\+Output\+Frequency}} (uint32\+\_\+t P\+L\+L\+\_\+\+Input\+Frequency, \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Function to check that P\+LL can be modified \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_gadea8d69f206dca8aa02fa08920a8be0e}{U\+T\+I\+L\+S\+\_\+\+Set\+Flash\+Latency}} (uint32\+\_\+t H\+C\+L\+K\+\_\+\+Frequency)
+\begin{DoxyCompactList}\small\item\em Update number of Flash wait states in line with new frequency and current voltage range. \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0}{U\+T\+I\+L\+S\+\_\+\+Enable\+P\+L\+L\+And\+Switch\+System}} (uint32\+\_\+t S\+Y\+S\+C\+L\+K\+\_\+\+Frequency, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em Function to enable P\+LL and switch system clock to P\+LL \end{DoxyCompactList}\item 
+static Error\+Status \mbox{\hyperlink{group__UTILS__LL__Private__Functions_ga4242342336a76627fc39a7e145dbf3c7}{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+Is\+Busy}} (void)
+\begin{DoxyCompactList}\small\item\em Function to check that P\+LL can be modified \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0}\label{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0}} 
+\index{UTILS Private functions@{UTILS Private functions}!UTILS\_EnablePLLAndSwitchSystem@{UTILS\_EnablePLLAndSwitchSystem}}
+\index{UTILS\_EnablePLLAndSwitchSystem@{UTILS\_EnablePLLAndSwitchSystem}!UTILS Private functions@{UTILS Private functions}}
+\doxysubsubsection{\texorpdfstring{UTILS\_EnablePLLAndSwitchSystem()}{UTILS\_EnablePLLAndSwitchSystem()}}
+{\footnotesize\ttfamily static Error\+Status U\+T\+I\+L\+S\+\_\+\+Enable\+P\+L\+L\+And\+Switch\+System (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{S\+Y\+S\+C\+L\+K\+\_\+\+Frequency,  }\item[{\mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Function to enable P\+LL and switch system clock to P\+LL 
+
+
+\begin{DoxyParams}{参数}
+{\em S\+Y\+S\+C\+L\+K\+\_\+\+Frequency} & S\+Y\+S\+C\+LK frequency \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} structure that contains the configuration information for the B\+US prescalers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: No problem to switch system to P\+LL
+\item E\+R\+R\+OR\+: Problem to switch system to P\+LL 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 670 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__LL__Private__Functions_ga320bd51e9a0bfdf2fa1da4a24bb05fc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__LL__Private__Functions_gae40ed31572a8b64837e7f6d8eda0f4e2}\label{group__UTILS__LL__Private__Functions_gae40ed31572a8b64837e7f6d8eda0f4e2}} 
+\index{UTILS Private functions@{UTILS Private functions}!UTILS\_GetPLLOutputFrequency@{UTILS\_GetPLLOutputFrequency}}
+\index{UTILS\_GetPLLOutputFrequency@{UTILS\_GetPLLOutputFrequency}!UTILS Private functions@{UTILS Private functions}}
+\doxysubsubsection{\texorpdfstring{UTILS\_GetPLLOutputFrequency()}{UTILS\_GetPLLOutputFrequency()}}
+{\footnotesize\ttfamily static uint32\+\_\+t U\+T\+I\+L\+S\+\_\+\+Get\+P\+L\+L\+Output\+Frequency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{P\+L\+L\+\_\+\+Input\+Frequency,  }\item[{\mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Function to check that P\+LL can be modified 
+
+
+\begin{DoxyParams}{参数}
+{\em P\+L\+L\+\_\+\+Input\+Frequency} & P\+LL input frequency (in Hz) \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} structure that contains the configuration information for the P\+LL. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em P\+LL} & output frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 600 行定义.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__LL__Private__Functions_gae40ed31572a8b64837e7f6d8eda0f4e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__LL__Private__Functions_ga4242342336a76627fc39a7e145dbf3c7}\label{group__UTILS__LL__Private__Functions_ga4242342336a76627fc39a7e145dbf3c7}} 
+\index{UTILS Private functions@{UTILS Private functions}!UTILS\_PLL\_IsBusy@{UTILS\_PLL\_IsBusy}}
+\index{UTILS\_PLL\_IsBusy@{UTILS\_PLL\_IsBusy}!UTILS Private functions@{UTILS Private functions}}
+\doxysubsubsection{\texorpdfstring{UTILS\_PLL\_IsBusy()}{UTILS\_PLL\_IsBusy()}}
+{\footnotesize\ttfamily static Error\+Status U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+\_\+\+Is\+Busy (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Function to check that P\+LL can be modified 
+
+
+\begin{DoxyRetVals}{返回值}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: P\+LL modification can be done
+\item E\+R\+R\+OR\+: P\+LL is busy 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 631 行定义.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__LL__Private__Functions_ga4242342336a76627fc39a7e145dbf3c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__LL__Private__Functions_gadea8d69f206dca8aa02fa08920a8be0e}\label{group__UTILS__LL__Private__Functions_gadea8d69f206dca8aa02fa08920a8be0e}} 
+\index{UTILS Private functions@{UTILS Private functions}!UTILS\_SetFlashLatency@{UTILS\_SetFlashLatency}}
+\index{UTILS\_SetFlashLatency@{UTILS\_SetFlashLatency}!UTILS Private functions@{UTILS Private functions}}
+\doxysubsubsection{\texorpdfstring{UTILS\_SetFlashLatency()}{UTILS\_SetFlashLatency()}}
+{\footnotesize\ttfamily static Error\+Status U\+T\+I\+L\+S\+\_\+\+Set\+Flash\+Latency (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+\_\+\+Frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Update number of Flash wait states in line with new frequency and current voltage range. 
+
+\begin{DoxyNote}{注解}
+This Function support O\+N\+LY devices with supply voltage (voltage range) between 2.\+7V and 3.\+6V 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em H\+C\+L\+K\+\_\+\+Frequency} & H\+C\+LK frequency \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: Latency has been modified
+\item E\+R\+R\+OR\+: Latency cannot be modified 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 477 行定义.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__LL__Private__Functions_gadea8d69f206dca8aa02fa08920a8be0e_icgraph}
+\end{center}
+\end{figure}

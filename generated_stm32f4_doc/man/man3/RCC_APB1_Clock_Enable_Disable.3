@@ -1,0 +1,198 @@
+.TH "RCC_APB1_Clock_Enable_Disable" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB1_Clock_Enable_Disable \- Enable or disable the Low Speed APB (APB1) peripheral clock\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_ENABLE\fP()"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM5_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_TIM5EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_WWDG_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_WWDGEN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_SPI2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_USART2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C1_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C1EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_I2C2_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C2EN))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_PWR_CLK_DISABLE\fP()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_PWREN))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Enable or disable the Low Speed APB (APB1) peripheral clock\&. 
+
+
+.PP
+\fB注解\fP
+.RS 4
+After reset, the peripheral clock (used for registers read/write access) is disabled and the application software has to enable this clock before using it\&. 
+.RE
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_I2C1_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C1EN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 525 行定义\&.
+.SS "#define __HAL_RCC_I2C1_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_I2C1EN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_I2C1EN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 499 行定义\&.
+.SS "#define __HAL_RCC_I2C2_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_I2C2EN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 526 行定义\&.
+.SS "#define __HAL_RCC_I2C2_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_I2C2EN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_I2C2EN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 506 行定义\&.
+.SS "#define __HAL_RCC_PWR_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_PWREN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 527 行定义\&.
+.SS "#define __HAL_RCC_PWR_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_PWREN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_PWREN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 513 行定义\&.
+.SS "#define __HAL_RCC_SPI2_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_SPI2EN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 523 行定义\&.
+.SS "#define __HAL_RCC_SPI2_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_SPI2EN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_SPI2EN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 485 行定义\&.
+.SS "#define __HAL_RCC_TIM5_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_TIM5EN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 521 行定义\&.
+.SS "#define __HAL_RCC_TIM5_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_TIM5EN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_TIM5EN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 471 行定义\&.
+.SS "#define __HAL_RCC_USART2_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_USART2EN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 524 行定义\&.
+.SS "#define __HAL_RCC_USART2_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_USART2EN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_USART2EN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 492 行定义\&.
+.SS "#define __HAL_RCC_WWDG_CLK_DISABLE()   (RCC\->APB1ENR &= ~(RCC_APB1ENR_WWDGEN))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 522 行定义\&.
+.SS "#define __HAL_RCC_WWDG_CLK_ENABLE()"
+\fB值:\fP
+.PP
+.nf
+                                        do { \
+                                        __IO uint32_t tmpreg = 0x00U; \
+                                        SET_BIT(RCC->APB1ENR, RCC_APB1ENR_WWDGEN);\
+                                        /* Delay after an RCC peripheral clock enabling */ \
+                                        tmpreg = READ_BIT(RCC->APB1ENR, RCC_APB1ENR_WWDGEN);\
+                                        UNUSED(tmpreg); \
+                                          } while(0U)
+.fi
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 478 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

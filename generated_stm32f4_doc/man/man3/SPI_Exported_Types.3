@@ -1,0 +1,97 @@
+.TH "SPI_Exported_Types" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SPI_Exported_Types
+.SH SYNOPSIS
+.br
+.PP
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSPI_InitTypeDef\fP"
+.br
+.RI "SPI Configuration Structure definition "
+.ti -1c
+.RI "struct \fB__SPI_HandleTypeDef\fP"
+.br
+.RI "SPI handle Structure definition "
+.in -1c
+.SS "类型定义"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__SPI_HandleTypeDef\fP \fBSPI_HandleTypeDef\fP"
+.br
+.RI "SPI handle Structure definition "
+.in -1c
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_SPI_StateTypeDef\fP { \fBHAL_SPI_STATE_RESET\fP = 0x00U, \fBHAL_SPI_STATE_READY\fP = 0x01U, \fBHAL_SPI_STATE_BUSY\fP = 0x02U, \fBHAL_SPI_STATE_BUSY_TX\fP = 0x03U, \fBHAL_SPI_STATE_BUSY_RX\fP = 0x04U, \fBHAL_SPI_STATE_BUSY_TX_RX\fP = 0x05U, \fBHAL_SPI_STATE_ERROR\fP = 0x06U, \fBHAL_SPI_STATE_ABORT\fP = 0x07U }"
+.br
+.RI "HAL SPI State structure definition "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "类型定义说明"
+.PP 
+.SS "typedef struct \fB__SPI_HandleTypeDef\fP \fBSPI_HandleTypeDef\fP"
+
+.PP
+SPI handle Structure definition 
+.SH "枚举类型说明"
+.PP 
+.SS "enum \fBHAL_SPI_StateTypeDef\fP"
+
+.PP
+HAL SPI State structure definition 
+.PP
+\fB枚举值\fP
+.in +1c
+.TP
+\fB\fIHAL_SPI_STATE_RESET \fP\fP
+Peripheral not Initialized 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_READY \fP\fP
+Peripheral Initialized and ready for use 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_BUSY \fP\fP
+an internal process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_BUSY_TX \fP\fP
+Data Transmission process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_BUSY_RX \fP\fP
+Data Reception process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_BUSY_TX_RX \fP\fP
+Data Transmission and Reception process is ongoing 
+.TP
+\fB\fIHAL_SPI_STATE_ERROR \fP\fP
+SPI error state 
+.br
+ 
+.TP
+\fB\fIHAL_SPI_STATE_ABORT \fP\fP
+SPI abort is ongoing 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 90 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

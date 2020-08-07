@@ -1,0 +1,139 @@
+.TH "ADCEx_External_trigger_Source_Injected" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADCEx_External_trigger_Source_Injected
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T1_CC4\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T1_TRGO\fP   ((uint32_t)ADC_CR2_JEXTSEL_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T2_CC1\fP   ((uint32_t)ADC_CR2_JEXTSEL_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T2_TRGO\fP   ((uint32_t)(ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T3_CC2\fP   ((uint32_t)ADC_CR2_JEXTSEL_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T3_CC4\fP   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T4_CC1\fP   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T4_CC2\fP   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T4_CC3\fP   ((uint32_t)ADC_CR2_JEXTSEL_3)"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T4_TRGO\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T5_CC4\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T5_TRGO\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T8_CC2\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T8_CC3\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_T8_CC4\fP   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_EXTERNALTRIGINJECCONV_EXT_IT15\fP   ((uint32_t)ADC_CR2_JEXTSEL)"
+.br
+.ti -1c
+.RI "#define \fBADC_INJECTED_SOFTWARE_START\fP   ((uint32_t)ADC_CR2_JEXTSEL + 1U)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define ADC_EXTERNALTRIGINJECCONV_EXT_IT15   ((uint32_t)ADC_CR2_JEXTSEL)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 195 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T1_CC4   0x00000000U"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 180 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T1_TRGO   ((uint32_t)ADC_CR2_JEXTSEL_0)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 181 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T2_CC1   ((uint32_t)ADC_CR2_JEXTSEL_1)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 182 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T2_TRGO   ((uint32_t)(ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 183 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T3_CC2   ((uint32_t)ADC_CR2_JEXTSEL_2)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 184 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T3_CC4   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 185 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T4_CC1   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 186 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T4_CC2   ((uint32_t)(ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 187 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T4_CC3   ((uint32_t)ADC_CR2_JEXTSEL_3)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 188 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T4_TRGO   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 189 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T5_CC4   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 190 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T5_TRGO   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_1 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 191 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T8_CC2   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 192 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T8_CC3   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 193 行定义\&.
+.SS "#define ADC_EXTERNALTRIGINJECCONV_T8_CC4   ((uint32_t)(ADC_CR2_JEXTSEL_3 | ADC_CR2_JEXTSEL_2 | ADC_CR2_JEXTSEL_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 194 行定义\&.
+.SS "#define ADC_INJECTED_SOFTWARE_START   ((uint32_t)ADC_CR2_JEXTSEL + 1U)"
+
+.PP
+在文件 stm32f4xx_hal_adc_ex\&.h 第 196 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

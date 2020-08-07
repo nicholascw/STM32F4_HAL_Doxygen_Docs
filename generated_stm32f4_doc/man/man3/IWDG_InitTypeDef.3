@@ -1,0 +1,40 @@
+.TH "IWDG_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IWDG_InitTypeDef \- IWDG Init structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_iwdg\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBPrescaler\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBReload\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+IWDG Init structure definition 
+.PP
+在文件 stm32f4xx_hal_iwdg\&.h 第 47 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t Prescaler"
+Select the prescaler of the IWDG\&. This parameter can be a value of \fBIWDG Prescaler\fP 
+.PP
+在文件 stm32f4xx_hal_iwdg\&.h 第 49 行定义\&.
+.SS "uint32_t Reload"
+Specifies the IWDG down-counter reload value\&. This parameter must be a number between Min_Data = 0 and Max_Data = 0x0FFF 
+.PP
+在文件 stm32f4xx_hal_iwdg\&.h 第 52 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

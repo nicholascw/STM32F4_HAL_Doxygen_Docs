@@ -1,0 +1,168 @@
+\hypertarget{structSMARTCARD__InitTypeDef}{}\doxysection{S\+M\+A\+R\+T\+C\+A\+R\+D\+\_\+\+Init\+Type\+Def结构体 参考}
+\label{structSMARTCARD__InitTypeDef}\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+
+
+S\+M\+A\+R\+T\+C\+A\+RD Init Structure definition  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+smartcard.\+h$>$}
+
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_aaad609733f3fd8146c8745e953a91b2a}{Baud\+Rate}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_ae5e60b9a021fe0009588fc86c7584a5a}{Word\+Length}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_a8394ba239444e3e5fe1ada1c37cb1019}{Stop\+Bits}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_a1d60a99b8f3965f01ab23444b154ba79}{Parity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}{Mode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_a83f278c9d173d3cd021644692bf3c435}{C\+L\+K\+Polarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_aba7183911cbc41063270dab182de768f}{C\+L\+K\+Phase}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_abf58d9d3c7c5f08ad9624410d22d04c8}{C\+L\+K\+Last\+Bit}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_affb82025da5b8d4a06e61f1690460f4d}{Prescaler}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_ac931b822471eeaeb5adf699bc1aaeb68}{Guard\+Time}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structSMARTCARD__InitTypeDef_a6d7513624f51308e761f4e59bc9d62d9}{N\+A\+C\+K\+State}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+S\+M\+A\+R\+T\+C\+A\+RD Init Structure definition 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 47 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_aaad609733f3fd8146c8745e953a91b2a}\label{structSMARTCARD__InitTypeDef_aaad609733f3fd8146c8745e953a91b2a}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!BaudRate@{BaudRate}}
+\index{BaudRate@{BaudRate}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{BaudRate}{BaudRate}}
+{\footnotesize\ttfamily uint32\+\_\+t Baud\+Rate}
+
+This member configures the Smart\+Card communication baud rate. The baud rate is computed using the following formula\+:
+\begin{DoxyItemize}
+\item Integer\+Divider = ((P\+C\+L\+Kx) / (16 $\ast$ (hsc-\/$>$Init.\+Baud\+Rate)))
+\item Fractional\+Divider = ((Integer\+Divider -\/ ((uint32\+\_\+t) Integer\+Divider)) $\ast$ 16) + 0.\+5 
+\end{DoxyItemize}
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 49 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_abf58d9d3c7c5f08ad9624410d22d04c8}\label{structSMARTCARD__InitTypeDef_abf58d9d3c7c5f08ad9624410d22d04c8}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!CLKLastBit@{CLKLastBit}}
+\index{CLKLastBit@{CLKLastBit}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CLKLastBit}{CLKLastBit}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+K\+Last\+Bit}
+
+Specifies whether the clock pulse corresponding to the last transmitted data bit (M\+SB) has to be output on the S\+C\+LK pin in synchronous mode. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Last__Bit}{S\+M\+A\+R\+T\+C\+A\+RD Last Bit}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 76 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_aba7183911cbc41063270dab182de768f}\label{structSMARTCARD__InitTypeDef_aba7183911cbc41063270dab182de768f}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!CLKPhase@{CLKPhase}}
+\index{CLKPhase@{CLKPhase}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CLKPhase}{CLKPhase}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+K\+Phase}
+
+Specifies the clock transition on which the bit capture is made. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Clock__Phase}{S\+M\+A\+R\+T\+C\+A\+RD Clock Phase}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 73 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_a83f278c9d173d3cd021644692bf3c435}\label{structSMARTCARD__InitTypeDef_a83f278c9d173d3cd021644692bf3c435}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!CLKPolarity@{CLKPolarity}}
+\index{CLKPolarity@{CLKPolarity}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{CLKPolarity}{CLKPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t C\+L\+K\+Polarity}
+
+Specifies the steady state of the serial clock. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Clock__Polarity}{S\+M\+A\+R\+T\+C\+A\+RD Clock Polarity}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 70 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_ac931b822471eeaeb5adf699bc1aaeb68}\label{structSMARTCARD__InitTypeDef_ac931b822471eeaeb5adf699bc1aaeb68}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!GuardTime@{GuardTime}}
+\index{GuardTime@{GuardTime}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{GuardTime}{GuardTime}}
+{\footnotesize\ttfamily uint32\+\_\+t Guard\+Time}
+
+Specifies the Smart\+Card Guard Time value in terms of number of baud clocks 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 85 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}\label{structSMARTCARD__InitTypeDef_a0ffc93ec511ed9cf1663f6939bd3e839}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!Mode@{Mode}}
+\index{Mode@{Mode}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily uint32\+\_\+t Mode}
+
+Specifies whether the Receive or Transmit mode is enabled or disabled. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Mode}{S\+M\+A\+R\+T\+C\+A\+RD Mode}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 67 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_a6d7513624f51308e761f4e59bc9d62d9}\label{structSMARTCARD__InitTypeDef_a6d7513624f51308e761f4e59bc9d62d9}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!NACKState@{NACKState}}
+\index{NACKState@{NACKState}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{NACKState}{NACKState}}
+{\footnotesize\ttfamily uint32\+\_\+t N\+A\+C\+K\+State}
+
+Specifies the Smart\+Card N\+A\+CK Transmission state. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__NACK__State}{S\+M\+A\+R\+T\+C\+A\+RD N\+A\+CK State}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 87 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_a1d60a99b8f3965f01ab23444b154ba79}\label{structSMARTCARD__InitTypeDef_a1d60a99b8f3965f01ab23444b154ba79}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!Parity@{Parity}}
+\index{Parity@{Parity}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Parity}{Parity}}
+{\footnotesize\ttfamily uint32\+\_\+t Parity}
+
+Specifies the parity mode. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Parity}{S\+M\+A\+R\+T\+C\+A\+RD Parity}} \begin{DoxyNote}{注解}
+When parity is enabled, the computed parity is inserted at the M\+SB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits). 
+\end{DoxyNote}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 60 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_affb82025da5b8d4a06e61f1690460f4d}\label{structSMARTCARD__InitTypeDef_affb82025da5b8d4a06e61f1690460f4d}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!Prescaler@{Prescaler}}
+\index{Prescaler@{Prescaler}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Prescaler}{Prescaler}}
+{\footnotesize\ttfamily uint32\+\_\+t Prescaler}
+
+Specifies the Smart\+Card Prescaler value used for dividing the system clock to provide the smartcard clock. The value given in the register (5 significant bits) is multiplied by 2 to give the division factor of the source clock frequency. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Prescaler}{S\+M\+A\+R\+T\+C\+A\+RD Prescaler}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 80 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_a8394ba239444e3e5fe1ada1c37cb1019}\label{structSMARTCARD__InitTypeDef_a8394ba239444e3e5fe1ada1c37cb1019}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!StopBits@{StopBits}}
+\index{StopBits@{StopBits}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{StopBits}{StopBits}}
+{\footnotesize\ttfamily uint32\+\_\+t Stop\+Bits}
+
+Specifies the number of stop bits transmitted. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Stop__Bits}{S\+M\+A\+R\+T\+C\+A\+RD Number of Stop Bits}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 57 行定义.
+
+\mbox{\Hypertarget{structSMARTCARD__InitTypeDef_ae5e60b9a021fe0009588fc86c7584a5a}\label{structSMARTCARD__InitTypeDef_ae5e60b9a021fe0009588fc86c7584a5a}} 
+\index{SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}!WordLength@{WordLength}}
+\index{WordLength@{WordLength}!SMARTCARD\_InitTypeDef@{SMARTCARD\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{WordLength}{WordLength}}
+{\footnotesize\ttfamily uint32\+\_\+t Word\+Length}
+
+Specifies the number of data bits transmitted or received in a frame. This parameter can be a value of \mbox{\hyperlink{group__SMARTCARD__Word__Length}{S\+M\+A\+R\+T\+C\+A\+RD Word Length}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smartcard.\+h 第 54 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__smartcard_8h}{stm32f4xx\+\_\+hal\+\_\+smartcard.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,115 @@
+\hypertarget{group__HAL__MSP__Private__Functions}{}\doxysection{H\+AL M\+SP Private Functions}
+\label{group__HAL__MSP__Private__Functions}\index{HAL MSP Private Functions@{HAL MSP Private Functions}}
+H\+AL M\+SP Private Functions 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{group__HAL__MSP__Private__Functions}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__HAL__MSP__Private__Functions_gae4fb8e66865c87d0ebab74a726a6891f}{H\+A\+L\+\_\+\+Msp\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the Global M\+SP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__MSP__Private__Functions_gadd10d026ef02d00e32e80c9eab9db830}{H\+A\+L\+\_\+\+Msp\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the Global M\+SP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__MSP__Private__Functions_ga4f778ad7de857377eb5493377047e72d}{H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the P\+PP M\+SP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__MSP__Private__Functions_gaca177eaaeb329fc02e292efd92a8ed13}{H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+De\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em De\+Initializes the P\+PP M\+SP. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__HAL__MSP__Private__Functions_gadd10d026ef02d00e32e80c9eab9db830}\label{group__HAL__MSP__Private__Functions_gadd10d026ef02d00e32e80c9eab9db830}} 
+\index{HAL MSP Private Functions@{HAL MSP Private Functions}!HAL\_MspDeInit@{HAL\_MspDeInit}}
+\index{HAL\_MspDeInit@{HAL\_MspDeInit}!HAL MSP Private Functions@{HAL MSP Private Functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_MspDeInit()}{HAL\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes the Global M\+SP. 
+
+\begin{DoxyNote}{注解}
+This functiona is called from \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_ga95911129a26afb05232caaaefa31956f}{H\+A\+L\+\_\+\+De\+Init()}} function to perform system level de-\/initialization (G\+P\+I\+Os, clock, D\+MA, interrupt). 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+msp\+\_\+template.\+c 第 62 行定义.
+
+\mbox{\Hypertarget{group__HAL__MSP__Private__Functions_gae4fb8e66865c87d0ebab74a726a6891f}\label{group__HAL__MSP__Private__Functions_gae4fb8e66865c87d0ebab74a726a6891f}} 
+\index{HAL MSP Private Functions@{HAL MSP Private Functions}!HAL\_MspInit@{HAL\_MspInit}}
+\index{HAL\_MspInit@{HAL\_MspInit}!HAL MSP Private Functions@{HAL MSP Private Functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_MspInit()}{HAL\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the Global M\+SP. 
+
+\begin{DoxyNote}{注解}
+This function is called from \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gaecac54d350c3730e6831eb404e557dc4}{H\+A\+L\+\_\+\+Init()}} function to perform system level initialization (G\+P\+I\+Os, clock, D\+MA, interrupt). 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+msp\+\_\+template.\+c 第 51 行定义.
+
+\mbox{\Hypertarget{group__HAL__MSP__Private__Functions_gaca177eaaeb329fc02e292efd92a8ed13}\label{group__HAL__MSP__Private__Functions_gaca177eaaeb329fc02e292efd92a8ed13}} 
+\index{HAL MSP Private Functions@{HAL MSP Private Functions}!HAL\_PPP\_MspDeInit@{HAL\_PPP\_MspDeInit}}
+\index{HAL\_PPP\_MspDeInit@{HAL\_PPP\_MspDeInit}!HAL MSP Private Functions@{HAL MSP Private Functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PPP\_MspDeInit()}{HAL\_PPP\_MspDeInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+De\+Initializes the P\+PP M\+SP. 
+
+\begin{DoxyNote}{注解}
+This functiona is called from H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+De\+Init() function to perform peripheral(\+P\+P\+P) system level de-\/initialization (G\+P\+I\+Os, clock, D\+MA, interrupt) 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+msp\+\_\+template.\+c 第 84 行定义.
+
+\mbox{\Hypertarget{group__HAL__MSP__Private__Functions_ga4f778ad7de857377eb5493377047e72d}\label{group__HAL__MSP__Private__Functions_ga4f778ad7de857377eb5493377047e72d}} 
+\index{HAL MSP Private Functions@{HAL MSP Private Functions}!HAL\_PPP\_MspInit@{HAL\_PPP\_MspInit}}
+\index{HAL\_PPP\_MspInit@{HAL\_PPP\_MspInit}!HAL MSP Private Functions@{HAL MSP Private Functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_PPP\_MspInit()}{HAL\_PPP\_MspInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the P\+PP M\+SP. 
+
+\begin{DoxyNote}{注解}
+This functiona is called from H\+A\+L\+\_\+\+P\+P\+P\+\_\+\+Init() function to perform peripheral(\+P\+P\+P) system level initialization (G\+P\+I\+Os, clock, D\+MA, interrupt) 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+msp\+\_\+template.\+c 第 73 行定义.
+

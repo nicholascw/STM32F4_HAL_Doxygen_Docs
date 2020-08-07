@@ -1,0 +1,167 @@
+.TH "ADC_channels" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_channels
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_CHANNEL_0\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_1\fP   ((uint32_t)ADC_CR1_AWDCH_0)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_2\fP   ((uint32_t)ADC_CR1_AWDCH_1)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_3\fP   ((uint32_t)(ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_4\fP   ((uint32_t)ADC_CR1_AWDCH_2)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_5\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_6\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_7\fP   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_8\fP   ((uint32_t)ADC_CR1_AWDCH_3)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_9\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_10\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_11\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_12\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_13\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_14\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_15\fP   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_16\fP   ((uint32_t)ADC_CR1_AWDCH_4)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_17\fP   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_0))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_18\fP   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_1))"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_VREFINT\fP   ((uint32_t)\fBADC_CHANNEL_17\fP)"
+.br
+.ti -1c
+.RI "#define \fBADC_CHANNEL_VBAT\fP   ((uint32_t)\fBADC_CHANNEL_18\fP)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define ADC_CHANNEL_0   0x00000000U"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 362 行定义\&.
+.SS "#define ADC_CHANNEL_1   ((uint32_t)ADC_CR1_AWDCH_0)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 363 行定义\&.
+.SS "#define ADC_CHANNEL_10   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 372 行定义\&.
+.SS "#define ADC_CHANNEL_11   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 373 行定义\&.
+.SS "#define ADC_CHANNEL_12   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 374 行定义\&.
+.SS "#define ADC_CHANNEL_13   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 375 行定义\&.
+.SS "#define ADC_CHANNEL_14   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 376 行定义\&.
+.SS "#define ADC_CHANNEL_15   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 377 行定义\&.
+.SS "#define ADC_CHANNEL_16   ((uint32_t)ADC_CR1_AWDCH_4)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 378 行定义\&.
+.SS "#define ADC_CHANNEL_17   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 379 行定义\&.
+.SS "#define ADC_CHANNEL_18   ((uint32_t)(ADC_CR1_AWDCH_4 | ADC_CR1_AWDCH_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 380 行定义\&.
+.SS "#define ADC_CHANNEL_2   ((uint32_t)ADC_CR1_AWDCH_1)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 364 行定义\&.
+.SS "#define ADC_CHANNEL_3   ((uint32_t)(ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 365 行定义\&.
+.SS "#define ADC_CHANNEL_4   ((uint32_t)ADC_CR1_AWDCH_2)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 366 行定义\&.
+.SS "#define ADC_CHANNEL_5   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 367 行定义\&.
+.SS "#define ADC_CHANNEL_6   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 368 行定义\&.
+.SS "#define ADC_CHANNEL_7   ((uint32_t)(ADC_CR1_AWDCH_2 | ADC_CR1_AWDCH_1 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 369 行定义\&.
+.SS "#define ADC_CHANNEL_8   ((uint32_t)ADC_CR1_AWDCH_3)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 370 行定义\&.
+.SS "#define ADC_CHANNEL_9   ((uint32_t)(ADC_CR1_AWDCH_3 | ADC_CR1_AWDCH_0))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 371 行定义\&.
+.SS "#define ADC_CHANNEL_VBAT   ((uint32_t)\fBADC_CHANNEL_18\fP)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 383 行定义\&.
+.SS "#define ADC_CHANNEL_VREFINT   ((uint32_t)\fBADC_CHANNEL_17\fP)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 382 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

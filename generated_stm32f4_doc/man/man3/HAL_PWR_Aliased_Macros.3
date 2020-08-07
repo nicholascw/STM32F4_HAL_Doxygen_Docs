@@ -1,0 +1,300 @@
+.TH "HAL_PWR_Aliased_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_PWR_Aliased_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_PVD_EVENT_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EVENT_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_FALLINGTRIGGER_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_FALLINGTRIGGER_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_RISINGTRIGGER_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_RISINGTRIGGER_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EVENT_DISABLE\fP   __HAL_PWR_PVM_EVENT_DISABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EVENT_ENABLE\fP   __HAL_PWR_PVM_EVENT_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EXTI_FALLINGTRIGGER_DISABLE\fP   __HAL_PWR_PVM_EXTI_FALLINGTRIGGER_DISABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EXTI_FALLINGTRIGGER_ENABLE\fP   __HAL_PWR_PVM_EXTI_FALLINGTRIGGER_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EXTI_RISINGTRIGGER_DISABLE\fP   __HAL_PWR_PVM_EXTI_RISINGTRIGGER_DISABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVM_EXTI_RISINGTRIGGER_ENABLE\fP   __HAL_PWR_PVM_EXTI_RISINGTRIGGER_ENABLE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_INTERNALWAKEUP_DISABLE\fP   HAL_PWREx_DisableInternalWakeUpLine"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_INTERNALWAKEUP_ENABLE\fP   HAL_PWREx_EnableInternalWakeUpLine"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PULL_UP_DOWN_CONFIG_DISABLE\fP   HAL_PWREx_DisablePullUpPullDownConfig"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PULL_UP_DOWN_CONFIG_ENABLE\fP   HAL_PWREx_EnablePullUpPullDownConfig"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_CLEAR_EGDE_TRIGGER\fP()   do { \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP(); } while(0)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_EVENT_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_EVENT_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_FALLINGTRIGGER_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_FALLINGTRIGGER_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_RISINGTRIGGER_DISABLE\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_RISINGTRIGGER_ENABLE\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_SET_FALLING_EGDE_TRIGGER\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVD_EXTI_SET_RISING_EDGE_TRIGGER\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVM_DISABLE\fP()   do { HAL_PWREx_DisablePVM1();HAL_PWREx_DisablePVM2();HAL_PWREx_DisablePVM3();HAL_PWREx_DisablePVM4(); } while(0)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_PVM_ENABLE\fP()   do { HAL_PWREx_EnablePVM1();HAL_PWREx_EnablePVM2();HAL_PWREx_EnablePVM3();HAL_PWREx_EnablePVM4(); } while(0)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_SRAM2CONTENT_PRESERVE_DISABLE\fP   HAL_PWREx_DisableSRAM2ContentRetention"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_SRAM2CONTENT_PRESERVE_ENABLE\fP   HAL_PWREx_EnableSRAM2ContentRetention"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDIO2_DISABLE\fP   HAL_PWREx_DisableVddIO2"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDIO2_ENABLE\fP   HAL_PWREx_EnableVddIO2"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDIO2_EXTI_CLEAR_EGDE_TRIGGER\fP   __HAL_PWR_VDDIO2_EXTI_DISABLE_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDIO2_EXTI_SET_FALLING_EGDE_TRIGGER\fP   __HAL_PWR_VDDIO2_EXTI_ENABLE_FALLING_EDGE"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDUSB_DISABLE\fP   HAL_PWREx_DisableVddUSB"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PWR_VDDUSB_ENABLE\fP   HAL_PWREx_EnableVddUSB"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_CLEAR_FLAG\fP   \fB__HAL_PWR_PVD_EXTI_CLEAR_FLAG\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_DISABLE_IT\fP   \fB__HAL_PWR_PVD_EXTI_DISABLE_IT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_ENABLE_IT\fP   \fB__HAL_PWR_PVD_EXTI_ENABLE_IT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_GENERATE_SWIT\fP   \fB__HAL_PWR_PVD_EXTI_GENERATE_SWIT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_PVD_EXTI_GET_FLAG\fP   \fB__HAL_PWR_PVD_EXTI_GET_FLAG\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_PVD_EVENT_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1927 行定义\&.
+.SS "#define __HAL_PVD_EVENT_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1928 行定义\&.
+.SS "#define __HAL_PVD_EXTI_CLEAR_FLAG   \fB__HAL_PWR_PVD_EXTI_CLEAR_FLAG\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1970 行定义\&.
+.SS "#define __HAL_PVD_EXTI_DISABLE_IT   \fB__HAL_PWR_PVD_EXTI_DISABLE_IT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1971 行定义\&.
+.SS "#define __HAL_PVD_EXTI_ENABLE_IT   \fB__HAL_PWR_PVD_EXTI_ENABLE_IT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1972 行定义\&.
+.SS "#define __HAL_PVD_EXTI_FALLINGTRIGGER_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1929 行定义\&.
+.SS "#define __HAL_PVD_EXTI_FALLINGTRIGGER_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1930 行定义\&.
+.SS "#define __HAL_PVD_EXTI_GENERATE_SWIT   \fB__HAL_PWR_PVD_EXTI_GENERATE_SWIT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1973 行定义\&.
+.SS "#define __HAL_PVD_EXTI_GET_FLAG   \fB__HAL_PWR_PVD_EXTI_GET_FLAG\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1974 行定义\&.
+.SS "#define __HAL_PVD_EXTI_RISINGTRIGGER_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1931 行定义\&.
+.SS "#define __HAL_PVD_EXTI_RISINGTRIGGER_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1932 行定义\&.
+.SS "#define __HAL_PVM_EVENT_DISABLE   __HAL_PWR_PVM_EVENT_DISABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1933 行定义\&.
+.SS "#define __HAL_PVM_EVENT_ENABLE   __HAL_PWR_PVM_EVENT_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1934 行定义\&.
+.SS "#define __HAL_PVM_EXTI_FALLINGTRIGGER_DISABLE   __HAL_PWR_PVM_EXTI_FALLINGTRIGGER_DISABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1935 行定义\&.
+.SS "#define __HAL_PVM_EXTI_FALLINGTRIGGER_ENABLE   __HAL_PWR_PVM_EXTI_FALLINGTRIGGER_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1936 行定义\&.
+.SS "#define __HAL_PVM_EXTI_RISINGTRIGGER_DISABLE   __HAL_PWR_PVM_EXTI_RISINGTRIGGER_DISABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1937 行定义\&.
+.SS "#define __HAL_PVM_EXTI_RISINGTRIGGER_ENABLE   __HAL_PWR_PVM_EXTI_RISINGTRIGGER_ENABLE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1938 行定义\&.
+.SS "#define __HAL_PWR_INTERNALWAKEUP_DISABLE   HAL_PWREx_DisableInternalWakeUpLine"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1939 行定义\&.
+.SS "#define __HAL_PWR_INTERNALWAKEUP_ENABLE   HAL_PWREx_EnableInternalWakeUpLine"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1940 行定义\&.
+.SS "#define __HAL_PWR_PULL_UP_DOWN_CONFIG_DISABLE   HAL_PWREx_DisablePullUpPullDownConfig"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1941 行定义\&.
+.SS "#define __HAL_PWR_PULL_UP_DOWN_CONFIG_ENABLE   HAL_PWREx_EnablePullUpPullDownConfig"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1942 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_CLEAR_EGDE_TRIGGER()   do { \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP();\fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP(); } while(0)"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1943 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_EVENT_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_EVENT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1944 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_EVENT_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_EVENT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1945 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_FALLINGTRIGGER_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_FALLING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1946 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_FALLINGTRIGGER_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1947 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_RISINGTRIGGER_DISABLE   \fB__HAL_PWR_PVD_EXTI_DISABLE_RISING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1948 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_RISINGTRIGGER_ENABLE   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1949 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_SET_FALLING_EGDE_TRIGGER   \fB__HAL_PWR_PVD_EXTI_ENABLE_FALLING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1950 行定义\&.
+.SS "#define __HAL_PWR_PVD_EXTI_SET_RISING_EDGE_TRIGGER   \fB__HAL_PWR_PVD_EXTI_ENABLE_RISING_EDGE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1951 行定义\&.
+.SS "#define __HAL_PWR_PVM_DISABLE()   do { HAL_PWREx_DisablePVM1();HAL_PWREx_DisablePVM2();HAL_PWREx_DisablePVM3();HAL_PWREx_DisablePVM4(); } while(0)"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1952 行定义\&.
+.SS "#define __HAL_PWR_PVM_ENABLE()   do { HAL_PWREx_EnablePVM1();HAL_PWREx_EnablePVM2();HAL_PWREx_EnablePVM3();HAL_PWREx_EnablePVM4(); } while(0)"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1953 行定义\&.
+.SS "#define __HAL_PWR_SRAM2CONTENT_PRESERVE_DISABLE   HAL_PWREx_DisableSRAM2ContentRetention"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1954 行定义\&.
+.SS "#define __HAL_PWR_SRAM2CONTENT_PRESERVE_ENABLE   HAL_PWREx_EnableSRAM2ContentRetention"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1955 行定义\&.
+.SS "#define __HAL_PWR_VDDIO2_DISABLE   HAL_PWREx_DisableVddIO2"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1956 行定义\&.
+.SS "#define __HAL_PWR_VDDIO2_ENABLE   HAL_PWREx_EnableVddIO2"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1957 行定义\&.
+.SS "#define __HAL_PWR_VDDIO2_EXTI_CLEAR_EGDE_TRIGGER   __HAL_PWR_VDDIO2_EXTI_DISABLE_FALLING_EDGE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1958 行定义\&.
+.SS "#define __HAL_PWR_VDDIO2_EXTI_SET_FALLING_EGDE_TRIGGER   __HAL_PWR_VDDIO2_EXTI_ENABLE_FALLING_EDGE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1959 行定义\&.
+.SS "#define __HAL_PWR_VDDUSB_DISABLE   HAL_PWREx_DisableVddUSB"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1960 行定义\&.
+.SS "#define __HAL_PWR_VDDUSB_ENABLE   HAL_PWREx_EnableVddUSB"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1961 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

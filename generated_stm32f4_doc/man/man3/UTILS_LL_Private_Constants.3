@@ -1,0 +1,132 @@
+.TH "UTILS_LL_Private_Constants" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UTILS_LL_Private_Constants
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLL_MAX_DELAY\fP   0xFFFFFFFFU"
+.br
+.ti -1c
+.RI "#define \fBUID_BASE_ADDRESS\fP   UID_BASE"
+.br
+.RI "Unique device ID register base address "
+.ti -1c
+.RI "#define \fBFLASHSIZE_BASE_ADDRESS\fP   FLASHSIZE_BASE"
+.br
+.RI "Flash size data register base address "
+.ti -1c
+.RI "#define \fBPACKAGE_BASE_ADDRESS\fP   PACKAGE_BASE"
+.br
+.RI "Package data register base address "
+.ti -1c
+.RI "#define \fBUTILS_MAX_FREQUENCY_SCALE2\fP   RCC_MAX_FREQUENCY_SCALE2"
+.br
+.ti -1c
+.RI "#define \fBUTILS_PLLVCO_INPUT_MIN\fP   RCC_PLLVCO_INPUT_MIN"
+.br
+.ti -1c
+.RI "#define \fBUTILS_PLLVCO_INPUT_MAX\fP   RCC_PLLVCO_INPUT_MAX"
+.br
+.ti -1c
+.RI "#define \fBUTILS_PLLVCO_OUTPUT_MIN\fP   RCC_PLLVCO_OUTPUT_MIN"
+.br
+.ti -1c
+.RI "#define \fBUTILS_PLLVCO_OUTPUT_MAX\fP   RCC_PLLVCO_OUTPUT_MAX"
+.br
+.ti -1c
+.RI "#define \fBUTILS_HSE_FREQUENCY_MIN\fP   4000000U"
+.br
+.ti -1c
+.RI "#define \fBUTILS_HSE_FREQUENCY_MAX\fP   26000000U"
+.br
+.ti -1c
+.RI "#define \fBUTILS_SCALE2_LATENCY1_FREQ\fP   FLASH_SCALE2_LATENCY1_FREQ"
+.br
+.ti -1c
+.RI "#define \fBUTILS_SCALE2_LATENCY2_FREQ\fP   FLASH_SCALE2_LATENCY2_FREQ"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define FLASHSIZE_BASE_ADDRESS   FLASHSIZE_BASE"
+
+.PP
+Flash size data register base address 
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 71 行定义\&.
+.SS "#define LL_MAX_DELAY   0xFFFFFFFFU"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 61 行定义\&.
+.SS "#define PACKAGE_BASE_ADDRESS   PACKAGE_BASE"
+
+.PP
+Package data register base address 
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 76 行定义\&.
+.SS "#define UID_BASE_ADDRESS   UID_BASE"
+
+.PP
+Unique device ID register base address 
+.PP
+在文件 stm32f4xx_ll_utils\&.h 第 66 行定义\&.
+.SS "#define UTILS_HSE_FREQUENCY_MAX   26000000U"
+Frequency max for HSE frequency, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 61 行定义\&.
+.SS "#define UTILS_HSE_FREQUENCY_MIN   4000000U"
+Frequency min for HSE frequency, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 60 行定义\&.
+.SS "#define UTILS_MAX_FREQUENCY_SCALE2   RCC_MAX_FREQUENCY_SCALE2"
+Maximum frequency for system clock at power scale2, in Hz 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 48 行定义\&.
+.SS "#define UTILS_PLLVCO_INPUT_MAX   RCC_PLLVCO_INPUT_MAX"
+Frequency max for PLLVCO input, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 55 行定义\&.
+.SS "#define UTILS_PLLVCO_INPUT_MIN   RCC_PLLVCO_INPUT_MIN"
+Frequency min for PLLVCO input, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 54 行定义\&.
+.SS "#define UTILS_PLLVCO_OUTPUT_MAX   RCC_PLLVCO_OUTPUT_MAX"
+Frequency max for PLLVCO output, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 57 行定义\&.
+.SS "#define UTILS_PLLVCO_OUTPUT_MIN   RCC_PLLVCO_OUTPUT_MIN"
+Frequency min for PLLVCO output, in Hz 
+.br
+ 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 56 行定义\&.
+.SS "#define UTILS_SCALE2_LATENCY1_FREQ   FLASH_SCALE2_LATENCY1_FREQ"
+HCLK frequency to set FLASH latency 1 in power scale 2 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 79 行定义\&.
+.SS "#define UTILS_SCALE2_LATENCY2_FREQ   FLASH_SCALE2_LATENCY2_FREQ"
+HCLK frequency to set FLASH latency 2 in power scale 2 
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 80 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

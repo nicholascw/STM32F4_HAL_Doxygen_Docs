@@ -1,0 +1,54 @@
+.TH "TIM_Input_Capture_Prescaler" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Input_Capture_Prescaler
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV2\fP   TIM_CCMR1_IC1PSC_0"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV4\fP   TIM_CCMR1_IC1PSC_1"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICPSC_DIV8\fP   TIM_CCMR1_IC1PSC"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_ICPSC_DIV1   0x00000000U"
+Capture performed each time an edge is detected on the capture input 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 607 行定义\&.
+.SS "#define TIM_ICPSC_DIV2   TIM_CCMR1_IC1PSC_0"
+Capture performed once every 2 events 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 608 行定义\&.
+.SS "#define TIM_ICPSC_DIV4   TIM_CCMR1_IC1PSC_1"
+Capture performed once every 4 events 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 609 行定义\&.
+.SS "#define TIM_ICPSC_DIV8   TIM_CCMR1_IC1PSC"
+Capture performed once every 8 events 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 610 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

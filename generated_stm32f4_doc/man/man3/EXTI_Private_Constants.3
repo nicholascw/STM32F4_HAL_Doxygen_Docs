@@ -1,0 +1,50 @@
+.TH "EXTI_Private_Constants" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EXTI_Private_Constants
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEXTI_MODE_MASK\fP   (\fBEXTI_MODE_EVENT\fP | \fBEXTI_MODE_INTERRUPT\fP)"
+.br
+.RI "EXTI Mask for interrupt & event mode "
+.ti -1c
+.RI "#define \fBEXTI_TRIGGER_MASK\fP   (\fBEXTI_TRIGGER_RISING\fP | \fBEXTI_TRIGGER_FALLING\fP | \fBEXTI_TRIGGER_RISING_FALLING\fP)"
+.br
+.RI "EXTI Mask for trigger possibilities "
+.ti -1c
+.RI "#define \fBEXTI_LINE_NB\fP   23UL"
+.br
+.RI "EXTI Line number "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define EXTI_LINE_NB   23UL"
+
+.PP
+EXTI Line number 
+.PP
+在文件 stm32f4xx_hal_exti\&.h 第 166 行定义\&.
+.SS "#define EXTI_MODE_MASK   (\fBEXTI_MODE_EVENT\fP | \fBEXTI_MODE_INTERRUPT\fP)"
+
+.PP
+EXTI Mask for interrupt & event mode 
+.PP
+在文件 stm32f4xx_hal_exti\&.h 第 156 行定义\&.
+.SS "#define EXTI_TRIGGER_MASK   (\fBEXTI_TRIGGER_RISING\fP | \fBEXTI_TRIGGER_FALLING\fP | \fBEXTI_TRIGGER_RISING_FALLING\fP)"
+
+.PP
+EXTI Mask for trigger possibilities 
+.PP
+在文件 stm32f4xx_hal_exti\&.h 第 161 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

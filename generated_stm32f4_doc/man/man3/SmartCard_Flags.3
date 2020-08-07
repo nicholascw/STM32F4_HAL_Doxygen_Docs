@@ -1,0 +1,83 @@
+.TH "SmartCard_Flags" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SmartCard_Flags \- Elements values convention: 0xXXXX  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_TXE\fP   ((uint32_t)USART_SR_TXE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_TC\fP   ((uint32_t)USART_SR_TC)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_RXNE\fP   ((uint32_t)USART_SR_RXNE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_IDLE\fP   ((uint32_t)USART_SR_IDLE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_ORE\fP   ((uint32_t)USART_SR_ORE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_NE\fP   ((uint32_t)USART_SR_NE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_FE\fP   ((uint32_t)USART_SR_FE)"
+.br
+.ti -1c
+.RI "#define \fBSMARTCARD_FLAG_PE\fP   ((uint32_t)USART_SR_PE)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Elements values convention: 0xXXXX 
+
+
+.IP "\(bu" 2
+0xXXXX : Flag mask in the SR register 
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define SMARTCARD_FLAG_FE   ((uint32_t)USART_SR_FE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 388 行定义\&.
+.SS "#define SMARTCARD_FLAG_IDLE   ((uint32_t)USART_SR_IDLE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 385 行定义\&.
+.SS "#define SMARTCARD_FLAG_NE   ((uint32_t)USART_SR_NE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 387 行定义\&.
+.SS "#define SMARTCARD_FLAG_ORE   ((uint32_t)USART_SR_ORE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 386 行定义\&.
+.SS "#define SMARTCARD_FLAG_PE   ((uint32_t)USART_SR_PE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 389 行定义\&.
+.SS "#define SMARTCARD_FLAG_RXNE   ((uint32_t)USART_SR_RXNE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 384 行定义\&.
+.SS "#define SMARTCARD_FLAG_TC   ((uint32_t)USART_SR_TC)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 383 行定义\&.
+.SS "#define SMARTCARD_FLAG_TXE   ((uint32_t)USART_SR_TXE)"
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 382 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

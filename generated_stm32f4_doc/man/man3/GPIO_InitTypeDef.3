@@ -1,0 +1,65 @@
+.TH "GPIO_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO_InitTypeDef \- GPIO Init structure definition 
+.br
+  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_gpio\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBPin\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPull\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSpeed\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBAlternate\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+GPIO Init structure definition 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 47 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t Alternate"
+Peripheral to be connected to the selected pins\&. This parameter can be a value of \fBGPIO Alternate Function Selection\fP 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 61 行定义\&.
+.SS "uint32_t Mode"
+Specifies the operating mode for the selected pins\&. This parameter can be a value of \fBGPIO mode define\fP 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 52 行定义\&.
+.SS "uint32_t Pin"
+Specifies the GPIO pins to be configured\&. This parameter can be any value of \fBGPIO pins define\fP 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 49 行定义\&.
+.SS "uint32_t Pull"
+Specifies the Pull-up or Pull-Down activation for the selected pins\&. This parameter can be a value of \fBGPIO pull define\fP 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 55 行定义\&.
+.SS "uint32_t Speed"
+Specifies the speed for the selected pins\&. This parameter can be a value of \fBGPIO speed define\fP 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 58 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

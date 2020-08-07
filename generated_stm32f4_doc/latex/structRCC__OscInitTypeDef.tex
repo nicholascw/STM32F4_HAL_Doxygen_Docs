@@ -1,0 +1,129 @@
+\hypertarget{structRCC__OscInitTypeDef}{}\doxysection{R\+C\+C\+\_\+\+Osc\+Init\+Type\+Def结构体 参考}
+\label{structRCC__OscInitTypeDef}\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+
+
+R\+CC Internal/\+External Oscillator (H\+SE, H\+SI, L\+SE and L\+SI) configuration structure definition  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+rcc.\+h$>$}
+
+
+
+R\+C\+C\+\_\+\+Osc\+Init\+Type\+Def 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{structRCC__OscInitTypeDef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_a23b9d1da2a92936c618d2416406275a3}{Oscillator\+Type}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_ad499b1bbeeb8096235b534a9bfa53c9d}{H\+S\+E\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_abb72dd5bfb99667e36d99b6887f80a0a}{L\+S\+E\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_a49183e0be5cf522de0fa1968df0bf0d7}{H\+S\+I\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_ad28b977e258a3ee788cd6c2d72430c30}{H\+S\+I\+Calibration\+Value}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRCC__OscInitTypeDef_a9acc15f6278f950ef02d5d6f819f68e8}{L\+S\+I\+State}}
+\item 
+\mbox{\hyperlink{structRCC__PLLInitTypeDef}{R\+C\+C\+\_\+\+P\+L\+L\+Init\+Type\+Def}} \mbox{\hyperlink{structRCC__OscInitTypeDef_a7ec4025786fa81e2a4bfc42832c0eddf}{P\+LL}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+R\+CC Internal/\+External Oscillator (H\+SE, H\+SI, L\+SE and L\+SI) configuration structure definition 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 51 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_ad499b1bbeeb8096235b534a9bfa53c9d}\label{structRCC__OscInitTypeDef_ad499b1bbeeb8096235b534a9bfa53c9d}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!HSEState@{HSEState}}
+\index{HSEState@{HSEState}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{HSEState}{HSEState}}
+{\footnotesize\ttfamily uint32\+\_\+t H\+S\+E\+State}
+
+The new state of the H\+SE. This parameter can be a value of \mbox{\hyperlink{group__RCC__HSE__Config}{H\+SE Config}} ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 56 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_ad28b977e258a3ee788cd6c2d72430c30}\label{structRCC__OscInitTypeDef_ad28b977e258a3ee788cd6c2d72430c30}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!HSICalibrationValue@{HSICalibrationValue}}
+\index{HSICalibrationValue@{HSICalibrationValue}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{HSICalibrationValue}{HSICalibrationValue}}
+{\footnotesize\ttfamily uint32\+\_\+t H\+S\+I\+Calibration\+Value}
+
+The H\+SI calibration trimming value (default is R\+C\+C\+\_\+\+H\+S\+I\+C\+A\+L\+I\+B\+R\+A\+T\+I\+O\+N\+\_\+\+D\+E\+F\+A\+U\+LT). This parameter must be a number between Min\+\_\+\+Data = 0x00 and Max\+\_\+\+Data = 0x1F 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 65 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_a49183e0be5cf522de0fa1968df0bf0d7}\label{structRCC__OscInitTypeDef_a49183e0be5cf522de0fa1968df0bf0d7}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!HSIState@{HSIState}}
+\index{HSIState@{HSIState}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{HSIState}{HSIState}}
+{\footnotesize\ttfamily uint32\+\_\+t H\+S\+I\+State}
+
+The new state of the H\+SI. This parameter can be a value of \mbox{\hyperlink{group__RCC__HSI__Config}{H\+SI Config}} ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 62 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_abb72dd5bfb99667e36d99b6887f80a0a}\label{structRCC__OscInitTypeDef_abb72dd5bfb99667e36d99b6887f80a0a}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!LSEState@{LSEState}}
+\index{LSEState@{LSEState}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{LSEState}{LSEState}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+S\+E\+State}
+
+The new state of the L\+SE. This parameter can be a value of \mbox{\hyperlink{group__RCC__LSE__Config}{L\+SE Config}} ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 59 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_a9acc15f6278f950ef02d5d6f819f68e8}\label{structRCC__OscInitTypeDef_a9acc15f6278f950ef02d5d6f819f68e8}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!LSIState@{LSIState}}
+\index{LSIState@{LSIState}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{LSIState}{LSIState}}
+{\footnotesize\ttfamily uint32\+\_\+t L\+S\+I\+State}
+
+The new state of the L\+SI. This parameter can be a value of \mbox{\hyperlink{group__RCC__LSI__Config}{L\+SI Config}} ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 68 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_a23b9d1da2a92936c618d2416406275a3}\label{structRCC__OscInitTypeDef_a23b9d1da2a92936c618d2416406275a3}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!OscillatorType@{OscillatorType}}
+\index{OscillatorType@{OscillatorType}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OscillatorType}{OscillatorType}}
+{\footnotesize\ttfamily uint32\+\_\+t Oscillator\+Type}
+
+The oscillators to be configured. This parameter can be a value of \mbox{\hyperlink{group__RCC__Oscillator__Type}{Oscillator Type}} ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 53 行定义.
+
+\mbox{\Hypertarget{structRCC__OscInitTypeDef_a7ec4025786fa81e2a4bfc42832c0eddf}\label{structRCC__OscInitTypeDef_a7ec4025786fa81e2a4bfc42832c0eddf}} 
+\index{RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}!PLL@{PLL}}
+\index{PLL@{PLL}!RCC\_OscInitTypeDef@{RCC\_OscInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLL}{PLL}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRCC__PLLInitTypeDef}{R\+C\+C\+\_\+\+P\+L\+L\+Init\+Type\+Def}} P\+LL}
+
+P\+LL structure parameters ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rcc.\+h 第 71 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__rcc_8h}{stm32f4xx\+\_\+hal\+\_\+rcc.\+h}}\end{DoxyCompactItemize}

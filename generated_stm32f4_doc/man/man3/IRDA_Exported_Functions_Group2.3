@@ -1,0 +1,140 @@
+.TH "IRDA_Exported_Functions_Group2" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+IRDA_Exported_Functions_Group2
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Transmit\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Receive\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Transmit_IT\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Receive_IT\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Transmit_DMA\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Receive_DMA\fP (\fBIRDA_HandleTypeDef\fP *hirda, uint8_t *pData, uint16_t Size)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_DMAPause\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_DMAResume\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_DMAStop\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Abort\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_AbortTransmit\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_AbortReceive\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_Abort_IT\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_AbortTransmit_IT\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_IRDA_AbortReceive_IT\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_IRQHandler\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_TxCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_RxCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_TxHalfCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_RxHalfCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_ErrorCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_AbortCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_AbortTransmitCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.ti -1c
+.RI "void \fBHAL_IRDA_AbortReceiveCpltCallback\fP (\fBIRDA_HandleTypeDef\fP *hirda)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Abort (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Abort_IT (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_AbortCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_AbortReceive (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_AbortReceive_IT (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_AbortReceiveCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_AbortTransmit (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_AbortTransmit_IT (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_AbortTransmitCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_DMAPause (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_DMAResume (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_DMAStop (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_ErrorCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_IRQHandler (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Receive (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Receive_DMA (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Receive_IT (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size)"
+
+.SS "void HAL_IRDA_RxCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_RxHalfCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Transmit (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Transmit_DMA (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_IRDA_Transmit_IT (\fBIRDA_HandleTypeDef\fP * hirda, uint8_t * pData, uint16_t Size)"
+
+.SS "void HAL_IRDA_TxCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SS "void HAL_IRDA_TxHalfCpltCallback (\fBIRDA_HandleTypeDef\fP * hirda)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

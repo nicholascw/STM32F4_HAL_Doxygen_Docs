@@ -1,0 +1,116 @@
+.TH "SMARTCARD_InitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SMARTCARD_InitTypeDef \- SMARTCARD Init Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_smartcard\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBBaudRate\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBWordLength\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBStopBits\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBParity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBMode\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCLKPolarity\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCLKPhase\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBCLKLastBit\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBPrescaler\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBGuardTime\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBNACKState\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+SMARTCARD Init Structure definition 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 47 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t BaudRate"
+This member configures the SmartCard communication baud rate\&. The baud rate is computed using the following formula:
+.IP "\(bu" 2
+IntegerDivider = ((PCLKx) / (16 * (hsc->Init\&.BaudRate)))
+.IP "\(bu" 2
+FractionalDivider = ((IntegerDivider - ((uint32_t) IntegerDivider)) * 16) + 0\&.5 
+.PP
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 49 行定义\&.
+.SS "uint32_t CLKLastBit"
+Specifies whether the clock pulse corresponding to the last transmitted data bit (MSB) has to be output on the SCLK pin in synchronous mode\&. This parameter can be a value of \fBSMARTCARD Last Bit\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 76 行定义\&.
+.SS "uint32_t CLKPhase"
+Specifies the clock transition on which the bit capture is made\&. This parameter can be a value of \fBSMARTCARD Clock Phase\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 73 行定义\&.
+.SS "uint32_t CLKPolarity"
+Specifies the steady state of the serial clock\&. This parameter can be a value of \fBSMARTCARD Clock Polarity\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 70 行定义\&.
+.SS "uint32_t GuardTime"
+Specifies the SmartCard Guard Time value in terms of number of baud clocks 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 85 行定义\&.
+.SS "uint32_t Mode"
+Specifies whether the Receive or Transmit mode is enabled or disabled\&. This parameter can be a value of \fBSMARTCARD Mode\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 67 行定义\&.
+.SS "uint32_t NACKState"
+Specifies the SmartCard NACK Transmission state\&. This parameter can be a value of \fBSMARTCARD NACK State\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 87 行定义\&.
+.SS "uint32_t Parity"
+Specifies the parity mode\&. This parameter can be a value of \fBSMARTCARD Parity\fP 
+.PP
+\fB注解\fP
+.RS 4
+When parity is enabled, the computed parity is inserted at the MSB position of the transmitted data (9th bit when the word length is set to 9 data bits; 8th bit when the word length is set to 8 data bits)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 60 行定义\&.
+.SS "uint32_t Prescaler"
+Specifies the SmartCard Prescaler value used for dividing the system clock to provide the smartcard clock\&. The value given in the register (5 significant bits) is multiplied by 2 to give the division factor of the source clock frequency\&. This parameter can be a value of \fBSMARTCARD Prescaler\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 80 行定义\&.
+.SS "uint32_t StopBits"
+Specifies the number of stop bits transmitted\&. This parameter can be a value of \fBSMARTCARD Number of Stop Bits\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 57 行定义\&.
+.SS "uint32_t WordLength"
+Specifies the number of data bits transmitted or received in a frame\&. This parameter can be a value of \fBSMARTCARD Word Length\fP 
+.PP
+在文件 stm32f4xx_hal_smartcard\&.h 第 54 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

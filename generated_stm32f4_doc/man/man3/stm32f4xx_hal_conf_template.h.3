@@ -1,0 +1,1191 @@
+.TH "inc/stm32f4xx_hal_conf_template.h" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+inc/stm32f4xx_hal_conf_template.h \- HAL configuration template file\&. This file should be copied to the application folder and renamed to stm32f4xx_hal_conf\&.h\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal_rcc\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_gpio\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_exti\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dma\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_cortex\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_adc\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_can\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_crc\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_cryp\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dma2d\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dac\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dcmi\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_eth\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_flash\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_sram\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_nor\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_nand\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_pccard\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_sdram\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_hash\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_i2c\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_smbus\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_i2s\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_iwdg\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_ltdc\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_pwr\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_rng\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_rtc\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_sai\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_sd\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_spi\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_tim\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_uart\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_usart\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_irda\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_smartcard\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_wwdg\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_pcd\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_hcd\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dsi\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_qspi\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_cec\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_fmpi2c\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_spdifrx\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_dfsdm\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_lptim\&.h'\fP
+.br
+\fC#include 'stm32f4xx_hal_mmc\&.h'\fP
+.br
+
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_MODULE_ENABLED\fP"
+.br
+.RI "This is the list of modules to be used in the HAL driver "
+.ti -1c
+.RI "#define \fBHAL_ADC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_CAN_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_CRC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_CEC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_CRYP_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DAC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DCMI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DMA_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DMA2D_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_ETH_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_NAND_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_NOR_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCCARD_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SRAM_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SDRAM_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_HASH_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_GPIO_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_EXTI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_I2C_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SMBUS_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_I2S_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_IWDG_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_LTDC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DSI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PWR_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_QSPI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_RCC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_RNG_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_RTC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SAI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SD_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SPI_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_TIM_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_UART_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_USART_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_IRDA_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SMARTCARD_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_WWDG_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_CORTEX_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_PCD_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_HCD_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_FMPI2C_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_SPDIFRX_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_DFSDM_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_LPTIM_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHAL_MMC_MODULE_ENABLED\fP"
+.br
+.ti -1c
+.RI "#define \fBHSE_VALUE\fP   25000000U"
+.br
+.RI "Adjust the value of External High Speed oscillator (HSE) used in your application\&. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL)\&. 
+.br
+ "
+.ti -1c
+.RI "#define \fBHSE_STARTUP_TIMEOUT\fP   100U"
+.br
+.ti -1c
+.RI "#define \fBHSI_VALUE\fP   16000000U"
+.br
+.RI "Internal High Speed oscillator (HSI) value\&. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL)\&. "
+.ti -1c
+.RI "#define \fBLSI_VALUE\fP   32000U"
+.br
+.RI "Internal Low Speed oscillator (LSI) value\&. "
+.ti -1c
+.RI "#define \fBLSE_VALUE\fP   32768U"
+.br
+.RI "External Low Speed oscillator (LSE) value\&. "
+.ti -1c
+.RI "#define \fBLSE_STARTUP_TIMEOUT\fP   5000U"
+.br
+.ti -1c
+.RI "#define \fBEXTERNAL_CLOCK_VALUE\fP   12288000U"
+.br
+.RI "External clock source for I2S peripheral This value is used by the I2S HAL module to compute the I2S clock source frequency, this source is inserted directly through I2S_CKIN pad\&. "
+.ti -1c
+.RI "#define \fBVDD_VALUE\fP   3300U"
+.br
+.RI "This is the HAL system configuration section "
+.ti -1c
+.RI "#define \fBTICK_INT_PRIORITY\fP   0x0FU"
+.br
+.ti -1c
+.RI "#define \fBUSE_RTOS\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBPREFETCH_ENABLE\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBINSTRUCTION_CACHE_ENABLE\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBDATA_CACHE_ENABLE\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_ADC_REGISTER_CALLBACKS\fP   0U /* ADC register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_CAN_REGISTER_CALLBACKS\fP   0U /* CAN register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_CEC_REGISTER_CALLBACKS\fP   0U /* CEC register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_CRYP_REGISTER_CALLBACKS\fP   0U /* CRYP register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_DAC_REGISTER_CALLBACKS\fP   0U /* DAC register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_DCMI_REGISTER_CALLBACKS\fP   0U /* DCMI register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_DFSDM_REGISTER_CALLBACKS\fP   0U /* DFSDM register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_DMA2D_REGISTER_CALLBACKS\fP   0U /* DMA2D register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_DSI_REGISTER_CALLBACKS\fP   0U /* DSI register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_ETH_REGISTER_CALLBACKS\fP   0U /* ETH register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_HASH_REGISTER_CALLBACKS\fP   0U /* HASH register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_HCD_REGISTER_CALLBACKS\fP   0U /* HCD register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_I2C_REGISTER_CALLBACKS\fP   0U /* I2C register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_FMPI2C_REGISTER_CALLBACKS\fP   0U /* FMPI2C register callback disabled    */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_I2S_REGISTER_CALLBACKS\fP   0U /* I2S register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_IRDA_REGISTER_CALLBACKS\fP   0U /* IRDA register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_LPTIM_REGISTER_CALLBACKS\fP   0U /* LPTIM register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_LTDC_REGISTER_CALLBACKS\fP   0U /* LTDC register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_MMC_REGISTER_CALLBACKS\fP   0U /* MMC register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_NAND_REGISTER_CALLBACKS\fP   0U /* NAND register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_NOR_REGISTER_CALLBACKS\fP   0U /* NOR register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_PCCARD_REGISTER_CALLBACKS\fP   0U /* PCCARD register callback disabled    */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_PCD_REGISTER_CALLBACKS\fP   0U /* PCD register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_QSPI_REGISTER_CALLBACKS\fP   0U /* QSPI register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_RNG_REGISTER_CALLBACKS\fP   0U /* RNG register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_RTC_REGISTER_CALLBACKS\fP   0U /* RTC register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SAI_REGISTER_CALLBACKS\fP   0U /* SAI register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SD_REGISTER_CALLBACKS\fP   0U /* SD register callback disabled        */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SMARTCARD_REGISTER_CALLBACKS\fP   0U /* SMARTCARD register callback disabled */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SDRAM_REGISTER_CALLBACKS\fP   0U /* SDRAM register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SRAM_REGISTER_CALLBACKS\fP   0U /* SRAM register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SPDIFRX_REGISTER_CALLBACKS\fP   0U /* SPDIFRX register callback disabled   */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SMBUS_REGISTER_CALLBACKS\fP   0U /* SMBUS register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_SPI_REGISTER_CALLBACKS\fP   0U /* SPI register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_TIM_REGISTER_CALLBACKS\fP   0U /* TIM register callback disabled       */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_UART_REGISTER_CALLBACKS\fP   0U /* UART register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_USART_REGISTER_CALLBACKS\fP   0U /* USART register callback disabled     */"
+.br
+.ti -1c
+.RI "#define \fBUSE_HAL_WWDG_REGISTER_CALLBACKS\fP   0U /* WWDG register callback disabled      */"
+.br
+.ti -1c
+.RI "#define \fBMAC_ADDR0\fP   2U"
+.br
+.RI "Uncomment the line below to expanse the 'assert_param' macro in the HAL drivers code "
+.ti -1c
+.RI "#define \fBMAC_ADDR1\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBMAC_ADDR2\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBMAC_ADDR3\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBMAC_ADDR4\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBMAC_ADDR5\fP   0U"
+.br
+.ti -1c
+.RI "#define \fBETH_RX_BUF_SIZE\fP   ETH_MAX_PACKET_SIZE /* buffer size for receive               */"
+.br
+.ti -1c
+.RI "#define \fBETH_TX_BUF_SIZE\fP   ETH_MAX_PACKET_SIZE /* buffer size for transmit              */"
+.br
+.ti -1c
+.RI "#define \fBETH_RXBUFNB\fP   4U                  /* 4 Rx buffers of size \fBETH_RX_BUF_SIZE\fP  */"
+.br
+.ti -1c
+.RI "#define \fBETH_TXBUFNB\fP   4U                  /* 4 Tx buffers of size \fBETH_TX_BUF_SIZE\fP  */"
+.br
+.ti -1c
+.RI "#define \fBDP83848_PHY_ADDRESS\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBPHY_RESET_DELAY\fP   0x000000FFU"
+.br
+.ti -1c
+.RI "#define \fBPHY_CONFIG_DELAY\fP   0x00000FFFU"
+.br
+.ti -1c
+.RI "#define \fBPHY_READ_TO\fP   0x0000FFFFU"
+.br
+.ti -1c
+.RI "#define \fBPHY_WRITE_TO\fP   0x0000FFFFU"
+.br
+.ti -1c
+.RI "#define \fBPHY_BCR\fP   ((uint16_t)0x0000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_BSR\fP   ((uint16_t)0x0001)"
+.br
+.ti -1c
+.RI "#define \fBPHY_RESET\fP   ((uint16_t)0x8000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_LOOPBACK\fP   ((uint16_t)0x4000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_FULLDUPLEX_100M\fP   ((uint16_t)0x2100)"
+.br
+.ti -1c
+.RI "#define \fBPHY_HALFDUPLEX_100M\fP   ((uint16_t)0x2000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_FULLDUPLEX_10M\fP   ((uint16_t)0x0100)"
+.br
+.ti -1c
+.RI "#define \fBPHY_HALFDUPLEX_10M\fP   ((uint16_t)0x0000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_AUTONEGOTIATION\fP   ((uint16_t)0x1000)"
+.br
+.ti -1c
+.RI "#define \fBPHY_RESTART_AUTONEGOTIATION\fP   ((uint16_t)0x0200)"
+.br
+.ti -1c
+.RI "#define \fBPHY_POWERDOWN\fP   ((uint16_t)0x0800)"
+.br
+.ti -1c
+.RI "#define \fBPHY_ISOLATE\fP   ((uint16_t)0x0400)"
+.br
+.ti -1c
+.RI "#define \fBPHY_AUTONEGO_COMPLETE\fP   ((uint16_t)0x0020)"
+.br
+.ti -1c
+.RI "#define \fBPHY_LINKED_STATUS\fP   ((uint16_t)0x0004)"
+.br
+.ti -1c
+.RI "#define \fBPHY_JABBER_DETECTION\fP   ((uint16_t)0x0002)"
+.br
+.ti -1c
+.RI "#define \fBPHY_SR\fP   ((uint16_t)0x0010)"
+.br
+.ti -1c
+.RI "#define \fBPHY_MICR\fP   ((uint16_t)0x0011)"
+.br
+.ti -1c
+.RI "#define \fBPHY_MISR\fP   ((uint16_t)0x0012)"
+.br
+.ti -1c
+.RI "#define \fBPHY_LINK_STATUS\fP   ((uint16_t)0x0001)"
+.br
+.ti -1c
+.RI "#define \fBPHY_SPEED_STATUS\fP   ((uint16_t)0x0002)"
+.br
+.ti -1c
+.RI "#define \fBPHY_DUPLEX_STATUS\fP   ((uint16_t)0x0004)"
+.br
+.ti -1c
+.RI "#define \fBPHY_MICR_INT_EN\fP   ((uint16_t)0x0002)"
+.br
+.ti -1c
+.RI "#define \fBPHY_MICR_INT_OE\fP   ((uint16_t)0x0001)"
+.br
+.ti -1c
+.RI "#define \fBPHY_MISR_LINK_INT_EN\fP   ((uint16_t)0x0020)"
+.br
+.ti -1c
+.RI "#define \fBPHY_LINK_INTERRUPT\fP   ((uint16_t)0x2000)"
+.br
+.ti -1c
+.RI "#define \fBUSE_SPI_CRC\fP   1U"
+.br
+.ti -1c
+.RI "#define \fBassert_param\fP(expr)   ((void)0U)"
+.br
+.RI "Include module's header file "
+.in -1c
+.SH "详细描述"
+.PP 
+HAL configuration template file\&. This file should be copied to the application folder and renamed to stm32f4xx_hal_conf\&.h\&. 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_conf_template\&.h\fP 中定义\&.
+.SH "宏定义说明"
+.PP 
+.SS "#define assert_param(expr)   ((void)0U)"
+
+.PP
+Include module's header file 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 485 行定义\&.
+.SS "#define DATA_CACHE_ENABLE   1U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 151 行定义\&.
+.SS "#define DP83848_PHY_ADDRESS   0x01U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 220 行定义\&.
+.SS "#define ETH_RX_BUF_SIZE   ETH_MAX_PACKET_SIZE /* buffer size for receive               */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 212 行定义\&.
+.SS "#define ETH_RXBUFNB   4U                  /* 4 Rx buffers of size \fBETH_RX_BUF_SIZE\fP  */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 214 行定义\&.
+.SS "#define ETH_TX_BUF_SIZE   ETH_MAX_PACKET_SIZE /* buffer size for transmit              */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 213 行定义\&.
+.SS "#define ETH_TXBUFNB   4U                  /* 4 Tx buffers of size \fBETH_TX_BUF_SIZE\fP  */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 215 行定义\&.
+.SS "#define EXTERNAL_CLOCK_VALUE   12288000U"
+
+.PP
+External clock source for I2S peripheral This value is used by the I2S HAL module to compute the I2S clock source frequency, this source is inserted directly through I2S_CKIN pad\&. Value of the External oscillator in Hz 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 136 行定义\&.
+.SS "#define HAL_ADC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 39 行定义\&.
+.SS "#define HAL_CAN_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 40 行定义\&.
+.SS "#define HAL_CEC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 43 行定义\&.
+.SS "#define HAL_CORTEX_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 79 行定义\&.
+.SS "#define HAL_CRC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 42 行定义\&.
+.SS "#define HAL_CRYP_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 44 行定义\&.
+.SS "#define HAL_DAC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 45 行定义\&.
+.SS "#define HAL_DCMI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 46 行定义\&.
+.SS "#define HAL_DFSDM_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 84 行定义\&.
+.SS "#define HAL_DMA2D_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 48 行定义\&.
+.SS "#define HAL_DMA_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 47 行定义\&.
+.SS "#define HAL_DSI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 64 行定义\&.
+.SS "#define HAL_ETH_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 49 行定义\&.
+.SS "#define HAL_EXTI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 58 行定义\&.
+.SS "#define HAL_FLASH_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 50 行定义\&.
+.SS "#define HAL_FMPI2C_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 82 行定义\&.
+.SS "#define HAL_GPIO_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 57 行定义\&.
+.SS "#define HAL_HASH_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 56 行定义\&.
+.SS "#define HAL_HCD_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 81 行定义\&.
+.SS "#define HAL_I2C_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 59 行定义\&.
+.SS "#define HAL_I2S_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 61 行定义\&.
+.SS "#define HAL_IRDA_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 76 行定义\&.
+.SS "#define HAL_IWDG_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 62 行定义\&.
+.SS "#define HAL_LPTIM_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 85 行定义\&.
+.SS "#define HAL_LTDC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 63 行定义\&.
+.SS "#define HAL_MMC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 86 行定义\&.
+.SS "#define HAL_MODULE_ENABLED"
+
+.PP
+This is the list of modules to be used in the HAL driver 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 38 行定义\&.
+.SS "#define HAL_NAND_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 51 行定义\&.
+.SS "#define HAL_NOR_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 52 行定义\&.
+.SS "#define HAL_PCCARD_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 53 行定义\&.
+.SS "#define HAL_PCD_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 80 行定义\&.
+.SS "#define HAL_PWR_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 65 行定义\&.
+.SS "#define HAL_QSPI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 66 行定义\&.
+.SS "#define HAL_RCC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 67 行定义\&.
+.SS "#define HAL_RNG_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 68 行定义\&.
+.SS "#define HAL_RTC_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 69 行定义\&.
+.SS "#define HAL_SAI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 70 行定义\&.
+.SS "#define HAL_SD_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 71 行定义\&.
+.SS "#define HAL_SDRAM_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 55 行定义\&.
+.SS "#define HAL_SMARTCARD_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 77 行定义\&.
+.SS "#define HAL_SMBUS_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 60 行定义\&.
+.SS "#define HAL_SPDIFRX_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 83 行定义\&.
+.SS "#define HAL_SPI_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 72 行定义\&.
+.SS "#define HAL_SRAM_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 54 行定义\&.
+.SS "#define HAL_TIM_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 73 行定义\&.
+.SS "#define HAL_UART_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 74 行定义\&.
+.SS "#define HAL_USART_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 75 行定义\&.
+.SS "#define HAL_WWDG_MODULE_ENABLED"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 78 行定义\&.
+.SS "#define HSE_STARTUP_TIMEOUT   100U"
+Time out for HSE start up, in ms 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 99 行定义\&.
+.SS "#define HSE_VALUE   25000000U"
+
+.PP
+Adjust the value of External High Speed oscillator (HSE) used in your application\&. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL)\&. 
+.br
+ Value of the External oscillator in Hz 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 95 行定义\&.
+.SS "#define HSI_VALUE   16000000U"
+
+.PP
+Internal High Speed oscillator (HSI) value\&. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL)\&. Value of the Internal oscillator in Hz 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 108 行定义\&.
+.SS "#define INSTRUCTION_CACHE_ENABLE   1U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 150 行定义\&.
+.SS "#define LSE_STARTUP_TIMEOUT   5000U"
+Time out for LSE start up, in ms 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 127 行定义\&.
+.SS "#define LSE_VALUE   32768U"
+
+.PP
+External Low Speed oscillator (LSE) value\&. < Value of the Internal Low Speed oscillator in Hz The real value may vary depending on the variations in voltage and temperature\&. Value of the External Low Speed oscillator in Hz 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 123 行定义\&.
+.SS "#define LSI_VALUE   32000U"
+
+.PP
+Internal Low Speed oscillator (LSI) value\&. LSI Typical Value in Hz 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 115 行定义\&.
+.SS "#define MAC_ADDR0   2U"
+
+.PP
+Uncomment the line below to expanse the 'assert_param' macro in the HAL drivers code 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 204 行定义\&.
+.SS "#define MAC_ADDR1   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 205 行定义\&.
+.SS "#define MAC_ADDR2   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 206 行定义\&.
+.SS "#define MAC_ADDR3   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 207 行定义\&.
+.SS "#define MAC_ADDR4   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 208 行定义\&.
+.SS "#define MAC_ADDR5   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 209 行定义\&.
+.SS "#define PHY_AUTONEGO_COMPLETE   ((uint16_t)0x0020)"
+Auto-Negotiation process completed 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 245 行定义\&.
+.SS "#define PHY_AUTONEGOTIATION   ((uint16_t)0x1000)"
+Enable auto-negotiation function 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 240 行定义\&.
+.SS "#define PHY_BCR   ((uint16_t)0x0000)"
+Transceiver Basic Control Register 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 231 行定义\&.
+.SS "#define PHY_BSR   ((uint16_t)0x0001)"
+Transceiver Basic Status Register 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 232 行定义\&.
+.SS "#define PHY_CONFIG_DELAY   0x00000FFFU"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 224 行定义\&.
+.SS "#define PHY_DUPLEX_STATUS   ((uint16_t)0x0004)"
+PHY Duplex mask 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 257 行定义\&.
+.SS "#define PHY_FULLDUPLEX_100M   ((uint16_t)0x2100)"
+Set the full-duplex mode at 100 Mb/s 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 236 行定义\&.
+.SS "#define PHY_FULLDUPLEX_10M   ((uint16_t)0x0100)"
+Set the full-duplex mode at 10 Mb/s 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 238 行定义\&.
+.SS "#define PHY_HALFDUPLEX_100M   ((uint16_t)0x2000)"
+Set the half-duplex mode at 100 Mb/s 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 237 行定义\&.
+.SS "#define PHY_HALFDUPLEX_10M   ((uint16_t)0x0000)"
+Set the half-duplex mode at 10 Mb/s 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 239 行定义\&.
+.SS "#define PHY_ISOLATE   ((uint16_t)0x0400)"
+Isolate PHY from MII 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 243 行定义\&.
+.SS "#define PHY_JABBER_DETECTION   ((uint16_t)0x0002)"
+Jabber condition detected 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 247 行定义\&.
+.SS "#define PHY_LINK_INTERRUPT   ((uint16_t)0x2000)"
+PHY link status interrupt mask 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 263 行定义\&.
+.SS "#define PHY_LINK_STATUS   ((uint16_t)0x0001)"
+PHY Link mask 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 255 行定义\&.
+.SS "#define PHY_LINKED_STATUS   ((uint16_t)0x0004)"
+Valid link established 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 246 行定义\&.
+.SS "#define PHY_LOOPBACK   ((uint16_t)0x4000)"
+Select loop-back mode 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 235 行定义\&.
+.SS "#define PHY_MICR   ((uint16_t)0x0011)"
+MII Interrupt Control Register 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 252 行定义\&.
+.SS "#define PHY_MICR_INT_EN   ((uint16_t)0x0002)"
+PHY Enable interrupts 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 259 行定义\&.
+.SS "#define PHY_MICR_INT_OE   ((uint16_t)0x0001)"
+PHY Enable output interrupt events 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 260 行定义\&.
+.SS "#define PHY_MISR   ((uint16_t)0x0012)"
+MII Interrupt Status and Misc\&. Control Register 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 253 行定义\&.
+.SS "#define PHY_MISR_LINK_INT_EN   ((uint16_t)0x0020)"
+Enable Interrupt on change of link status 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 262 行定义\&.
+.SS "#define PHY_POWERDOWN   ((uint16_t)0x0800)"
+Select the power down mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 242 行定义\&.
+.SS "#define PHY_READ_TO   0x0000FFFFU"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 226 行定义\&.
+.SS "#define PHY_RESET   ((uint16_t)0x8000)"
+PHY Reset 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 234 行定义\&.
+.SS "#define PHY_RESET_DELAY   0x000000FFU"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 222 行定义\&.
+.SS "#define PHY_RESTART_AUTONEGOTIATION   ((uint16_t)0x0200)"
+Restart auto-negotiation function 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 241 行定义\&.
+.SS "#define PHY_SPEED_STATUS   ((uint16_t)0x0002)"
+PHY Speed mask 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 256 行定义\&.
+.SS "#define PHY_SR   ((uint16_t)0x0010)"
+PHY status register Offset 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 251 行定义\&.
+.SS "#define PHY_WRITE_TO   0x0000FFFFU"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 227 行定义\&.
+.SS "#define PREFETCH_ENABLE   1U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 149 行定义\&.
+.SS "#define TICK_INT_PRIORITY   0x0FU"
+tick interrupt priority 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 147 行定义\&.
+.SS "#define USE_HAL_ADC_REGISTER_CALLBACKS   0U /* ADC register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 153 行定义\&.
+.SS "#define USE_HAL_CAN_REGISTER_CALLBACKS   0U /* CAN register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 154 行定义\&.
+.SS "#define USE_HAL_CEC_REGISTER_CALLBACKS   0U /* CEC register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 155 行定义\&.
+.SS "#define USE_HAL_CRYP_REGISTER_CALLBACKS   0U /* CRYP register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 156 行定义\&.
+.SS "#define USE_HAL_DAC_REGISTER_CALLBACKS   0U /* DAC register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 157 行定义\&.
+.SS "#define USE_HAL_DCMI_REGISTER_CALLBACKS   0U /* DCMI register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 158 行定义\&.
+.SS "#define USE_HAL_DFSDM_REGISTER_CALLBACKS   0U /* DFSDM register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 159 行定义\&.
+.SS "#define USE_HAL_DMA2D_REGISTER_CALLBACKS   0U /* DMA2D register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 160 行定义\&.
+.SS "#define USE_HAL_DSI_REGISTER_CALLBACKS   0U /* DSI register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 161 行定义\&.
+.SS "#define USE_HAL_ETH_REGISTER_CALLBACKS   0U /* ETH register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 162 行定义\&.
+.SS "#define USE_HAL_FMPI2C_REGISTER_CALLBACKS   0U /* FMPI2C register callback disabled    */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 166 行定义\&.
+.SS "#define USE_HAL_HASH_REGISTER_CALLBACKS   0U /* HASH register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 163 行定义\&.
+.SS "#define USE_HAL_HCD_REGISTER_CALLBACKS   0U /* HCD register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 164 行定义\&.
+.SS "#define USE_HAL_I2C_REGISTER_CALLBACKS   0U /* I2C register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 165 行定义\&.
+.SS "#define USE_HAL_I2S_REGISTER_CALLBACKS   0U /* I2S register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 167 行定义\&.
+.SS "#define USE_HAL_IRDA_REGISTER_CALLBACKS   0U /* IRDA register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 168 行定义\&.
+.SS "#define USE_HAL_LPTIM_REGISTER_CALLBACKS   0U /* LPTIM register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 169 行定义\&.
+.SS "#define USE_HAL_LTDC_REGISTER_CALLBACKS   0U /* LTDC register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 170 行定义\&.
+.SS "#define USE_HAL_MMC_REGISTER_CALLBACKS   0U /* MMC register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 171 行定义\&.
+.SS "#define USE_HAL_NAND_REGISTER_CALLBACKS   0U /* NAND register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 172 行定义\&.
+.SS "#define USE_HAL_NOR_REGISTER_CALLBACKS   0U /* NOR register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 173 行定义\&.
+.SS "#define USE_HAL_PCCARD_REGISTER_CALLBACKS   0U /* PCCARD register callback disabled    */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 174 行定义\&.
+.SS "#define USE_HAL_PCD_REGISTER_CALLBACKS   0U /* PCD register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 175 行定义\&.
+.SS "#define USE_HAL_QSPI_REGISTER_CALLBACKS   0U /* QSPI register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 176 行定义\&.
+.SS "#define USE_HAL_RNG_REGISTER_CALLBACKS   0U /* RNG register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 177 行定义\&.
+.SS "#define USE_HAL_RTC_REGISTER_CALLBACKS   0U /* RTC register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 178 行定义\&.
+.SS "#define USE_HAL_SAI_REGISTER_CALLBACKS   0U /* SAI register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 179 行定义\&.
+.SS "#define USE_HAL_SD_REGISTER_CALLBACKS   0U /* SD register callback disabled        */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 180 行定义\&.
+.SS "#define USE_HAL_SDRAM_REGISTER_CALLBACKS   0U /* SDRAM register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 182 行定义\&.
+.SS "#define USE_HAL_SMARTCARD_REGISTER_CALLBACKS   0U /* SMARTCARD register callback disabled */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 181 行定义\&.
+.SS "#define USE_HAL_SMBUS_REGISTER_CALLBACKS   0U /* SMBUS register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 185 行定义\&.
+.SS "#define USE_HAL_SPDIFRX_REGISTER_CALLBACKS   0U /* SPDIFRX register callback disabled   */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 184 行定义\&.
+.SS "#define USE_HAL_SPI_REGISTER_CALLBACKS   0U /* SPI register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 186 行定义\&.
+.SS "#define USE_HAL_SRAM_REGISTER_CALLBACKS   0U /* SRAM register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 183 行定义\&.
+.SS "#define USE_HAL_TIM_REGISTER_CALLBACKS   0U /* TIM register callback disabled       */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 187 行定义\&.
+.SS "#define USE_HAL_UART_REGISTER_CALLBACKS   0U /* UART register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 188 行定义\&.
+.SS "#define USE_HAL_USART_REGISTER_CALLBACKS   0U /* USART register callback disabled     */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 189 行定义\&.
+.SS "#define USE_HAL_WWDG_REGISTER_CALLBACKS   0U /* WWDG register callback disabled      */"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 190 行定义\&.
+.SS "#define USE_RTOS   0U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 148 行定义\&.
+.SS "#define USE_SPI_CRC   1U"
+
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 272 行定义\&.
+.SS "#define VDD_VALUE   3300U"
+
+.PP
+This is the HAL system configuration section Value of VDD in mv 
+.PP
+在文件 stm32f4xx_hal_conf_template\&.h 第 146 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,8 @@
+<map id="SMBUS" name="SMBUS">
+<area shape="rect" id="node1" href="$group__SMBUS__Exported__Types.html" title=" " alt="" coords="365,5,537,31"/>
+<area shape="rect" id="node2" href="$group__SMBUS__Exported__Constants.html" title=" " alt="" coords="351,55,551,80"/>
+<area shape="rect" id="node3" href="$group__STM32F4xx__HAL__Driver.html" title=" " alt="" coords="5,80,184,105"/>
+<area shape="rect" id="node4" title="SMBUS HAL module driver" alt="" coords="232,80,301,105"/>
+<area shape="rect" id="node5" href="$group__SMBUS__Exported__Macros.html" title=" " alt="" coords="359,104,542,129"/>
+<area shape="rect" id="node6" href="$group__SMBUS__Exported__Functions.html" title=" " alt="" coords="349,153,552,179"/>
+</map>

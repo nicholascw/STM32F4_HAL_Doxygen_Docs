@@ -1,0 +1,156 @@
+.TH "SMBUS_Exported_Types" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SMBUS_Exported_Types
+.SH SYNOPSIS
+.br
+.PP
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSMBUS_InitTypeDef\fP"
+.br
+.RI "SMBUS Configuration Structure definition "
+.ti -1c
+.RI "struct \fB__SMBUS_HandleTypeDef\fP"
+.br
+.RI "SMBUS handle Structure definition "
+.in -1c
+.SS "类型定义"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__SMBUS_HandleTypeDef\fP \fBSMBUS_HandleTypeDef\fP"
+.br
+.RI "SMBUS handle Structure definition "
+.in -1c
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_SMBUS_StateTypeDef\fP { \fBHAL_SMBUS_STATE_RESET\fP = 0x00U, \fBHAL_SMBUS_STATE_READY\fP = 0x20U, \fBHAL_SMBUS_STATE_BUSY\fP = 0x24U, \fBHAL_SMBUS_STATE_BUSY_TX\fP = 0x21U, \fBHAL_SMBUS_STATE_BUSY_RX\fP = 0x22U, \fBHAL_SMBUS_STATE_LISTEN\fP = 0x28U, \fBHAL_SMBUS_STATE_BUSY_TX_LISTEN\fP = 0x29U, \fBHAL_SMBUS_STATE_BUSY_RX_LISTEN\fP = 0x2AU, \fBHAL_SMBUS_STATE_ABORT\fP = 0x60U, \fBHAL_SMBUS_STATE_TIMEOUT\fP = 0xA0U, \fBHAL_SMBUS_STATE_ERROR\fP = 0xE0U }"
+.br
+.RI "HAL State structure definition "
+.ti -1c
+.RI "enum \fBHAL_SMBUS_ModeTypeDef\fP { \fBHAL_SMBUS_MODE_NONE\fP = 0x00U, \fBHAL_SMBUS_MODE_MASTER\fP = 0x10U, \fBHAL_SMBUS_MODE_SLAVE\fP = 0x20U }"
+.br
+.RI "HAL Mode structure definition "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "类型定义说明"
+.PP 
+.SS "typedef struct \fB__SMBUS_HandleTypeDef\fP \fBSMBUS_HandleTypeDef\fP"
+
+.PP
+SMBUS handle Structure definition 
+.SH "枚举类型说明"
+.PP 
+.SS "enum \fBHAL_SMBUS_ModeTypeDef\fP"
+
+.PP
+HAL Mode structure definition 
+.PP
+\fB注解\fP
+.RS 4
+HAL SMBUS Mode value coding follow below described bitmap : b7 (not used) x : Should be set to 0 b6 (not used) x : Should be set to 0 b5 0 : None 1 : Slave (HAL SMBUS communication is in Slave/Device Mode) b4 0 : None 1 : Master (HAL SMBUS communication is in Master/Host Mode) b3-b2-b1-b0 (not used) xxxx : Should be set to 0000 
+.RE
+.PP
+
+.PP
+\fB枚举值\fP
+.in +1c
+.TP
+\fB\fIHAL_SMBUS_MODE_NONE \fP\fP
+No SMBUS communication on going 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_MODE_MASTER \fP\fP
+SMBUS communication is in Master Mode 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_MODE_SLAVE \fP\fP
+SMBUS communication is in Slave Mode 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 141 行定义\&.
+.SS "enum \fBHAL_SMBUS_StateTypeDef\fP"
+
+.PP
+HAL State structure definition 
+.PP
+\fB注解\fP
+.RS 4
+HAL SMBUS State value coding follow below described bitmap : b7-b6 Error information 00 : No Error 01 : Abort (Abort user request on going) 10 : Timeout 11 : Error b5 IP initilisation status 0 : Reset (IP not initialized) 1 : Init done (IP initialized and ready to use\&. HAL SMBUS Init function called) b4 (not used) x : Should be set to 0 b3 0 : Ready or Busy (No Listen mode ongoing) 1 : Listen (IP in Address Listen Mode) b2 Intrinsic process state 0 : Ready 1 : Busy (IP busy with some configuration or internal operations) b1 Rx state 0 : Ready (no Rx operation ongoing) 1 : Busy (Rx operation ongoing) b0 Tx state 0 : Ready (no Tx operation ongoing) 1 : Busy (Tx operation ongoing) 
+.RE
+.PP
+
+.PP
+\fB枚举值\fP
+.in +1c
+.TP
+\fB\fIHAL_SMBUS_STATE_RESET \fP\fP
+Peripheral is not yet Initialized 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_READY \fP\fP
+Peripheral Initialized and ready for use 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_BUSY \fP\fP
+An internal process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_BUSY_TX \fP\fP
+Data Transmission process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_BUSY_RX \fP\fP
+Data Reception process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_LISTEN \fP\fP
+Address Listen Mode is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_BUSY_TX_LISTEN \fP\fP
+Address Listen Mode and Data Transmission process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_BUSY_RX_LISTEN \fP\fP
+Address Listen Mode and Data Reception process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_ABORT \fP\fP
+Abort user request ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_TIMEOUT \fP\fP
+Timeout state 
+.br
+ 
+.TP
+\fB\fIHAL_SMBUS_STATE_ERROR \fP\fP
+Error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 107 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

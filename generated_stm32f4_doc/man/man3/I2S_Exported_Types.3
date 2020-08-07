@@ -1,0 +1,97 @@
+.TH "I2S_Exported_Types" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+I2S_Exported_Types
+.SH SYNOPSIS
+.br
+.PP
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBI2S_InitTypeDef\fP"
+.br
+.RI "I2S Init structure definition "
+.ti -1c
+.RI "struct \fB__I2S_HandleTypeDef\fP"
+.br
+.RI "I2S handle Structure definition "
+.in -1c
+.SS "类型定义"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__I2S_HandleTypeDef\fP \fBI2S_HandleTypeDef\fP"
+.br
+.RI "I2S handle Structure definition "
+.in -1c
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_I2S_StateTypeDef\fP { \fBHAL_I2S_STATE_RESET\fP = 0x00U, \fBHAL_I2S_STATE_READY\fP = 0x01U, \fBHAL_I2S_STATE_BUSY\fP = 0x02U, \fBHAL_I2S_STATE_BUSY_TX\fP = 0x03U, \fBHAL_I2S_STATE_BUSY_RX\fP = 0x04U, \fBHAL_I2S_STATE_BUSY_TX_RX\fP = 0x05U, \fBHAL_I2S_STATE_TIMEOUT\fP = 0x06U, \fBHAL_I2S_STATE_ERROR\fP = 0x07U }"
+.br
+.RI "HAL State structures definition "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "类型定义说明"
+.PP 
+.SS "typedef struct \fB__I2S_HandleTypeDef\fP \fBI2S_HandleTypeDef\fP"
+
+.PP
+I2S handle Structure definition 
+.SH "枚举类型说明"
+.PP 
+.SS "enum \fBHAL_I2S_StateTypeDef\fP"
+
+.PP
+HAL State structures definition 
+.PP
+\fB枚举值\fP
+.in +1c
+.TP
+\fB\fIHAL_I2S_STATE_RESET \fP\fP
+I2S not yet initialized or disabled 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_READY \fP\fP
+I2S initialized and ready for use 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_BUSY \fP\fP
+I2S internal process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_BUSY_TX \fP\fP
+Data Transmission process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_BUSY_RX \fP\fP
+Data Reception process is ongoing 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_BUSY_TX_RX \fP\fP
+Data Transmission and Reception process is ongoing 
+.TP
+\fB\fIHAL_I2S_STATE_TIMEOUT \fP\fP
+I2S timeout state 
+.br
+ 
+.TP
+\fB\fIHAL_I2S_STATE_ERROR \fP\fP
+I2S error state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 76 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

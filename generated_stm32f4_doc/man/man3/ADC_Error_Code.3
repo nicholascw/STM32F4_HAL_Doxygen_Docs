@@ -1,0 +1,56 @@
+.TH "ADC_Error_Code" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Error_Code
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_NONE\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_INTERNAL\fP   0x01U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_OVR\fP   0x02U"
+.br
+.ti -1c
+.RI "#define \fBHAL_ADC_ERROR_DMA\fP   0x04U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define HAL_ADC_ERROR_DMA   0x04U"
+DMA transfer error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 259 行定义\&.
+.SS "#define HAL_ADC_ERROR_INTERNAL   0x01U"
+ADC IP internal error: if problem of clocking, enable/disable, erroneous state 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 257 行定义\&.
+.SS "#define HAL_ADC_ERROR_NONE   0x00U"
+No error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 255 行定义\&.
+.SS "#define HAL_ADC_ERROR_OVR   0x02U"
+Overrun error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 258 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

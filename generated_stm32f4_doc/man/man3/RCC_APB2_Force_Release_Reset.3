@@ -1,0 +1,149 @@
+.TH "RCC_APB2_Force_Release_Reset" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_APB2_Force_Release_Reset \- Force or release APB2 peripheral reset\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_FORCE_RESET\fP()   (RCC\->APB2RSTR = 0xFFFFFFFFU)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART6RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_ADCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SPI1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SYSCFGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM9RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_FORCE_RESET\fP()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM11RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_APB2_RELEASE_RESET\fP()   (RCC\->APB2RSTR = 0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_USART6_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART6RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_ADC_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_ADCRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SPI1_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SPI1RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_SYSCFG_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SYSCFGRST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM9_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM9RST))"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RCC_TIM11_RELEASE_RESET\fP()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM11RST))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Force or release APB2 peripheral reset\&. 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RCC_ADC_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_ADCRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 718 行定义\&.
+.SS "#define __HAL_RCC_ADC_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_ADCRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 728 行定义\&.
+.SS "#define __HAL_RCC_APB2_FORCE_RESET()   (RCC\->APB2RSTR = 0xFFFFFFFFU)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 714 行定义\&.
+.SS "#define __HAL_RCC_APB2_RELEASE_RESET()   (RCC\->APB2RSTR = 0x00U)"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 724 行定义\&.
+.SS "#define __HAL_RCC_SPI1_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SPI1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 719 行定义\&.
+.SS "#define __HAL_RCC_SPI1_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SPI1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 729 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_SYSCFGRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 720 行定义\&.
+.SS "#define __HAL_RCC_SYSCFG_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_SYSCFGRST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 730 行定义\&.
+.SS "#define __HAL_RCC_TIM11_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM11RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 722 行定义\&.
+.SS "#define __HAL_RCC_TIM11_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM11RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 732 行定义\&.
+.SS "#define __HAL_RCC_TIM1_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 715 行定义\&.
+.SS "#define __HAL_RCC_TIM1_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 725 行定义\&.
+.SS "#define __HAL_RCC_TIM9_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_TIM9RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 721 行定义\&.
+.SS "#define __HAL_RCC_TIM9_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_TIM9RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 731 行定义\&.
+.SS "#define __HAL_RCC_USART1_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 716 行定义\&.
+.SS "#define __HAL_RCC_USART1_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART1RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 726 行定义\&.
+.SS "#define __HAL_RCC_USART6_FORCE_RESET()   (RCC\->APB2RSTR |= (RCC_APB2RSTR_USART6RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 717 行定义\&.
+.SS "#define __HAL_RCC_USART6_RELEASE_RESET()   (RCC\->APB2RSTR &= ~(RCC_APB2RSTR_USART6RST))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 727 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,36 @@
+.TH "TIM_Break_Polarity" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Break_Polarity
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_BREAKPOLARITY_LOW\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_BREAKPOLARITY_HIGH\fP   TIM_BDTR_BKP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_BREAKPOLARITY_HIGH   TIM_BDTR_BKP"
+Break input BRK is active high 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 804 行定义\&.
+.SS "#define TIM_BREAKPOLARITY_LOW   0x00000000U"
+Break input BRK is active low 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 803 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,34 @@
+.TH "TIM_Output_Compare_State" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Output_Compare_State
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_OUTPUTSTATE_DISABLE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_OUTPUTSTATE_ENABLE\fP   TIM_CCER_CC1E"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_OUTPUTSTATE_DISABLE   0x00000000U"
+Capture/Compare 1 output disabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 512 行定义\&.
+.SS "#define TIM_OUTPUTSTATE_ENABLE   TIM_CCER_CC1E"
+Capture/Compare 1 output enabled 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 513 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

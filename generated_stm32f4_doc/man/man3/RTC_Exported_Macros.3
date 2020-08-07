@@ -1,0 +1,610 @@
+.TH "RTC_Exported_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTC_Exported_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_RESET_HANDLE_STATE\fP(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_RTC_STATE_RESET\fP)"
+.br
+.RI "Reset RTC handle state "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WRITEPROTECTION_DISABLE\fP(__HANDLE__)"
+.br
+.RI "Disable the write protection for RTC registers\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WRITEPROTECTION_ENABLE\fP(__HANDLE__)"
+.br
+.RI "Enable the write protection for RTC registers\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARMA_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_ALRAE))"
+.br
+.RI "Enable the RTC ALARMA peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARMA_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_ALRAE))"
+.br
+.RI "Disable the RTC ALARMA peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARMB_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_ALRBE))"
+.br
+.RI "Enable the RTC ALARMB peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARMB_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_ALRBE))"
+.br
+.RI "Disable the RTC ALARMB peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+.br
+.RI "Enable the RTC Alarm interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the RTC Alarm interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_GET_IT\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR)& ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Alarm interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+.br
+.RI "Get the selected RTC Alarm's flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+.br
+.RI "Clear the RTC Alarm's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Alarm interrupt has been enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_ENABLE_IT\fP()   (EXTI\->IMR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Enable interrupt on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_DISABLE_IT\fP()   (EXTI\->IMR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+.br
+.RI "Disable interrupt on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_ENABLE_EVENT\fP()   (EXTI\->EMR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Enable event on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_DISABLE_EVENT\fP()   (EXTI\->EMR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+.br
+.RI "Disable event on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_ENABLE_FALLING_EDGE\fP()   (EXTI\->FTSR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Enable falling edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_DISABLE_FALLING_EDGE\fP()   (EXTI\->FTSR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+.br
+.RI "Disable falling edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_ENABLE_RISING_EDGE\fP()   (EXTI\->RTSR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Enable rising edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_DISABLE_RISING_EDGE\fP()   (EXTI\->RTSR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+.br
+.RI "Disable rising edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_ENABLE_RISING_FALLING_EDGE\fP()"
+.br
+.RI "Enable rising & falling edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_DISABLE_RISING_FALLING_EDGE\fP()"
+.br
+.RI "Disable rising & falling edge trigger on the RTC Alarm associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_GET_FLAG\fP()   (EXTI\->PR & \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Check whether the RTC Alarm associated Exti line interrupt flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_CLEAR_FLAG\fP()   (EXTI\->PR = \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Clear the RTC Alarm associated Exti line flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_ALARM_EXTI_GENERATE_SWIT\fP()   (EXTI\->SWIER |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+.br
+.RI "Generate a Software interrupt on RTC Alarm associated Exti line\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_ALARM_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+
+.PP
+Clear the RTC Alarm's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Alarm Flag sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_ALRAF 
+.IP "\(bu" 2
+RTC_FLAG_ALRBF 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 572 行定义\&.
+.SS "#define __HAL_RTC_ALARM_DISABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+
+.PP
+Disable the RTC Alarm interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Alarm interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_ALRA: Alarm A interrupt 
+.IP "\(bu" 2
+RTC_IT_ALRB: Alarm B interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 537 行定义\&.
+.SS "#define __HAL_RTC_ALARM_ENABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+
+.PP
+Enable the RTC Alarm interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Alarm interrupt sources to be enabled or disabled\&. This parameter can be any combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_ALRA: Alarm A interrupt 
+.IP "\(bu" 2
+RTC_IT_ALRB: Alarm B interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 526 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_CLEAR_FLAG()   (EXTI\->PR = \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Clear the RTC Alarm associated Exti line flag\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 660 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_DISABLE_EVENT()   (EXTI\->EMR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+
+.PP
+Disable event on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 608 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_DISABLE_FALLING_EDGE()   (EXTI\->FTSR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+
+.PP
+Disable falling edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 620 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_DISABLE_IT()   (EXTI\->IMR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+
+.PP
+Disable interrupt on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 596 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_DISABLE_RISING_EDGE()   (EXTI\->RTSR &= ~(\fBRTC_EXTI_LINE_ALARM_EVENT\fP))"
+
+.PP
+Disable rising edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 632 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_DISABLE_RISING_FALLING_EDGE()"
+\fB值:\fP
+.PP
+.nf
+                                                                do { __HAL_RTC_ALARM_EXTI_DISABLE_RISING_EDGE();\
+                                                                __HAL_RTC_ALARM_EXTI_DISABLE_FALLING_EDGE();\
+                                                              } while(0U)
+.fi
+.PP
+Disable rising & falling edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 646 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_ENABLE_EVENT()   (EXTI\->EMR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Enable event on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 602 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_ENABLE_FALLING_EDGE()   (EXTI\->FTSR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Enable falling edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 614 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_ENABLE_IT()   (EXTI\->IMR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Enable interrupt on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 590 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_ENABLE_RISING_EDGE()   (EXTI\->RTSR |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Enable rising edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 626 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_ENABLE_RISING_FALLING_EDGE()"
+\fB值:\fP
+.PP
+.nf
+                                                               do { __HAL_RTC_ALARM_EXTI_ENABLE_RISING_EDGE(); \
+                                                               __HAL_RTC_ALARM_EXTI_ENABLE_FALLING_EDGE();\
+                                                             } while(0U)
+.fi
+.PP
+Enable rising & falling edge trigger on the RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 638 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_GENERATE_SWIT()   (EXTI\->SWIER |= \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Generate a Software interrupt on RTC Alarm associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 666 行定义\&.
+.SS "#define __HAL_RTC_ALARM_EXTI_GET_FLAG()   (EXTI\->PR & \fBRTC_EXTI_LINE_ALARM_EVENT\fP)"
+
+.PP
+Check whether the RTC Alarm associated Exti line interrupt flag is set or not\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fILine\fP Status\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 654 行定义\&.
+.SS "#define __HAL_RTC_ALARM_GET_FLAG(__HANDLE__, __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+
+.PP
+Get the selected RTC Alarm's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Alarm Flag to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_ALRAF 
+.IP "\(bu" 2
+RTC_FLAG_ALRBF 
+.IP "\(bu" 2
+RTC_FLAG_ALRAWF 
+.IP "\(bu" 2
+RTC_FLAG_ALRBWF 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 561 行定义\&.
+.SS "#define __HAL_RTC_ALARM_GET_IT(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR)& ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+
+.PP
+Check whether the specified RTC Alarm interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Alarm interrupt to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_ALRA: Alarm A interrupt 
+.IP "\(bu" 2
+RTC_IT_ALRB: Alarm B interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 548 行定义\&.
+.SS "#define __HAL_RTC_ALARM_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+
+.PP
+Check whether the specified RTC Alarm interrupt has been enabled or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Alarm interrupt sources to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_ALRA: Alarm A interrupt 
+.IP "\(bu" 2
+RTC_IT_ALRB: Alarm B interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 584 行定义\&.
+.SS "#define __HAL_RTC_ALARMA_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_ALRAE))"
+
+.PP
+Disable the RTC ALARMA peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 501 行定义\&.
+.SS "#define __HAL_RTC_ALARMA_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_ALRAE))"
+
+.PP
+Enable the RTC ALARMA peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 494 行定义\&.
+.SS "#define __HAL_RTC_ALARMB_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_ALRBE))"
+
+.PP
+Disable the RTC ALARMB peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 515 行定义\&.
+.SS "#define __HAL_RTC_ALARMB_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_ALRBE))"
+
+.PP
+Enable the RTC ALARMB peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 508 行定义\&.
+.SS "#define __HAL_RTC_RESET_HANDLE_STATE(__HANDLE__)   ((__HANDLE__)\->State = \fBHAL_RTC_STATE_RESET\fP)"
+
+.PP
+Reset RTC handle state 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 465 行定义\&.
+.SS "#define __HAL_RTC_WRITEPROTECTION_DISABLE(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+                        do{                                       \
+                            (__HANDLE__)->Instance->WPR = 0xCAU;  \
+                            (__HANDLE__)->Instance->WPR = 0x53U;  \
+                          } while(0U)
+.fi
+.PP
+Disable the write protection for RTC registers\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 473 行定义\&.
+.SS "#define __HAL_RTC_WRITEPROTECTION_ENABLE(__HANDLE__)"
+\fB值:\fP
+.PP
+.nf
+                        do{                                       \
+                            (__HANDLE__)->Instance->WPR = 0xFFU;  \
+                          } while(0U)
+.fi
+.PP
+Enable the write protection for RTC registers\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 484 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

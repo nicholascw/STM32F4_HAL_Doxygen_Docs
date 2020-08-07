@@ -1,0 +1,55 @@
+.TH "RCC_System_Clock_Source" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RCC_System_Clock_Source
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_HSI\fP   RCC_CFGR_SW_HSI"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_HSE\fP   RCC_CFGR_SW_HSE"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_PLLCLK\fP   RCC_CFGR_SW_PLL"
+.br
+.ti -1c
+.RI "#define \fBRCC_SYSCLKSOURCE_PLLRCLK\fP   ((uint32_t)(RCC_CFGR_SW_0 | RCC_CFGR_SW_1))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.PP
+\fB注解\fP
+.RS 4
+The RCC_SYSCLKSOURCE_PLLRCLK parameter is available only for STM32F446xx devices\&. 
+.RE
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define RCC_SYSCLKSOURCE_HSE   RCC_CFGR_SW_HSE"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 205 行定义\&.
+.SS "#define RCC_SYSCLKSOURCE_HSI   RCC_CFGR_SW_HSI"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 204 行定义\&.
+.SS "#define RCC_SYSCLKSOURCE_PLLCLK   RCC_CFGR_SW_PLL"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 206 行定义\&.
+.SS "#define RCC_SYSCLKSOURCE_PLLRCLK   ((uint32_t)(RCC_CFGR_SW_0 | RCC_CFGR_SW_1))"
+
+.PP
+在文件 stm32f4xx_hal_rcc\&.h 第 207 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

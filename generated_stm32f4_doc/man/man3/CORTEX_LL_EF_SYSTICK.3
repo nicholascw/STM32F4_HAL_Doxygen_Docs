@@ -1,0 +1,146 @@
+.TH "CORTEX_LL_EF_SYSTICK" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CORTEX_LL_EF_SYSTICK
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_SYSTICK_IsActiveCounterFlag\fP (void)"
+.br
+.RI "This function checks if the Systick counter flag is active or not\&. "
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_SYSTICK_SetClkSource\fP (uint32_t Source)"
+.br
+.RI "Configures the SysTick clock source @rmtoll STK_CTRL CLKSOURCE LL_SYSTICK_SetClkSource "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_SYSTICK_GetClkSource\fP (void)"
+.br
+.RI "Get the SysTick clock source @rmtoll STK_CTRL CLKSOURCE LL_SYSTICK_GetClkSource "
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_SYSTICK_EnableIT\fP (void)"
+.br
+.RI "Enable SysTick exception request @rmtoll STK_CTRL TICKINT LL_SYSTICK_EnableIT "
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_SYSTICK_DisableIT\fP (void)"
+.br
+.RI "Disable SysTick exception request @rmtoll STK_CTRL TICKINT LL_SYSTICK_DisableIT "
+.ti -1c
+.RI "__STATIC_INLINE uint32_t \fBLL_SYSTICK_IsEnabledIT\fP (void)"
+.br
+.RI "Checks if the SYSTICK interrupt is enabled or disabled\&. @rmtoll STK_CTRL TICKINT LL_SYSTICK_IsEnabledIT "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "__STATIC_INLINE void LL_SYSTICK_DisableIT (void)"
+
+.PP
+Disable SysTick exception request @rmtoll STK_CTRL TICKINT LL_SYSTICK_DisableIT 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 283 行定义\&.
+.SS "__STATIC_INLINE void LL_SYSTICK_EnableIT (void)"
+
+.PP
+Enable SysTick exception request @rmtoll STK_CTRL TICKINT LL_SYSTICK_EnableIT 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 273 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_SYSTICK_GetClkSource (void)"
+
+.PP
+Get the SysTick clock source @rmtoll STK_CTRL CLKSOURCE LL_SYSTICK_GetClkSource 
+.PP
+\fB返回值\fP
+.RS 4
+\fIReturned\fP value can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBLL_SYSTICK_CLKSOURCE_HCLK_DIV8\fP 
+.IP "\(bu" 2
+\fBLL_SYSTICK_CLKSOURCE_HCLK\fP 
+.PP
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 263 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_SYSTICK_IsActiveCounterFlag (void)"
+
+.PP
+This function checks if the Systick counter flag is active or not\&. 
+.PP
+\fB注解\fP
+.RS 4
+It can be used in timeout function on application side\&. @rmtoll STK_CTRL COUNTFLAG LL_SYSTICK_IsActiveCounterFlag 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fIState\fP of bit (1 or 0)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 231 行定义\&.
+.SS "__STATIC_INLINE uint32_t LL_SYSTICK_IsEnabledIT (void)"
+
+.PP
+Checks if the SYSTICK interrupt is enabled or disabled\&. @rmtoll STK_CTRL TICKINT LL_SYSTICK_IsEnabledIT 
+.PP
+\fB返回值\fP
+.RS 4
+\fIState\fP of bit (1 or 0)\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 293 行定义\&.
+.SS "__STATIC_INLINE void LL_SYSTICK_SetClkSource (uint32_t Source)"
+
+.PP
+Configures the SysTick clock source @rmtoll STK_CTRL CLKSOURCE LL_SYSTICK_SetClkSource 
+.PP
+\fB参数\fP
+.RS 4
+\fISource\fP This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBLL_SYSTICK_CLKSOURCE_HCLK_DIV8\fP 
+.IP "\(bu" 2
+\fBLL_SYSTICK_CLKSOURCE_HCLK\fP 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 244 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

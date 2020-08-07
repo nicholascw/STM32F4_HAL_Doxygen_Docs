@@ -1,0 +1,479 @@
+.TH "RTCEx_WakeUp_Timer" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_WakeUp_Timer
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_WUTE))"
+.br
+.RI "Enable the RTC WakeUp Timer peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_WUTE))"
+.br
+.RI "Disable the RTC Wake-up Timer peripheral\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_ENABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+.br
+.RI "Enable the RTC WakeUpTimer interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_DISABLE_IT\fP(__HANDLE__,  __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+.br
+.RI "Disable the RTC WakeUpTimer interrupt\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_GET_IT\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+.br
+.RI "Check whether the specified RTC WakeUpTimer interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Wake Up timer interrupt has been enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+.br
+.RI "Get the selected RTC WakeUpTimer's flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+.br
+.RI "Clear the RTC Wake Up timer's pending flags\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_IT\fP()   (EXTI\->IMR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Enable interrupt on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_IT\fP()   (EXTI\->IMR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+.br
+.RI "Disable interrupt on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_EVENT\fP()   (EXTI\->EMR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Enable event on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_EVENT\fP()   (EXTI\->EMR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+.br
+.RI "Disable event on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_FALLING_EDGE\fP()   (EXTI\->FTSR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Enable falling edge trigger on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_FALLING_EDGE\fP()   (EXTI\->FTSR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+.br
+.RI "Disable falling edge trigger on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_RISING_EDGE\fP()   (EXTI\->RTSR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Enable rising edge trigger on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_RISING_EDGE\fP()   (EXTI\->RTSR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+.br
+.RI "Disable rising edge trigger on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_RISING_FALLING_EDGE\fP()"
+.br
+.RI "Enable rising & falling edge trigger on the RTC Wake-up Timer associated Exti line\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_RISING_FALLING_EDGE\fP()"
+.br
+.RI "Disable rising & falling edge trigger on the RTC Wake-up Timer associated Exti line\&. This parameter can be: "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_GET_FLAG\fP()   (EXTI\->PR & \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Check whether the RTC Wake-up Timer associated Exti line interrupt flag is set or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG\fP()   (EXTI\->PR = \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Clear the RTC Wake-up Timer associated Exti line flag\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_WAKEUPTIMER_EXTI_GENERATE_SWIT\fP()   (EXTI\->SWIER |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+.br
+.RI "Generate a Software interrupt on the RTC Wake-up Timer associated Exti line\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_WAKEUPTIMER_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+
+.PP
+Clear the RTC Wake Up timer's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Tamper Flag sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_WUTF 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 391 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_WUTE))"
+
+.PP
+Disable the RTC Wake-up Timer peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 330 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_DISABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR &= ~(__INTERRUPT__))"
+
+.PP
+Disable the RTC WakeUpTimer interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC WakeUpTimer interrupt sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_WUT: WakeUpTimer A interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 350 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_WUTE))"
+
+.PP
+Enable the RTC WakeUp Timer peripheral\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 323 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_ENABLE_IT(__HANDLE__, __INTERRUPT__)   ((__HANDLE__)\->Instance\->CR |= (__INTERRUPT__))"
+
+.PP
+Enable the RTC WakeUpTimer interrupt\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC WakeUpTimer interrupt sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_WUT: WakeUpTimer A interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 340 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG()   (EXTI\->PR = \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Clear the RTC Wake-up Timer associated Exti line flag\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 468 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_EVENT()   (EXTI\->EMR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+
+.PP
+Disable event on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 415 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_FALLING_EDGE()   (EXTI\->FTSR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+
+.PP
+Disable falling edge trigger on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 427 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_IT()   (EXTI\->IMR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+
+.PP
+Disable interrupt on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 403 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_RISING_EDGE()   (EXTI\->RTSR &= ~(\fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP))"
+
+.PP
+Disable rising edge trigger on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 439 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_RISING_FALLING_EDGE()"
+\fB值:\fP
+.PP
+.nf
+                                                                      do { __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_RISING_EDGE();\
+                                                                      __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_FALLING_EDGE();\
+                                                                    } while(0U)
+.fi
+.PP
+Disable rising & falling edge trigger on the RTC Wake-up Timer associated Exti line\&. This parameter can be: 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 454 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_EVENT()   (EXTI\->EMR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Enable event on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 409 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_FALLING_EDGE()   (EXTI\->FTSR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Enable falling edge trigger on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 421 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_IT()   (EXTI\->IMR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Enable interrupt on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 397 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_RISING_EDGE()   (EXTI\->RTSR |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Enable rising edge trigger on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 433 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_RISING_FALLING_EDGE()"
+\fB值:\fP
+.PP
+.nf
+                                                                     do { __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_RISING_EDGE();\
+                                                                     __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_FALLING_EDGE();\
+                                                                   } while(0U)
+.fi
+.PP
+Enable rising & falling edge trigger on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 445 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_GENERATE_SWIT()   (EXTI\->SWIER |= \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Generate a Software interrupt on the RTC Wake-up Timer associated Exti line\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\&.\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 474 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_EXTI_GET_FLAG()   (EXTI\->PR & \fBRTC_EXTI_LINE_WAKEUPTIMER_EVENT\fP)"
+
+.PP
+Check whether the RTC Wake-up Timer associated Exti line interrupt flag is set or not\&. 
+.PP
+\fB返回值\fP
+.RS 4
+\fILine\fP Status\&. 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 462 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_GET_FLAG(__HANDLE__, __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+
+.PP
+Get the selected RTC WakeUpTimer's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC WakeUpTimer Flag to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_WUTF 
+.br
+ 
+.IP "\(bu" 2
+RTC_FLAG_WUTWF 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 381 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_GET_IT(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+
+.PP
+Check whether the specified RTC WakeUpTimer interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC WakeUpTimer interrupt to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_WUT: WakeUpTimer A interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 360 行定义\&.
+.SS "#define __HAL_RTC_WAKEUPTIMER_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->CR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+
+.PP
+Check whether the specified RTC Wake Up timer interrupt has been enabled or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Wake Up timer interrupt sources to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_WUT: WakeUpTimer interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 370 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

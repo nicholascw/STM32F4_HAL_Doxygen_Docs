@@ -1,0 +1,222 @@
+.TH "UART_Private_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UART_Private_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_UART_WORD_LENGTH\fP(LENGTH)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_LIN_WORD_LENGTH\fP(LENGTH)   (((LENGTH) == \fBUART_WORDLENGTH_8B\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_STOPBITS\fP(STOPBITS)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_PARITY\fP(PARITY)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_HARDWARE_FLOW_CONTROL\fP(CONTROL)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_MODE\fP(MODE)   ((((MODE) & 0x0000FFF3U) == 0x00U) && ((MODE) != 0x00U))"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_STATE\fP(STATE)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_OVERSAMPLING\fP(SAMPLING)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_LIN_OVERSAMPLING\fP(SAMPLING)   (((SAMPLING) == \fBUART_OVERSAMPLING_16\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_LIN_BREAK_DETECT_LENGTH\fP(LENGTH)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_WAKEUPMETHOD\fP(WAKEUP)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_BAUDRATE\fP(BAUDRATE)   ((BAUDRATE) <= 10500000U)"
+.br
+.ti -1c
+.RI "#define \fBIS_UART_ADDRESS\fP(ADDRESS)   ((ADDRESS) <= 0x0FU)"
+.br
+.ti -1c
+.RI "#define \fBUART_DIV_SAMPLING16\fP(_PCLK_,  _BAUD_)   (((_PCLK_)*25U)/(4U*(_BAUD_)))"
+.br
+.ti -1c
+.RI "#define \fBUART_DIVMANT_SAMPLING16\fP(_PCLK_,  _BAUD_)   (\fBUART_DIV_SAMPLING16\fP((_PCLK_), (_BAUD_))/100U)"
+.br
+.ti -1c
+.RI "#define \fBUART_DIVFRAQ_SAMPLING16\fP(_PCLK_,  _BAUD_)   (((\fBUART_DIV_SAMPLING16\fP((_PCLK_), (_BAUD_)) \- (\fBUART_DIVMANT_SAMPLING16\fP((_PCLK_), (_BAUD_)) * 100U)) * 16U + 50U) / 100U)"
+.br
+.ti -1c
+.RI "#define \fBUART_BRR_SAMPLING16\fP(_PCLK_,  _BAUD_)"
+.br
+.ti -1c
+.RI "#define \fBUART_DIV_SAMPLING8\fP(_PCLK_,  _BAUD_)   (((_PCLK_)*25U)/(2U*(_BAUD_)))"
+.br
+.ti -1c
+.RI "#define \fBUART_DIVMANT_SAMPLING8\fP(_PCLK_,  _BAUD_)   (\fBUART_DIV_SAMPLING8\fP((_PCLK_), (_BAUD_))/100U)"
+.br
+.ti -1c
+.RI "#define \fBUART_DIVFRAQ_SAMPLING8\fP(_PCLK_,  _BAUD_)   (((\fBUART_DIV_SAMPLING8\fP((_PCLK_), (_BAUD_)) \- (\fBUART_DIVMANT_SAMPLING8\fP((_PCLK_), (_BAUD_)) * 100U)) * 8U + 50U) / 100U)"
+.br
+.ti -1c
+.RI "#define \fBUART_BRR_SAMPLING8\fP(_PCLK_,  _BAUD_)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define IS_UART_ADDRESS(ADDRESS)   ((ADDRESS) <= 0x0FU)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 800 行定义\&.
+.SS "#define IS_UART_BAUDRATE(BAUDRATE)   ((BAUDRATE) <= 10500000U)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 799 行定义\&.
+.SS "#define IS_UART_HARDWARE_FLOW_CONTROL(CONTROL)"
+\fB值:\fP
+.PP
+.nf
+                              (((CONTROL) == UART_HWCONTROL_NONE) || \
+                               ((CONTROL) == UART_HWCONTROL_RTS) || \
+                               ((CONTROL) == UART_HWCONTROL_CTS) || \
+                               ((CONTROL) == UART_HWCONTROL_RTS_CTS))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 784 行定义\&.
+.SS "#define IS_UART_LIN_BREAK_DETECT_LENGTH(LENGTH)"
+\fB值:\fP
+.PP
+.nf
+                                                 (((LENGTH) == UART_LINBREAKDETECTLENGTH_10B) || \
+                                                 ((LENGTH) == UART_LINBREAKDETECTLENGTH_11B))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 795 行定义\&.
+.SS "#define IS_UART_LIN_OVERSAMPLING(SAMPLING)   (((SAMPLING) == \fBUART_OVERSAMPLING_16\fP))"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 794 行定义\&.
+.SS "#define IS_UART_LIN_WORD_LENGTH(LENGTH)   (((LENGTH) == \fBUART_WORDLENGTH_8B\fP))"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 778 行定义\&.
+.SS "#define IS_UART_MODE(MODE)   ((((MODE) & 0x0000FFF3U) == 0x00U) && ((MODE) != 0x00U))"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 789 行定义\&.
+.SS "#define IS_UART_OVERSAMPLING(SAMPLING)"
+\fB值:\fP
+.PP
+.nf
+                                        (((SAMPLING) == UART_OVERSAMPLING_16) || \
+                                        ((SAMPLING) == UART_OVERSAMPLING_8))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 792 行定义\&.
+.SS "#define IS_UART_PARITY(PARITY)"
+\fB值:\fP
+.PP
+.nf
+                                (((PARITY) == UART_PARITY_NONE) || \
+                                ((PARITY) == UART_PARITY_EVEN) || \
+                                ((PARITY) == UART_PARITY_ODD))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 781 行定义\&.
+.SS "#define IS_UART_STATE(STATE)"
+\fB值:\fP
+.PP
+.nf
+                              (((STATE) == UART_STATE_DISABLE) || \
+                              ((STATE) == UART_STATE_ENABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 790 行定义\&.
+.SS "#define IS_UART_STOPBITS(STOPBITS)"
+\fB值:\fP
+.PP
+.nf
+                                    (((STOPBITS) == UART_STOPBITS_1) || \
+                                    ((STOPBITS) == UART_STOPBITS_2))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 779 行定义\&.
+.SS "#define IS_UART_WAKEUPMETHOD(WAKEUP)"
+\fB值:\fP
+.PP
+.nf
+                                      (((WAKEUP) == UART_WAKEUPMETHOD_IDLELINE) || \
+                                      ((WAKEUP) == UART_WAKEUPMETHOD_ADDRESSMARK))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 797 行定义\&.
+.SS "#define IS_UART_WORD_LENGTH(LENGTH)"
+\fB值:\fP
+.PP
+.nf
+                                     (((LENGTH) == UART_WORDLENGTH_8B) || \
+                                     ((LENGTH) == UART_WORDLENGTH_9B))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 776 行定义\&.
+.SS "#define UART_BRR_SAMPLING16(_PCLK_, _BAUD_)"
+\fB值:\fP
+.PP
+.nf
+                                                        (((UART_DIVMANT_SAMPLING16((_PCLK_), (_BAUD_)) << 4U) + \
+                                                        (UART_DIVFRAQ_SAMPLING16((_PCLK_), (_BAUD_)) & 0xF0U)) + \
+                                                        (UART_DIVFRAQ_SAMPLING16((_PCLK_), (_BAUD_)) & 0x0FU))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 807 行定义\&.
+.SS "#define UART_BRR_SAMPLING8(_PCLK_, _BAUD_)"
+\fB值:\fP
+.PP
+.nf
+                                                        (((UART_DIVMANT_SAMPLING8((_PCLK_), (_BAUD_)) << 4U) + \
+                                                        ((UART_DIVFRAQ_SAMPLING8((_PCLK_), (_BAUD_)) & 0xF8U) << 1U)) + \
+                                                        (UART_DIVFRAQ_SAMPLING8((_PCLK_), (_BAUD_)) & 0x07U))
+.fi
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 816 行定义\&.
+.SS "#define UART_DIV_SAMPLING16(_PCLK_, _BAUD_)   (((_PCLK_)*25U)/(4U*(_BAUD_)))"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 802 行定义\&.
+.SS "#define UART_DIV_SAMPLING8(_PCLK_, _BAUD_)   (((_PCLK_)*25U)/(2U*(_BAUD_)))"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 811 行定义\&.
+.SS "#define UART_DIVFRAQ_SAMPLING16(_PCLK_, _BAUD_)   (((\fBUART_DIV_SAMPLING16\fP((_PCLK_), (_BAUD_)) \- (\fBUART_DIVMANT_SAMPLING16\fP((_PCLK_), (_BAUD_)) * 100U)) * 16U + 50U) / 100U)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 804 行定义\&.
+.SS "#define UART_DIVFRAQ_SAMPLING8(_PCLK_, _BAUD_)   (((\fBUART_DIV_SAMPLING8\fP((_PCLK_), (_BAUD_)) \- (\fBUART_DIVMANT_SAMPLING8\fP((_PCLK_), (_BAUD_)) * 100U)) * 8U + 50U) / 100U)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 813 行定义\&.
+.SS "#define UART_DIVMANT_SAMPLING16(_PCLK_, _BAUD_)   (\fBUART_DIV_SAMPLING16\fP((_PCLK_), (_BAUD_))/100U)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 803 行定义\&.
+.SS "#define UART_DIVMANT_SAMPLING8(_PCLK_, _BAUD_)   (\fBUART_DIV_SAMPLING8\fP((_PCLK_), (_BAUD_))/100U)"
+
+.PP
+在文件 stm32f4xx_hal_uart\&.h 第 812 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

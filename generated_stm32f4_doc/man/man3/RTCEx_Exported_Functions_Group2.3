@@ -1,0 +1,77 @@
+.TH "RTCEx_Exported_Functions_Group2" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Exported_Functions_Group2
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetWakeUpTimer\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_SetWakeUpTimer_IT\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RTCEx_DeactivateWakeUpTimer\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_RTCEx_GetWakeUpTimer\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "void \fBHAL_RTCEx_WakeUpTimerIRQHandler\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.ti -1c
+.RI "void \fBHAL_RTCEx_WakeUpTimerEventCallback\fP (\fBRTC_HandleTypeDef\fP *hrtc)"
+.br
+.RI "Wake Up Timer Event Callback in non blocking mode "
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_RTCEx_PollForWakeUpTimerEvent\fP (\fBRTC_HandleTypeDef\fP *hrtc, uint32_t Timeout)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "uint32_t HAL_RTCEx_DeactivateWakeUpTimer (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "uint32_t HAL_RTCEx_GetWakeUpTimer (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_PollForWakeUpTimerEvent (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetWakeUpTimer (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_RTCEx_SetWakeUpTimer_IT (\fBRTC_HandleTypeDef\fP * hrtc, uint32_t WakeUpCounter, uint32_t WakeUpClock)"
+
+.SS "void HAL_RTCEx_WakeUpTimerEventCallback (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.PP
+Wake Up Timer Event Callback in non blocking mode 
+.PP
+\fB注解\fP
+.RS 4
+This function is called when RTC_WKUP interrupt took place, inside \fBRTC_WKUP_IRQHandler()\fP\&. It makes a direct call to \fBHAL_IncTick()\fP to increment a global variable 'uwTick' used as application time base\&. 
+.RE
+.PP
+\fB参数\fP
+.RS 4
+\fIhrtc\fP RTC handle 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_timebase_rtc_wakeup_template\&.c 第 253 行定义\&.
+.SS "void HAL_RTCEx_WakeUpTimerIRQHandler (\fBRTC_HandleTypeDef\fP * hrtc)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

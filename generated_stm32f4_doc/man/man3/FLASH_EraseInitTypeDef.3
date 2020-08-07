@@ -1,0 +1,61 @@
+.TH "FLASH_EraseInitTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_EraseInitTypeDef \- FLASH Erase structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_flash_ex\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint32_t \fBTypeErase\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBBanks\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSector\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBNbSectors\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBVoltageRange\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+FLASH Erase structure definition 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 47 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t Banks"
+Select banks to erase when Mass erase is enabled\&. This parameter must be a value of \fBFLASH Banks\fP 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 52 行定义\&.
+.SS "uint32_t NbSectors"
+Number of sectors to be erased\&. This parameter must be a value between 1 and (max number of sectors - value of Initial sector) 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 58 行定义\&.
+.SS "uint32_t Sector"
+Initial FLASH sector to erase when Mass erase is disabled This parameter must be a value of \fBFLASH Sectors\fP 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 55 行定义\&.
+.SS "uint32_t TypeErase"
+Mass erase or sector Erase\&. This parameter can be a value of \fBFLASH Type Erase\fP 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 49 行定义\&.
+.SS "uint32_t VoltageRange"
+The device voltage range which defines the erase parallelism This parameter must be a value of \fBFLASH Voltage Range\fP 
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 61 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

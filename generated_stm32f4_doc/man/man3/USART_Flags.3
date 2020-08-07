@@ -1,0 +1,83 @@
+.TH "USART_Flags" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USART_Flags \- Elements values convention: 0xXXXX  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSART_FLAG_TXE\fP   ((uint32_t)USART_SR_TXE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_TC\fP   ((uint32_t)USART_SR_TC)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_RXNE\fP   ((uint32_t)USART_SR_RXNE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_IDLE\fP   ((uint32_t)USART_SR_IDLE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_ORE\fP   ((uint32_t)USART_SR_ORE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_NE\fP   ((uint32_t)USART_SR_NE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_FE\fP   ((uint32_t)USART_SR_FE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_FLAG_PE\fP   ((uint32_t)USART_SR_PE)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+Elements values convention: 0xXXXX 
+
+
+.IP "\(bu" 2
+0xXXXX : Flag mask in the SR register 
+.PP
+
+.SH "宏定义说明"
+.PP 
+.SS "#define USART_FLAG_FE   ((uint32_t)USART_SR_FE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 291 行定义\&.
+.SS "#define USART_FLAG_IDLE   ((uint32_t)USART_SR_IDLE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 288 行定义\&.
+.SS "#define USART_FLAG_NE   ((uint32_t)USART_SR_NE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 290 行定义\&.
+.SS "#define USART_FLAG_ORE   ((uint32_t)USART_SR_ORE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 289 行定义\&.
+.SS "#define USART_FLAG_PE   ((uint32_t)USART_SR_PE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 292 行定义\&.
+.SS "#define USART_FLAG_RXNE   ((uint32_t)USART_SR_RXNE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 287 行定义\&.
+.SS "#define USART_FLAG_TC   ((uint32_t)USART_SR_TC)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 286 行定义\&.
+.SS "#define USART_FLAG_TXE   ((uint32_t)USART_SR_TXE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 285 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

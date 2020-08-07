@@ -1,0 +1,55 @@
+.TH "PWR_register_alias_address" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWR_register_alias_address
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPWR_OFFSET\fP   (PWR_BASE \- PERIPH_BASE)"
+.br
+.ti -1c
+.RI "#define \fBPWR_CR_OFFSET\fP   0x00U"
+.br
+.ti -1c
+.RI "#define \fBPWR_CSR_OFFSET\fP   0x04U"
+.br
+.ti -1c
+.RI "#define \fBPWR_CR_OFFSET_BB\fP   (\fBPWR_OFFSET\fP + \fBPWR_CR_OFFSET\fP)"
+.br
+.ti -1c
+.RI "#define \fBPWR_CSR_OFFSET_BB\fP   (\fBPWR_OFFSET\fP + \fBPWR_CSR_OFFSET\fP)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define PWR_CR_OFFSET   0x00U"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 347 行定义\&.
+.SS "#define PWR_CR_OFFSET_BB   (\fBPWR_OFFSET\fP + \fBPWR_CR_OFFSET\fP)"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 349 行定义\&.
+.SS "#define PWR_CSR_OFFSET   0x04U"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 348 行定义\&.
+.SS "#define PWR_CSR_OFFSET_BB   (\fBPWR_OFFSET\fP + \fBPWR_CSR_OFFSET\fP)"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 350 行定义\&.
+.SS "#define PWR_OFFSET   (PWR_BASE \- PERIPH_BASE)"
+
+.PP
+在文件 stm32f4xx_hal_pwr\&.h 第 346 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

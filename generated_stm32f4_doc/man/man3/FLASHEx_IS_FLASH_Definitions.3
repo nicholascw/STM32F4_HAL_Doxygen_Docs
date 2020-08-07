@@ -1,0 +1,130 @@
+.TH "FLASHEx_IS_FLASH_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASHEx_IS_FLASH_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_FLASH_TYPEERASE\fP(VALUE)"
+.br
+.ti -1c
+.RI "#define \fBIS_VOLTAGERANGE\fP(RANGE)"
+.br
+.ti -1c
+.RI "#define \fBIS_WRPSTATE\fP(VALUE)"
+.br
+.ti -1c
+.RI "#define \fBIS_OPTIONBYTE\fP(VALUE)   (((VALUE) <= (\fBOPTIONBYTE_WRP\fP|\fBOPTIONBYTE_RDP\fP|\fBOPTIONBYTE_USER\fP|\fBOPTIONBYTE_BOR\fP)))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_RDP_LEVEL\fP(LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_IWDG_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_IWDG_SW\fP) || ((SOURCE) == \fBOB_IWDG_HW\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STOP_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STOP_NO_RST\fP) || ((SOURCE) == \fBOB_STOP_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_STDBY_SOURCE\fP(SOURCE)   (((SOURCE) == \fBOB_STDBY_NO_RST\fP) || ((SOURCE) == \fBOB_STDBY_RST\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_OB_BOR_LEVEL\fP(LEVEL)"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_ADDRESS\fP(ADDRESS)"
+.br
+.ti -1c
+.RI "#define \fBIS_FLASH_NBSECTORS\fP(NBSECTORS)   (((NBSECTORS) != 0) && ((NBSECTORS) <= FLASH_SECTOR_TOTAL))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define IS_FLASH_ADDRESS(ADDRESS)"
+\fB值:\fP
+.PP
+.nf
+                                   ((((ADDRESS) >= FLASH_BASE) && ((ADDRESS) <= FLASH_END)) || \
+                                   (((ADDRESS) >= FLASH_OTP_BASE) && ((ADDRESS) <= FLASH_OTP_END)))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 970 行定义\&.
+.SS "#define IS_FLASH_NBSECTORS(NBSECTORS)   (((NBSECTORS) != 0) && ((NBSECTORS) <= FLASH_SECTOR_TOTAL))"
+
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 973 行定义\&.
+.SS "#define IS_FLASH_TYPEERASE(VALUE)"
+\fB值:\fP
+.PP
+.nf
+                                  (((VALUE) == FLASH_TYPEERASE_SECTORS) || \
+                                  ((VALUE) == FLASH_TYPEERASE_MASSERASE))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 814 行定义\&.
+.SS "#define IS_OB_BOR_LEVEL(LEVEL)"
+\fB值:\fP
+.PP
+.nf
+                                (((LEVEL) == OB_BOR_LEVEL1) || ((LEVEL) == OB_BOR_LEVEL2) ||\
+                                ((LEVEL) == OB_BOR_LEVEL3) || ((LEVEL) == OB_BOR_OFF))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 837 行定义\&.
+.SS "#define IS_OB_IWDG_SOURCE(SOURCE)   (((SOURCE) == \fBOB_IWDG_SW\fP) || ((SOURCE) == \fBOB_IWDG_HW\fP))"
+
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 831 行定义\&.
+.SS "#define IS_OB_RDP_LEVEL(LEVEL)"
+\fB值:\fP
+.PP
+.nf
+                                (((LEVEL) == OB_RDP_LEVEL_0) ||\
+                                ((LEVEL) == OB_RDP_LEVEL_1) ||\
+                                ((LEVEL) == OB_RDP_LEVEL_2))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 827 行定义\&.
+.SS "#define IS_OB_STDBY_SOURCE(SOURCE)   (((SOURCE) == \fBOB_STDBY_NO_RST\fP) || ((SOURCE) == \fBOB_STDBY_RST\fP))"
+
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 835 行定义\&.
+.SS "#define IS_OB_STOP_SOURCE(SOURCE)   (((SOURCE) == \fBOB_STOP_NO_RST\fP) || ((SOURCE) == \fBOB_STOP_RST\fP))"
+
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 833 行定义\&.
+.SS "#define IS_OPTIONBYTE(VALUE)   (((VALUE) <= (\fBOPTIONBYTE_WRP\fP|\fBOPTIONBYTE_RDP\fP|\fBOPTIONBYTE_USER\fP|\fBOPTIONBYTE_BOR\fP)))"
+
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 825 行定义\&.
+.SS "#define IS_VOLTAGERANGE(RANGE)"
+\fB值:\fP
+.PP
+.nf
+                               (((RANGE) == FLASH_VOLTAGE_RANGE_1) || \
+                               ((RANGE) == FLASH_VOLTAGE_RANGE_2) || \
+                               ((RANGE) == FLASH_VOLTAGE_RANGE_3) || \
+                               ((RANGE) == FLASH_VOLTAGE_RANGE_4))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 817 行定义\&.
+.SS "#define IS_WRPSTATE(VALUE)"
+\fB值:\fP
+.PP
+.nf
+                           (((VALUE) == OB_WRPSTATE_DISABLE) || \
+                           ((VALUE) == OB_WRPSTATE_ENABLE))
+.fi
+.PP
+在文件 stm32f4xx_hal_flash_ex\&.h 第 822 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,255 @@
+.TH "STM32F4xx_HAL_Driver" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+STM32F4xx_HAL_Driver
+.SH SYNOPSIS
+.br
+.PP
+.SS "模块"
+
+.in +1c
+.ti -1c
+.RI "\fBEXTI\fP"
+.br
+.RI "EXTI HAL module driver "
+.ti -1c
+.RI "\fBGPIOEx\fP"
+.br
+.ti -1c
+.RI "\fBIWDG\fP"
+.br
+.ti -1c
+.RI "\fBCAN\fP"
+.br
+.RI "CAN driver modules "
+.ti -1c
+.RI "\fBHAL\fP"
+.br
+.RI "HAL module driver\&. "
+.ti -1c
+.RI "\fBADC\fP"
+.br
+.RI "ADC driver modules "
+.ti -1c
+.RI "\fBADCEx\fP"
+.br
+.RI "ADC Extended driver modules "
+.ti -1c
+.RI "\fBCEC\fP"
+.br
+.RI "HAL CEC module driver "
+.ti -1c
+.RI "\fBCORTEX\fP"
+.br
+.RI "CORTEX HAL module driver "
+.ti -1c
+.RI "\fBCRC\fP"
+.br
+.RI "CRC HAL module driver\&. "
+.ti -1c
+.RI "\fBDAC\fP"
+.br
+.RI "DAC driver modules "
+.ti -1c
+.RI "\fBDACEx\fP"
+.br
+.RI "DAC driver modules "
+.ti -1c
+.RI "\fBDCMI\fP"
+.br
+.RI "DCMI HAL module driver "
+.ti -1c
+.RI "\fBDCMIEx\fP"
+.br
+.RI "DCMI Extended HAL module driver "
+.ti -1c
+.RI "\fBDMA\fP"
+.br
+.RI "DMA HAL module driver "
+.ti -1c
+.RI "\fBDMAEx\fP"
+.br
+.RI "DMA Extended HAL module driver "
+.ti -1c
+.RI "\fBETH\fP"
+.br
+.RI "ETH HAL module driver "
+.ti -1c
+.RI "\fBFLASH\fP"
+.br
+.RI "FLASH HAL module driver "
+.ti -1c
+.RI "\fBFLASHEx\fP"
+.br
+.RI "FLASH HAL Extension module driver "
+.ti -1c
+.RI "\fBFLASH RAMFUNC\fP"
+.br
+.RI "FLASH functions executed from RAM "
+.ti -1c
+.RI "\fBFMPI2C\fP"
+.br
+.RI "FMPI2C HAL module driver "
+.ti -1c
+.RI "\fBFMPI2CEx\fP"
+.br
+.RI "FMPI2C Extended HAL module driver "
+.ti -1c
+.RI "\fBGPIO\fP"
+.br
+.RI "GPIO HAL module driver "
+.ti -1c
+.RI "\fBI2C\fP"
+.br
+.RI "I2C HAL module driver "
+.ti -1c
+.RI "\fBI2CEx\fP"
+.br
+.RI "I2C HAL module driver "
+.ti -1c
+.RI "\fBIRDA\fP"
+.br
+.RI "HAL IRDA module driver "
+.ti -1c
+.RI "\fBLPTIM\fP"
+.br
+.RI "LPTIM HAL module driver\&. "
+.ti -1c
+.RI "\fBHAL MSP\fP"
+.br
+.RI "HAL MSP module\&. "
+.ti -1c
+.RI "\fBNOR\fP"
+.br
+.RI "NOR driver modules "
+.ti -1c
+.RI "\fBPCD\fP"
+.br
+.RI "PCD HAL module driver "
+.ti -1c
+.RI "\fBPCDEx\fP"
+.br
+.RI "PCD Extended HAL module driver "
+.ti -1c
+.RI "\fBPWR\fP"
+.br
+.RI "PWR HAL module driver "
+.ti -1c
+.RI "\fBPWREx\fP"
+.br
+.RI "PWR HAL module driver "
+.ti -1c
+.RI "\fBQSPI\fP"
+.br
+.RI "QSPI HAL module driver "
+.ti -1c
+.RI "\fBRCC\fP"
+.br
+.RI "RCC HAL module driver "
+.ti -1c
+.RI "\fBRCCEx\fP"
+.br
+.RI "RCCEx HAL module driver "
+.ti -1c
+.RI "\fBRTC\fP"
+.br
+.RI "RTC HAL module driver "
+.ti -1c
+.RI "\fBRTCEx\fP"
+.br
+.RI "RTC HAL module driver "
+.ti -1c
+.RI "\fBSAI\fP"
+.br
+.RI "SAI HAL module driver "
+.ti -1c
+.RI "\fBSAIEx\fP"
+.br
+.RI "SAI Extension HAL module driver "
+.ti -1c
+.RI "\fBSDRAM\fP"
+.br
+.RI "SDRAM driver modules "
+.ti -1c
+.RI "\fBSMARTCARD\fP"
+.br
+.RI "HAL SMARTCARD module driver "
+.ti -1c
+.RI "\fBSMBUS\fP"
+.br
+.RI "SMBUS HAL module driver "
+.ti -1c
+.RI "\fBSPDIFRX\fP"
+.br
+.RI "SPDIFRX HAL module driver "
+.ti -1c
+.RI "\fBSPI\fP"
+.br
+.RI "SPI HAL module driver "
+.ti -1c
+.RI "\fBSRAM\fP"
+.br
+.RI "SRAM driver modules "
+.ti -1c
+.RI "\fBTIM\fP"
+.br
+.RI "TIM HAL module driver "
+.ti -1c
+.RI "\fBTIMEx\fP"
+.br
+.RI "TIM Extended HAL module driver "
+.ti -1c
+.RI "\fBHAL TimeBase RTC Alarm Template\fP"
+.br
+.ti -1c
+.RI "\fBHAL TimeBase RTC WakeUp Template\fP"
+.br
+.ti -1c
+.RI "\fBUART\fP"
+.br
+.RI "HAL UART module driver "
+.ti -1c
+.RI "\fBUSART\fP"
+.br
+.RI "HAL USART Synchronous module driver "
+.ti -1c
+.RI "\fBFMC Low Layer\fP"
+.br
+.RI "FMC driver modules "
+.ti -1c
+.RI "\fBFSMC Low Layer\fP"
+.br
+.RI "FSMC driver modules "
+.ti -1c
+.RI "\fBSDMMC Low Layer\fP"
+.br
+.RI "Low layer module for SD "
+.ti -1c
+.RI "\fBCRYPEx\fP"
+.br
+.ti -1c
+.RI "\fBI2S\fP"
+.br
+.ti -1c
+.RI "\fBNAND\fP"
+.br
+.ti -1c
+.RI "\fBWWDG\fP"
+.br
+.ti -1c
+.RI "\fBMMC\fP"
+.br
+.ti -1c
+.RI "\fBSD\fP"
+.br
+.ti -1c
+.RI "\fBHAL_TimeBase_TIM\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,50 @@
+.TH "GPIO_pull_define" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GPIO_pull_define \- GPIO Pull-Up or Pull-Down Activation  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGPIO_NOPULL\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PULLUP\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBGPIO_PULLDOWN\fP   0x00000002U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+GPIO Pull-Up or Pull-Down Activation 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define GPIO_NOPULL   0x00000000U"
+No Pull-up or Pull-down activation 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 155 行定义\&.
+.SS "#define GPIO_PULLDOWN   0x00000002U"
+Pull-down activation 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 157 行定义\&.
+.SS "#define GPIO_PULLUP   0x00000001U"
+Pull-up activation 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_gpio\&.h 第 156 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

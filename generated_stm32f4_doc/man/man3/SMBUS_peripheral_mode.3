@@ -1,0 +1,41 @@
+.TH "SMBUS_peripheral_mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SMBUS_peripheral_mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSMBUS_PERIPHERAL_MODE_SMBUS_HOST\fP   (uint32_t)(I2C_CR1_SMBUS | I2C_CR1_SMBTYPE | I2C_CR1_ENARP)"
+.br
+.ti -1c
+.RI "#define \fBSMBUS_PERIPHERAL_MODE_SMBUS_SLAVE\fP   I2C_CR1_SMBUS"
+.br
+.ti -1c
+.RI "#define \fBSMBUS_PERIPHERAL_MODE_SMBUS_SLAVE_ARP\fP   (uint32_t)(I2C_CR1_SMBUS | I2C_CR1_ENARP)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define SMBUS_PERIPHERAL_MODE_SMBUS_HOST   (uint32_t)(I2C_CR1_SMBUS | I2C_CR1_SMBTYPE | I2C_CR1_ENARP)"
+
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 314 行定义\&.
+.SS "#define SMBUS_PERIPHERAL_MODE_SMBUS_SLAVE   I2C_CR1_SMBUS"
+
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 315 行定义\&.
+.SS "#define SMBUS_PERIPHERAL_MODE_SMBUS_SLAVE_ARP   (uint32_t)(I2C_CR1_SMBUS | I2C_CR1_ENARP)"
+
+.PP
+在文件 stm32f4xx_hal_smbus\&.h 第 316 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

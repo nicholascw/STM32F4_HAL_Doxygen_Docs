@@ -1,0 +1,41 @@
+.TH "USART_Mode" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USART_Mode
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBUSART_MODE_RX\fP   ((uint32_t)USART_CR1_RE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_MODE_TX\fP   ((uint32_t)USART_CR1_TE)"
+.br
+.ti -1c
+.RI "#define \fBUSART_MODE_TX_RX\fP   ((uint32_t)(USART_CR1_TE | USART_CR1_RE))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define USART_MODE_RX   ((uint32_t)USART_CR1_RE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 228 行定义\&.
+.SS "#define USART_MODE_TX   ((uint32_t)USART_CR1_TE)"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 229 行定义\&.
+.SS "#define USART_MODE_TX_RX   ((uint32_t)(USART_CR1_TE | USART_CR1_RE))"
+
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 230 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,62 @@
+.TH "src/stm32f4xx_hal_fmpi2c_ex.c" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stm32f4xx_hal_fmpi2c_ex.c \- FMPI2C Extended HAL module driver\&. This file provides firmware functions to manage the following functionalities of FMPI2C Extended peripheral:  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+
+.SH "详细描述"
+.PP 
+FMPI2C Extended HAL module driver\&. This file provides firmware functions to manage the following functionalities of FMPI2C Extended peripheral: 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team
+.IP "\(bu" 2
+Extended features functions
+.PP
+.RE
+.PP
+.PP
+.nf
+==============================================================================
+             ##### FMPI2C peripheral Extended features  #####
+==============================================================================
+
+[..] Comparing to other previous devices, the FMPI2C interface for STM32F4xx
+     devices contains the following additional features
+
+     (+) Possibility to disable or enable Analog Noise Filter
+     (+) Use of a configured Digital Noise Filter
+     (+) Disable or enable Fast Mode Plus
+
+                   ##### How to use this driver #####
+==============================================================================
+[..] This driver provides functions to:
+  (#) Configure FMPI2C Analog noise filter using the function HAL_FMPI2CEx_ConfigAnalogFilter()
+  (#) Configure FMPI2C Digital noise filter using the function HAL_FMPI2CEx_ConfigDigitalFilter()
+  (#) Configure the enable or disable of fast mode plus driving capability using the functions :
+        (++) HAL_FMPI2CEx_EnableFastModePlus()
+        (++) HAL_FMPI2CEx_DisableFastModePlus()
+.fi
+.PP
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2016 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal_fmpi2c_ex\&.c\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,68 @@
+.TH "PWREx_Exported_Constants" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+PWREx_Exported_Constants
+.SH SYNOPSIS
+.br
+.PP
+.SS "模块"
+
+.in +1c
+.ti -1c
+.RI "\fBPWREx Regulator Voltage Scale\fP"
+.br
+.in -1c
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_PWR_VOLTAGESCALING_CONFIG\fP(__REGULATOR__)"
+.br
+.RI "macros configure the main internal regulator output voltage\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_PWR_VOLTAGESCALING_CONFIG(__REGULATOR__)"
+\fB值:\fP
+.PP
+.nf
+                                                            do {                                                     \
+                                                            __IO uint32_t tmpreg = 0x00U;                        \
+                                                            MODIFY_REG(PWR->CR, PWR_CR_VOS, (__REGULATOR__));   \
+                                                            /* Delay after an RCC peripheral clock enabling */  \
+                                                            tmpreg = READ_BIT(PWR->CR, PWR_CR_VOS);             \
+                                                            UNUSED(tmpreg);                                     \
+                                                          } while(0U)
+.fi
+.PP
+macros configure the main internal regulator output voltage\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>REGULATOR</strong>\fP specifies the regulator output voltage to achieve a tradeoff between performance and power consumption when the device does not operate at the maximum frequency (refer to the datasheets for more details)\&. This parameter can be one of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+PWR_REGULATOR_VOLTAGE_SCALE1: Regulator voltage output Scale 1 mode 
+.IP "\(bu" 2
+PWR_REGULATOR_VOLTAGE_SCALE2: Regulator voltage output Scale 2 mode 
+.IP "\(bu" 2
+PWR_REGULATOR_VOLTAGE_SCALE3: Regulator voltage output Scale 3 mode 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_pwr_ex\&.h 第 136 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

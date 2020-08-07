@@ -1,0 +1,36 @@
+.TH "RTCEx_Smooth_calib_Plus_pulses_Definitions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Smooth_calib_Plus_pulses_Definitions
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBRTC_SMOOTHCALIB_PLUSPULSES_SET\fP   0x00008000U"
+.br
+.ti -1c
+.RI "#define \fBRTC_SMOOTHCALIB_PLUSPULSES_RESET\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define RTC_SMOOTHCALIB_PLUSPULSES_RESET   0x00000000U"
+The number of RTCCLK pulses subbstited during a 32-second window = CALM[8:0] 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 280 行定义\&.
+.SS "#define RTC_SMOOTHCALIB_PLUSPULSES_SET   0x00008000U"
+The number of RTCCLK pulses added 
+.br
+ during a X -second window = Y - CALM[8:0] with Y = 512, 256, 128 when X = 32, 16, 8 
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 278 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

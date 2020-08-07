@@ -1,0 +1,48 @@
+.TH "TIM_ETR_Prescaler" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_ETR_Prescaler
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_ETRPRESCALER_DIV1\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBTIM_ETRPRESCALER_DIV2\fP   TIM_SMCR_ETPS_0"
+.br
+.ti -1c
+.RI "#define \fBTIM_ETRPRESCALER_DIV4\fP   TIM_SMCR_ETPS_1"
+.br
+.ti -1c
+.RI "#define \fBTIM_ETRPRESCALER_DIV8\fP   TIM_SMCR_ETPS"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_ETRPRESCALER_DIV1   0x00000000U"
+No prescaler is used 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 479 行定义\&.
+.SS "#define TIM_ETRPRESCALER_DIV2   TIM_SMCR_ETPS_0"
+ETR input source is divided by 2 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 480 行定义\&.
+.SS "#define TIM_ETRPRESCALER_DIV4   TIM_SMCR_ETPS_1"
+ETR input source is divided by 4 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 481 行定义\&.
+.SS "#define TIM_ETRPRESCALER_DIV8   TIM_SMCR_ETPS"
+ETR input source is divided by 8 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 482 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

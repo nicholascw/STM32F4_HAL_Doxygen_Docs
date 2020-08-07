@@ -1,0 +1,70 @@
+.TH "TIM_Private_Functions" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Private_Functions
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBTIM_Base_SetConfig\fP (TIM_TypeDef *TIMx, \fBTIM_Base_InitTypeDef\fP *Structure)"
+.br
+.ti -1c
+.RI "void \fBTIM_TI1_SetConfig\fP (TIM_TypeDef *TIMx, uint32_t TIM_ICPolarity, uint32_t TIM_ICSelection, uint32_t TIM_ICFilter)"
+.br
+.ti -1c
+.RI "void \fBTIM_OC2_SetConfig\fP (TIM_TypeDef *TIMx, \fBTIM_OC_InitTypeDef\fP *OC_Config)"
+.br
+.ti -1c
+.RI "void \fBTIM_ETR_SetConfig\fP (TIM_TypeDef *TIMx, uint32_t TIM_ExtTRGPrescaler, uint32_t TIM_ExtTRGPolarity, uint32_t ExtTRGFilter)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMADelayPulseCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMADelayPulseHalfCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMAError\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMACaptureCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_DMACaptureHalfCplt\fP (\fBDMA_HandleTypeDef\fP *hdma)"
+.br
+.ti -1c
+.RI "void \fBTIM_CCxChannelCmd\fP (TIM_TypeDef *TIMx, uint32_t Channel, uint32_t ChannelState)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "void TIM_Base_SetConfig (TIM_TypeDef * TIMx, \fBTIM_Base_InitTypeDef\fP * Structure)"
+
+.SS "void TIM_CCxChannelCmd (TIM_TypeDef * TIMx, uint32_t Channel, uint32_t ChannelState)"
+
+.SS "void TIM_DMACaptureCplt (\fBDMA_HandleTypeDef\fP * hdma)"
+
+.SS "void TIM_DMACaptureHalfCplt (\fBDMA_HandleTypeDef\fP * hdma)"
+
+.SS "void TIM_DMADelayPulseCplt (\fBDMA_HandleTypeDef\fP * hdma)"
+
+.SS "void TIM_DMADelayPulseHalfCplt (\fBDMA_HandleTypeDef\fP * hdma)"
+
+.SS "void TIM_DMAError (\fBDMA_HandleTypeDef\fP * hdma)"
+
+.SS "void TIM_ETR_SetConfig (TIM_TypeDef * TIMx, uint32_t TIM_ExtTRGPrescaler, uint32_t TIM_ExtTRGPolarity, uint32_t ExtTRGFilter)"
+
+.SS "void TIM_OC2_SetConfig (TIM_TypeDef * TIMx, \fBTIM_OC_InitTypeDef\fP * OC_Config)"
+
+.SS "void TIM_TI1_SetConfig (TIM_TypeDef * TIMx, uint32_t TIM_ICPolarity, uint32_t TIM_ICSelection, uint32_t TIM_ICFilter)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

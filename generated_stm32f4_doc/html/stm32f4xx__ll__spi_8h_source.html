@@ -1,0 +1,853 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32F4_HAL: inc/stm32f4xx_ll_spi.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32F4_HAL
+   &#160;<span id="projectnumber">1.24.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stm32f4xx__ll__spi_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stm32f4xx_ll_spi.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stm32f4xx__ll__spi_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef STM32F4xx_LL_SPI_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define STM32F4xx_LL_SPI_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;stm32f4xx.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#if defined (SPI1) || defined (SPI2) || defined (SPI3) || defined (SPI4) || defined (SPI5) || defined(SPI6)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* Private types -------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">/* Private macros ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">/* Exported types ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  uint32_t TransferDirection;       </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  uint32_t Mode;                    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  uint32_t DataWidth;               </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  uint32_t ClockPolarity;           </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  uint32_t ClockPhase;              </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  uint32_t NSS;                     </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  uint32_t BaudRate;                </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  uint32_t BitOrder;                </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  uint32_t CRCCalculation;          </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  uint32_t CRCPoly;                 </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} LL_SPI_InitTypeDef;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_FULL_LL_DRIVER */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment">/* Exported constants --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#define LL_SPI_SR_RXNE                     SPI_SR_RXNE               </span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#define LL_SPI_SR_TXE                      SPI_SR_TXE                </span></div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">#define LL_SPI_SR_BSY                      SPI_SR_BSY                </span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#define LL_SPI_SR_CRCERR                   SPI_SR_CRCERR             </span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">#define LL_SPI_SR_MODF                     SPI_SR_MODF               </span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#define LL_SPI_SR_OVR                      SPI_SR_OVR                </span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#define LL_SPI_SR_FRE                      SPI_SR_FRE                </span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#define LL_SPI_CR2_RXNEIE                  SPI_CR2_RXNEIE            </span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#define LL_SPI_CR2_TXEIE                   SPI_CR2_TXEIE             </span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#define LL_SPI_CR2_ERRIE                   SPI_CR2_ERRIE             </span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor">#define LL_SPI_MODE_MASTER                 (SPI_CR1_MSTR | SPI_CR1_SSI)    </span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="preprocessor">#define LL_SPI_MODE_SLAVE                  0x00000000U                     </span></div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#define LL_SPI_PROTOCOL_MOTOROLA           0x00000000U               </span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#define LL_SPI_PROTOCOL_TI                 (SPI_CR2_FRF)             </span></div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#define LL_SPI_PHASE_1EDGE                 0x00000000U               </span></div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;<span class="preprocessor">#define LL_SPI_PHASE_2EDGE                 (SPI_CR1_CPHA)            </span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="preprocessor">#define LL_SPI_POLARITY_LOW                0x00000000U               </span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#define LL_SPI_POLARITY_HIGH               (SPI_CR1_CPOL)            </span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV2      0x00000000U                                    </span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV4      (SPI_CR1_BR_0)                                 </span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV8      (SPI_CR1_BR_1)                                 </span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV16     (SPI_CR1_BR_1 | SPI_CR1_BR_0)                  </span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV32     (SPI_CR1_BR_2)                                 </span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV64     (SPI_CR1_BR_2 | SPI_CR1_BR_0)                  </span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV128    (SPI_CR1_BR_2 | SPI_CR1_BR_1)                  </span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#define LL_SPI_BAUDRATEPRESCALER_DIV256    (SPI_CR1_BR_2 | SPI_CR1_BR_1 | SPI_CR1_BR_0)   </span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor">#define LL_SPI_LSB_FIRST                   (SPI_CR1_LSBFIRST)        </span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="preprocessor">#define LL_SPI_MSB_FIRST                   0x00000000U               </span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="preprocessor">#define LL_SPI_FULL_DUPLEX                 0x00000000U                          </span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="preprocessor">#define LL_SPI_SIMPLEX_RX                  (SPI_CR1_RXONLY)                     </span></div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#define LL_SPI_HALF_DUPLEX_RX              (SPI_CR1_BIDIMODE)                   </span></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="preprocessor">#define LL_SPI_HALF_DUPLEX_TX              (SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE)  </span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#define LL_SPI_NSS_SOFT                    (SPI_CR1_SSM)                     </span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#define LL_SPI_NSS_HARD_INPUT              0x00000000U                       </span></div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#define LL_SPI_NSS_HARD_OUTPUT             (((uint32_t)SPI_CR2_SSOE &lt;&lt; 16U)) </span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#define LL_SPI_DATAWIDTH_8BIT              0x00000000U                       </span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="preprocessor">#define LL_SPI_DATAWIDTH_16BIT             (SPI_CR1_DFF)                     </span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#define LL_SPI_CRCCALCULATION_DISABLE      0x00000000U               </span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="preprocessor">#define LL_SPI_CRCCALCULATION_ENABLE       (SPI_CR1_CRCEN)           </span></div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_FULL_LL_DRIVER */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="comment">/* Exported macro ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">#define LL_SPI_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__-&gt;__REG__, (__VALUE__))</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#define LL_SPI_ReadReg(__INSTANCE__, __REG__) READ_REG(__INSTANCE__-&gt;__REG__)</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="comment">/* Exported functions --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_Enable(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  SET_BIT(SPIx-&gt;CR1, SPI_CR1_SPE);</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_Disable(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  CLEAR_BIT(SPIx-&gt;CR1, SPI_CR1_SPE);</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabled(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;{</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR1, SPI_CR1_SPE) == (SPI_CR1_SPE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;}</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetMode(SPI_TypeDef *SPIx, uint32_t Mode)</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;{</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_MSTR | SPI_CR1_SSI, Mode);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160; </div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetMode(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_MSTR | SPI_CR1_SSI));</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;}</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetStandard(SPI_TypeDef *SPIx, uint32_t Standard)</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;{</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;  MODIFY_REG(SPIx-&gt;CR2, SPI_CR2_FRF, Standard);</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetStandard(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;{</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR2, SPI_CR2_FRF));</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetClockPhase(SPI_TypeDef *SPIx, uint32_t ClockPhase)</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;{</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_CPHA, ClockPhase);</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetClockPhase(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_CPHA));</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;}</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetClockPolarity(SPI_TypeDef *SPIx, uint32_t ClockPolarity)</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;{</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_CPOL, ClockPolarity);</div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;}</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetClockPolarity(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;{</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_CPOL));</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;}</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160; </div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetBaudRatePrescaler(SPI_TypeDef *SPIx, uint32_t BaudRate)</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;{</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_BR, BaudRate);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;}</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetBaudRatePrescaler(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;{</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_BR));</div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;}</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160; </div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetTransferBitOrder(SPI_TypeDef *SPIx, uint32_t BitOrder)</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;{</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_LSBFIRST, BitOrder);</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetTransferBitOrder(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;{</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_LSBFIRST));</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetTransferDirection(SPI_TypeDef *SPIx, uint32_t TransferDirection)</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;{</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_RXONLY | SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE, TransferDirection);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;}</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160; </div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetTransferDirection(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;{</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_RXONLY | SPI_CR1_BIDIMODE | SPI_CR1_BIDIOE));</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;}</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160; </div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetDataWidth(SPI_TypeDef *SPIx, uint32_t DataWidth)</div>
+<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;{</div>
+<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_DFF, DataWidth);</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;}</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160; </div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetDataWidth(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;{</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;CR1, SPI_CR1_DFF));</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;}</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableCRC(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;{</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;  SET_BIT(SPIx-&gt;CR1, SPI_CR1_CRCEN);</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;}</div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableCRC(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;{</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  CLEAR_BIT(SPIx-&gt;CR1, SPI_CR1_CRCEN);</div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;}</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledCRC(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;{</div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR1, SPI_CR1_CRCEN) == (SPI_CR1_CRCEN)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;}</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160; </div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetCRCNext(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;{</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  SET_BIT(SPIx-&gt;CR1, SPI_CR1_CRCNEXT);</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;}</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160; </div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetCRCPolynomial(SPI_TypeDef *SPIx, uint32_t CRCPoly)</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;{</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;  WRITE_REG(SPIx-&gt;CRCPR, (uint16_t)CRCPoly);</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;}</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160; </div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetCRCPolynomial(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;{</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_REG(SPIx-&gt;CRCPR));</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;}</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetRxCRC(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;{</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_REG(SPIx-&gt;RXCRCR));</div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;}</div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160; </div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetTxCRC(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;{</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_REG(SPIx-&gt;TXCRCR));</div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;}</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_SetNSSMode(SPI_TypeDef *SPIx, uint32_t NSS)</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;{</div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  MODIFY_REG(SPIx-&gt;CR1, SPI_CR1_SSM,  NSS);</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  MODIFY_REG(SPIx-&gt;CR2, SPI_CR2_SSOE, ((uint32_t)(NSS &gt;&gt; 16U)));</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;}</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;__STATIC_INLINE uint32_t LL_SPI_GetNSSMode(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;{</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  <span class="keyword">register</span> uint32_t Ssm  = (READ_BIT(SPIx-&gt;CR1, SPI_CR1_SSM));</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  <span class="keyword">register</span> uint32_t Ssoe = (READ_BIT(SPIx-&gt;CR2,  SPI_CR2_SSOE) &lt;&lt; 16U);</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  <span class="keywordflow">return</span> (Ssm | Ssoe);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;}</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;{</div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_RXNE) == (SPI_SR_RXNE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;}</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;{</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_TXE) == (SPI_SR_TXE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;}</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_CRCERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;{</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_CRCERR) == (SPI_SR_CRCERR)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;}</div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160; </div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_MODF(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;{</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_MODF) == (SPI_SR_MODF)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;}</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_OVR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;{</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_OVR) == (SPI_SR_OVR)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;}</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160; </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_BSY(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;{</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_BSY) == (SPI_SR_BSY)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;}</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsActiveFlag_FRE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;{</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_FRE) == (SPI_SR_FRE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;}</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160; </div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_ClearFlag_CRCERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;{</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;  CLEAR_BIT(SPIx-&gt;SR, SPI_SR_CRCERR);</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;}</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_ClearFlag_MODF(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;{</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;  __IO uint32_t tmpreg_sr;</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;  tmpreg_sr = SPIx-&gt;SR;</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;  (void) tmpreg_sr;</div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;  CLEAR_BIT(SPIx-&gt;CR1, SPI_CR1_SPE);</div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;}</div>
+<div class="line"><a name="l00836"></a><span class="lineno">  836</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_ClearFlag_OVR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;{</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;  __IO uint32_t tmpreg;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;  tmpreg = SPIx-&gt;DR;</div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;  (void) tmpreg;</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;  tmpreg = SPIx-&gt;SR;</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;  (void) tmpreg;</div>
+<div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;}</div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160; </div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_ClearFlag_FRE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;{</div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;  __IO uint32_t tmpreg;</div>
+<div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;  tmpreg = SPIx-&gt;SR;</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;  (void) tmpreg;</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;}</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160; </div>
+<div class="line"><a name="l00883"></a><span class="lineno">  883</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00884"></a><span class="lineno">  884</span>&#160;{</div>
+<div class="line"><a name="l00885"></a><span class="lineno">  885</span>&#160;  SET_BIT(SPIx-&gt;CR2, SPI_CR2_ERRIE);</div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;}</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160; </div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00895"></a><span class="lineno">  895</span>&#160;{</div>
+<div class="line"><a name="l00896"></a><span class="lineno">  896</span>&#160;  SET_BIT(SPIx-&gt;CR2, SPI_CR2_RXNEIE);</div>
+<div class="line"><a name="l00897"></a><span class="lineno">  897</span>&#160;}</div>
+<div class="line"><a name="l00898"></a><span class="lineno">  898</span>&#160; </div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;{</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;  SET_BIT(SPIx-&gt;CR2, SPI_CR2_TXEIE);</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;}</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;{</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;  CLEAR_BIT(SPIx-&gt;CR2, SPI_CR2_ERRIE);</div>
+<div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;}</div>
+<div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160; </div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;{</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;  CLEAR_BIT(SPIx-&gt;CR2, SPI_CR2_RXNEIE);</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;}</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
+<div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;{</div>
+<div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;  CLEAR_BIT(SPIx-&gt;CR2, SPI_CR2_TXEIE);</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;}</div>
+<div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160; </div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;{</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR2, SPI_CR2_ERRIE) == (SPI_CR2_ERRIE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;}</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160; </div>
+<div class="line"><a name="l00961"></a><span class="lineno">  961</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00962"></a><span class="lineno">  962</span>&#160;{</div>
+<div class="line"><a name="l00963"></a><span class="lineno">  963</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR2, SPI_CR2_RXNEIE) == (SPI_CR2_RXNEIE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00964"></a><span class="lineno">  964</span>&#160;}</div>
+<div class="line"><a name="l00965"></a><span class="lineno">  965</span>&#160; </div>
+<div class="line"><a name="l00972"></a><span class="lineno">  972</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00973"></a><span class="lineno">  973</span>&#160;{</div>
+<div class="line"><a name="l00974"></a><span class="lineno">  974</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR2, SPI_CR2_TXEIE) == (SPI_CR2_TXEIE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l00975"></a><span class="lineno">  975</span>&#160;}</div>
+<div class="line"><a name="l00976"></a><span class="lineno">  976</span>&#160; </div>
+<div class="line"><a name="l00991"></a><span class="lineno">  991</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160;{</div>
+<div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;  SET_BIT(SPIx-&gt;CR2, SPI_CR2_RXDMAEN);</div>
+<div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;}</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160; </div>
+<div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;{</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;  CLEAR_BIT(SPIx-&gt;CR2, SPI_CR2_RXDMAEN);</div>
+<div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;}</div>
+<div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160; </div>
+<div class="line"><a name="l01013"></a><span class="lineno"> 1013</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01014"></a><span class="lineno"> 1014</span>&#160;{</div>
+<div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR2, SPI_CR2_RXDMAEN) == (SPI_CR2_RXDMAEN)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;}</div>
+<div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160; </div>
+<div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_EnableDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;{</div>
+<div class="line"><a name="l01026"></a><span class="lineno"> 1026</span>&#160;  SET_BIT(SPIx-&gt;CR2, SPI_CR2_TXDMAEN);</div>
+<div class="line"><a name="l01027"></a><span class="lineno"> 1027</span>&#160;}</div>
+<div class="line"><a name="l01028"></a><span class="lineno"> 1028</span>&#160; </div>
+<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_DisableDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160;{</div>
+<div class="line"><a name="l01037"></a><span class="lineno"> 1037</span>&#160;  CLEAR_BIT(SPIx-&gt;CR2, SPI_CR2_TXDMAEN);</div>
+<div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160;}</div>
+<div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160; </div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;__STATIC_INLINE uint32_t LL_SPI_IsEnabledDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;{</div>
+<div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;CR2, SPI_CR2_TXDMAEN) == (SPI_CR2_TXDMAEN)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;}</div>
+<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160; </div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;__STATIC_INLINE uint32_t LL_SPI_DMA_GetRegAddr(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160;{</div>
+<div class="line"><a name="l01059"></a><span class="lineno"> 1059</span>&#160;  <span class="keywordflow">return</span> (uint32_t) &amp; (SPIx-&gt;DR);</div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;}</div>
+<div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160; </div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;__STATIC_INLINE uint8_t LL_SPI_ReceiveData8(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;{</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;  <span class="keywordflow">return</span> (uint8_t)(READ_REG(SPIx-&gt;DR));</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;}</div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160; </div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;__STATIC_INLINE uint16_t LL_SPI_ReceiveData16(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;{</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;  <span class="keywordflow">return</span> (uint16_t)(READ_REG(SPIx-&gt;DR));</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;}</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160; </div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_TransmitData8(SPI_TypeDef *SPIx, uint8_t TxData)</div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;{</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;<span class="preprocessor">#if defined (__GNUC__)</span></div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;  __IO uint8_t *spidr = ((__IO uint8_t *)&amp;SPIx-&gt;DR);</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;  *spidr = TxData;</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;  *((__IO uint8_t *)&amp;SPIx-&gt;DR) = TxData;</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;}</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160; </div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_SPI_TransmitData16(SPI_TypeDef *SPIx, uint16_t TxData)</div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;{</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;<span class="preprocessor">#if defined (__GNUC__)</span></div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;  __IO uint16_t *spidr = ((__IO uint16_t *)&amp;SPIx-&gt;DR);</div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;  *spidr = TxData;</div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;  SPIx-&gt;DR = TxData;</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;}</div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160; </div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160; </div>
+<div class="line"><a name="l01134"></a><span class="lineno"> 1134</span>&#160;ErrorStatus LL_SPI_DeInit(SPI_TypeDef *SPIx);</div>
+<div class="line"><a name="l01135"></a><span class="lineno"> 1135</span>&#160;ErrorStatus LL_SPI_Init(SPI_TypeDef *SPIx, LL_SPI_InitTypeDef *SPI_InitStruct);</div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;<span class="keywordtype">void</span>        LL_SPI_StructInit(LL_SPI_InitTypeDef *SPI_InitStruct);</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160; </div>
+<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_FULL_LL_DRIVER */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160; </div>
+<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160;<span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01155"></a><span class="lineno"> 1155</span>&#160;<span class="comment">/* Private constants ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01156"></a><span class="lineno"> 1156</span>&#160;<span class="comment">/* Private macros ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01157"></a><span class="lineno"> 1157</span>&#160; </div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;<span class="comment">/* Exported types ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160; </div>
+<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;{</div>
+<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160;  uint32_t Mode;                    </div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;  uint32_t Standard;                </div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;  uint32_t DataFormat;              </div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;  uint32_t MCLKOutput;              </div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160;  uint32_t AudioFreq;               </div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;  uint32_t ClockPolarity;           </div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;} LL_I2S_InitTypeDef;</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160; </div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/*USE_FULL_LL_DRIVER*/</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160; </div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;<span class="comment">/* Exported constants --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;<span class="preprocessor">#define LL_I2S_SR_RXNE                     LL_SPI_SR_RXNE            </span></div>
+<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160;<span class="preprocessor">#define LL_I2S_SR_TXE                      LL_SPI_SR_TXE             </span></div>
+<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;<span class="preprocessor">#define LL_I2S_SR_BSY                      LL_SPI_SR_BSY             </span></div>
+<div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160;<span class="preprocessor">#define LL_I2S_SR_UDR                      SPI_SR_UDR                </span></div>
+<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;<span class="preprocessor">#define LL_I2S_SR_OVR                      LL_SPI_SR_OVR             </span></div>
+<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;<span class="preprocessor">#define LL_I2S_SR_FRE                      LL_SPI_SR_FRE             </span></div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;<span class="preprocessor">#define LL_I2S_CR2_RXNEIE                  LL_SPI_CR2_RXNEIE         </span></div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;<span class="preprocessor">#define LL_I2S_CR2_TXEIE                   LL_SPI_CR2_TXEIE          </span></div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;<span class="preprocessor">#define LL_I2S_CR2_ERRIE                   LL_SPI_CR2_ERRIE          </span></div>
+<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160;<span class="preprocessor">#define LL_I2S_DATAFORMAT_16B              0x00000000U                                   </span></div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;<span class="preprocessor">#define LL_I2S_DATAFORMAT_16B_EXTENDED     (SPI_I2SCFGR_CHLEN)                           </span></div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;<span class="preprocessor">#define LL_I2S_DATAFORMAT_24B              (SPI_I2SCFGR_CHLEN | SPI_I2SCFGR_DATLEN_0)    </span></div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;<span class="preprocessor">#define LL_I2S_DATAFORMAT_32B              (SPI_I2SCFGR_CHLEN | SPI_I2SCFGR_DATLEN_1)    </span></div>
+<div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160;<span class="preprocessor">#define LL_I2S_POLARITY_LOW                0x00000000U               </span></div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;<span class="preprocessor">#define LL_I2S_POLARITY_HIGH               (SPI_I2SCFGR_CKPOL)       </span></div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;<span class="preprocessor">#define LL_I2S_STANDARD_PHILIPS            0x00000000U                                                         </span></div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;<span class="preprocessor">#define LL_I2S_STANDARD_MSB                (SPI_I2SCFGR_I2SSTD_0)                                              </span></div>
+<div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;<span class="preprocessor">#define LL_I2S_STANDARD_LSB                (SPI_I2SCFGR_I2SSTD_1)                                              </span></div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;<span class="preprocessor">#define LL_I2S_STANDARD_PCM_SHORT          (SPI_I2SCFGR_I2SSTD_0 | SPI_I2SCFGR_I2SSTD_1)                       </span></div>
+<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;<span class="preprocessor">#define LL_I2S_STANDARD_PCM_LONG           (SPI_I2SCFGR_I2SSTD_0 | SPI_I2SCFGR_I2SSTD_1 | SPI_I2SCFGR_PCMSYNC) </span></div>
+<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;<span class="preprocessor">#define LL_I2S_MODE_SLAVE_TX               0x00000000U                                   </span></div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;<span class="preprocessor">#define LL_I2S_MODE_SLAVE_RX               (SPI_I2SCFGR_I2SCFG_0)                        </span></div>
+<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;<span class="preprocessor">#define LL_I2S_MODE_MASTER_TX              (SPI_I2SCFGR_I2SCFG_1)                        </span></div>
+<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160;<span class="preprocessor">#define LL_I2S_MODE_MASTER_RX              (SPI_I2SCFGR_I2SCFG_0 | SPI_I2SCFGR_I2SCFG_1) </span></div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;<span class="preprocessor">#define LL_I2S_PRESCALER_PARITY_EVEN       0x00000000U               </span></div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;<span class="preprocessor">#define LL_I2S_PRESCALER_PARITY_ODD        (SPI_I2SPR_ODD &gt;&gt; 8U)     </span></div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160; </div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;<span class="preprocessor">#define LL_I2S_MCLK_OUTPUT_DISABLE         0x00000000U               </span></div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;<span class="preprocessor">#define LL_I2S_MCLK_OUTPUT_ENABLE          (SPI_I2SPR_MCKOE)         </span></div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_192K              192000U       </span></div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_96K               96000U        </span></div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_48K               48000U        </span></div>
+<div class="line"><a name="l01312"></a><span class="lineno"> 1312</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_44K               44100U        </span></div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_32K               32000U        </span></div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_22K               22050U        </span></div>
+<div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_16K               16000U        </span></div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_11K               11025U        </span></div>
+<div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_8K                8000U         </span></div>
+<div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160;<span class="preprocessor">#define LL_I2S_AUDIOFREQ_DEFAULT           2U            </span></div>
+<div class="line"><a name="l01322"></a><span class="lineno"> 1322</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_FULL_LL_DRIVER */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01323"></a><span class="lineno"> 1323</span>&#160; </div>
+<div class="line"><a name="l01328"></a><span class="lineno"> 1328</span>&#160;<span class="comment">/* Exported macro ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01344"></a><span class="lineno"> 1344</span>&#160;<span class="preprocessor">#define LL_I2S_WriteReg(__INSTANCE__, __REG__, __VALUE__) WRITE_REG(__INSTANCE__-&gt;__REG__, (__VALUE__))</span></div>
+<div class="line"><a name="l01345"></a><span class="lineno"> 1345</span>&#160; </div>
+<div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;<span class="preprocessor">#define LL_I2S_ReadReg(__INSTANCE__, __REG__) READ_REG(__INSTANCE__-&gt;__REG__)</span></div>
+<div class="line"><a name="l01353"></a><span class="lineno"> 1353</span>&#160; </div>
+<div class="line"><a name="l01362"></a><span class="lineno"> 1362</span>&#160;<span class="comment">/* Exported functions --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l01363"></a><span class="lineno"> 1363</span>&#160; </div>
+<div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_Enable(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;{</div>
+<div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160;  SET_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SMOD | SPI_I2SCFGR_I2SE);</div>
+<div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;}</div>
+<div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160; </div>
+<div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_Disable(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;{</div>
+<div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;  CLEAR_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SMOD | SPI_I2SCFGR_I2SE);</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;}</div>
+<div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160; </div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabled(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;{</div>
+<div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SE) == (SPI_I2SCFGR_I2SE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01404"></a><span class="lineno"> 1404</span>&#160;}</div>
+<div class="line"><a name="l01405"></a><span class="lineno"> 1405</span>&#160; </div>
+<div class="line"><a name="l01418"></a><span class="lineno"> 1418</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetDataFormat(SPI_TypeDef *SPIx, uint32_t DataFormat)</div>
+<div class="line"><a name="l01419"></a><span class="lineno"> 1419</span>&#160;{</div>
+<div class="line"><a name="l01420"></a><span class="lineno"> 1420</span>&#160;  MODIFY_REG(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_DATLEN | SPI_I2SCFGR_CHLEN, DataFormat);</div>
+<div class="line"><a name="l01421"></a><span class="lineno"> 1421</span>&#160;}</div>
+<div class="line"><a name="l01422"></a><span class="lineno"> 1422</span>&#160; </div>
+<div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetDataFormat(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01435"></a><span class="lineno"> 1435</span>&#160;{</div>
+<div class="line"><a name="l01436"></a><span class="lineno"> 1436</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_DATLEN | SPI_I2SCFGR_CHLEN));</div>
+<div class="line"><a name="l01437"></a><span class="lineno"> 1437</span>&#160;}</div>
+<div class="line"><a name="l01438"></a><span class="lineno"> 1438</span>&#160; </div>
+<div class="line"><a name="l01448"></a><span class="lineno"> 1448</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetClockPolarity(SPI_TypeDef *SPIx, uint32_t ClockPolarity)</div>
+<div class="line"><a name="l01449"></a><span class="lineno"> 1449</span>&#160;{</div>
+<div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;  SET_BIT(SPIx-&gt;I2SCFGR, ClockPolarity);</div>
+<div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;}</div>
+<div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160; </div>
+<div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetClockPolarity(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;{</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_CKPOL));</div>
+<div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;}</div>
+<div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160; </div>
+<div class="line"><a name="l01479"></a><span class="lineno"> 1479</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetStandard(SPI_TypeDef *SPIx, uint32_t Standard)</div>
+<div class="line"><a name="l01480"></a><span class="lineno"> 1480</span>&#160;{</div>
+<div class="line"><a name="l01481"></a><span class="lineno"> 1481</span>&#160;  MODIFY_REG(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SSTD | SPI_I2SCFGR_PCMSYNC, Standard);</div>
+<div class="line"><a name="l01482"></a><span class="lineno"> 1482</span>&#160;}</div>
+<div class="line"><a name="l01483"></a><span class="lineno"> 1483</span>&#160; </div>
+<div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetStandard(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;{</div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SSTD | SPI_I2SCFGR_PCMSYNC));</div>
+<div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;}</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160; </div>
+<div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetTransferMode(SPI_TypeDef *SPIx, uint32_t Mode)</div>
+<div class="line"><a name="l01513"></a><span class="lineno"> 1513</span>&#160;{</div>
+<div class="line"><a name="l01514"></a><span class="lineno"> 1514</span>&#160;  MODIFY_REG(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SCFG, Mode);</div>
+<div class="line"><a name="l01515"></a><span class="lineno"> 1515</span>&#160;}</div>
+<div class="line"><a name="l01516"></a><span class="lineno"> 1516</span>&#160; </div>
+<div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetTransferMode(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;{</div>
+<div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_I2SCFG));</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;}</div>
+<div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160; </div>
+<div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetPrescalerLinear(SPI_TypeDef *SPIx, uint8_t PrescalerLinear)</div>
+<div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;{</div>
+<div class="line"><a name="l01541"></a><span class="lineno"> 1541</span>&#160;  MODIFY_REG(SPIx-&gt;I2SPR, SPI_I2SPR_I2SDIV, PrescalerLinear);</div>
+<div class="line"><a name="l01542"></a><span class="lineno"> 1542</span>&#160;}</div>
+<div class="line"><a name="l01543"></a><span class="lineno"> 1543</span>&#160; </div>
+<div class="line"><a name="l01550"></a><span class="lineno"> 1550</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetPrescalerLinear(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01551"></a><span class="lineno"> 1551</span>&#160;{</div>
+<div class="line"><a name="l01552"></a><span class="lineno"> 1552</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SPR, SPI_I2SPR_I2SDIV));</div>
+<div class="line"><a name="l01553"></a><span class="lineno"> 1553</span>&#160;}</div>
+<div class="line"><a name="l01554"></a><span class="lineno"> 1554</span>&#160; </div>
+<div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_SetPrescalerParity(SPI_TypeDef *SPIx, uint32_t PrescalerParity)</div>
+<div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;{</div>
+<div class="line"><a name="l01566"></a><span class="lineno"> 1566</span>&#160;  MODIFY_REG(SPIx-&gt;I2SPR, SPI_I2SPR_ODD, PrescalerParity &lt;&lt; 8U);</div>
+<div class="line"><a name="l01567"></a><span class="lineno"> 1567</span>&#160;}</div>
+<div class="line"><a name="l01568"></a><span class="lineno"> 1568</span>&#160; </div>
+<div class="line"><a name="l01577"></a><span class="lineno"> 1577</span>&#160;__STATIC_INLINE uint32_t LL_I2S_GetPrescalerParity(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01578"></a><span class="lineno"> 1578</span>&#160;{</div>
+<div class="line"><a name="l01579"></a><span class="lineno"> 1579</span>&#160;  <span class="keywordflow">return</span> (uint32_t)(READ_BIT(SPIx-&gt;I2SPR, SPI_I2SPR_ODD) &gt;&gt; 8U);</div>
+<div class="line"><a name="l01580"></a><span class="lineno"> 1580</span>&#160;}</div>
+<div class="line"><a name="l01581"></a><span class="lineno"> 1581</span>&#160; </div>
+<div class="line"><a name="l01588"></a><span class="lineno"> 1588</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableMasterClock(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160;{</div>
+<div class="line"><a name="l01590"></a><span class="lineno"> 1590</span>&#160;  SET_BIT(SPIx-&gt;I2SPR, SPI_I2SPR_MCKOE);</div>
+<div class="line"><a name="l01591"></a><span class="lineno"> 1591</span>&#160;}</div>
+<div class="line"><a name="l01592"></a><span class="lineno"> 1592</span>&#160; </div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableMasterClock(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160;{</div>
+<div class="line"><a name="l01601"></a><span class="lineno"> 1601</span>&#160;  CLEAR_BIT(SPIx-&gt;I2SPR, SPI_I2SPR_MCKOE);</div>
+<div class="line"><a name="l01602"></a><span class="lineno"> 1602</span>&#160;}</div>
+<div class="line"><a name="l01603"></a><span class="lineno"> 1603</span>&#160; </div>
+<div class="line"><a name="l01610"></a><span class="lineno"> 1610</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledMasterClock(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01611"></a><span class="lineno"> 1611</span>&#160;{</div>
+<div class="line"><a name="l01612"></a><span class="lineno"> 1612</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;I2SPR, SPI_I2SPR_MCKOE) == (SPI_I2SPR_MCKOE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01613"></a><span class="lineno"> 1613</span>&#160;}</div>
+<div class="line"><a name="l01614"></a><span class="lineno"> 1614</span>&#160; </div>
+<div class="line"><a name="l01615"></a><span class="lineno"> 1615</span>&#160;<span class="preprocessor">#if defined(SPI_I2SCFGR_ASTRTEN)</span></div>
+<div class="line"><a name="l01616"></a><span class="lineno"> 1616</span>&#160; </div>
+<div class="line"><a name="l01622"></a><span class="lineno"> 1622</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableAsyncStart(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01623"></a><span class="lineno"> 1623</span>&#160;{</div>
+<div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160;  SET_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_ASTRTEN);</div>
+<div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;}</div>
+<div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160; </div>
+<div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableAsyncStart(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;{</div>
+<div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;  CLEAR_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_ASTRTEN);</div>
+<div class="line"><a name="l01636"></a><span class="lineno"> 1636</span>&#160;}</div>
+<div class="line"><a name="l01637"></a><span class="lineno"> 1637</span>&#160; </div>
+<div class="line"><a name="l01644"></a><span class="lineno"> 1644</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledAsyncStart(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01645"></a><span class="lineno"> 1645</span>&#160;{</div>
+<div class="line"><a name="l01646"></a><span class="lineno"> 1646</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;I2SCFGR, SPI_I2SCFGR_ASTRTEN) == (SPI_I2SCFGR_ASTRTEN)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01647"></a><span class="lineno"> 1647</span>&#160;}</div>
+<div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPI_I2SCFGR_ASTRTEN */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160; </div>
+<div class="line"><a name="l01664"></a><span class="lineno"> 1664</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01665"></a><span class="lineno"> 1665</span>&#160;{</div>
+<div class="line"><a name="l01666"></a><span class="lineno"> 1666</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsActiveFlag_RXNE(SPIx);</div>
+<div class="line"><a name="l01667"></a><span class="lineno"> 1667</span>&#160;}</div>
+<div class="line"><a name="l01668"></a><span class="lineno"> 1668</span>&#160; </div>
+<div class="line"><a name="l01675"></a><span class="lineno"> 1675</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01676"></a><span class="lineno"> 1676</span>&#160;{</div>
+<div class="line"><a name="l01677"></a><span class="lineno"> 1677</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsActiveFlag_TXE(SPIx);</div>
+<div class="line"><a name="l01678"></a><span class="lineno"> 1678</span>&#160;}</div>
+<div class="line"><a name="l01679"></a><span class="lineno"> 1679</span>&#160; </div>
+<div class="line"><a name="l01686"></a><span class="lineno"> 1686</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_BSY(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01687"></a><span class="lineno"> 1687</span>&#160;{</div>
+<div class="line"><a name="l01688"></a><span class="lineno"> 1688</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsActiveFlag_BSY(SPIx);</div>
+<div class="line"><a name="l01689"></a><span class="lineno"> 1689</span>&#160;}</div>
+<div class="line"><a name="l01690"></a><span class="lineno"> 1690</span>&#160; </div>
+<div class="line"><a name="l01697"></a><span class="lineno"> 1697</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_OVR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01698"></a><span class="lineno"> 1698</span>&#160;{</div>
+<div class="line"><a name="l01699"></a><span class="lineno"> 1699</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsActiveFlag_OVR(SPIx);</div>
+<div class="line"><a name="l01700"></a><span class="lineno"> 1700</span>&#160;}</div>
+<div class="line"><a name="l01701"></a><span class="lineno"> 1701</span>&#160; </div>
+<div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_UDR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;{</div>
+<div class="line"><a name="l01710"></a><span class="lineno"> 1710</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_UDR) == (SPI_SR_UDR)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01711"></a><span class="lineno"> 1711</span>&#160;}</div>
+<div class="line"><a name="l01712"></a><span class="lineno"> 1712</span>&#160; </div>
+<div class="line"><a name="l01719"></a><span class="lineno"> 1719</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_FRE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01720"></a><span class="lineno"> 1720</span>&#160;{</div>
+<div class="line"><a name="l01721"></a><span class="lineno"> 1721</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsActiveFlag_FRE(SPIx);</div>
+<div class="line"><a name="l01722"></a><span class="lineno"> 1722</span>&#160;}</div>
+<div class="line"><a name="l01723"></a><span class="lineno"> 1723</span>&#160; </div>
+<div class="line"><a name="l01733"></a><span class="lineno"> 1733</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsActiveFlag_CHSIDE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01734"></a><span class="lineno"> 1734</span>&#160;{</div>
+<div class="line"><a name="l01735"></a><span class="lineno"> 1735</span>&#160;  <span class="keywordflow">return</span> ((READ_BIT(SPIx-&gt;SR, SPI_SR_CHSIDE) == (SPI_SR_CHSIDE)) ? 1UL : 0UL);</div>
+<div class="line"><a name="l01736"></a><span class="lineno"> 1736</span>&#160;}</div>
+<div class="line"><a name="l01737"></a><span class="lineno"> 1737</span>&#160; </div>
+<div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_ClearFlag_OVR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01745"></a><span class="lineno"> 1745</span>&#160;{</div>
+<div class="line"><a name="l01746"></a><span class="lineno"> 1746</span>&#160;  LL_SPI_ClearFlag_OVR(SPIx);</div>
+<div class="line"><a name="l01747"></a><span class="lineno"> 1747</span>&#160;}</div>
+<div class="line"><a name="l01748"></a><span class="lineno"> 1748</span>&#160; </div>
+<div class="line"><a name="l01755"></a><span class="lineno"> 1755</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_ClearFlag_UDR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01756"></a><span class="lineno"> 1756</span>&#160;{</div>
+<div class="line"><a name="l01757"></a><span class="lineno"> 1757</span>&#160;  __IO uint32_t tmpreg;</div>
+<div class="line"><a name="l01758"></a><span class="lineno"> 1758</span>&#160;  tmpreg = SPIx-&gt;SR;</div>
+<div class="line"><a name="l01759"></a><span class="lineno"> 1759</span>&#160;  (void)tmpreg;</div>
+<div class="line"><a name="l01760"></a><span class="lineno"> 1760</span>&#160;}</div>
+<div class="line"><a name="l01761"></a><span class="lineno"> 1761</span>&#160; </div>
+<div class="line"><a name="l01768"></a><span class="lineno"> 1768</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_ClearFlag_FRE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01769"></a><span class="lineno"> 1769</span>&#160;{</div>
+<div class="line"><a name="l01770"></a><span class="lineno"> 1770</span>&#160;  LL_SPI_ClearFlag_FRE(SPIx);</div>
+<div class="line"><a name="l01771"></a><span class="lineno"> 1771</span>&#160;}</div>
+<div class="line"><a name="l01772"></a><span class="lineno"> 1772</span>&#160; </div>
+<div class="line"><a name="l01788"></a><span class="lineno"> 1788</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01789"></a><span class="lineno"> 1789</span>&#160;{</div>
+<div class="line"><a name="l01790"></a><span class="lineno"> 1790</span>&#160;  LL_SPI_EnableIT_ERR(SPIx);</div>
+<div class="line"><a name="l01791"></a><span class="lineno"> 1791</span>&#160;}</div>
+<div class="line"><a name="l01792"></a><span class="lineno"> 1792</span>&#160; </div>
+<div class="line"><a name="l01799"></a><span class="lineno"> 1799</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01800"></a><span class="lineno"> 1800</span>&#160;{</div>
+<div class="line"><a name="l01801"></a><span class="lineno"> 1801</span>&#160;  LL_SPI_EnableIT_RXNE(SPIx);</div>
+<div class="line"><a name="l01802"></a><span class="lineno"> 1802</span>&#160;}</div>
+<div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160; </div>
+<div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01811"></a><span class="lineno"> 1811</span>&#160;{</div>
+<div class="line"><a name="l01812"></a><span class="lineno"> 1812</span>&#160;  LL_SPI_EnableIT_TXE(SPIx);</div>
+<div class="line"><a name="l01813"></a><span class="lineno"> 1813</span>&#160;}</div>
+<div class="line"><a name="l01814"></a><span class="lineno"> 1814</span>&#160; </div>
+<div class="line"><a name="l01822"></a><span class="lineno"> 1822</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01823"></a><span class="lineno"> 1823</span>&#160;{</div>
+<div class="line"><a name="l01824"></a><span class="lineno"> 1824</span>&#160;  LL_SPI_DisableIT_ERR(SPIx);</div>
+<div class="line"><a name="l01825"></a><span class="lineno"> 1825</span>&#160;}</div>
+<div class="line"><a name="l01826"></a><span class="lineno"> 1826</span>&#160; </div>
+<div class="line"><a name="l01833"></a><span class="lineno"> 1833</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01834"></a><span class="lineno"> 1834</span>&#160;{</div>
+<div class="line"><a name="l01835"></a><span class="lineno"> 1835</span>&#160;  LL_SPI_DisableIT_RXNE(SPIx);</div>
+<div class="line"><a name="l01836"></a><span class="lineno"> 1836</span>&#160;}</div>
+<div class="line"><a name="l01837"></a><span class="lineno"> 1837</span>&#160; </div>
+<div class="line"><a name="l01844"></a><span class="lineno"> 1844</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01845"></a><span class="lineno"> 1845</span>&#160;{</div>
+<div class="line"><a name="l01846"></a><span class="lineno"> 1846</span>&#160;  LL_SPI_DisableIT_TXE(SPIx);</div>
+<div class="line"><a name="l01847"></a><span class="lineno"> 1847</span>&#160;}</div>
+<div class="line"><a name="l01848"></a><span class="lineno"> 1848</span>&#160; </div>
+<div class="line"><a name="l01855"></a><span class="lineno"> 1855</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledIT_ERR(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01856"></a><span class="lineno"> 1856</span>&#160;{</div>
+<div class="line"><a name="l01857"></a><span class="lineno"> 1857</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsEnabledIT_ERR(SPIx);</div>
+<div class="line"><a name="l01858"></a><span class="lineno"> 1858</span>&#160;}</div>
+<div class="line"><a name="l01859"></a><span class="lineno"> 1859</span>&#160; </div>
+<div class="line"><a name="l01866"></a><span class="lineno"> 1866</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledIT_RXNE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01867"></a><span class="lineno"> 1867</span>&#160;{</div>
+<div class="line"><a name="l01868"></a><span class="lineno"> 1868</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsEnabledIT_RXNE(SPIx);</div>
+<div class="line"><a name="l01869"></a><span class="lineno"> 1869</span>&#160;}</div>
+<div class="line"><a name="l01870"></a><span class="lineno"> 1870</span>&#160; </div>
+<div class="line"><a name="l01877"></a><span class="lineno"> 1877</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledIT_TXE(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01878"></a><span class="lineno"> 1878</span>&#160;{</div>
+<div class="line"><a name="l01879"></a><span class="lineno"> 1879</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsEnabledIT_TXE(SPIx);</div>
+<div class="line"><a name="l01880"></a><span class="lineno"> 1880</span>&#160;}</div>
+<div class="line"><a name="l01881"></a><span class="lineno"> 1881</span>&#160; </div>
+<div class="line"><a name="l01896"></a><span class="lineno"> 1896</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01897"></a><span class="lineno"> 1897</span>&#160;{</div>
+<div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;  LL_SPI_EnableDMAReq_RX(SPIx);</div>
+<div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;}</div>
+<div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160; </div>
+<div class="line"><a name="l01907"></a><span class="lineno"> 1907</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01908"></a><span class="lineno"> 1908</span>&#160;{</div>
+<div class="line"><a name="l01909"></a><span class="lineno"> 1909</span>&#160;  LL_SPI_DisableDMAReq_RX(SPIx);</div>
+<div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;}</div>
+<div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160; </div>
+<div class="line"><a name="l01918"></a><span class="lineno"> 1918</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledDMAReq_RX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160;{</div>
+<div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsEnabledDMAReq_RX(SPIx);</div>
+<div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;}</div>
+<div class="line"><a name="l01922"></a><span class="lineno"> 1922</span>&#160; </div>
+<div class="line"><a name="l01929"></a><span class="lineno"> 1929</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_EnableDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01930"></a><span class="lineno"> 1930</span>&#160;{</div>
+<div class="line"><a name="l01931"></a><span class="lineno"> 1931</span>&#160;  LL_SPI_EnableDMAReq_TX(SPIx);</div>
+<div class="line"><a name="l01932"></a><span class="lineno"> 1932</span>&#160;}</div>
+<div class="line"><a name="l01933"></a><span class="lineno"> 1933</span>&#160; </div>
+<div class="line"><a name="l01940"></a><span class="lineno"> 1940</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_DisableDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01941"></a><span class="lineno"> 1941</span>&#160;{</div>
+<div class="line"><a name="l01942"></a><span class="lineno"> 1942</span>&#160;  LL_SPI_DisableDMAReq_TX(SPIx);</div>
+<div class="line"><a name="l01943"></a><span class="lineno"> 1943</span>&#160;}</div>
+<div class="line"><a name="l01944"></a><span class="lineno"> 1944</span>&#160; </div>
+<div class="line"><a name="l01951"></a><span class="lineno"> 1951</span>&#160;__STATIC_INLINE uint32_t LL_I2S_IsEnabledDMAReq_TX(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01952"></a><span class="lineno"> 1952</span>&#160;{</div>
+<div class="line"><a name="l01953"></a><span class="lineno"> 1953</span>&#160;  <span class="keywordflow">return</span> LL_SPI_IsEnabledDMAReq_TX(SPIx);</div>
+<div class="line"><a name="l01954"></a><span class="lineno"> 1954</span>&#160;}</div>
+<div class="line"><a name="l01955"></a><span class="lineno"> 1955</span>&#160; </div>
+<div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160;__STATIC_INLINE uint16_t LL_I2S_ReceiveData16(SPI_TypeDef *SPIx)</div>
+<div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;{</div>
+<div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160;  <span class="keywordflow">return</span> LL_SPI_ReceiveData16(SPIx);</div>
+<div class="line"><a name="l01973"></a><span class="lineno"> 1973</span>&#160;}</div>
+<div class="line"><a name="l01974"></a><span class="lineno"> 1974</span>&#160; </div>
+<div class="line"><a name="l01982"></a><span class="lineno"> 1982</span>&#160;__STATIC_INLINE <span class="keywordtype">void</span> LL_I2S_TransmitData16(SPI_TypeDef *SPIx, uint16_t TxData)</div>
+<div class="line"><a name="l01983"></a><span class="lineno"> 1983</span>&#160;{</div>
+<div class="line"><a name="l01984"></a><span class="lineno"> 1984</span>&#160;  LL_SPI_TransmitData16(SPIx, TxData);</div>
+<div class="line"><a name="l01985"></a><span class="lineno"> 1985</span>&#160;}</div>
+<div class="line"><a name="l01986"></a><span class="lineno"> 1986</span>&#160; </div>
+<div class="line"><a name="l01991"></a><span class="lineno"> 1991</span>&#160;<span class="preprocessor">#if defined(USE_FULL_LL_DRIVER)</span></div>
+<div class="line"><a name="l01992"></a><span class="lineno"> 1992</span>&#160; </div>
+<div class="line"><a name="l01996"></a><span class="lineno"> 1996</span>&#160;ErrorStatus LL_I2S_DeInit(SPI_TypeDef *SPIx);</div>
+<div class="line"><a name="l01997"></a><span class="lineno"> 1997</span>&#160;ErrorStatus LL_I2S_Init(SPI_TypeDef *SPIx, LL_I2S_InitTypeDef *I2S_InitStruct);</div>
+<div class="line"><a name="l01998"></a><span class="lineno"> 1998</span>&#160;<span class="keywordtype">void</span>        LL_I2S_StructInit(LL_I2S_InitTypeDef *I2S_InitStruct);</div>
+<div class="line"><a name="l01999"></a><span class="lineno"> 1999</span>&#160;<span class="keywordtype">void</span>        LL_I2S_ConfigPrescaler(SPI_TypeDef *SPIx, uint32_t PrescalerLinear, uint32_t PrescalerParity);</div>
+<div class="line"><a name="l02000"></a><span class="lineno"> 2000</span>&#160;<span class="preprocessor">#if defined (SPI_I2S_FULLDUPLEX_SUPPORT)</span></div>
+<div class="line"><a name="l02001"></a><span class="lineno"> 2001</span>&#160;ErrorStatus LL_I2S_InitFullDuplex(SPI_TypeDef *I2Sxext, LL_I2S_InitTypeDef *I2S_InitStruct);</div>
+<div class="line"><a name="l02002"></a><span class="lineno"> 2002</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPI_I2S_FULLDUPLEX_SUPPORT */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02003"></a><span class="lineno"> 2003</span>&#160; </div>
+<div class="line"><a name="l02007"></a><span class="lineno"> 2007</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_FULL_LL_DRIVER */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02008"></a><span class="lineno"> 2008</span>&#160; </div>
+<div class="line"><a name="l02017"></a><span class="lineno"> 2017</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* defined (SPI1) || defined (SPI2) || defined (SPI3) || defined (SPI4) || defined (SPI5) || defined(SPI6) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02018"></a><span class="lineno"> 2018</span>&#160; </div>
+<div class="line"><a name="l02023"></a><span class="lineno"> 2023</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l02024"></a><span class="lineno"> 2024</span>&#160;}</div>
+<div class="line"><a name="l02025"></a><span class="lineno"> 2025</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l02026"></a><span class="lineno"> 2026</span>&#160; </div>
+<div class="line"><a name="l02027"></a><span class="lineno"> 2027</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STM32F4xx_LL_SPI_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l02028"></a><span class="lineno"> 2028</span>&#160; </div>
+<div class="line"><a name="l02029"></a><span class="lineno"> 2029</span>&#160;<span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="stm32f4xx__ll__spi_8h.html">stm32f4xx_ll_spi.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

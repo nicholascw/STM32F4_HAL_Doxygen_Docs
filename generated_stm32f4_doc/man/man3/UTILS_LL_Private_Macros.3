@@ -1,0 +1,142 @@
+.TH "UTILS_LL_Private_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UTILS_LL_Private_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_SYSCLK_DIV\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_APB1_DIV\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_APB2_DIV\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLLM_VALUE\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLLN_VALUE\fP(__VALUE__)   ((RCC_PLLN_MIN_VALUE <= (__VALUE__)) && ((__VALUE__) <= RCC_PLLN_MAX_VALUE))"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLLP_VALUE\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLLVCO_INPUT\fP(__VALUE__)   ((\fBUTILS_PLLVCO_INPUT_MIN\fP <= (__VALUE__)) && ((__VALUE__) <= \fBUTILS_PLLVCO_INPUT_MAX\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLLVCO_OUTPUT\fP(__VALUE__)   ((\fBUTILS_PLLVCO_OUTPUT_MIN\fP <= (__VALUE__)) && ((__VALUE__) <= \fBUTILS_PLLVCO_OUTPUT_MAX\fP))"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_PLL_FREQUENCY\fP(__VALUE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_HSE_BYPASS\fP(__STATE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_LL_UTILS_HSE_FREQUENCY\fP(__FREQUENCY__)   (((__FREQUENCY__) >= \fBUTILS_HSE_FREQUENCY_MIN\fP) && ((__FREQUENCY__) <= \fBUTILS_HSE_FREQUENCY_MAX\fP))"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define IS_LL_UTILS_APB1_DIV(__VALUE__)"
+\fB值:\fP
+.PP
+.nf
+                                      (((__VALUE__) == LL_RCC_APB1_DIV_1) \
+                                      || ((__VALUE__) == LL_RCC_APB1_DIV_2) \
+                                      || ((__VALUE__) == LL_RCC_APB1_DIV_4) \
+                                      || ((__VALUE__) == LL_RCC_APB1_DIV_8) \
+                                      || ((__VALUE__) == LL_RCC_APB1_DIV_16))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 123 行定义\&.
+.SS "#define IS_LL_UTILS_APB2_DIV(__VALUE__)"
+\fB值:\fP
+.PP
+.nf
+                                      (((__VALUE__) == LL_RCC_APB2_DIV_1) \
+                                      || ((__VALUE__) == LL_RCC_APB2_DIV_2) \
+                                      || ((__VALUE__) == LL_RCC_APB2_DIV_4) \
+                                      || ((__VALUE__) == LL_RCC_APB2_DIV_8) \
+                                      || ((__VALUE__) == LL_RCC_APB2_DIV_16))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 129 行定义\&.
+.SS "#define IS_LL_UTILS_HSE_BYPASS(__STATE__)"
+\fB值:\fP
+.PP
+.nf
+                                        (((__STATE__) == LL_UTILS_HSEBYPASS_ON) \
+                                        || ((__STATE__) == LL_UTILS_HSEBYPASS_OFF))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 223 行定义\&.
+.SS "#define IS_LL_UTILS_HSE_FREQUENCY(__FREQUENCY__)   (((__FREQUENCY__) >= \fBUTILS_HSE_FREQUENCY_MIN\fP) && ((__FREQUENCY__) <= \fBUTILS_HSE_FREQUENCY_MAX\fP))"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 226 行定义\&.
+.SS "#define IS_LL_UTILS_PLL_FREQUENCY(__VALUE__)"
+\fB值:\fP
+.PP
+.nf
+                                             ((LL_PWR_GetRegulVoltageScaling() == LL_PWR_REGU_VOLTAGE_SCALE2) ? ((__VALUE__) <= UTILS_MAX_FREQUENCY_SCALE2) : \
+                                             ((__VALUE__) <= UTILS_MAX_FREQUENCY_SCALE3))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 210 行定义\&.
+.SS "#define IS_LL_UTILS_PLLM_VALUE(__VALUE__)"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 135 行定义\&.
+.SS "#define IS_LL_UTILS_PLLN_VALUE(__VALUE__)   ((RCC_PLLN_MIN_VALUE <= (__VALUE__)) && ((__VALUE__) <= RCC_PLLN_MAX_VALUE))"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 198 行定义\&.
+.SS "#define IS_LL_UTILS_PLLP_VALUE(__VALUE__)"
+\fB值:\fP
+.PP
+.nf
+                                        (((__VALUE__) == LL_RCC_PLLP_DIV_2) \
+                                        || ((__VALUE__) == LL_RCC_PLLP_DIV_4) \
+                                        || ((__VALUE__) == LL_RCC_PLLP_DIV_6) \
+                                        || ((__VALUE__) == LL_RCC_PLLP_DIV_8))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 200 行定义\&.
+.SS "#define IS_LL_UTILS_PLLVCO_INPUT(__VALUE__)   ((\fBUTILS_PLLVCO_INPUT_MIN\fP <= (__VALUE__)) && ((__VALUE__) <= \fBUTILS_PLLVCO_INPUT_MAX\fP))"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 205 行定义\&.
+.SS "#define IS_LL_UTILS_PLLVCO_OUTPUT(__VALUE__)   ((\fBUTILS_PLLVCO_OUTPUT_MIN\fP <= (__VALUE__)) && ((__VALUE__) <= \fBUTILS_PLLVCO_OUTPUT_MAX\fP))"
+
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 207 行定义\&.
+.SS "#define IS_LL_UTILS_SYSCLK_DIV(__VALUE__)"
+\fB值:\fP
+.PP
+.nf
+                                        (((__VALUE__) == LL_RCC_SYSCLK_DIV_1)   \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_2)   \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_4)   \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_8)   \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_16)  \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_64)  \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_128) \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_256) \
+                                        || ((__VALUE__) == LL_RCC_SYSCLK_DIV_512))
+.fi
+.PP
+在文件 stm32f4xx_ll_utils\&.c 第 113 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

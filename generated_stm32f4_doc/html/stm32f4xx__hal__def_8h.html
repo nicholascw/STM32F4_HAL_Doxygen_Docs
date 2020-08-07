@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32F4_HAL: inc/stm32f4xx_hal_def.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32F4_HAL
+   &#160;<span id="projectnumber">1.24.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stm32f4xx__hal__def_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a>  </div>
+  <div class="headertitle">
+<div class="title">stm32f4xx_hal_def.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>This file contains HAL common defines, enumeration, macros and structures definitions.  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;stm32f4xx.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="stm32__hal__legacy_8h_source.html">Legacy/stm32_hal_legacy.h</a>&quot;</code><br />
+<code>#include &lt;stddef.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+stm32f4xx_hal_def.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f4xx__hal__def_8h__incl.png" border="0" usemap="#inc_2stm32f4xx__hal__def_8h" alt=""/></div>
+<map name="inc_2stm32f4xx__hal__def_8h" id="inc_2stm32f4xx__hal__def_8h">
+<area shape="rect" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="143,5,324,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,109,107"/>
+<area shape="rect" href="stm32__hal__legacy_8h.html" title="This file contains aliases definition for the STM32Cube HAL constants macros and functions maintained..." alt="" coords="133,80,333,107"/>
+<area shape="rect" title=" " alt="" coords="357,80,432,107"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="stm32f4xx__hal__def_8h__dep__incl.png" border="0" usemap="#inc_2stm32f4xx__hal__def_8hdep" alt=""/></div>
+<map name="inc_2stm32f4xx__hal__def_8hdep" id="inc_2stm32f4xx__hal__def_8hdep">
+<area shape="rect" title="This file contains HAL common defines, enumeration, macros and structures definitions." alt="" coords="2880,5,3061,32"/>
+<area shape="rect" href="stm32f4xx__hal__adc_8h.html" title="Header file containing functions prototypes of ADC HAL library." alt="" coords="5,155,189,181"/>
+<area shape="rect" href="stm32f4xx__hal__adc__ex_8h.html" title="Header file of ADC HAL module." alt="" coords="265,80,471,107"/>
+<area shape="rect" href="stm32f4xx__hal__can_8h.html" title="Header file of CAN HAL module." alt="" coords="213,155,397,181"/>
+<area shape="rect" href="stm32f4xx__hal__cec_8h.html" title="Header file of CEC HAL module." alt="" coords="422,155,605,181"/>
+<area shape="rect" href="stm32f4xx__hal__rcc_8h.html" title="Header file of RCC HAL module." alt="" coords="629,155,809,181"/>
+<area shape="rect" href="stm32f4xx__hal__rcc__ex_8h.html" title="Header file of RCC HAL Extension module." alt="" coords="769,80,972,107"/>
+<area shape="rect" href="stm32f4xx__hal__gpio_8h.html" title="Header file of GPIO HAL module." alt="" coords="833,155,1023,181"/>
+<area shape="rect" href="stm32f4xx__hal__gpio__ex_8h.html" title="Header file of GPIO HAL Extension module." alt="" coords="1062,80,1274,107"/>
+<area shape="rect" href="stm32f4xx__hal__exti_8h.html" title="Header file of EXTI HAL module." alt="" coords="1047,155,1233,181"/>
+<area shape="rect" href="stm32f4xx__hal__dma_8h.html" title="Header file of DMA HAL module." alt="" coords="1258,155,1449,181"/>
+<area shape="rect" href="stm32f4xx__hal__dma__ex_8h.html" title="Header file of DMA HAL extension module." alt="" coords="1495,80,1708,107"/>
+<area shape="rect" href="stm32f4xx__hal__cortex_8h.html" title="Header file of CORTEX HAL module." alt="" coords="1473,155,1676,181"/>
+<area shape="rect" href="stm32f4xx__hal__crc_8h.html" title="Header file of CRC HAL module." alt="" coords="1701,155,1881,181"/>
+<area shape="rect" href="stm32f4xx__hal__cryp_8h.html" title="Header file of CRYP HAL module." alt="" coords="1905,155,2095,181"/>
+<area shape="rect" href="stm32f4xx__hal__flash_8h.html" title="Header file of FLASH HAL module." alt="" coords="2119,155,2311,181"/>
+<area shape="rect" href="stm32f4xx__hal__flash__ex_8h.html" title="Header file of FLASH HAL Extension module." alt="" coords="2238,80,2453,107"/>
+<area shape="rect" href="stm32f4xx__hal__hash_8h.html" title="Header file of HASH HAL module." alt="" coords="2335,155,2527,181"/>
+<area shape="rect" href="stm32f4xx__hal__i2c_8h.html" title="Header file of I2C HAL module." alt="" coords="2551,155,2731,181"/>
+<area shape="rect" href="stm32f4xx__hal__smbus_8h.html" title="Header file of SMBUS HAL module." alt="" coords="2755,155,2959,181"/>
+<area shape="rect" href="stm32f4xx__hal__i2s_8h.html" title="Header file of I2S HAL module." alt="" coords="2983,155,3163,181"/>
+<area shape="rect" href="stm32f4xx__hal__i2s__ex_8h.html" title="Header file of I2S HAL module." alt="" coords="2680,80,2883,107"/>
+<area shape="rect" href="stm32f4xx__hal__iwdg_8h.html" title="Header file of IWDG HAL module." alt="" coords="3188,155,3380,181"/>
+<area shape="rect" href="stm32f4xx__hal__pwr_8h.html" title="Header file of PWR HAL module." alt="" coords="3404,155,3588,181"/>
+<area shape="rect" href="stm32f4xx__hal__pwr__ex_8h.html" title="Header file of PWR HAL Extension module." alt="" coords="3008,80,3216,107"/>
+<area shape="rect" href="stm32f4xx__hal__rng_8h.html" title="Header file of RNG HAL module." alt="" coords="3613,155,3795,181"/>
+<area shape="rect" href="stm32f4xx__hal__rtc_8h.html" title="Header file of RTC HAL module." alt="" coords="3820,155,3999,181"/>
+<area shape="rect" href="stm32f4xx__hal__rtc__ex_8h.html" title="Header file of RTC HAL Extension module." alt="" coords="3342,80,3543,107"/>
+<area shape="rect" href="stm32f4xx__hal__sai_8h.html" title="Header file of SAI HAL module." alt="" coords="4023,155,4203,181"/>
+<area shape="rect" href="stm32f4xx__hal__spi_8h.html" title="Header file of SPI HAL module." alt="" coords="4227,155,4407,181"/>
+<area shape="rect" href="stm32f4xx__hal__tim_8h.html" title="Header file of TIM HAL module." alt="" coords="4431,155,4614,181"/>
+<area shape="rect" href="stm32f4xx__hal__tim__ex_8h.html" title="Header file of TIM HAL Extended module." alt="" coords="3721,80,3927,107"/>
+<area shape="rect" href="stm32f4xx__hal__uart_8h.html" title="Header file of UART HAL module." alt="" coords="3952,80,4139,107"/>
+<area shape="rect" href="stm32f4xx__hal__usart_8h.html" title="Header file of USART HAL module." alt="" coords="4163,80,4357,107"/>
+<area shape="rect" href="stm32f4xx__hal__irda_8h.html" title="Header file of IRDA HAL module." alt="" coords="4381,80,4568,107"/>
+<area shape="rect" href="stm32f4xx__hal__smartcard_8h.html" title="Header file of SMARTCARD HAL module." alt="" coords="4592,80,4819,107"/>
+<area shape="rect" href="stm32f4xx__hal__wwdg_8h.html" title="Header file of WWDG HAL module." alt="" coords="4843,80,5042,107"/>
+<area shape="rect" href="stm32f4xx__ll__usb_8h.html" title="Header file of USB Low Layer HAL module." alt="" coords="5066,80,5238,107"/>
+<area shape="rect" href="stm32f4xx__hal__spdifrx_8h.html" title="Header file of SPDIFRX HAL module." alt="" coords="5262,80,5469,107"/>
+<area shape="rect" href="stm32f4xx__hal__lptim_8h.html" title="Header file of LPTIM HAL module." alt="" coords="5493,80,5688,107"/>
+<area shape="rect" href="stm32f4xx__hal__cryp__ex_8h.html" title="Header file of CRYP HAL Extension module." alt="" coords="5713,80,5925,107"/>
+<area shape="rect" href="stm32f4xx__hal__hash__ex_8h.html" title="Header file of HASH HAL module." alt="" coords="5949,80,6163,107"/>
+<area shape="rect" href="stm32f4xx__hal__pcd__ex_8h.html" title="Header file of PCD HAL Extension module." alt="" coords="6187,80,6394,107"/>
+<area shape="rect" href="stm32f4xx__hal__sai__ex_8h.html" title="Header file of SAI Extension HAL module." alt="" coords="6419,80,6621,107"/>
+<area shape="rect" href="stm32f4xx__ll__fmc_8h.html" title="Header file of FMC HAL module." alt="" coords="6646,80,6821,107"/>
+<area shape="rect" href="stm32f4xx__ll__fsmc_8h.html" title="Header file of FSMC HAL module." alt="" coords="6845,80,7027,107"/>
+<area shape="rect" href="stm32f4xx__hal__conf__template_8h.html" title="HAL configuration template file. This file should be copied to the application folder and renamed to ..." alt="" coords="3195,229,3373,271"/>
+<area shape="rect" href="stm32f4xx__hal__pcd_8h.html" title="Header file of PCD HAL module." alt="" coords="4892,155,5076,181"/>
+<area shape="rect" href="stm32f4xx__hal__hcd_8h.html" title="Header file of HCD HAL module." alt="" coords="5100,155,5284,181"/>
+</map>
+</div>
+</div>
+<p><a href="stm32f4xx__hal__def_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:a6bc306171da085f4c7df2c66d2ff8e47"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a6bc306171da085f4c7df2c66d2ff8e47">UNUSED</a>(X)&#160;&#160;&#160;(void)X      /* To avoid gcc/g++ warnings */</td></tr>
+<tr class="separator:a6bc306171da085f4c7df2c66d2ff8e47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad28bc64749c50dcedd6bf819fdc6974"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#aad28bc64749c50dcedd6bf819fdc6974">HAL_MAX_DELAY</a>&#160;&#160;&#160;0xFFFFFFFFU</td></tr>
+<tr class="separator:aad28bc64749c50dcedd6bf819fdc6974"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b44dfd2a26f85f7b628b0945daff2c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a5b44dfd2a26f85f7b628b0945daff2c3">HAL_IS_BIT_SET</a>(REG,  BIT)&#160;&#160;&#160;(((REG) &amp; (BIT)) == (BIT))</td></tr>
+<tr class="separator:a5b44dfd2a26f85f7b628b0945daff2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82637a84fbdca0e2a25496089b549924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a82637a84fbdca0e2a25496089b549924">HAL_IS_BIT_CLR</a>(REG,  BIT)&#160;&#160;&#160;(((REG) &amp; (BIT)) == 0U)</td></tr>
+<tr class="separator:a82637a84fbdca0e2a25496089b549924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5b3b3d0eff8c4cb59d4d3909c247311"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#af5b3b3d0eff8c4cb59d4d3909c247311">__HAL_LINKDMA</a>(__HANDLE__,  __PPP_DMA_FIELD__,  __DMA_HANDLE__)</td></tr>
+<tr class="separator:af5b3b3d0eff8c4cb59d4d3909c247311"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5850085e1bb7a96a417756f235b16aea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a5850085e1bb7a96a417756f235b16aea">__HAL_RESET_HANDLE_STATE</a>(__HANDLE__)&#160;&#160;&#160;((__HANDLE__)-&gt;State = 0U)</td></tr>
+<tr class="memdesc:a5850085e1bb7a96a417756f235b16aea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the Handle's State field.  <a href="stm32f4xx__hal__def_8h.html#a5850085e1bb7a96a417756f235b16aea">更多...</a><br /></td></tr>
+<tr class="separator:a5850085e1bb7a96a417756f235b16aea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3d96e1b9022ba76b69eeda91027b36c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#ad3d96e1b9022ba76b69eeda91027b36c">__HAL_LOCK</a>(__HANDLE__)</td></tr>
+<tr class="separator:ad3d96e1b9022ba76b69eeda91027b36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2c23627aed2bb71d8c1ad071cda004"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a7c2c23627aed2bb71d8c1ad071cda004">__HAL_UNLOCK</a>(__HANDLE__)</td></tr>
+<tr class="separator:a7c2c23627aed2bb71d8c1ad071cda004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa12b03c58e2eb296bd7aa915ee540f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#aaa12b03c58e2eb296bd7aa915ee540f3">__ALIGN_END</a></td></tr>
+<tr class="separator:aaa12b03c58e2eb296bd7aa915ee540f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a63c0679d1cb8b8c684fbb0632743478f"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> { <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632">HAL_OK</a> = 0x00U, 
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4">HAL_ERROR</a> = 0x01U, 
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7">HAL_BUSY</a> = 0x02U, 
+<a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5">HAL_TIMEOUT</a> = 0x03U
+ }</td></tr>
+<tr class="memdesc:a63c0679d1cb8b8c684fbb0632743478f"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL Status structures definition <br  />
+  <a href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">更多...</a><br /></td></tr>
+<tr class="separator:a63c0679d1cb8b8c684fbb0632743478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab367482e943333a1299294eadaad284b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</a> { <a class="el" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0">HAL_UNLOCKED</a> = 0x00U, 
+<a class="el" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d">HAL_LOCKED</a> = 0x01U
+ }</td></tr>
+<tr class="memdesc:ab367482e943333a1299294eadaad284b"><td class="mdescLeft">&#160;</td><td class="mdescRight">HAL Lock structures definition <br  />
+  <a href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284b">更多...</a><br /></td></tr>
+<tr class="separator:ab367482e943333a1299294eadaad284b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>This file contains HAL common defines, enumeration, macros and structures definitions. </p>
+<dl class="section author"><dt>作者</dt><dd>MCD Application Team </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd></dd></dl>
+<h2><center>&copy; Copyright (c) 2017 STMicroelectronics. All rights reserved.</center></h2>
+<p>This software component is licensed by ST under BSD 3-Clause license, the "License"; You may not use this file except in compliance with the License. You may obtain a copy of the License at: opensource.org/licenses/BSD-3-Clause </p>
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 中定义.</p>
+</div><h2 class="groupheader">宏定义说明</h2>
+<a id="aaa12b03c58e2eb296bd7aa915ee540f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa12b03c58e2eb296bd7aa915ee540f3">&#9670;&nbsp;</a></span>__ALIGN_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __ALIGN_END</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00131">131</a> 行定义.</p>
+
+</div>
+</div>
+<a id="af5b3b3d0eff8c4cb59d4d3909c247311"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5b3b3d0eff8c4cb59d4d3909c247311">&#9670;&nbsp;</a></span>__HAL_LINKDMA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_LINKDMA</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__HANDLE__, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__PPP_DMA_FIELD__, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__DMA_HANDLE__&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">                        <span class="keywordflow">do</span>{                                                      \</div>
+<div class="line">                              (__HANDLE__)-&gt;__PPP_DMA_FIELD__ = &amp;(__DMA_HANDLE__); \</div>
+<div class="line">                              (__DMA_HANDLE__).Parent = (__HANDLE__);             \</div>
+<div class="line">                          } <span class="keywordflow">while</span>(0U)</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00066">66</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad3d96e1b9022ba76b69eeda91027b36c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3d96e1b9022ba76b69eeda91027b36c">&#9670;&nbsp;</a></span>__HAL_LOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_LOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__HANDLE__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">                                <span class="keywordflow">do</span>{                                        \</div>
+<div class="line">                                    if((__HANDLE__)-&gt;Lock == <a class="code" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d">HAL_LOCKED</a>)   \</div>
+<div class="line">                                    {                                      \</div>
+<div class="line">                                       return <a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7">HAL_BUSY</a>;                    \</div>
+<div class="line">                                    }                                      \</div>
+<div class="line">                                    else                                   \</div>
+<div class="line">                                    {                                      \</div>
+<div class="line">                                       (__HANDLE__)-&gt;Lock = <a class="code" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d">HAL_LOCKED</a>;    \</div>
+<div class="line">                                    }                                      \</div>
+<div class="line">                                  }<span class="keywordflow">while</span> (0U)</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00093">93</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5850085e1bb7a96a417756f235b16aea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5850085e1bb7a96a417756f235b16aea">&#9670;&nbsp;</a></span>__HAL_RESET_HANDLE_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_RESET_HANDLE_STATE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__HANDLE__</td><td>)</td>
+          <td>&#160;&#160;&#160;((__HANDLE__)-&gt;State = 0U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the Handle's State field. </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;strong&gt;HANDLE&lt;/strong&gt;</td><td>specifies the Peripheral Handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>This macro can be used for the following purpose:<ul>
+<li>When the Handle is declared as local variable; before passing it as parameter to HAL_PPP_Init() for the first time, it is mandatory to use this macro to set to 0 the Handle's "State" field. Otherwise, "State" field may have any random value and the first time the function HAL_PPP_Init() is called, the low level hardware initialization will be missed (i.e. <a class="el" href="group__HAL__MSP__Private__Functions.html#ga4f778ad7de857377eb5493377047e72d" title="Initializes the PPP MSP.">HAL_PPP_MspInit()</a> will not be executed).</li>
+<li>When there is a need to reconfigure the low level hardware: instead of calling HAL_PPP_DeInit() then HAL_PPP_Init(), user can make a call to this macro then HAL_PPP_Init(). In this later function, when the Handle's "State" field is set to 0, it will execute the function <a class="el" href="group__HAL__MSP__Private__Functions.html#ga4f778ad7de857377eb5493377047e72d" title="Initializes the PPP MSP.">HAL_PPP_MspInit()</a> which will reconfigure the low level hardware. </li>
+</ul>
+</dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00087">87</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7c2c23627aed2bb71d8c1ad071cda004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2c23627aed2bb71d8c1ad071cda004">&#9670;&nbsp;</a></span>__HAL_UNLOCK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define __HAL_UNLOCK</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">__HANDLE__</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>值:</b><div class="fragment"><div class="line">                                  <span class="keywordflow">do</span>{                                       \</div>
+<div class="line">                                      (__HANDLE__)-&gt;Lock = <a class="code" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0">HAL_UNLOCKED</a>;    \</div>
+<div class="line">                                    }<span class="keywordflow">while</span> (0U)</div>
+</div><!-- fragment -->
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00105">105</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a82637a84fbdca0e2a25496089b549924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82637a84fbdca0e2a25496089b549924">&#9670;&nbsp;</a></span>HAL_IS_BIT_CLR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAL_IS_BIT_CLR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">REG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BIT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((REG) &amp; (BIT)) == 0U)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00064">64</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5b44dfd2a26f85f7b628b0945daff2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b44dfd2a26f85f7b628b0945daff2c3">&#9670;&nbsp;</a></span>HAL_IS_BIT_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAL_IS_BIT_SET</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">REG, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">BIT&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;(((REG) &amp; (BIT)) == (BIT))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aad28bc64749c50dcedd6bf819fdc6974"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad28bc64749c50dcedd6bf819fdc6974">&#9670;&nbsp;</a></span>HAL_MAX_DELAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HAL_MAX_DELAY&#160;&#160;&#160;0xFFFFFFFFU</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00061">61</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a6bc306171da085f4c7df2c66d2ff8e47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc306171da085f4c7df2c66d2ff8e47">&#9670;&nbsp;</a></span>UNUSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define UNUSED</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">X</td><td>)</td>
+          <td>&#160;&#160;&#160;(void)X      /* To avoid gcc/g++ warnings */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00059">59</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ab367482e943333a1299294eadaad284b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab367482e943333a1299294eadaad284b">&#9670;&nbsp;</a></span>HAL_LockTypeDef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HAL Lock structures definition <br  />
+ </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0"></a>HAL_UNLOCKED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d"></a>HAL_LOCKED&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a63c0679d1cb8b8c684fbb0632743478f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63c0679d1cb8b8c684fbb0632743478f">&#9670;&nbsp;</a></span>HAL_StatusTypeDef</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>HAL Status structures definition <br  />
+ </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a63c0679d1cb8b8c684fbb0632743478fa6eb724a07061d89a4a2052744e5a3632"></a>HAL_OK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a63c0679d1cb8b8c684fbb0632743478fa5a04e395e501e4e400172c610478c4a4"></a>HAL_ERROR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7"></a>HAL_BUSY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a63c0679d1cb8b8c684fbb0632743478fa00c89549bc881c35e8e4cd9e718337e5"></a>HAL_TIMEOUT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="stm32f4xx__hal__def_8h_source.html">stm32f4xx_hal_def.h</a> 第 <a class="el" href="stm32f4xx__hal__def_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astm32f4xx__hal__def_8h_html_ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba656ad5f6dad97210cf3ccf107c033e4d">HAL_LOCKED</a></div><div class="ttdeci">@ HAL_LOCKED</div><div class="ttdef"><b>Definition:</b> <a href="stm32f4xx__hal__def_8h_source.html#l00054">stm32f4xx_hal_def.h:53</a></div></div>
+<div class="ttc" id="astm32f4xx__hal__def_8h_html_a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478fa8532fa3641ae7c14cb1b0554e2d9cbc7">HAL_BUSY</a></div><div class="ttdeci">@ HAL_BUSY</div><div class="ttdef"><b>Definition:</b> <a href="stm32f4xx__hal__def_8h_source.html#l00043">stm32f4xx_hal_def.h:43</a></div></div>
+<div class="ttc" id="astm32f4xx__hal__def_8h_html_ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284ba9bd487430440139444e6e7ff226005c0">HAL_UNLOCKED</a></div><div class="ttdeci">@ HAL_UNLOCKED</div><div class="ttdef"><b>Definition:</b> <a href="stm32f4xx__hal__def_8h_source.html#l00052">stm32f4xx_hal_def.h:52</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="stm32f4xx__hal__def_8h.html">stm32f4xx_hal_def.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

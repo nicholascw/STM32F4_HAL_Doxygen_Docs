@@ -1,0 +1,61 @@
+.TH "HAL_DAC_Aliased_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_DAC_Aliased_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_DHR12R1_ALIGNEMENT\fP   DAC_DHR12R1_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DHR12R2_ALIGNEMENT\fP   DAC_DHR12R2_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fB__HAL_DHR12RD_ALIGNEMENT\fP   DAC_DHR12RD_ALIGNMENT"
+.br
+.ti -1c
+.RI "#define \fBIS_DAC_GENERATE_WAVE\fP   \fBIS_DAC_WAVE\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_DAC_WAVE\fP(WAVE)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_DHR12R1_ALIGNEMENT   DAC_DHR12R1_ALIGNMENT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1522 行定义\&.
+.SS "#define __HAL_DHR12R2_ALIGNEMENT   DAC_DHR12R2_ALIGNMENT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1523 行定义\&.
+.SS "#define __HAL_DHR12RD_ALIGNEMENT   DAC_DHR12RD_ALIGNMENT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1524 行定义\&.
+.SS "#define IS_DAC_GENERATE_WAVE   \fBIS_DAC_WAVE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 1525 行定义\&.
+.SS "#define IS_DAC_WAVE(WAVE)"
+\fB值:\fP
+.PP
+.nf
+                          (((WAVE) == DAC_WAVE_NONE) || \
+                          ((WAVE) == DAC_WAVE_NOISE)|| \
+                          ((WAVE) == DAC_WAVE_TRIANGLE))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 1794 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

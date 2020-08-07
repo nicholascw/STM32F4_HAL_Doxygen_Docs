@@ -1,0 +1,5 @@
+<map id="inc/stm32f4xx_hal_rcc_ex.h" name="inc/stm32f4xx_hal_rcc_ex.h">
+<area shape="rect" id="node1" title="Header file of RCC HAL Extension module." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$stm32f4xx__hal__rcc_8h.html" title="Header file of RCC HAL module." alt="" coords="17,80,197,107"/>
+<area shape="rect" id="node3" href="$stm32f4xx__hal__conf__template_8h.html" title="HAL configuration template file. This file should be copied to the application folder and renamed to ..." alt="" coords="18,155,195,196"/>
+</map>

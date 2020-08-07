@@ -1,0 +1,41 @@
+.TH "HAL_Private_Variables" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_Private_Variables
+.SH SYNOPSIS
+.br
+.PP
+.SS "变量"
+
+.in +1c
+.ti -1c
+.RI "__IO uint32_t \fBuwTick\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBuwTickPrio\fP = (1UL << __NVIC_PRIO_BITS)"
+.br
+.ti -1c
+.RI "\fBHAL_TickFreqTypeDef\fP \fBuwTickFreq\fP = \fBHAL_TICK_FREQ_DEFAULT\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "变量说明"
+.PP 
+.SS "__IO uint32_t uwTick"
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 94 行定义\&.
+.SS "\fBHAL_TickFreqTypeDef\fP uwTickFreq = \fBHAL_TICK_FREQ_DEFAULT\fP"
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 96 行定义\&.
+.SS "uint32_t uwTickPrio = (1UL << __NVIC_PRIO_BITS)"
+
+.PP
+在文件 stm32f4xx_hal\&.c 第 95 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

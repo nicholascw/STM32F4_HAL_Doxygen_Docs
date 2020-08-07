@@ -1,0 +1,232 @@
+.TH "RTCEx_Tamper" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Tamper
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER1_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR |= (RTC_TAFCR_TAMP1E))"
+.br
+.RI "Enable the RTC Tamper1 input detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER1_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR &= ~(RTC_TAFCR_TAMP1E))"
+.br
+.RI "Disable the RTC Tamper1 input detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER2_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR |= (RTC_TAFCR_TAMP2E))"
+.br
+.RI "Enable the RTC Tamper2 input detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER2_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR &= ~(RTC_TAFCR_TAMP2E))"
+.br
+.RI "Disable the RTC Tamper2 input detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER_GET_IT\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Tamper interrupt has occurred or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER_GET_IT_SOURCE\fP(__HANDLE__,  __INTERRUPT__)   (((((__HANDLE__)\->Instance\->TAFCR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+.br
+.RI "Check whether the specified RTC Tamper interrupt has been enabled or not\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+.br
+.RI "Get the selected RTC Tamper's flag status\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_TAMPER_CLEAR_FLAG\fP(__HANDLE__,  __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+.br
+.RI "Clear the RTC Tamper's pending flags\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_TAMPER1_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR &= ~(RTC_TAFCR_TAMP1E))"
+
+.PP
+Disable the RTC Tamper1 input detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 581 行定义\&.
+.SS "#define __HAL_RTC_TAMPER1_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR |= (RTC_TAFCR_TAMP1E))"
+
+.PP
+Enable the RTC Tamper1 input detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 574 行定义\&.
+.SS "#define __HAL_RTC_TAMPER2_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR &= ~(RTC_TAFCR_TAMP2E))"
+
+.PP
+Disable the RTC Tamper2 input detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 596 行定义\&.
+.SS "#define __HAL_RTC_TAMPER2_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->TAFCR |= (RTC_TAFCR_TAMP2E))"
+
+.PP
+Enable the RTC Tamper2 input detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 589 行定义\&.
+.SS "#define __HAL_RTC_TAMPER_CLEAR_FLAG(__HANDLE__, __FLAG__)   ((__HANDLE__)\->Instance\->ISR) = (~((__FLAG__) | RTC_ISR_INIT)|((__HANDLE__)\->Instance\->ISR & RTC_ISR_INIT))"
+
+.PP
+Clear the RTC Tamper's pending flags\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Tamper Flag to clear\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_TAMP1F 
+.IP "\(bu" 2
+RTC_FLAG_TAMP2F 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 640 行定义\&.
+.SS "#define __HAL_RTC_TAMPER_GET_FLAG(__HANDLE__, __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+
+.PP
+Get the selected RTC Tamper's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC Tamper Flag sources to be enabled or disabled\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_TAMP1F 
+.IP "\(bu" 2
+RTC_FLAG_TAMP2F 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 629 行定义\&.
+.SS "#define __HAL_RTC_TAMPER_GET_IT(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->ISR) & ((__INTERRUPT__)>> 4U)) != RESET)? SET : RESET)"
+
+.PP
+Check whether the specified RTC Tamper interrupt has occurred or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Tamper interrupt to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TAMP1 
+.IP "\(bu" 2
+RTC_IT_TAMP2 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 608 行定义\&.
+.SS "#define __HAL_RTC_TAMPER_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__)   (((((__HANDLE__)\->Instance\->TAFCR) & (__INTERRUPT__)) != RESET) ? SET : RESET)"
+
+.PP
+Check whether the specified RTC Tamper interrupt has been enabled or not\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>INTERRUPT</strong>\fP specifies the RTC Tamper interrupt source to check\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_IT_TAMP: Tamper interrupt 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 618 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

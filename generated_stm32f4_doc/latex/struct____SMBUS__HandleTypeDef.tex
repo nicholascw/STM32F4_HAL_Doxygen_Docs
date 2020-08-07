@@ -1,0 +1,221 @@
+\hypertarget{struct____SMBUS__HandleTypeDef}{}\doxysection{\+\_\+\+\_\+\+S\+M\+B\+U\+S\+\_\+\+Handle\+Type\+Def结构体 参考}
+\label{struct____SMBUS__HandleTypeDef}\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+
+
+S\+M\+B\+US handle Structure definition  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+smbus.\+h$>$}
+
+
+
+\+\_\+\+\_\+\+S\+M\+B\+U\+S\+\_\+\+Handle\+Type\+Def 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{struct____SMBUS__HandleTypeDef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+I2\+C\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}
+\item 
+\mbox{\hyperlink{structSMBUS__InitTypeDef}{S\+M\+B\+U\+S\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a930c8079019ff72009a76aff3cd49392}{Init}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}{p\+Buff\+Ptr}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a51999331ab800faccdb97383b39819dd}{Xfer\+Size}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}{Xfer\+Count}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}{Xfer\+Options}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}{Previous\+State}}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{group__SMBUS__Exported__Types_ga566b6739a68408dafa25ad013868e7b1}{H\+A\+L\+\_\+\+S\+M\+B\+U\+S\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a6aa1ddf9a58477a561f0effe56e7bcdc}{State}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{group__SMBUS__Exported__Types_gaf3eb99bb66f3e388777f3d123a242f13}{H\+A\+L\+\_\+\+S\+M\+B\+U\+S\+\_\+\+Mode\+Type\+Def}} \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a3a06263e063460689e9bb813896545cf}{Mode}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{Error\+Code}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}{Devaddress}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}{Event\+Count}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{struct____SMBUS__HandleTypeDef_ad8f4bea0197311e24dabb327aac2a459}{Xfer\+P\+EC}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+S\+M\+B\+US handle Structure definition 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 152 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}\label{struct____SMBUS__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!Devaddress@{Devaddress}}
+\index{Devaddress@{Devaddress}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Devaddress}{Devaddress}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Devaddress}
+
+S\+M\+B\+US Target device address ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 178 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}\label{struct____SMBUS__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Error\+Code}
+
+S\+M\+B\+US Error code ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 176 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}\label{struct____SMBUS__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!EventCount@{EventCount}}
+\index{EventCount@{EventCount}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{EventCount}{EventCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Event\+Count}
+
+S\+M\+B\+US Event counter ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 180 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a930c8079019ff72009a76aff3cd49392}\label{struct____SMBUS__HandleTypeDef_a930c8079019ff72009a76aff3cd49392}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSMBUS__InitTypeDef}{S\+M\+B\+U\+S\+\_\+\+Init\+Type\+Def}} Init}
+
+S\+M\+B\+US communication parameters ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 156 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}\label{struct____SMBUS__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Type\+Def$\ast$ Instance}
+
+S\+M\+B\+US registers base address ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 154 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}\label{struct____SMBUS__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} Lock}
+
+S\+M\+B\+US locking object ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 170 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a3a06263e063460689e9bb813896545cf}\label{struct____SMBUS__HandleTypeDef_a3a06263e063460689e9bb813896545cf}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!Mode@{Mode}}
+\index{Mode@{Mode}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{group__SMBUS__Exported__Types_gaf3eb99bb66f3e388777f3d123a242f13}{H\+A\+L\+\_\+\+S\+M\+B\+U\+S\+\_\+\+Mode\+Type\+Def}} Mode}
+
+S\+M\+B\+US communication mode ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 174 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}\label{struct____SMBUS__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!pBuffPtr@{pBuffPtr}}
+\index{pBuffPtr@{pBuffPtr}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{pBuffPtr}{pBuffPtr}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Buff\+Ptr}
+
+Pointer to S\+M\+B\+US transfer buffer ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 158 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}\label{struct____SMBUS__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!PreviousState@{PreviousState}}
+\index{PreviousState@{PreviousState}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{PreviousState}{PreviousState}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Previous\+State}
+
+S\+M\+B\+US communication Previous state and mode context for internal usage ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 167 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a6aa1ddf9a58477a561f0effe56e7bcdc}\label{struct____SMBUS__HandleTypeDef_a6aa1ddf9a58477a561f0effe56e7bcdc}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!State@{State}}
+\index{State@{State}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{group__SMBUS__Exported__Types_ga566b6739a68408dafa25ad013868e7b1}{H\+A\+L\+\_\+\+S\+M\+B\+U\+S\+\_\+\+State\+Type\+Def}} State}
+
+S\+M\+B\+US communication state ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 172 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}\label{struct____SMBUS__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!XferCount@{XferCount}}
+\index{XferCount@{XferCount}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferCount}{XferCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Xfer\+Count}
+
+S\+M\+B\+US transfer counter ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 162 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}\label{struct____SMBUS__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!XferOptions@{XferOptions}}
+\index{XferOptions@{XferOptions}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferOptions}{XferOptions}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Xfer\+Options}
+
+S\+M\+B\+US transfer options this parameter can be a value of S\+M\+B\+U\+S\+\_\+\+O\+P\+T\+I\+O\+NS ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 164 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_ad8f4bea0197311e24dabb327aac2a459}\label{struct____SMBUS__HandleTypeDef_ad8f4bea0197311e24dabb327aac2a459}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!XferPEC@{XferPEC}}
+\index{XferPEC@{XferPEC}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferPEC}{XferPEC}}
+{\footnotesize\ttfamily uint8\+\_\+t Xfer\+P\+EC}
+
+S\+M\+B\+US P\+EC data in reception mode ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 182 行定义.
+
+\mbox{\Hypertarget{struct____SMBUS__HandleTypeDef_a51999331ab800faccdb97383b39819dd}\label{struct____SMBUS__HandleTypeDef_a51999331ab800faccdb97383b39819dd}} 
+\index{\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}!XferSize@{XferSize}}
+\index{XferSize@{XferSize}!\_\_SMBUS\_HandleTypeDef@{\_\_SMBUS\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferSize}{XferSize}}
+{\footnotesize\ttfamily uint16\+\_\+t Xfer\+Size}
+
+S\+M\+B\+US transfer size ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+smbus.\+h 第 160 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__smbus_8h}{stm32f4xx\+\_\+hal\+\_\+smbus.\+h}}\end{DoxyCompactItemize}

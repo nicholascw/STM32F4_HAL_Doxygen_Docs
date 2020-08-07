@@ -1,0 +1,255 @@
+\hypertarget{struct____I2C__HandleTypeDef}{}\doxysection{\+\_\+\+\_\+\+I2\+C\+\_\+\+Handle\+Type\+Def结构体 参考}
+\label{struct____I2C__HandleTypeDef}\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+i2c.\+h$>$}
+
+
+
+\+\_\+\+\_\+\+I2\+C\+\_\+\+Handle\+Type\+Def 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{struct____I2C__HandleTypeDef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+I2\+C\+\_\+\+Type\+Def $\ast$ \mbox{\hyperlink{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}{Instance}}
+\item 
+\mbox{\hyperlink{structI2C__InitTypeDef}{I2\+C\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{struct____I2C__HandleTypeDef_a4b1d65e692a280d15470a8184ed2f68a}{Init}}
+\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{struct____I2C__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}{p\+Buff\+Ptr}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a51999331ab800faccdb97383b39819dd}{Xfer\+Size}}
+\item 
+\+\_\+\+\_\+\+IO uint16\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}{Xfer\+Count}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}{Xfer\+Options}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}{Previous\+State}}
+\item 
+\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct____I2C__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}{hdmatx}}
+\item 
+\mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct____I2C__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}{hdmarx}}
+\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct____I2C__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}{Lock}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{group__HAL__state__structure__definition_gaef355af8eab251ae2a19ee164ad81c37}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}{State}}
+\item 
+\+\_\+\+\_\+\+IO \mbox{\hyperlink{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}} \mbox{\hyperlink{struct____I2C__HandleTypeDef_ac25cb640453370e3b2526799dc24eb5a}{Mode}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}{Error\+Code}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}{Devaddress}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a009bdd1b89c6ca994760617de151645d}{Memaddress}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a4c670e27912a66ef89546d7006d1b06b}{Memadd\+Size}}
+\item 
+\+\_\+\+\_\+\+IO uint32\+\_\+t \mbox{\hyperlink{struct____I2C__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}{Event\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 184 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}\label{struct____I2C__HandleTypeDef_ad6bcf76f2ccfe535724014ef07eae04b}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Devaddress@{Devaddress}}
+\index{Devaddress@{Devaddress}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Devaddress}{Devaddress}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Devaddress}
+
+I2C Target device address ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 213 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}\label{struct____I2C__HandleTypeDef_a123c5063e6a3b1901b2fbe5f88c53a7e}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Error\+Code}
+
+I2C Error code ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 211 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}\label{struct____I2C__HandleTypeDef_a5b9ab6922825ed4ab1bfeef04f18b90a}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!EventCount@{EventCount}}
+\index{EventCount@{EventCount}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{EventCount}{EventCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Event\+Count}
+
+I2C Event counter ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 219 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}\label{struct____I2C__HandleTypeDef_abd0aeec20298a55d89a440320e35634f}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!hdmarx@{hdmarx}}
+\index{hdmarx@{hdmarx}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{hdmarx}{hdmarx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}}$\ast$ hdmarx}
+
+I2C Rx D\+MA handle parameters ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 203 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}\label{struct____I2C__HandleTypeDef_a33e13c28b1a70e6164417abb026d7a22}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!hdmatx@{hdmatx}}
+\index{hdmatx@{hdmatx}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{hdmatx}{hdmatx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__DMA__Exported__Types_ga41b754a906b86bce54dc79938970138b}{D\+M\+A\+\_\+\+Handle\+Type\+Def}}$\ast$ hdmatx}
+
+I2C Tx D\+MA handle parameters ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 201 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a4b1d65e692a280d15470a8184ed2f68a}\label{struct____I2C__HandleTypeDef_a4b1d65e692a280d15470a8184ed2f68a}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structI2C__InitTypeDef}{I2\+C\+\_\+\+Init\+Type\+Def}} Init}
+
+I2C communication parameters ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 188 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}\label{struct____I2C__HandleTypeDef_a8bdec20782b6b99587806437094c43d2}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Type\+Def$\ast$ Instance}
+
+I2C registers base address ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 186 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}\label{struct____I2C__HandleTypeDef_ad4cf225029dbefe8d3fe660c33b8bb6b}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32f4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{H\+A\+L\+\_\+\+Lock\+Type\+Def}} Lock}
+
+I2C locking object ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 205 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a009bdd1b89c6ca994760617de151645d}\label{struct____I2C__HandleTypeDef_a009bdd1b89c6ca994760617de151645d}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Memaddress@{Memaddress}}
+\index{Memaddress@{Memaddress}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Memaddress}{Memaddress}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Memaddress}
+
+I2C Target memory address ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 215 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a4c670e27912a66ef89546d7006d1b06b}\label{struct____I2C__HandleTypeDef_a4c670e27912a66ef89546d7006d1b06b}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!MemaddSize@{MemaddSize}}
+\index{MemaddSize@{MemaddSize}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{MemaddSize}{MemaddSize}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Memadd\+Size}
+
+I2C Target memory address size ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 217 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_ac25cb640453370e3b2526799dc24eb5a}\label{struct____I2C__HandleTypeDef_ac25cb640453370e3b2526799dc24eb5a}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!Mode@{Mode}}
+\index{Mode@{Mode}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Mode}{Mode}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{group__HAL__mode__structure__definition_gabcbb7b844f2ffd63c4e530c117882062}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+Mode\+Type\+Def}} Mode}
+
+I2C communication mode ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 209 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}\label{struct____I2C__HandleTypeDef_ae5b117ad14c78eb266b018fb972e315e}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!pBuffPtr@{pBuffPtr}}
+\index{pBuffPtr@{pBuffPtr}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{pBuffPtr}{pBuffPtr}}
+{\footnotesize\ttfamily uint8\+\_\+t$\ast$ p\+Buff\+Ptr}
+
+Pointer to I2C transfer buffer ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 190 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}\label{struct____I2C__HandleTypeDef_aa74abfd1a56073ae8c2c826db1be0628}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!PreviousState@{PreviousState}}
+\index{PreviousState@{PreviousState}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{PreviousState}{PreviousState}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Previous\+State}
+
+I2C communication Previous state and mode context for internal usage ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 198 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}\label{struct____I2C__HandleTypeDef_a48237f31888af06f6c25dead5438f5a7}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!State@{State}}
+\index{State@{State}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO \mbox{\hyperlink{group__HAL__state__structure__definition_gaef355af8eab251ae2a19ee164ad81c37}{H\+A\+L\+\_\+\+I2\+C\+\_\+\+State\+Type\+Def}} State}
+
+I2C communication state ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 207 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}\label{struct____I2C__HandleTypeDef_a49bf3cd0e9bcb9f41f161663f513f405}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!XferCount@{XferCount}}
+\index{XferCount@{XferCount}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferCount}{XferCount}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint16\+\_\+t Xfer\+Count}
+
+I2C transfer counter ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 194 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}\label{struct____I2C__HandleTypeDef_a275aa3c8180a03dbe4bf55fafba3e892}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!XferOptions@{XferOptions}}
+\index{XferOptions@{XferOptions}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferOptions}{XferOptions}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+IO uint32\+\_\+t Xfer\+Options}
+
+I2C transfer options ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 196 行定义.
+
+\mbox{\Hypertarget{struct____I2C__HandleTypeDef_a51999331ab800faccdb97383b39819dd}\label{struct____I2C__HandleTypeDef_a51999331ab800faccdb97383b39819dd}} 
+\index{\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}!XferSize@{XferSize}}
+\index{XferSize@{XferSize}!\_\_I2C\_HandleTypeDef@{\_\_I2C\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferSize}{XferSize}}
+{\footnotesize\ttfamily uint16\+\_\+t Xfer\+Size}
+
+I2C transfer size ~\newline
+ 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+i2c.\+h 第 192 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__i2c_8h}{stm32f4xx\+\_\+hal\+\_\+i2c.\+h}}\end{DoxyCompactItemize}

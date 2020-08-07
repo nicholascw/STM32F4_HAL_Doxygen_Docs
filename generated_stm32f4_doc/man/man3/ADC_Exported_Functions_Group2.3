@@ -1,0 +1,90 @@
+.TH "ADC_Exported_Functions_Group2" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_Exported_Functions_Group2
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_PollForConversion\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_PollForEvent\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t EventType, uint32_t Timeout)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start_IT\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop_IT\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_IRQHandler\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Start_DMA\fP (\fBADC_HandleTypeDef\fP *hadc, uint32_t *pData, uint32_t Length)"
+.br
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_ADC_Stop_DMA\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "uint32_t \fBHAL_ADC_GetValue\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ConvCpltCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ConvHalfCpltCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_LevelOutOfWindowCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.ti -1c
+.RI "void \fBHAL_ADC_ErrorCallback\fP (\fBADC_HandleTypeDef\fP *hadc)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "void HAL_ADC_ConvCpltCallback (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "void HAL_ADC_ConvHalfCpltCallback (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "void HAL_ADC_ErrorCallback (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "uint32_t HAL_ADC_GetValue (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "void HAL_ADC_IRQHandler (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "void HAL_ADC_LevelOutOfWindowCallback (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_PollForConversion (\fBADC_HandleTypeDef\fP * hadc, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_PollForEvent (\fBADC_HandleTypeDef\fP * hadc, uint32_t EventType, uint32_t Timeout)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Start (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Start_DMA (\fBADC_HandleTypeDef\fP * hadc, uint32_t * pData, uint32_t Length)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Start_IT (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Stop (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Stop_DMA (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SS "\fBHAL_StatusTypeDef\fP HAL_ADC_Stop_IT (\fBADC_HandleTypeDef\fP * hadc)"
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,242 @@
+\hypertarget{group__HAL__TimeBase__RTC__Alarm__Template}{}\doxysection{H\+AL Time\+Base R\+TC Alarm Template}
+\label{group__HAL__TimeBase__RTC__Alarm__Template}\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+H\+AL Time\+Base R\+TC Alarm Template 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__RTC__Alarm__Template}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga5da1cd82e5ae713267918a9c85b4dc77}{R\+T\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_gac483fb44f1611ddb407a4aacec7ae4e7}{R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}}~99U
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga433a49865e4af2e0972e6bbbea894d51}{R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV}}~9U
+\item 
+\#define \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_gad4aef0e3572ec727de3815fcff26220a}{R\+C\+C\+\_\+\+R\+T\+C\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+1\+M\+HZ}}~((uint32\+\_\+t)((uint32\+\_\+t)R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+S\+EL $\vert$ (uint32\+\_\+t)((\mbox{\hyperlink{stm32f4xx__hal__conf__template_8h_aeafcff4f57440c60e64812dddd13e7cb}{H\+S\+E\+\_\+\+V\+A\+L\+UE}}/1000000U) $<$$<$ 16U)))
+\end{DoxyCompactItemize}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga4da4fb52ec579671d337938e78f9a207}{R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function handles R\+TC A\+L\+A\+RM interrupt request. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga879cdb21ef051eb81ec51c18147397d5}{H\+A\+L\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_gaaf651af2afe688a991c657f64f8fa5f9}{H\+A\+L\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga24e0ee9dae1ec0f9d19200f5575ff790}{H\+A\+L\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga11aeff83fd498cddbed3bcddcf017e0a}{H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback}} (\mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} $\ast$hrtc)
+\begin{DoxyCompactList}\small\item\em A\+L\+A\+RM A Event Callback in non blocking mode \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{group__HAL__TimeBase__RTC__Alarm__Template_ga66edbb38f0b45759c28ecd5aede14478}{h\+R\+T\+C\+\_\+\+Handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_gad4aef0e3572ec727de3815fcff26220a}\label{group__HAL__TimeBase__RTC__Alarm__Template_gad4aef0e3572ec727de3815fcff26220a}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!RCC\_RTCCLKSOURCE\_1MHZ@{RCC\_RTCCLKSOURCE\_1MHZ}}
+\index{RCC\_RTCCLKSOURCE\_1MHZ@{RCC\_RTCCLKSOURCE\_1MHZ}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{RCC\_RTCCLKSOURCE\_1MHZ}{RCC\_RTCCLKSOURCE\_1MHZ}}
+{\footnotesize\ttfamily \#define R\+C\+C\+\_\+\+R\+T\+C\+C\+L\+K\+S\+O\+U\+R\+C\+E\+\_\+1\+M\+HZ~((uint32\+\_\+t)((uint32\+\_\+t)R\+C\+C\+\_\+\+B\+D\+C\+R\+\_\+\+R\+T\+C\+S\+EL $\vert$ (uint32\+\_\+t)((\mbox{\hyperlink{stm32f4xx__hal__conf__template_8h_aeafcff4f57440c60e64812dddd13e7cb}{H\+S\+E\+\_\+\+V\+A\+L\+UE}}/1000000U) $<$$<$ 16U)))}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 74 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_gac483fb44f1611ddb407a4aacec7ae4e7}\label{group__HAL__TimeBase__RTC__Alarm__Template_gac483fb44f1611ddb407a4aacec7ae4e7}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!RTC\_ASYNCH\_PREDIV@{RTC\_ASYNCH\_PREDIV}}
+\index{RTC\_ASYNCH\_PREDIV@{RTC\_ASYNCH\_PREDIV}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{RTC\_ASYNCH\_PREDIV}{RTC\_ASYNCH\_PREDIV}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+A\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV~99U}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 72 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga5da1cd82e5ae713267918a9c85b4dc77}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga5da1cd82e5ae713267918a9c85b4dc77}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!RTC\_CLOCK\_SOURCE\_HSE@{RTC\_CLOCK\_SOURCE\_HSE}}
+\index{RTC\_CLOCK\_SOURCE\_HSE@{RTC\_CLOCK\_SOURCE\_HSE}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{RTC\_CLOCK\_SOURCE\_HSE}{RTC\_CLOCK\_SOURCE\_HSE}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+C\+L\+O\+C\+K\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+H\+SE}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 67 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga433a49865e4af2e0972e6bbbea894d51}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga433a49865e4af2e0972e6bbbea894d51}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!RTC\_SYNCH\_PREDIV@{RTC\_SYNCH\_PREDIV}}
+\index{RTC\_SYNCH\_PREDIV@{RTC\_SYNCH\_PREDIV}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{RTC\_SYNCH\_PREDIV}{RTC\_SYNCH\_PREDIV}}
+{\footnotesize\ttfamily \#define R\+T\+C\+\_\+\+S\+Y\+N\+C\+H\+\_\+\+P\+R\+E\+D\+IV~9U}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 73 行定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga879cdb21ef051eb81ec51c18147397d5}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!HAL\_InitTick@{HAL\_InitTick}}
+\index{HAL\_InitTick@{HAL\_InitTick}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{HAL\_InitTick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32f4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{H\+A\+L\+\_\+\+Status\+Type\+Def}} H\+A\+L\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the R\+T\+C\+\_\+\+A\+L\+A\+R\+MA as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{注解}
+This function is called automatically at the beginning of program after reset by \mbox{\hyperlink{group__HAL__Exported__Functions__Group1_gaecac54d350c3730e6831eb404e557dc4}{H\+A\+L\+\_\+\+Init()}} or at any time when clock is configured, by \mbox{\hyperlink{group__RCC__Exported__Functions__Group1_gad0a4b5c7459219fafc15f3f867563ef3}{H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+Clock\+Config()}}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em H\+AL} & status \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 95 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__RTC__Alarm__Template_ga879cdb21ef051eb81ec51c18147397d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga24e0ee9dae1ec0f9d19200f5575ff790}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!HAL\_ResumeTick@{HAL\_ResumeTick}}
+\index{HAL\_ResumeTick@{HAL\_ResumeTick}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{HAL\_ResumeTick()}{HAL\_ResumeTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{注解}
+Enable the tick increment by Enabling R\+TC A\+L\+A\+RM interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 233 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga11aeff83fd498cddbed3bcddcf017e0a}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga11aeff83fd498cddbed3bcddcf017e0a}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}}
+\index{HAL\_RTC\_AlarmAEventCallback@{HAL\_RTC\_AlarmAEventCallback}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{HAL\_RTC\_AlarmAEventCallback()}{HAL\_RTC\_AlarmAEventCallback()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+R\+T\+C\+\_\+\+Alarm\+A\+Event\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} $\ast$}]{hrtc }\end{DoxyParamCaption})}
+
+
+
+A\+L\+A\+RM A Event Callback in non blocking mode 
+
+\begin{DoxyNote}{注解}
+This function is called when R\+T\+C\+\_\+\+A\+L\+A\+RM interrupt took place, inside R\+T\+C\+\_\+\+A\+L\+A\+R\+M\+\_\+\+I\+R\+Q\+Handler(). It makes a direct call to \mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaba5b726bfedd013bf7bb5a51d5c4f188}{H\+A\+L\+\_\+\+Inc\+Tick()}} to increment a global variable \char`\"{}uw\+Tick\char`\"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em hrtc} & R\+TC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 251 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__RTC__Alarm__Template_ga11aeff83fd498cddbed3bcddcf017e0a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_gaaf651af2afe688a991c657f64f8fa5f9}\label{group__HAL__TimeBase__RTC__Alarm__Template_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!HAL\_SuspendTick@{HAL\_SuspendTick}}
+\index{HAL\_SuspendTick@{HAL\_SuspendTick}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{HAL\_SuspendTick()}{HAL\_SuspendTick()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{注解}
+Disable the tick increment by disabling R\+TC A\+L\+A\+RM interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 218 行定义.
+
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga4da4fb52ec579671d337938e78f9a207}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga4da4fb52ec579671d337938e78f9a207}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!RTC\_Alarm\_IRQHandler@{RTC\_Alarm\_IRQHandler}}
+\index{RTC\_Alarm\_IRQHandler@{RTC\_Alarm\_IRQHandler}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{RTC\_Alarm\_IRQHandler()}{RTC\_Alarm\_IRQHandler()}}
+{\footnotesize\ttfamily void R\+T\+C\+\_\+\+Alarm\+\_\+\+I\+R\+Q\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function handles R\+TC A\+L\+A\+RM interrupt request. 
+
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 283 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__HAL__TimeBase__RTC__Alarm__Template_ga4da4fb52ec579671d337938e78f9a207_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{group__HAL__TimeBase__RTC__Alarm__Template_ga66edbb38f0b45759c28ecd5aede14478}\label{group__HAL__TimeBase__RTC__Alarm__Template_ga66edbb38f0b45759c28ecd5aede14478}} 
+\index{HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}!hRTC\_Handle@{hRTC\_Handle}}
+\index{hRTC\_Handle@{hRTC\_Handle}!HAL TimeBase RTC Alarm Template@{HAL TimeBase RTC Alarm Template}}
+\doxysubsubsection{\texorpdfstring{hRTC\_Handle}{hRTC\_Handle}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRTC__HandleTypeDef}{R\+T\+C\+\_\+\+Handle\+Type\+Def}} h\+R\+T\+C\+\_\+\+Handle}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+timebase\+\_\+rtc\+\_\+alarm\+\_\+template.\+c 第 81 行定义.
+

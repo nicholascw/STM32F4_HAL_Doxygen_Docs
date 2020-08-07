@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>STM32F4_HAL: inc/stm32f4xx_hal_cec.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">STM32F4_HAL
+   &#160;<span id="projectnumber">1.24.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stm32f4xx__hal__cec_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stm32f4xx_hal_cec.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stm32f4xx__hal__cec_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">/* Define to prevent recursive inclusion -------------------------------------*/</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef STM32F4xx_HAL_CEC_H</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define STM32F4xx_HAL_CEC_H</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">/* Includes ------------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stm32f4xx__hal__def_8h.html">stm32f4xx_hal_def.h</a>&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#if defined (CEC)</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">/* Exported types ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  uint32_t SignalFreeTime;               </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  uint32_t Tolerance;                    </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  uint32_t BRERxStop;                    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  uint32_t BREErrorBitGen;               </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  uint32_t LBPEErrorBitGen;              </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  uint32_t BroadcastMsgNoErrorBitGen;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  uint32_t SignalFreeTimeOption;         </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  uint32_t ListenMode;                   </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  uint16_t  OwnAddress;                 </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  uint8_t  *RxBuffer;                    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;} CEC_InitTypeDef;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">typedef</span> uint32_t HAL_CEC_StateTypeDef;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>__CEC_HandleTypeDef</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;#else</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;typedef struct</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;#endif <span class="comment">/* USE_HAL_CEC_REGISTER_CALLBACKS */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;{</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  CEC_TypeDef             *Instance;      </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  CEC_InitTypeDef         Init;           </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  uint8_t                 *pTxBuffPtr;    </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  uint16_t                TxXferCount;    </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  uint16_t                RxXferSize;     </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <a class="code" href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</a>         Lock;           </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  HAL_CEC_StateTypeDef    gState;         </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  HAL_CEC_StateTypeDef    RxState;        </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  uint32_t                ErrorCode;      </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  void (* TxCpltCallback)(<span class="keyword">struct </span>__CEC_HandleTypeDef</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                          *hcec);                                </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  void (* RxCpltCallback)(<span class="keyword">struct </span>__CEC_HandleTypeDef *hcec,</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                          uint32_t RxFrameSize);          </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  void (* ErrorCallback)(<span class="keyword">struct </span>__CEC_HandleTypeDef *hcec);                                 </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  void (* MspInitCallback)(<span class="keyword">struct </span>__CEC_HandleTypeDef *hcec);               </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  void (* MspDeInitCallback)(<span class="keyword">struct </span>__CEC_HandleTypeDef *hcec);             </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* (USE_HAL_CEC_REGISTER_CALLBACKS) */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;} CEC_HandleTypeDef;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  HAL_CEC_TX_CPLT_CB_ID      = 0x00U,    </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  HAL_CEC_RX_CPLT_CB_ID      = 0x01U,    </div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  HAL_CEC_ERROR_CB_ID        = 0x02U,    </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  HAL_CEC_MSPINIT_CB_ID      = 0x03U,    </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  HAL_CEC_MSPDEINIT_CB_ID    = 0x04U     </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;} HAL_CEC_CallbackIDTypeDef;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">typedef</span>  void (*pCEC_CallbackTypeDef)(CEC_HandleTypeDef *hcec);  </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keyword">typedef</span>  void (*pCEC_RxCallbackTypeDef)(CEC_HandleTypeDef *hcec,</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                                        uint32_t RxFrameSize);  </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_HAL_CEC_REGISTER_CALLBACKS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="comment">/* Exported constants --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_RESET      ((uint32_t)0x00000000)   </span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_READY      ((uint32_t)0x00000020)   </span></div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_BUSY       ((uint32_t)0x00000024)   </span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_BUSY_RX    ((uint32_t)0x00000022)   </span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_BUSY_TX    ((uint32_t)0x00000021)   </span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_BUSY_RX_TX ((uint32_t)0x00000023)   </span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="preprocessor">#define   HAL_CEC_STATE_ERROR      ((uint32_t)0x00000050)   </span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_NONE    (uint32_t) 0x0000U     </span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_RXOVR   CEC_ISR_RXOVR          </span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_BRE     CEC_ISR_BRE            </span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_SBPE    CEC_ISR_SBPE           </span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_LBPE    CEC_ISR_LBPE           </span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_RXACKE  CEC_ISR_RXACKE         </span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_ARBLST  CEC_ISR_ARBLST         </span></div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_TXUDR   CEC_ISR_TXUDR          </span></div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_TXERR   CEC_ISR_TXERR          </span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="preprocessor">#define HAL_CEC_ERROR_TXACKE  CEC_ISR_TXACKE         </span></div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">#define  HAL_CEC_ERROR_INVALID_CALLBACK ((uint32_t)0x00002000U) </span></div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_HAL_CEC_REGISTER_CALLBACKS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">#define CEC_DEFAULT_SFT                    ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#define CEC_0_5_BITPERIOD_SFT              ((uint32_t)0x00000001U)</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">#define CEC_1_5_BITPERIOD_SFT              ((uint32_t)0x00000002U)</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">#define CEC_2_5_BITPERIOD_SFT              ((uint32_t)0x00000003U)</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#define CEC_3_5_BITPERIOD_SFT              ((uint32_t)0x00000004U)</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">#define CEC_4_5_BITPERIOD_SFT              ((uint32_t)0x00000005U)</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">#define CEC_5_5_BITPERIOD_SFT              ((uint32_t)0x00000006U)</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#define CEC_6_5_BITPERIOD_SFT              ((uint32_t)0x00000007U)</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">#define CEC_STANDARD_TOLERANCE             ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;<span class="preprocessor">#define CEC_EXTENDED_TOLERANCE             ((uint32_t)CEC_CFGR_RXTOL)</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;<span class="preprocessor">#define CEC_NO_RX_STOP_ON_BRE             ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#define CEC_RX_STOP_ON_BRE                ((uint32_t)CEC_CFGR_BRESTP)</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="preprocessor">#define CEC_BRE_ERRORBIT_NO_GENERATION     ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;<span class="preprocessor">#define CEC_BRE_ERRORBIT_GENERATION        ((uint32_t)CEC_CFGR_BREGEN)</span></div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;<span class="preprocessor">#define CEC_LBPE_ERRORBIT_NO_GENERATION     ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#define CEC_LBPE_ERRORBIT_GENERATION        ((uint32_t)CEC_CFGR_LBPEGEN)</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#define CEC_BROADCASTERROR_ERRORBIT_GENERATION     ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;<span class="preprocessor">#define CEC_BROADCASTERROR_NO_ERRORBIT_GENERATION  ((uint32_t)CEC_CFGR_BRDNOGEN)</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;<span class="preprocessor">#define CEC_SFT_START_ON_TXSOM           ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#define CEC_SFT_START_ON_TX_RX_END       ((uint32_t)CEC_CFGR_SFTOPT)</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="preprocessor">#define CEC_REDUCED_LISTENING_MODE          ((uint32_t)0x00000000U)</span></div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;<span class="preprocessor">#define CEC_FULL_LISTENING_MODE             ((uint32_t)CEC_CFGR_LSTN)</span></div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="preprocessor">#define CEC_CFGR_OAR_LSB_POS            ((uint32_t) 16U)</span></div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;<span class="preprocessor">#define CEC_INITIATOR_LSB_POS           ((uint32_t) 4U)</span></div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_NONE           ((uint16_t) 0x0000U)   </span><span class="comment">/* Reset value */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_0              ((uint16_t) 0x0001U)   </span><span class="comment">/* Logical Address 0 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_1              ((uint16_t) 0x0002U)   </span><span class="comment">/* Logical Address 1 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_2              ((uint16_t) 0x0004U)   </span><span class="comment">/* Logical Address 2 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_3              ((uint16_t) 0x0008U)   </span><span class="comment">/* Logical Address 3 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_4              ((uint16_t) 0x0010U)   </span><span class="comment">/* Logical Address 4 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_5              ((uint16_t) 0x0020U)   </span><span class="comment">/* Logical Address 5 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_6              ((uint16_t) 0x0040U)   </span><span class="comment">/* Logical Address 6 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_7              ((uint16_t) 0x0080U)   </span><span class="comment">/* Logical Address 7 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_8              ((uint16_t) 0x0100U)   </span><span class="comment">/* Logical Address 9 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_9              ((uint16_t) 0x0200U)   </span><span class="comment">/* Logical Address 10 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_10             ((uint16_t) 0x0400U)   </span><span class="comment">/* Logical Address 11 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_11             ((uint16_t) 0x0800U)   </span><span class="comment">/* Logical Address 12 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_12             ((uint16_t) 0x1000U)   </span><span class="comment">/* Logical Address 13 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_13             ((uint16_t) 0x2000U)   </span><span class="comment">/* Logical Address 14 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;<span class="preprocessor">#define CEC_OWN_ADDRESS_14             ((uint16_t) 0x4000U)   </span><span class="comment">/* Logical Address 15 */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;<span class="preprocessor">#define CEC_IT_TXACKE                   CEC_IER_TXACKEIE</span></div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;<span class="preprocessor">#define CEC_IT_TXERR                    CEC_IER_TXERRIE</span></div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;<span class="preprocessor">#define CEC_IT_TXUDR                    CEC_IER_TXUDRIE</span></div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;<span class="preprocessor">#define CEC_IT_TXEND                    CEC_IER_TXENDIE</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">#define CEC_IT_TXBR                     CEC_IER_TXBRIE</span></div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;<span class="preprocessor">#define CEC_IT_ARBLST                   CEC_IER_ARBLSTIE</span></div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;<span class="preprocessor">#define CEC_IT_RXACKE                   CEC_IER_RXACKEIE</span></div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;<span class="preprocessor">#define CEC_IT_LBPE                     CEC_IER_LBPEIE</span></div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;<span class="preprocessor">#define CEC_IT_SBPE                     CEC_IER_SBPEIE</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;<span class="preprocessor">#define CEC_IT_BRE                      CEC_IER_BREIE</span></div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;<span class="preprocessor">#define CEC_IT_RXOVR                    CEC_IER_RXOVRIE</span></div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;<span class="preprocessor">#define CEC_IT_RXEND                    CEC_IER_RXENDIE</span></div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor">#define CEC_IT_RXBR                     CEC_IER_RXBRIE</span></div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;<span class="preprocessor">#define CEC_FLAG_TXACKE                 CEC_ISR_TXACKE</span></div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="preprocessor">#define CEC_FLAG_TXERR                  CEC_ISR_TXERR</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;<span class="preprocessor">#define CEC_FLAG_TXUDR                  CEC_ISR_TXUDR</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="preprocessor">#define CEC_FLAG_TXEND                  CEC_ISR_TXEND</span></div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;<span class="preprocessor">#define CEC_FLAG_TXBR                   CEC_ISR_TXBR</span></div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;<span class="preprocessor">#define CEC_FLAG_ARBLST                 CEC_ISR_ARBLST</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;<span class="preprocessor">#define CEC_FLAG_RXACKE                 CEC_ISR_RXACKE</span></div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;<span class="preprocessor">#define CEC_FLAG_LBPE                   CEC_ISR_LBPE</span></div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;<span class="preprocessor">#define CEC_FLAG_SBPE                   CEC_ISR_SBPE</span></div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;<span class="preprocessor">#define CEC_FLAG_BRE                    CEC_ISR_BRE</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;<span class="preprocessor">#define CEC_FLAG_RXOVR                  CEC_ISR_RXOVR</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;<span class="preprocessor">#define CEC_FLAG_RXEND                  CEC_ISR_RXEND</span></div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;<span class="preprocessor">#define CEC_FLAG_RXBR                   CEC_ISR_RXBR</span></div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;<span class="preprocessor">#define CEC_ISR_ALL_ERROR              ((uint32_t)CEC_ISR_RXOVR|CEC_ISR_BRE|CEC_ISR_SBPE|CEC_ISR_LBPE|CEC_ISR_RXACKE|\</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;<span class="preprocessor">                                        CEC_ISR_ARBLST|CEC_ISR_TXUDR|CEC_ISR_TXERR|CEC_ISR_TXACKE)</span></div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;<span class="preprocessor">#define CEC_IER_RX_ALL_ERR              ((uint32_t)CEC_IER_RXACKEIE|CEC_IER_LBPEIE|CEC_IER_SBPEIE|CEC_IER_BREIE|CEC_IER_RXOVRIE)</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="preprocessor">#define CEC_IER_TX_ALL_ERR              ((uint32_t)CEC_IER_TXACKEIE|CEC_IER_TXERRIE|CEC_IER_TXUDRIE|CEC_IER_ARBLSTIE)</span></div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">/* Exported macros -----------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="preprocessor">#define __HAL_CEC_RESET_HANDLE_STATE(__HANDLE__) do{                                                   \</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;gState = HAL_CEC_STATE_RESET;     \</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;RxState = HAL_CEC_STATE_RESET;    \</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;MspInitCallback = NULL;           \</span></div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;MspDeInitCallback = NULL;         \</span></div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="preprocessor">                                                     } while(0)</span></div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="preprocessor">#define __HAL_CEC_RESET_HANDLE_STATE(__HANDLE__) do{                                                   \</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;gState = HAL_CEC_STATE_RESET;     \</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="preprocessor">                                                       (__HANDLE__)-&gt;RxState = HAL_CEC_STATE_RESET;    \</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="preprocessor">                                                     } while(0)</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_HAL_CEC_REGISTER_CALLBACKS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;<span class="preprocessor">#define __HAL_CEC_GET_FLAG(__HANDLE__, __FLAG__)        ((__HANDLE__)-&gt;Instance-&gt;ISR &amp; (__FLAG__))</span></div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="preprocessor">#define __HAL_CEC_CLEAR_FLAG(__HANDLE__, __FLAG__)         ((__HANDLE__)-&gt;Instance-&gt;ISR |= (__FLAG__))</span></div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160; </div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;<span class="preprocessor">#define __HAL_CEC_ENABLE_IT(__HANDLE__, __INTERRUPT__)     ((__HANDLE__)-&gt;Instance-&gt;IER |= (__INTERRUPT__))</span></div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160; </div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;<span class="preprocessor">#define __HAL_CEC_DISABLE_IT(__HANDLE__, __INTERRUPT__)    ((__HANDLE__)-&gt;Instance-&gt;IER &amp;= (~(__INTERRUPT__)))</span></div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160; </div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;<span class="preprocessor">#define __HAL_CEC_GET_IT_SOURCE(__HANDLE__, __INTERRUPT__) ((__HANDLE__)-&gt;Instance-&gt;IER &amp; (__INTERRUPT__))</span></div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160; </div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;<span class="preprocessor">#define __HAL_CEC_ENABLE(__HANDLE__)                   ((__HANDLE__)-&gt;Instance-&gt;CR |=  CEC_CR_CECEN)</span></div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;<span class="preprocessor">#define __HAL_CEC_DISABLE(__HANDLE__)                  ((__HANDLE__)-&gt;Instance-&gt;CR &amp;=  ~CEC_CR_CECEN)</span></div>
+<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160; </div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;<span class="preprocessor">#define __HAL_CEC_FIRST_BYTE_TX_SET(__HANDLE__)        ((__HANDLE__)-&gt;Instance-&gt;CR |=  CEC_CR_TXSOM)</span></div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="preprocessor">#define __HAL_CEC_LAST_BYTE_TX_SET(__HANDLE__)         ((__HANDLE__)-&gt;Instance-&gt;CR |=  CEC_CR_TXEOM)</span></div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160; </div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;<span class="preprocessor">#define __HAL_CEC_GET_TRANSMISSION_START_FLAG(__HANDLE__) ((__HANDLE__)-&gt;Instance-&gt;CR &amp; CEC_CR_TXSOM)</span></div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160; </div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;<span class="preprocessor">#define __HAL_CEC_GET_TRANSMISSION_END_FLAG(__HANDLE__)   ((__HANDLE__)-&gt;Instance-&gt;CR &amp; CEC_CR_TXEOM)</span></div>
+<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;<span class="preprocessor">#define __HAL_CEC_CLEAR_OAR(__HANDLE__)   CLEAR_BIT((__HANDLE__)-&gt;Instance-&gt;CFGR, CEC_CFGR_OAR)</span></div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160; </div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;<span class="preprocessor">#define __HAL_CEC_SET_OAR(__HANDLE__,__ADDRESS__)   SET_BIT((__HANDLE__)-&gt;Instance-&gt;CFGR, (__ADDRESS__)&lt;&lt; CEC_CFGR_OAR_LSB_POS)</span></div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
+<div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;<span class="comment">/* Exported functions --------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<span class="comment">/* Initialization and de-initialization functions  ****************************/</span></div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_Init(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_DeInit(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_SetDeviceAddress(CEC_HandleTypeDef *hcec, uint16_t CEC_OwnAddress);</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="keywordtype">void</span> HAL_CEC_MspInit(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;<span class="keywordtype">void</span> HAL_CEC_MspDeInit(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160; </div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;<span class="preprocessor">#if (USE_HAL_CEC_REGISTER_CALLBACKS == 1)</span></div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_RegisterCallback(CEC_HandleTypeDef *hcec, HAL_CEC_CallbackIDTypeDef CallbackID,</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;                                           pCEC_CallbackTypeDef pCallback);</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_UnRegisterCallback(CEC_HandleTypeDef *hcec, HAL_CEC_CallbackIDTypeDef CallbackID);</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160; </div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_RegisterRxCpltCallback(CEC_HandleTypeDef *hcec, pCEC_RxCallbackTypeDef pCallback);</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_UnRegisterRxCpltCallback(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* USE_HAL_CEC_REGISTER_CALLBACKS */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="comment">/* I/O operation functions  ***************************************************/</span></div>
+<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;<a class="code" href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a> HAL_CEC_Transmit_IT(CEC_HandleTypeDef *hcec, uint8_t InitiatorAddress, uint8_t DestinationAddress,</div>
+<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                                      uint8_t *pData, uint32_t Size);</div>
+<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;uint32_t HAL_CEC_GetLastReceivedFrameSize(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="keywordtype">void</span> HAL_CEC_ChangeRxBuffer(CEC_HandleTypeDef *hcec, uint8_t *Rxbuffer);</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;<span class="keywordtype">void</span> HAL_CEC_IRQHandler(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;<span class="keywordtype">void</span> HAL_CEC_TxCpltCallback(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;<span class="keywordtype">void</span> HAL_CEC_RxCpltCallback(CEC_HandleTypeDef *hcec, uint32_t RxFrameSize);</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;<span class="keywordtype">void</span> HAL_CEC_ErrorCallback(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;<span class="comment">/* Peripheral State functions  ************************************************/</span></div>
+<div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;HAL_CEC_StateTypeDef HAL_CEC_GetState(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;uint32_t HAL_CEC_GetError(CEC_HandleTypeDef *hcec);</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;<span class="comment">/* Private types -------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="comment">/* Private variables ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="comment">/* Private constants ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="comment">/* Private macros ------------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">#define IS_CEC_SIGNALFREETIME(__SFT__)     ((__SFT__) &lt;= CEC_CFGR_SFT)</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160; </div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;<span class="preprocessor">#define IS_CEC_TOLERANCE(__RXTOL__)        (((__RXTOL__) == CEC_STANDARD_TOLERANCE) || \</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">                                            ((__RXTOL__) == CEC_EXTENDED_TOLERANCE))</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#define IS_CEC_BRERXSTOP(__BRERXSTOP__)   (((__BRERXSTOP__) == CEC_NO_RX_STOP_ON_BRE) || \</span></div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;<span class="preprocessor">                                           ((__BRERXSTOP__) == CEC_RX_STOP_ON_BRE))</span></div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="preprocessor">#define IS_CEC_BREERRORBITGEN(__ERRORBITGEN__) (((__ERRORBITGEN__) == CEC_BRE_ERRORBIT_NO_GENERATION) || \</span></div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;<span class="preprocessor">                                                ((__ERRORBITGEN__) == CEC_BRE_ERRORBIT_GENERATION))</span></div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="preprocessor">#define IS_CEC_LBPEERRORBITGEN(__ERRORBITGEN__) (((__ERRORBITGEN__) == CEC_LBPE_ERRORBIT_NO_GENERATION) || \</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="preprocessor">                                                 ((__ERRORBITGEN__) == CEC_LBPE_ERRORBIT_GENERATION))</span></div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160; </div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="preprocessor">#define IS_CEC_BROADCASTERROR_NO_ERRORBIT_GENERATION(__ERRORBITGEN__) (((__ERRORBITGEN__) == CEC_BROADCASTERROR_ERRORBIT_GENERATION) || \</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="preprocessor">                                                                       ((__ERRORBITGEN__) == CEC_BROADCASTERROR_NO_ERRORBIT_GENERATION))</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;<span class="preprocessor">#define IS_CEC_SFTOP(__SFTOP__)          (((__SFTOP__) == CEC_SFT_START_ON_TXSOM) || \</span></div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;<span class="preprocessor">                                          ((__SFTOP__) == CEC_SFT_START_ON_TX_RX_END))</span></div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="preprocessor">#define IS_CEC_LISTENING_MODE(__MODE__)     (((__MODE__) == CEC_REDUCED_LISTENING_MODE) || \</span></div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="preprocessor">                                             ((__MODE__) == CEC_FULL_LISTENING_MODE))</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="preprocessor">#define IS_CEC_MSGSIZE(__SIZE__) ((__SIZE__) &lt;= 0x10U)</span></div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#define IS_CEC_OWN_ADDRESS(__ADDRESS__) ((__ADDRESS__) &lt;= 0x7FFFU)</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="preprocessor">#define IS_CEC_ADDRESS(__ADDRESS__) ((__ADDRESS__) &lt;= 0xFU)</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160; </div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment">/* Private functions ---------------------------------------------------------*/</span></div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CEC */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;}</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160; </div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STM32F4xxHAL_CEC_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="comment">/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astm32f4xx__hal__def_8h_html"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html">stm32f4xx_hal_def.h</a></div><div class="ttdoc">This file contains HAL common defines, enumeration, macros and structures definitions.</div></div>
+<div class="ttc" id="astm32f4xx__hal__def_8h_html_a63c0679d1cb8b8c684fbb0632743478f"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html#a63c0679d1cb8b8c684fbb0632743478f">HAL_StatusTypeDef</a></div><div class="ttdeci">HAL_StatusTypeDef</div><div class="ttdoc">HAL Status structures definition</div><div class="ttdef"><b>Definition:</b> <a href="stm32f4xx__hal__def_8h_source.html#l00039">stm32f4xx_hal_def.h:40</a></div></div>
+<div class="ttc" id="astm32f4xx__hal__def_8h_html_ab367482e943333a1299294eadaad284b"><div class="ttname"><a href="stm32f4xx__hal__def_8h.html#ab367482e943333a1299294eadaad284b">HAL_LockTypeDef</a></div><div class="ttdeci">HAL_LockTypeDef</div><div class="ttdoc">HAL Lock structures definition</div><div class="ttdef"><b>Definition:</b> <a href="stm32f4xx__hal__def_8h_source.html#l00050">stm32f4xx_hal_def.h:51</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li><li class="navelem"><a class="el" href="stm32f4xx__hal__cec_8h.html">stm32f4xx_hal_cec.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
+</body>
+</html>

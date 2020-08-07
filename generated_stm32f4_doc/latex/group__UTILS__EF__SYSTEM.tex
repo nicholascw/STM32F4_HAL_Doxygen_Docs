@@ -1,0 +1,176 @@
+\hypertarget{group__UTILS__EF__SYSTEM}{}\doxysection{S\+Y\+S\+T\+EM}
+\label{group__UTILS__EF__SYSTEM}\index{SYSTEM@{SYSTEM}}
+
+
+System Configuration functions  
+
+
+S\+Y\+S\+T\+EM 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{group__UTILS__EF__SYSTEM}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__UTILS__EF__SYSTEM_ga5af902d59c4c2d9dc5e189df0bc71ecd}{L\+L\+\_\+\+Set\+System\+Core\+Clock}} (uint32\+\_\+t H\+C\+L\+K\+Frequency)
+\begin{DoxyCompactList}\small\item\em This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. \end{DoxyCompactList}\item 
+Error\+Status \mbox{\hyperlink{group__UTILS__EF__SYSTEM_ga7ada5e4210f6ef80ef9f55bf9dd048c6}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI}} (\mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock at maximum frequency with H\+SI as clock source of the P\+LL \end{DoxyCompactList}\item 
+Error\+Status \mbox{\hyperlink{group__UTILS__EF__SYSTEM_gaf6c8553d03464d4646b63321b97d25e2}{L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE}} (uint32\+\_\+t H\+S\+E\+Frequency, uint32\+\_\+t H\+S\+E\+Bypass, \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct, \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct)
+\begin{DoxyCompactList}\small\item\em This function configures system clock with H\+SE as clock source of the P\+LL \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+System Configuration functions 
+
+\begin{DoxyVerb}===============================================================================
+          ##### System Configuration functions #####
+===============================================================================
+   [..]
+        System, AHB and APB buses clocks configuration
+
+        (+) The maximum frequency of the SYSCLK, HCLK, PCLK1 and PCLK2 is 180000000 Hz.\end{DoxyVerb}
+ Depending on the device voltage range, the maximum frequency should be adapted accordingly to the Refenece manual. 
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{group__UTILS__EF__SYSTEM_gaf6c8553d03464d4646b63321b97d25e2}\label{group__UTILS__EF__SYSTEM_gaf6c8553d03464d4646b63321b97d25e2}} 
+\index{SYSTEM@{SYSTEM}!LL\_PLL\_ConfigSystemClock\_HSE@{LL\_PLL\_ConfigSystemClock\_HSE}}
+\index{LL\_PLL\_ConfigSystemClock\_HSE@{LL\_PLL\_ConfigSystemClock\_HSE}!SYSTEM@{SYSTEM}}
+\doxysubsubsection{\texorpdfstring{LL\_PLL\_ConfigSystemClock\_HSE()}{LL\_PLL\_ConfigSystemClock\_HSE()}}
+{\footnotesize\ttfamily Error\+Status L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SE (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+S\+E\+Frequency,  }\item[{uint32\+\_\+t}]{H\+S\+E\+Bypass,  }\item[{\mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct,  }\item[{\mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+This function configures system clock with H\+SE as clock source of the P\+LL 
+
+\begin{DoxyNote}{注解}
+The application need to ensure that P\+LL is disabled.
+\begin{DoxyItemize}
+\item P\+LL output frequency = (((H\+SI frequency / P\+L\+LM) $\ast$ P\+L\+LN) / P\+L\+LP)
+\item P\+L\+LM\+: ensure that the V\+CO input frequency ranges from R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+IN to R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+AX (P\+L\+L\+V\+C\+O\+\_\+input = H\+SI frequency / P\+L\+LM)
+\item P\+L\+LN\+: ensure that the V\+CO output frequency is between R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN and R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX (P\+L\+L\+V\+C\+O\+\_\+output = P\+L\+L\+V\+C\+O\+\_\+input $\ast$ P\+L\+LN)
+\item P\+L\+LP\+: ensure that max frequency at 180000000 Hz is reach (P\+L\+L\+V\+C\+O\+\_\+output / P\+L\+LP) 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em H\+S\+E\+Frequency} & Value between Min\+\_\+\+Data = 4000000 and Max\+\_\+\+Data = 26000000 \\
+\hline
+{\em H\+S\+E\+Bypass} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group__UTILS__EC__HSE__BYPASS_ga2053b398a3829ad616af6f1a732dbdd4}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+B\+Y\+P\+A\+S\+S\+\_\+\+ON}} \item \mbox{\hyperlink{group__UTILS__EC__HSE__BYPASS_ga4aab0968739934c6560805bcf222e1fe}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+H\+S\+E\+B\+Y\+P\+A\+S\+S\+\_\+\+O\+FF}} \end{DoxyItemize}
+\\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} structure that contains the configuration information for the P\+LL. \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} structure that contains the configuration information for the B\+US prescalers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: Max frequency configuration done
+\item E\+R\+R\+OR\+: Max frequency configuration not done 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 404 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__EF__SYSTEM_gaf6c8553d03464d4646b63321b97d25e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__EF__SYSTEM_ga7ada5e4210f6ef80ef9f55bf9dd048c6}\label{group__UTILS__EF__SYSTEM_ga7ada5e4210f6ef80ef9f55bf9dd048c6}} 
+\index{SYSTEM@{SYSTEM}!LL\_PLL\_ConfigSystemClock\_HSI@{LL\_PLL\_ConfigSystemClock\_HSI}}
+\index{LL\_PLL\_ConfigSystemClock\_HSI@{LL\_PLL\_ConfigSystemClock\_HSI}!SYSTEM@{SYSTEM}}
+\doxysubsubsection{\texorpdfstring{LL\_PLL\_ConfigSystemClock\_HSI()}{LL\_PLL\_ConfigSystemClock\_HSI()}}
+{\footnotesize\ttfamily Error\+Status L\+L\+\_\+\+P\+L\+L\+\_\+\+Config\+System\+Clock\+\_\+\+H\+SI (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct,  }\item[{\mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$}]{U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct }\end{DoxyParamCaption})}
+
+
+
+This function configures system clock at maximum frequency with H\+SI as clock source of the P\+LL 
+
+\begin{DoxyNote}{注解}
+The application need to ensure that P\+LL is disabled. 
+
+Function is based on the following formula\+:
+\begin{DoxyItemize}
+\item P\+LL output frequency = (((H\+SI frequency / P\+L\+LM) $\ast$ P\+L\+LN) / P\+L\+LP)
+\item P\+L\+LM\+: ensure that the V\+CO input frequency ranges from R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+IN to R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+I\+N\+P\+U\+T\+\_\+\+M\+AX (P\+L\+L\+V\+C\+O\+\_\+input = H\+SI frequency / P\+L\+LM)
+\item P\+L\+LN\+: ensure that the V\+CO output frequency is between R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+IN and R\+C\+C\+\_\+\+P\+L\+L\+V\+C\+O\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+M\+AX (P\+L\+L\+V\+C\+O\+\_\+output = P\+L\+L\+V\+C\+O\+\_\+input $\ast$ P\+L\+LN)
+\item P\+L\+LP\+: ensure that max frequency at 180000000 Hz is reach (P\+L\+L\+V\+C\+O\+\_\+output / P\+L\+LP) 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__PLLInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+P\+L\+L\+Init\+Type\+Def}} structure that contains the configuration information for the P\+LL. \\
+\hline
+{\em U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Struct} & pointer to a \mbox{\hyperlink{structLL__UTILS__ClkInitTypeDef}{L\+L\+\_\+\+U\+T\+I\+L\+S\+\_\+\+Clk\+Init\+Type\+Def}} structure that contains the configuration information for the B\+US prescalers. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em An} & Error\+Status enumeration value\+:
+\begin{DoxyItemize}
+\item S\+U\+C\+C\+E\+SS\+: Max frequency configuration done
+\item E\+R\+R\+OR\+: Max frequency configuration not done 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 347 行定义.
+
+函数调用图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__EF__SYSTEM_ga7ada5e4210f6ef80ef9f55bf9dd048c6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__UTILS__EF__SYSTEM_ga5af902d59c4c2d9dc5e189df0bc71ecd}\label{group__UTILS__EF__SYSTEM_ga5af902d59c4c2d9dc5e189df0bc71ecd}} 
+\index{SYSTEM@{SYSTEM}!LL\_SetSystemCoreClock@{LL\_SetSystemCoreClock}}
+\index{LL\_SetSystemCoreClock@{LL\_SetSystemCoreClock}!SYSTEM@{SYSTEM}}
+\doxysubsubsection{\texorpdfstring{LL\_SetSystemCoreClock()}{LL\_SetSystemCoreClock()}}
+{\footnotesize\ttfamily void L\+L\+\_\+\+Set\+System\+Core\+Clock (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{H\+C\+L\+K\+Frequency }\end{DoxyParamCaption})}
+
+
+
+This function sets directly System\+Core\+Clock C\+M\+S\+IS variable. 
+
+\begin{DoxyNote}{注解}
+Variable can be calculated also through System\+Core\+Clock\+Update function. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{参数}
+{\em H\+C\+L\+K\+Frequency} & H\+C\+LK frequency in Hz (can be calculated thanks to R\+CC helper macro) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{返回值}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+在文件 stm32f4xx\+\_\+ll\+\_\+utils.\+c 第 325 行定义.
+
+这是这个函数的调用关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__UTILS__EF__SYSTEM_ga5af902d59c4c2d9dc5e189df0bc71ecd_icgraph}
+\end{center}
+\end{figure}

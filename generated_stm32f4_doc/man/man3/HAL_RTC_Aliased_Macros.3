@@ -1,0 +1,218 @@
+.TH "HAL_RTC_Aliased_Macros" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HAL_RTC_Aliased_Macros
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_CLEAR_FLAG\fP   \fB__HAL_RTC_EXTI_CLEAR_FLAG\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_DISABLE_IT\fP   \fB__HAL_RTC_EXTI_DISABLE_IT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_ENABLE_IT\fP   \fB__HAL_RTC_EXTI_ENABLE_IT\fP"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_EXTI_CLEAR_FLAG\fP(__EXTI_LINE__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_EXTI_ENABLE_IT\fP(__EXTI_LINE__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_EXTI_DISABLE_IT\fP(__EXTI_LINE__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_EXTI_GET_FLAG\fP(__EXTI_LINE__)"
+.br
+.ti -1c
+.RI "#define \fB__HAL_RTC_EXTI_GENERATE_SWIT\fP(__EXTI_LINE__)"
+.br
+.ti -1c
+.RI "#define \fBIS_ALARM\fP   \fBIS_RTC_ALARM\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_ALARM_MASK\fP   \fBIS_RTC_ALARM_MASK\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER\fP   \fBIS_RTC_TAMPER\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_ERASE_MODE\fP   IS_RTC_TAMPER_ERASE_MODE"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_FILTER\fP   \fBIS_RTC_TAMPER_FILTER\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_INTERRUPT\fP   IS_RTC_TAMPER_INTERRUPT"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_MASKFLAG_STATE\fP   IS_RTC_TAMPER_MASKFLAG_STATE"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_PRECHARGE_DURATION\fP   \fBIS_RTC_TAMPER_PRECHARGE_DURATION\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_PULLUP_STATE\fP   \fBIS_RTC_TAMPER_PULLUP_STATE\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_SAMPLING_FREQ\fP   \fBIS_RTC_TAMPER_SAMPLING_FREQ\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_TIMESTAMPONTAMPER_DETECTION\fP   \fBIS_RTC_TAMPER_TIMESTAMPONTAMPER_DETECTION\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_TAMPER_TRIGGER\fP   \fBIS_RTC_TAMPER_TRIGGER\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_WAKEUP_CLOCK\fP   \fBIS_RTC_WAKEUP_CLOCK\fP"
+.br
+.ti -1c
+.RI "#define \fBIS_WAKEUP_COUNTER\fP   \fBIS_RTC_WAKEUP_COUNTER\fP"
+.br
+.ti -1c
+.RI "#define \fB__RTC_WRITEPROTECTION_ENABLE\fP   \fB__HAL_RTC_WRITEPROTECTION_ENABLE\fP"
+.br
+.ti -1c
+.RI "#define \fB__RTC_WRITEPROTECTION_DISABLE\fP   \fB__HAL_RTC_WRITEPROTECTION_DISABLE\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_CLEAR_FLAG   \fB__HAL_RTC_EXTI_CLEAR_FLAG\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3064 行定义\&.
+.SS "#define __HAL_RTC_DISABLE_IT   \fB__HAL_RTC_EXTI_DISABLE_IT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3066 行定义\&.
+.SS "#define __HAL_RTC_ENABLE_IT   \fB__HAL_RTC_EXTI_ENABLE_IT\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3067 行定义\&.
+.SS "#define __HAL_RTC_EXTI_CLEAR_FLAG(__EXTI_LINE__)"
+\fB值:\fP
+.PP
+.nf
+                                                   (((__EXTI_LINE__) == RTC_EXTI_LINE_ALARM_EVENT) ? __HAL_RTC_ALARM_EXTI_CLEAR_FLAG() : \
+                                                   (((__EXTI_LINE__) == RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEUPTIMER_EXTI_CLEAR_FLAG() : \
+                                                      __HAL_RTC_TAMPER_TIMESTAMP_EXTI_CLEAR_FLAG()))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 3080 行定义\&.
+.SS "#define __HAL_RTC_EXTI_DISABLE_IT(__EXTI_LINE__)"
+\fB值:\fP
+.PP
+.nf
+                                                  (((__EXTI_LINE__) == RTC_EXTI_LINE_ALARM_EVENT) ? __HAL_RTC_ALARM_EXTI_DISABLE_IT() : \
+                                                  (((__EXTI_LINE__) == RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEUPTIMER_EXTI_DISABLE_IT() : \
+                                                      __HAL_RTC_TAMPER_TIMESTAMP_EXTI_DISABLE_IT()))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 3086 行定义\&.
+.SS "#define __HAL_RTC_EXTI_ENABLE_IT(__EXTI_LINE__)"
+\fB值:\fP
+.PP
+.nf
+                                                  (((__EXTI_LINE__)  == RTC_EXTI_LINE_ALARM_EVENT) ? __HAL_RTC_ALARM_EXTI_ENABLE_IT() : \
+                                                  (((__EXTI_LINE__) == RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEUPTIMER_EXTI_ENABLE_IT() : \
+                                                      __HAL_RTC_TAMPER_TIMESTAMP_EXTI_ENABLE_IT()))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 3083 行定义\&.
+.SS "#define __HAL_RTC_EXTI_GENERATE_SWIT(__EXTI_LINE__)"
+\fB值:\fP
+.PP
+.nf
+                                                      (((__EXTI_LINE__) == RTC_EXTI_LINE_ALARM_EVENT) ? __HAL_RTC_ALARM_EXTI_GENERATE_SWIT() : \
+                                                      (((__EXTI_LINE__) == RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEUPTIMER_EXTI_GENERATE_SWIT() :  \
+                                                          __HAL_RTC_TAMPER_TIMESTAMP_EXTI_GENERATE_SWIT()))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 3092 行定义\&.
+.SS "#define __HAL_RTC_EXTI_GET_FLAG(__EXTI_LINE__)"
+\fB值:\fP
+.PP
+.nf
+                                                  (((__EXTI_LINE__) == RTC_EXTI_LINE_ALARM_EVENT) ? __HAL_RTC_ALARM_EXTI_GET_FLAG() : \
+                                                  (((__EXTI_LINE__) == RTC_EXTI_LINE_WAKEUPTIMER_EVENT) ? __HAL_RTC_WAKEUPTIMER_EXTI_GET_FLAG() : \
+                                                      __HAL_RTC_TAMPER_TIMESTAMP_EXTI_GET_FLAG()))
+.fi
+.PP
+在文件 stm32_hal_legacy\&.h 第 3089 行定义\&.
+.SS "#define __RTC_WRITEPROTECTION_DISABLE   \fB__HAL_RTC_WRITEPROTECTION_DISABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3113 行定义\&.
+.SS "#define __RTC_WRITEPROTECTION_ENABLE   \fB__HAL_RTC_WRITEPROTECTION_ENABLE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3112 行定义\&.
+.SS "#define IS_ALARM   \fBIS_RTC_ALARM\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3097 行定义\&.
+.SS "#define IS_ALARM_MASK   \fBIS_RTC_ALARM_MASK\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3098 行定义\&.
+.SS "#define IS_TAMPER   \fBIS_RTC_TAMPER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3099 行定义\&.
+.SS "#define IS_TAMPER_ERASE_MODE   IS_RTC_TAMPER_ERASE_MODE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3100 行定义\&.
+.SS "#define IS_TAMPER_FILTER   \fBIS_RTC_TAMPER_FILTER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3101 行定义\&.
+.SS "#define IS_TAMPER_INTERRUPT   IS_RTC_TAMPER_INTERRUPT"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3102 行定义\&.
+.SS "#define IS_TAMPER_MASKFLAG_STATE   IS_RTC_TAMPER_MASKFLAG_STATE"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3103 行定义\&.
+.SS "#define IS_TAMPER_PRECHARGE_DURATION   \fBIS_RTC_TAMPER_PRECHARGE_DURATION\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3104 行定义\&.
+.SS "#define IS_TAMPER_PULLUP_STATE   \fBIS_RTC_TAMPER_PULLUP_STATE\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3105 行定义\&.
+.SS "#define IS_TAMPER_SAMPLING_FREQ   \fBIS_RTC_TAMPER_SAMPLING_FREQ\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3106 行定义\&.
+.SS "#define IS_TAMPER_TIMESTAMPONTAMPER_DETECTION   \fBIS_RTC_TAMPER_TIMESTAMPONTAMPER_DETECTION\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3107 行定义\&.
+.SS "#define IS_TAMPER_TRIGGER   \fBIS_RTC_TAMPER_TRIGGER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3108 行定义\&.
+.SS "#define IS_WAKEUP_CLOCK   \fBIS_RTC_WAKEUP_CLOCK\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3109 行定义\&.
+.SS "#define IS_WAKEUP_COUNTER   \fBIS_RTC_WAKEUP_COUNTER\fP"
+
+.PP
+在文件 stm32_hal_legacy\&.h 第 3110 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

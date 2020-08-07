@@ -1,0 +1,36 @@
+.TH "TIM_OSSI_Off_State_Selection_for_Idle_mode_state" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_OSSI_Off_State_Selection_for_Idle_mode_state
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_OSSI_ENABLE\fP   TIM_BDTR_OSSI"
+.br
+.ti -1c
+.RI "#define \fBTIM_OSSI_DISABLE\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_OSSI_DISABLE   0x00000000U"
+When inactive, OC/OCN outputs are disabled (not controlled any longer by the timer) 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 776 行定义\&.
+.SS "#define TIM_OSSI_ENABLE   TIM_BDTR_OSSI"
+When inactive, OC/OCN outputs are enabled (still controlled by the timer) 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 775 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

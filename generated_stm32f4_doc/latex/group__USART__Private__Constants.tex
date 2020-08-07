@@ -1,0 +1,77 @@
+\hypertarget{group__USART__Private__Constants}{}\doxysection{U\+S\+A\+RT Private Constants}
+\label{group__USART__Private__Constants}\index{USART Private Constants@{USART Private Constants}}
+U\+S\+A\+RT Private Constants 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{group__USART__Private__Constants}
+\end{center}
+\end{figure}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Constants_ga034341c78baf4241878310a22ec76a06}{U\+S\+A\+R\+T\+\_\+\+I\+T\+\_\+\+M\+A\+SK}}
+\begin{DoxyCompactList}\small\item\em U\+S\+A\+RT interruptions flag mask \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__USART__Private__Constants_ga10d5540b51054ba0d1601160692f7298}{U\+S\+A\+R\+T\+\_\+\+C\+R1\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX}}~1U
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Constants_ga2d4c62a81acf30ee11ffd4add930f828}{U\+S\+A\+R\+T\+\_\+\+C\+R2\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX}}~2U
+\item 
+\#define \mbox{\hyperlink{group__USART__Private__Constants_ga408bddb54adca228b1fe74d15ca39957}{U\+S\+A\+R\+T\+\_\+\+C\+R3\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX}}~3U
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{group__USART__Private__Constants_ga10d5540b51054ba0d1601160692f7298}\label{group__USART__Private__Constants_ga10d5540b51054ba0d1601160692f7298}} 
+\index{USART Private Constants@{USART Private Constants}!USART\_CR1\_REG\_INDEX@{USART\_CR1\_REG\_INDEX}}
+\index{USART\_CR1\_REG\_INDEX@{USART\_CR1\_REG\_INDEX}!USART Private Constants@{USART Private Constants}}
+\doxysubsubsection{\texorpdfstring{USART\_CR1\_REG\_INDEX}{USART\_CR1\_REG\_INDEX}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+C\+R1\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX~1U}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 565 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Constants_ga2d4c62a81acf30ee11ffd4add930f828}\label{group__USART__Private__Constants_ga2d4c62a81acf30ee11ffd4add930f828}} 
+\index{USART Private Constants@{USART Private Constants}!USART\_CR2\_REG\_INDEX@{USART\_CR2\_REG\_INDEX}}
+\index{USART\_CR2\_REG\_INDEX@{USART\_CR2\_REG\_INDEX}!USART Private Constants@{USART Private Constants}}
+\doxysubsubsection{\texorpdfstring{USART\_CR2\_REG\_INDEX}{USART\_CR2\_REG\_INDEX}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+C\+R2\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX~2U}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 566 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Constants_ga408bddb54adca228b1fe74d15ca39957}\label{group__USART__Private__Constants_ga408bddb54adca228b1fe74d15ca39957}} 
+\index{USART Private Constants@{USART Private Constants}!USART\_CR3\_REG\_INDEX@{USART\_CR3\_REG\_INDEX}}
+\index{USART\_CR3\_REG\_INDEX@{USART\_CR3\_REG\_INDEX}!USART Private Constants@{USART Private Constants}}
+\doxysubsubsection{\texorpdfstring{USART\_CR3\_REG\_INDEX}{USART\_CR3\_REG\_INDEX}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+C\+R3\+\_\+\+R\+E\+G\+\_\+\+I\+N\+D\+EX~3U}
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 567 行定义.
+
+\mbox{\Hypertarget{group__USART__Private__Constants_ga034341c78baf4241878310a22ec76a06}\label{group__USART__Private__Constants_ga034341c78baf4241878310a22ec76a06}} 
+\index{USART Private Constants@{USART Private Constants}!USART\_IT\_MASK@{USART\_IT\_MASK}}
+\index{USART\_IT\_MASK@{USART\_IT\_MASK}!USART Private Constants@{USART Private Constants}}
+\doxysubsubsection{\texorpdfstring{USART\_IT\_MASK}{USART\_IT\_MASK}}
+{\footnotesize\ttfamily \#define U\+S\+A\+R\+T\+\_\+\+I\+T\+\_\+\+M\+A\+SK}
+
+{\bfseries 值\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                   ((uint32\_t) USART\_CR1\_PEIE | USART\_CR1\_TXEIE | USART\_CR1\_TCIE | USART\_CR1\_RXNEIE | \(\backslash\)}
+\DoxyCodeLine{                                   USART\_CR1\_IDLEIE | USART\_CR2\_LBDIE | USART\_CR3\_CTSIE | USART\_CR3\_EIE )}
+
+\end{DoxyCode}
+
+
+U\+S\+A\+RT interruptions flag mask 
+
+
+
+在文件 stm32f4xx\+\_\+hal\+\_\+usart.\+h 第 562 行定义.
+

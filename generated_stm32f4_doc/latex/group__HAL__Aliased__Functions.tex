@@ -1,0 +1,155 @@
+\hypertarget{group__HAL__Aliased__Functions}{}\doxysection{H\+AL Generic Aliased Functions maintained for legacy purpose}
+\label{group__HAL__Aliased__Functions}\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsection*{宏定义}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga334dab724209d848427632878cd18590}{H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Sleep\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf031bcc71ebad9b7edf405547efd762b}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Sleep\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_gadd190a639a43b5aa49cf3d773d6e877f}{H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Sleep\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gac7820d0561f19999a68d714655b901b5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Sleep\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga5d8db04085885e06f167cb9e901bb729}{H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Stop\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gadf25043b17de4bef38a95a75fd03e5c4}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Stop\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_gaca227f80c71d94c0880bd681d68deb85}{H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Stop\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga2c93dcee35e5983d74f1000de7c042d5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Stop\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga829fe0c92393d65bcb65eb8b8f7bdc99}{H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Standby\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Standby\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_gac17bfe5c0df5508f778b7f3784b9723a}{H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Standby\+Mode}}~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga7faa58d8508ea3123b9f247a70379779}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Standby\+Mode}}
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_gaeece8fd3268534ce330c635222ce79a3}{H\+A\+L\+\_\+\+D\+B\+G\+\_\+\+Low\+Power\+Config}}(Periph,  cmd)~(((cmd)==E\+N\+A\+B\+LE)? H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+D\+B\+G\+\_\+\+Enable\+Low\+Power\+Config(Periph) \+: H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+D\+B\+G\+\_\+\+Disable\+Low\+Power\+Config(Periph))
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga2c3d2cdc9071cfc99696e78c29621852}{H\+A\+L\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Output\+Select}}~H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Output\+Select
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga72384357565be710258691efd3b3b72c}{H\+A\+L\+\_\+\+Lock\+\_\+\+Cmd}}(cmd)~(((cmd)==E\+N\+A\+B\+LE) ? H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Enable\+\_\+\+Lock\+\_\+\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Disable\+\_\+\+Lock\+\_\+\+V\+R\+E\+F\+I\+NT())
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga89195eed3652b3f7ce36e89f3cc8e3a6}{H\+A\+L\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Cmd}}(cmd)~(((cmd)==E\+N\+A\+B\+LE)? H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Enable\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Disable\+V\+R\+E\+F\+I\+NT())
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga2945c26e7b184a3ee89309906de33cd3}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Enable\+Buffer\+\_\+\+Cmd}}(cmd)~(((cmd)==E\+N\+A\+B\+LE) ? H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Enable\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Disable\+V\+R\+E\+F\+I\+NT())
+\item 
+\#define \mbox{\hyperlink{group__HAL__Aliased__Functions_ga674bce235a7be59ff19cca605b2e3ce8}{H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Enable\+Buffer\+Sensor\+\_\+\+Cmd}}(cmd)~(((cmd)==E\+N\+A\+B\+LE) ?  H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Enable\+V\+R\+E\+F\+I\+N\+T\+Temp\+Sensor() \+: H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Disable\+V\+R\+E\+F\+I\+N\+T\+Temp\+Sensor())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+
+
+\doxysubsection{宏定义说明}
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga2945c26e7b184a3ee89309906de33cd3}\label{group__HAL__Aliased__Functions_ga2945c26e7b184a3ee89309906de33cd3}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_ADC\_EnableBuffer\_Cmd@{HAL\_ADC\_EnableBuffer\_Cmd}}
+\index{HAL\_ADC\_EnableBuffer\_Cmd@{HAL\_ADC\_EnableBuffer\_Cmd}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_ADC\_EnableBuffer\_Cmd}{HAL\_ADC\_EnableBuffer\_Cmd}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Enable\+Buffer\+\_\+\+Cmd(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})~(((cmd)==E\+N\+A\+B\+LE) ? H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Enable\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Disable\+V\+R\+E\+F\+I\+NT())}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1223 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga674bce235a7be59ff19cca605b2e3ce8}\label{group__HAL__Aliased__Functions_ga674bce235a7be59ff19cca605b2e3ce8}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_ADC\_EnableBufferSensor\_Cmd@{HAL\_ADC\_EnableBufferSensor\_Cmd}}
+\index{HAL\_ADC\_EnableBufferSensor\_Cmd@{HAL\_ADC\_EnableBufferSensor\_Cmd}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_ADC\_EnableBufferSensor\_Cmd}{HAL\_ADC\_EnableBufferSensor\_Cmd}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+A\+D\+C\+\_\+\+Enable\+Buffer\+Sensor\+\_\+\+Cmd(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})~(((cmd)==E\+N\+A\+B\+LE) ?  H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Enable\+V\+R\+E\+F\+I\+N\+T\+Temp\+Sensor() \+: H\+A\+L\+\_\+\+A\+D\+C\+Ex\+\_\+\+Disable\+V\+R\+E\+F\+I\+N\+T\+Temp\+Sensor())}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1224 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_gaeece8fd3268534ce330c635222ce79a3}\label{group__HAL__Aliased__Functions_gaeece8fd3268534ce330c635222ce79a3}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_DBG\_LowPowerConfig@{HAL\_DBG\_LowPowerConfig}}
+\index{HAL\_DBG\_LowPowerConfig@{HAL\_DBG\_LowPowerConfig}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_DBG\_LowPowerConfig}{HAL\_DBG\_LowPowerConfig}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+D\+B\+G\+\_\+\+Low\+Power\+Config(\begin{DoxyParamCaption}\item[{}]{Periph,  }\item[{}]{cmd }\end{DoxyParamCaption})~(((cmd)==E\+N\+A\+B\+LE)? H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+D\+B\+G\+\_\+\+Enable\+Low\+Power\+Config(Periph) \+: H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+D\+B\+G\+\_\+\+Disable\+Low\+Power\+Config(Periph))}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1216 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_gadd190a639a43b5aa49cf3d773d6e877f}\label{group__HAL__Aliased__Functions_gadd190a639a43b5aa49cf3d773d6e877f}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_DisableDBGSleepMode@{HAL\_DisableDBGSleepMode}}
+\index{HAL\_DisableDBGSleepMode@{HAL\_DisableDBGSleepMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_DisableDBGSleepMode}{HAL\_DisableDBGSleepMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Sleep\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gac7820d0561f19999a68d714655b901b5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Sleep\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1211 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_gac17bfe5c0df5508f778b7f3784b9723a}\label{group__HAL__Aliased__Functions_gac17bfe5c0df5508f778b7f3784b9723a}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_DisableDBGStandbyMode@{HAL\_DisableDBGStandbyMode}}
+\index{HAL\_DisableDBGStandbyMode@{HAL\_DisableDBGStandbyMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_DisableDBGStandbyMode}{HAL\_DisableDBGStandbyMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Standby\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga7faa58d8508ea3123b9f247a70379779}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Standby\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1215 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_gaca227f80c71d94c0880bd681d68deb85}\label{group__HAL__Aliased__Functions_gaca227f80c71d94c0880bd681d68deb85}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_DisableDBGStopMode@{HAL\_DisableDBGStopMode}}
+\index{HAL\_DisableDBGStopMode@{HAL\_DisableDBGStopMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_DisableDBGStopMode}{HAL\_DisableDBGStopMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Disable\+D\+B\+G\+Stop\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga2c93dcee35e5983d74f1000de7c042d5}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Disable\+D\+B\+G\+Stop\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1213 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga334dab724209d848427632878cd18590}\label{group__HAL__Aliased__Functions_ga334dab724209d848427632878cd18590}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_EnableDBGSleepMode@{HAL\_EnableDBGSleepMode}}
+\index{HAL\_EnableDBGSleepMode@{HAL\_EnableDBGSleepMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_EnableDBGSleepMode}{HAL\_EnableDBGSleepMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Sleep\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gaf031bcc71ebad9b7edf405547efd762b}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Sleep\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1210 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga829fe0c92393d65bcb65eb8b8f7bdc99}\label{group__HAL__Aliased__Functions_ga829fe0c92393d65bcb65eb8b8f7bdc99}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_EnableDBGStandbyMode@{HAL\_EnableDBGStandbyMode}}
+\index{HAL\_EnableDBGStandbyMode@{HAL\_EnableDBGStandbyMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_EnableDBGStandbyMode}{HAL\_EnableDBGStandbyMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Standby\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_ga28a1323b2eeb0a408c1cfdbfa0db5ead}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Standby\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1214 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga5d8db04085885e06f167cb9e901bb729}\label{group__HAL__Aliased__Functions_ga5d8db04085885e06f167cb9e901bb729}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_EnableDBGStopMode@{HAL\_EnableDBGStopMode}}
+\index{HAL\_EnableDBGStopMode@{HAL\_EnableDBGStopMode}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_EnableDBGStopMode}{HAL\_EnableDBGStopMode}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Enable\+D\+B\+G\+Stop\+Mode~\mbox{\hyperlink{group__HAL__Exported__Functions__Group2_gadf25043b17de4bef38a95a75fd03e5c4}{H\+A\+L\+\_\+\+D\+B\+G\+M\+C\+U\+\_\+\+Enable\+D\+B\+G\+Stop\+Mode}}}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1212 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga72384357565be710258691efd3b3b72c}\label{group__HAL__Aliased__Functions_ga72384357565be710258691efd3b3b72c}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_Lock\_Cmd@{HAL\_Lock\_Cmd}}
+\index{HAL\_Lock\_Cmd@{HAL\_Lock\_Cmd}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_Lock\_Cmd}{HAL\_Lock\_Cmd}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+Lock\+\_\+\+Cmd(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})~(((cmd)==E\+N\+A\+B\+LE) ? H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Enable\+\_\+\+Lock\+\_\+\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Disable\+\_\+\+Lock\+\_\+\+V\+R\+E\+F\+I\+NT())}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1218 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga89195eed3652b3f7ce36e89f3cc8e3a6}\label{group__HAL__Aliased__Functions_ga89195eed3652b3f7ce36e89f3cc8e3a6}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_VREFINT\_Cmd@{HAL\_VREFINT\_Cmd}}
+\index{HAL\_VREFINT\_Cmd@{HAL\_VREFINT\_Cmd}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_VREFINT\_Cmd}{HAL\_VREFINT\_Cmd}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Cmd(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})~(((cmd)==E\+N\+A\+B\+LE)? H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Enable\+V\+R\+E\+F\+I\+NT() \+: H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+Disable\+V\+R\+E\+F\+I\+NT())}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1221 行定义.
+
+\mbox{\Hypertarget{group__HAL__Aliased__Functions_ga2c3d2cdc9071cfc99696e78c29621852}\label{group__HAL__Aliased__Functions_ga2c3d2cdc9071cfc99696e78c29621852}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_VREFINT\_OutputSelect@{HAL\_VREFINT\_OutputSelect}}
+\index{HAL\_VREFINT\_OutputSelect@{HAL\_VREFINT\_OutputSelect}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_VREFINT\_OutputSelect}{HAL\_VREFINT\_OutputSelect}}
+{\footnotesize\ttfamily \#define H\+A\+L\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Output\+Select~H\+A\+L\+\_\+\+S\+Y\+S\+C\+F\+G\+\_\+\+V\+R\+E\+F\+I\+N\+T\+\_\+\+Output\+Select}
+
+
+
+在文件 stm32\+\_\+hal\+\_\+legacy.\+h 第 1217 行定义.
+

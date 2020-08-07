@@ -1,0 +1,126 @@
+.TH "__I2S_HandleTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+__I2S_HandleTypeDef \- I2S handle Structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_i2s\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "SPI_TypeDef * \fBInstance\fP"
+.br
+.ti -1c
+.RI "\fBI2S_InitTypeDef\fP \fBInit\fP"
+.br
+.ti -1c
+.RI "uint16_t * \fBpTxBuffPtr\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBTxXferSize\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBTxXferCount\fP"
+.br
+.ti -1c
+.RI "uint16_t * \fBpRxBuffPtr\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBRxXferSize\fP"
+.br
+.ti -1c
+.RI "__IO uint16_t \fBRxXferCount\fP"
+.br
+.ti -1c
+.RI "void(* \fBIrqHandlerISR\fP )(struct \fB__I2S_HandleTypeDef\fP *hi2s)"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdmatx\fP"
+.br
+.ti -1c
+.RI "\fBDMA_HandleTypeDef\fP * \fBhdmarx\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_LockTypeDef\fP \fBLock\fP"
+.br
+.ti -1c
+.RI "__IO \fBHAL_I2S_StateTypeDef\fP \fBState\fP"
+.br
+.ti -1c
+.RI "__IO uint32_t \fBErrorCode\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+I2S handle Structure definition 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 91 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "__IO uint32_t ErrorCode"
+I2S Error code This parameter can be a value of \fBI2S Error\fP 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 123 行定义\&.
+.SS "\fBDMA_HandleTypeDef\fP* hdmarx"
+I2S Rx DMA handle parameters 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 117 行定义\&.
+.SS "\fBDMA_HandleTypeDef\fP* hdmatx"
+I2S Tx DMA handle parameters 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 115 行定义\&.
+.SS "\fBI2S_InitTypeDef\fP Init"
+I2S communication parameters 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 95 行定义\&.
+.SS "SPI_TypeDef* Instance"
+I2S registers base address 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 93 行定义\&.
+.SS "void(* IrqHandlerISR) (struct \fB__I2S_HandleTypeDef\fP *hi2s)"
+I2S function pointer on IrqHandler 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 113 行定义\&.
+.SS "__IO \fBHAL_LockTypeDef\fP Lock"
+I2S locking object 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 119 行定义\&.
+.SS "uint16_t* pRxBuffPtr"
+Pointer to I2S Rx transfer buffer 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 103 行定义\&.
+.SS "uint16_t* pTxBuffPtr"
+Pointer to I2S Tx transfer buffer 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 97 行定义\&.
+.SS "__IO uint16_t RxXferCount"
+I2S Rx transfer counter (This field is initialized at the same value as transfer size at the beginning of the transfer and decremented when a sample is received NbSamplesReceived = RxBufferSize-RxBufferCount) 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 107 行定义\&.
+.SS "__IO uint16_t RxXferSize"
+I2S Rx transfer size 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 105 行定义\&.
+.SS "__IO \fBHAL_I2S_StateTypeDef\fP State"
+I2S communication state 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 121 行定义\&.
+.SS "__IO uint16_t TxXferCount"
+I2S Tx transfer Counter 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 101 行定义\&.
+.SS "__IO uint16_t TxXferSize"
+I2S Tx transfer size 
+.PP
+在文件 stm32f4xx_hal_i2s\&.h 第 99 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

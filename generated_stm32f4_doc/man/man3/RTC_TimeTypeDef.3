@@ -1,0 +1,84 @@
+.TH "RTC_TimeTypeDef" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTC_TimeTypeDef \- RTC Time structure definition  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <stm32f4xx_hal_rtc\&.h>\fP
+.SS "成员变量"
+
+.in +1c
+.ti -1c
+.RI "uint8_t \fBHours\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBMinutes\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBSeconds\fP"
+.br
+.ti -1c
+.RI "uint8_t \fBTimeFormat\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSubSeconds\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBSecondFraction\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBDayLightSaving\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBStoreOperation\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+RTC Time structure definition 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 83 行定义\&.
+.SH "结构体成员变量说明"
+.PP 
+.SS "uint32_t DayLightSaving"
+Specifies DayLight Save Operation\&. This parameter can be a value of \fBRTC DayLight Saving Definitions\fP 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 108 行定义\&.
+.SS "uint8_t Hours"
+Specifies the RTC Time Hour\&. This parameter must be a number between Min_Data = 0 and Max_Data = 12 if the RTC_HourFormat_12 is selected\&. This parameter must be a number between Min_Data = 0 and Max_Data = 23 if the RTC_HourFormat_24 is selected 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 85 行定义\&.
+.SS "uint8_t Minutes"
+Specifies the RTC Time Minutes\&. This parameter must be a number between Min_Data = 0 and Max_Data = 59 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 89 行定义\&.
+.SS "uint32_t SecondFraction"
+Specifies the range or granularity of Sub Second register content corresponding to Synchronous pre-scaler factor value (PREDIV_S) This parameter corresponds to a time unit range between [0-1] Second with [1 Sec / SecondFraction +1] granularity\&. This field will be used only by HAL_RTC_GetTime function 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 102 行定义\&.
+.SS "uint8_t Seconds"
+Specifies the RTC Time Seconds\&. This parameter must be a number between Min_Data = 0 and Max_Data = 59 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 92 行定义\&.
+.SS "uint32_t StoreOperation"
+Specifies RTC_StoreOperation value to be written in the BCK bit in CR register to store the operation\&. This parameter can be a value of \fBRTC Store Operation Definitions\fP 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 111 行定义\&.
+.SS "uint32_t SubSeconds"
+Specifies the RTC_SSR RTC Sub Second register content\&. This parameter corresponds to a time unit range between [0-1] Second with [1 Sec / SecondFraction +1] granularity 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 98 行定义\&.
+.SS "uint8_t TimeFormat"
+Specifies the RTC AM/PM Time\&. This parameter can be a value of \fBRTC AM PM Definitions\fP 
+.PP
+在文件 stm32f4xx_hal_rtc\&.h 第 95 行定义\&.
+
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,111 @@
+\hypertarget{structRTC__AlarmTypeDef}{}\doxysection{R\+T\+C\+\_\+\+Alarm\+Type\+Def结构体 参考}
+\label{structRTC__AlarmTypeDef}\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+
+
+R\+TC Alarm structure definition  
+
+
+
+
+{\ttfamily \#include $<$stm32f4xx\+\_\+hal\+\_\+rtc.\+h$>$}
+
+
+
+R\+T\+C\+\_\+\+Alarm\+Type\+Def 的协作图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{structRTC__AlarmTypeDef__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{成员变量}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structRTC__TimeTypeDef}{R\+T\+C\+\_\+\+Time\+Type\+Def}} \mbox{\hyperlink{structRTC__AlarmTypeDef_a8607cf90e5e86480f6093a0f78c9f0d8}{Alarm\+Time}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__AlarmTypeDef_abf8acd34aba8f7a8e7c7d156a3af33c4}{Alarm\+Mask}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__AlarmTypeDef_a039e2025c1ed1a817878070f54716f09}{Alarm\+Sub\+Second\+Mask}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__AlarmTypeDef_a1c87355c52b57692c8de8da7c9954987}{Alarm\+Date\+Week\+Day\+Sel}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{structRTC__AlarmTypeDef_a48a4eec6d33bb4b06f408e8e28c0c0ed}{Alarm\+Date\+Week\+Day}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{structRTC__AlarmTypeDef_aee2915b5d05ac353d48f215764e80aa5}{Alarm}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+R\+TC Alarm structure definition 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 138 行定义.
+
+
+
+\doxysubsection{结构体成员变量说明}
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_aee2915b5d05ac353d48f215764e80aa5}\label{structRTC__AlarmTypeDef_aee2915b5d05ac353d48f215764e80aa5}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!Alarm@{Alarm}}
+\index{Alarm@{Alarm}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{Alarm}{Alarm}}
+{\footnotesize\ttfamily uint32\+\_\+t Alarm}
+
+Specifies the alarm . This parameter can be a value of \mbox{\hyperlink{group__RTC__Alarms__Definitions}{R\+TC Alarms Definitions}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 155 行定义.
+
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_a48a4eec6d33bb4b06f408e8e28c0c0ed}\label{structRTC__AlarmTypeDef_a48a4eec6d33bb4b06f408e8e28c0c0ed}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!AlarmDateWeekDay@{AlarmDateWeekDay}}
+\index{AlarmDateWeekDay@{AlarmDateWeekDay}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{AlarmDateWeekDay}{AlarmDateWeekDay}}
+{\footnotesize\ttfamily uint8\+\_\+t Alarm\+Date\+Week\+Day}
+
+Specifies the R\+TC Alarm Date/\+Week\+Day. If the Alarm Date is selected, this parameter must be set to a value in the 1-\/31 range. If the Alarm Week\+Day is selected, this parameter can be a value of \mbox{\hyperlink{group__RTC__WeekDay__Definitions}{R\+TC Week\+Day Definitions}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 151 行定义.
+
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_a1c87355c52b57692c8de8da7c9954987}\label{structRTC__AlarmTypeDef_a1c87355c52b57692c8de8da7c9954987}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!AlarmDateWeekDaySel@{AlarmDateWeekDaySel}}
+\index{AlarmDateWeekDaySel@{AlarmDateWeekDaySel}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{AlarmDateWeekDaySel}{AlarmDateWeekDaySel}}
+{\footnotesize\ttfamily uint32\+\_\+t Alarm\+Date\+Week\+Day\+Sel}
+
+Specifies the R\+TC Alarm is on Date or Week\+Day. This parameter can be a value of \mbox{\hyperlink{group__RTC__AlarmDateWeekDay__Definitions}{R\+TC Alarm Date Week\+Day Definitions}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 148 行定义.
+
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_abf8acd34aba8f7a8e7c7d156a3af33c4}\label{structRTC__AlarmTypeDef_abf8acd34aba8f7a8e7c7d156a3af33c4}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!AlarmMask@{AlarmMask}}
+\index{AlarmMask@{AlarmMask}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{AlarmMask}{AlarmMask}}
+{\footnotesize\ttfamily uint32\+\_\+t Alarm\+Mask}
+
+Specifies the R\+TC Alarm Masks. This parameter can be a value of \mbox{\hyperlink{group__RTC__AlarmMask__Definitions}{R\+TC Alarm Mask Definitions}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 142 行定义.
+
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_a039e2025c1ed1a817878070f54716f09}\label{structRTC__AlarmTypeDef_a039e2025c1ed1a817878070f54716f09}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!AlarmSubSecondMask@{AlarmSubSecondMask}}
+\index{AlarmSubSecondMask@{AlarmSubSecondMask}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{AlarmSubSecondMask}{AlarmSubSecondMask}}
+{\footnotesize\ttfamily uint32\+\_\+t Alarm\+Sub\+Second\+Mask}
+
+Specifies the R\+TC Alarm Sub\+Seconds Masks. This parameter can be a value of \mbox{\hyperlink{group__RTC__Alarm__Sub__Seconds__Masks__Definitions}{R\+TC Alarm Sub Seconds Masks Definitions}} 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 145 行定义.
+
+\mbox{\Hypertarget{structRTC__AlarmTypeDef_a8607cf90e5e86480f6093a0f78c9f0d8}\label{structRTC__AlarmTypeDef_a8607cf90e5e86480f6093a0f78c9f0d8}} 
+\index{RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}!AlarmTime@{AlarmTime}}
+\index{AlarmTime@{AlarmTime}!RTC\_AlarmTypeDef@{RTC\_AlarmTypeDef}}
+\doxysubsubsection{\texorpdfstring{AlarmTime}{AlarmTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structRTC__TimeTypeDef}{R\+T\+C\+\_\+\+Time\+Type\+Def}} Alarm\+Time}
+
+Specifies the R\+TC Alarm Time members 
+
+在文件 stm32f4xx\+\_\+hal\+\_\+rtc.\+h 第 140 行定义.
+
+
+
+该结构体的文档由以下文件生成\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{stm32f4xx__hal__rtc_8h}{stm32f4xx\+\_\+hal\+\_\+rtc.\+h}}\end{DoxyCompactItemize}

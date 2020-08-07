@@ -1,0 +1,69 @@
+.TH "ADC_analog_watchdog_selection" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ADC_analog_watchdog_selection
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_REG\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_INJEC\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_SINGLE_REGINJEC\fP   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_REG\fP   ((uint32_t)ADC_CR1_AWDEN)"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_INJEC\fP   ((uint32_t)ADC_CR1_JAWDEN)"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_ALL_REGINJEC\fP   ((uint32_t)(ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+.br
+.ti -1c
+.RI "#define \fBADC_ANALOGWATCHDOG_NONE\fP   0x00000000U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define ADC_ANALOGWATCHDOG_ALL_INJEC   ((uint32_t)ADC_CR1_JAWDEN)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 429 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_ALL_REG   ((uint32_t)ADC_CR1_AWDEN)"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 428 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_ALL_REGINJEC   ((uint32_t)(ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 430 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_NONE   0x00000000U"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 431 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_SINGLE_INJEC   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_JAWDEN))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 426 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_SINGLE_REG   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 425 行定义\&.
+.SS "#define ADC_ANALOGWATCHDOG_SINGLE_REGINJEC   ((uint32_t)(ADC_CR1_AWDSGL | ADC_CR1_AWDEN | ADC_CR1_JAWDEN))"
+
+.PP
+在文件 stm32f4xx_hal_adc\&.h 第 427 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

@@ -1,0 +1,41 @@
+.TH "TIM_Input_Capture_Selection" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TIM_Input_Capture_Selection
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTIM_ICSELECTION_DIRECTTI\fP   TIM_CCMR1_CC1S_0"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICSELECTION_INDIRECTTI\fP   TIM_CCMR1_CC1S_1"
+.br
+.ti -1c
+.RI "#define \fBTIM_ICSELECTION_TRC\fP   TIM_CCMR1_CC1S"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define TIM_ICSELECTION_DIRECTTI   TIM_CCMR1_CC1S_0"
+TIM Input 1, 2, 3 or 4 is selected to be connected to IC1, IC2, IC3 or IC4, respectively 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 596 行定义\&.
+.SS "#define TIM_ICSELECTION_INDIRECTTI   TIM_CCMR1_CC1S_1"
+TIM Input 1, 2, 3 or 4 is selected to be connected to IC2, IC1, IC4 or IC3, respectively 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 598 行定义\&.
+.SS "#define TIM_ICSELECTION_TRC   TIM_CCMR1_CC1S"
+TIM Input 1, 2, 3 or 4 is selected to be connected to TRC 
+.PP
+在文件 stm32f4xx_hal_tim\&.h 第 599 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

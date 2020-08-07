@@ -1,0 +1,76 @@
+.TH "SPI_Flags_definition" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+SPI_Flags_definition
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSPI_FLAG_RXNE\fP   SPI_SR_RXNE   /* SPI status flag: Rx buffer not empty flag       */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_TXE\fP   SPI_SR_TXE    /* SPI status flag: Tx buffer empty flag           */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_BSY\fP   SPI_SR_BSY    /* SPI status flag: Busy flag                      */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_CRCERR\fP   SPI_SR_CRCERR /* SPI Error flag: CRC error flag                  */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_MODF\fP   SPI_SR_MODF   /* SPI Error flag: Mode fault flag                 */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_OVR\fP   SPI_SR_OVR    /* SPI Error flag: Overrun flag                    */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_FRE\fP   SPI_SR_FRE    /* SPI Error flag: TI mode frame format error flag */"
+.br
+.ti -1c
+.RI "#define \fBSPI_FLAG_MASK\fP   (SPI_SR_RXNE | SPI_SR_TXE | SPI_SR_BSY | SPI_SR_CRCERR | SPI_SR_MODF | SPI_SR_OVR | SPI_SR_FRE)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define SPI_FLAG_BSY   SPI_SR_BSY    /* SPI status flag: Busy flag                      */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 318 行定义\&.
+.SS "#define SPI_FLAG_CRCERR   SPI_SR_CRCERR /* SPI Error flag: CRC error flag                  */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 319 行定义\&.
+.SS "#define SPI_FLAG_FRE   SPI_SR_FRE    /* SPI Error flag: TI mode frame format error flag */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 322 行定义\&.
+.SS "#define SPI_FLAG_MASK   (SPI_SR_RXNE | SPI_SR_TXE | SPI_SR_BSY | SPI_SR_CRCERR | SPI_SR_MODF | SPI_SR_OVR | SPI_SR_FRE)"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 323 行定义\&.
+.SS "#define SPI_FLAG_MODF   SPI_SR_MODF   /* SPI Error flag: Mode fault flag                 */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 320 行定义\&.
+.SS "#define SPI_FLAG_OVR   SPI_SR_OVR    /* SPI Error flag: Overrun flag                    */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 321 行定义\&.
+.SS "#define SPI_FLAG_RXNE   SPI_SR_RXNE   /* SPI status flag: Rx buffer not empty flag       */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 316 行定义\&.
+.SS "#define SPI_FLAG_TXE   SPI_SR_TXE    /* SPI status flag: Tx buffer empty flag           */"
+
+.PP
+在文件 stm32f4xx_hal_spi\&.h 第 317 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

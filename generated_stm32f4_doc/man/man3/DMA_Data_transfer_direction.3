@@ -1,0 +1,46 @@
+.TH "DMA_Data_transfer_direction" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+DMA_Data_transfer_direction \- DMA data transfer direction  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBDMA_PERIPH_TO_MEMORY\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBDMA_MEMORY_TO_PERIPH\fP   ((uint32_t)DMA_SxCR_DIR_0)"
+.br
+.ti -1c
+.RI "#define \fBDMA_MEMORY_TO_MEMORY\fP   ((uint32_t)DMA_SxCR_DIR_1)"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+DMA data transfer direction 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define DMA_MEMORY_TO_MEMORY   ((uint32_t)DMA_SxCR_DIR_1)"
+Memory to memory direction 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 231 行定义\&.
+.SS "#define DMA_MEMORY_TO_PERIPH   ((uint32_t)DMA_SxCR_DIR_0)"
+Memory to peripheral direction 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 230 行定义\&.
+.SS "#define DMA_PERIPH_TO_MEMORY   0x00000000U"
+Peripheral to memory direction 
+.PP
+在文件 stm32f4xx_hal_dma\&.h 第 229 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

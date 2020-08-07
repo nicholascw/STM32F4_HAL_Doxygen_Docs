@@ -1,0 +1,84 @@
+.TH "FLASH_Error_Code" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FLASH_Error_Code \- FLASH Error Code  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_NONE\fP   0x00000000U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_RD\fP   0x00000001U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_PGS\fP   0x00000002U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_PGP\fP   0x00000004U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_PGA\fP   0x00000008U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_WRP\fP   0x00000010U"
+.br
+.ti -1c
+.RI "#define \fBHAL_FLASH_ERROR_OPERATION\fP   0x00000020U"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+FLASH Error Code 
+
+
+.SH "宏定义说明"
+.PP 
+.SS "#define HAL_FLASH_ERROR_NONE   0x00000000U"
+No error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 91 行定义\&.
+.SS "#define HAL_FLASH_ERROR_OPERATION   0x00000020U"
+Operation Error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 97 行定义\&.
+.SS "#define HAL_FLASH_ERROR_PGA   0x00000008U"
+Programming Alignment error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 95 行定义\&.
+.SS "#define HAL_FLASH_ERROR_PGP   0x00000004U"
+Programming Parallelism error 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 94 行定义\&.
+.SS "#define HAL_FLASH_ERROR_PGS   0x00000002U"
+Programming Sequence error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 93 行定义\&.
+.SS "#define HAL_FLASH_ERROR_RD   0x00000001U"
+Read Protection error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 92 行定义\&.
+.SS "#define HAL_FLASH_ERROR_WRP   0x00000010U"
+Write protection error 
+.br
+ 
+.PP
+在文件 stm32f4xx_hal_flash\&.h 第 96 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

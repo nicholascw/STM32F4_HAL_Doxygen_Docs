@@ -1,0 +1,183 @@
+.TH "RTCEx_Calibration" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RTCEx_Calibration
+.SH SYNOPSIS
+.br
+.PP
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__HAL_RTC_COARSE_CALIB_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_DCE))"
+.br
+.RI "Enable the Coarse calibration process\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_COARSE_CALIB_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_DCE))"
+.br
+.RI "Disable the Coarse calibration process\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_CALIBRATION_OUTPUT_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_COE))"
+.br
+.RI "Enable the RTC calibration output\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_CALIBRATION_OUTPUT_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_COE))"
+.br
+.RI "Disable the calibration output\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_CLOCKREF_DETECTION_ENABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_REFCKON))"
+.br
+.RI "Enable the clock reference detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_CLOCKREF_DETECTION_DISABLE\fP(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_REFCKON))"
+.br
+.RI "Disable the clock reference detection\&. "
+.ti -1c
+.RI "#define \fB__HAL_RTC_SHIFT_GET_FLAG\fP(__HANDLE__,  __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+.br
+.RI "Get the selected RTC shift operation's flag status\&. "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "宏定义说明"
+.PP 
+.SS "#define __HAL_RTC_CALIBRATION_OUTPUT_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_COE))"
+
+.PP
+Disable the calibration output\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 767 行定义\&.
+.SS "#define __HAL_RTC_CALIBRATION_OUTPUT_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_COE))"
+
+.PP
+Enable the RTC calibration output\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 760 行定义\&.
+.SS "#define __HAL_RTC_CLOCKREF_DETECTION_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_REFCKON))"
+
+.PP
+Disable the clock reference detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 781 行定义\&.
+.SS "#define __HAL_RTC_CLOCKREF_DETECTION_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_REFCKON))"
+
+.PP
+Enable the clock reference detection\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 774 行定义\&.
+.SS "#define __HAL_RTC_COARSE_CALIB_DISABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR &= ~(RTC_CR_DCE))"
+
+.PP
+Disable the Coarse calibration process\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 753 行定义\&.
+.SS "#define __HAL_RTC_COARSE_CALIB_ENABLE(__HANDLE__)   ((__HANDLE__)\->Instance\->CR |= (RTC_CR_DCE))"
+
+.PP
+Enable the Coarse calibration process\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 746 行定义\&.
+.SS "#define __HAL_RTC_SHIFT_GET_FLAG(__HANDLE__, __FLAG__)   (((((__HANDLE__)\->Instance\->ISR) & (__FLAG__)) != RESET)? SET : RESET)"
+
+.PP
+Get the selected RTC shift operation's flag status\&. 
+.PP
+\fB参数\fP
+.RS 4
+\fI<strong>HANDLE</strong>\fP specifies the RTC handle\&. 
+.br
+\fI<strong>FLAG</strong>\fP specifies the RTC shift operation Flag is pending or not\&. This parameter can be: 
+.PD 0
+
+.IP "\(bu" 2
+RTC_FLAG_SHPF 
+.br
+ 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_hal_rtc_ex\&.h 第 791 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

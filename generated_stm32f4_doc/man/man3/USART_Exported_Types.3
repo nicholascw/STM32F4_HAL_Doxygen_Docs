@@ -1,0 +1,85 @@
+.TH "USART_Exported_Types" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+USART_Exported_Types
+.SH SYNOPSIS
+.br
+.PP
+.SS "结构体"
+
+.in +1c
+.ti -1c
+.RI "struct \fBUSART_InitTypeDef\fP"
+.br
+.RI "USART Init Structure definition "
+.ti -1c
+.RI "struct \fB__USART_HandleTypeDef\fP"
+.br
+.RI "USART handle Structure definition "
+.in -1c
+.SS "类型定义"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fB__USART_HandleTypeDef\fP \fBUSART_HandleTypeDef\fP"
+.br
+.RI "USART handle Structure definition "
+.in -1c
+.SS "枚举"
+
+.in +1c
+.ti -1c
+.RI "enum \fBHAL_USART_StateTypeDef\fP { \fBHAL_USART_STATE_RESET\fP = 0x00U, \fBHAL_USART_STATE_READY\fP = 0x01U, \fBHAL_USART_STATE_BUSY\fP = 0x02U, \fBHAL_USART_STATE_BUSY_TX\fP = 0x12U, \fBHAL_USART_STATE_BUSY_RX\fP = 0x22U, \fBHAL_USART_STATE_BUSY_TX_RX\fP = 0x32U, \fBHAL_USART_STATE_TIMEOUT\fP = 0x03U, \fBHAL_USART_STATE_ERROR\fP = 0x04U }"
+.br
+.RI "HAL State structures definition "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "类型定义说明"
+.PP 
+.SS "typedef struct \fB__USART_HandleTypeDef\fP \fBUSART_HandleTypeDef\fP"
+
+.PP
+USART handle Structure definition 
+.SH "枚举类型说明"
+.PP 
+.SS "enum \fBHAL_USART_StateTypeDef\fP"
+
+.PP
+HAL State structures definition 
+.PP
+\fB枚举值\fP
+.in +1c
+.TP
+\fB\fIHAL_USART_STATE_RESET \fP\fP
+Peripheral is not yet Initialized 
+.br
+ 
+.TP
+\fB\fIHAL_USART_STATE_READY \fP\fP
+Peripheral Initialized and ready for use 
+.TP
+\fB\fIHAL_USART_STATE_BUSY \fP\fP
+an internal process is ongoing 
+.TP
+\fB\fIHAL_USART_STATE_BUSY_TX \fP\fP
+Data Transmission process is ongoing 
+.TP
+\fB\fIHAL_USART_STATE_BUSY_RX \fP\fP
+Data Reception process is ongoing 
+.TP
+\fB\fIHAL_USART_STATE_BUSY_TX_RX \fP\fP
+Data Transmission Reception process is ongoing 
+.TP
+\fB\fIHAL_USART_STATE_TIMEOUT \fP\fP
+Timeout state 
+.TP
+\fB\fIHAL_USART_STATE_ERROR \fP\fP
+Error 
+.PP
+在文件 stm32f4xx_hal_usart\&.h 第 84 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

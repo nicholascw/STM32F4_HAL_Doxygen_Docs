@@ -1,0 +1,82 @@
+.TH "CORTEX_LL_EF_HANDLER" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+CORTEX_LL_EF_HANDLER
+.SH SYNOPSIS
+.br
+.PP
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_HANDLER_EnableFault\fP (uint32_t Fault)"
+.br
+.RI "Enable a fault in System handler control register (SHCSR) @rmtoll SCB_SHCSR MEMFAULTENA LL_HANDLER_EnableFault "
+.ti -1c
+.RI "__STATIC_INLINE void \fBLL_HANDLER_DisableFault\fP (uint32_t Fault)"
+.br
+.RI "Disable a fault in System handler control register (SHCSR) @rmtoll SCB_SHCSR MEMFAULTENA LL_HANDLER_DisableFault "
+.in -1c
+.SH "详细描述"
+.PP 
+
+.SH "函数说明"
+.PP 
+.SS "__STATIC_INLINE void LL_HANDLER_DisableFault (uint32_t Fault)"
+
+.PP
+Disable a fault in System handler control register (SHCSR) @rmtoll SCB_SHCSR MEMFAULTENA LL_HANDLER_DisableFault 
+.PP
+\fB参数\fP
+.RS 4
+\fIFault\fP This parameter can be a combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_USG\fP 
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_BUS\fP 
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_MEM\fP 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 408 行定义\&.
+.SS "__STATIC_INLINE void LL_HANDLER_EnableFault (uint32_t Fault)"
+
+.PP
+Enable a fault in System handler control register (SHCSR) @rmtoll SCB_SHCSR MEMFAULTENA LL_HANDLER_EnableFault 
+.PP
+\fB参数\fP
+.RS 4
+\fIFault\fP This parameter can be a combination of the following values: 
+.PD 0
+
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_USG\fP 
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_BUS\fP 
+.IP "\(bu" 2
+\fBLL_HANDLER_FAULT_MEM\fP 
+.PP
+.RE
+.PP
+\fB返回值\fP
+.RS 4
+\fINone\fP 
+.RE
+.PP
+
+.PP
+在文件 stm32f4xx_ll_cortex\&.h 第 393 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.

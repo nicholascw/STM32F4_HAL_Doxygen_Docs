@@ -1,0 +1,229 @@
+.TH "src/stm32f4xx_hal.c" 3 "2020年 八月 7日 星期五" "Version 1.24.0" "STM32F4_HAL" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/stm32f4xx_hal.c \- HAL module driver\&. This is the common part of the HAL initialization  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'stm32f4xx_hal\&.h'\fP
+.br
+
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__STM32F4xx_HAL_VERSION_MAIN\fP   (0x01U)"
+.br
+.RI "STM32F4xx HAL Driver version number V1\&.7\&.5 "
+.ti -1c
+.RI "#define \fB__STM32F4xx_HAL_VERSION_SUB1\fP   (0x07U)"
+.br
+.ti -1c
+.RI "#define \fB__STM32F4xx_HAL_VERSION_SUB2\fP   (0x05U)"
+.br
+.ti -1c
+.RI "#define \fB__STM32F4xx_HAL_VERSION_RC\fP   (0x00U)"
+.br
+.ti -1c
+.RI "#define \fB__STM32F4xx_HAL_VERSION\fP"
+.br
+.ti -1c
+.RI "#define \fBIDCODE_DEVID_MASK\fP   0x00000FFFU"
+.br
+.ti -1c
+.RI "#define \fBSYSCFG_OFFSET\fP   (SYSCFG_BASE \- PERIPH_BASE)"
+.br
+.ti -1c
+.RI "#define \fBMEMRMP_OFFSET\fP   \fBSYSCFG_OFFSET\fP"
+.br
+.ti -1c
+.RI "#define \fBUFB_MODE_BIT_NUMBER\fP   SYSCFG_MEMRMP_UFB_MODE_Pos"
+.br
+.ti -1c
+.RI "#define \fBUFB_MODE_BB\fP   (uint32_t)(PERIPH_BB_BASE + (\fBMEMRMP_OFFSET\fP * 32U) + (\fBUFB_MODE_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBCMPCR_OFFSET\fP   (\fBSYSCFG_OFFSET\fP + 0x20U)"
+.br
+.ti -1c
+.RI "#define \fBCMP_PD_BIT_NUMBER\fP   SYSCFG_CMPCR_CMP_PD_Pos"
+.br
+.ti -1c
+.RI "#define \fBCMPCR_CMP_PD_BB\fP   (uint32_t)(PERIPH_BB_BASE + (\fBCMPCR_OFFSET\fP * 32U) + (\fBCMP_PD_BIT_NUMBER\fP * 4U))"
+.br
+.ti -1c
+.RI "#define \fBMCHDLYCR_OFFSET\fP   (\fBSYSCFG_OFFSET\fP + 0x30U)"
+.br
+.ti -1c
+.RI "#define \fBBSCKSEL_BIT_NUMBER\fP   SYSCFG_MCHDLYCR_BSCKSEL_Pos"
+.br
+.ti -1c
+.RI "#define \fBMCHDLYCR_BSCKSEL_BB\fP   (uint32_t)(PERIPH_BB_BASE + (\fBMCHDLYCR_OFFSET\fP * 32U) + (\fBBSCKSEL_BIT_NUMBER\fP * 4U))"
+.br
+.in -1c
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_Init\fP (void)"
+.br
+.RI "This function is used to initialize the HAL Library; it must be the first instruction to be executed in the main program (before to call any other HAL function), it performs the following: Configure the Flash prefetch, instruction and Data caches\&. Configures the SysTick to generate an interrupt each 1 millisecond, which is clocked by the HSI (at this stage, the clock is not yet configured and thus the system is running from the internal HSI at 16 MHz)\&. Set NVIC Group Priority to 4\&. Calls the \fBHAL_MspInit()\fP callback function defined in user file 'stm32f4xx_hal_msp\&.c' to do the global low level hardware initialization "
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_DeInit\fP (void)"
+.br
+.RI "This function de-Initializes common part of the HAL and stops the systick\&. This function is optional\&. 
+.br
+ "
+.ti -1c
+.RI "void \fBHAL_MspInit\fP (void)"
+.br
+.RI "Initialize the MSP\&. "
+.ti -1c
+.RI "void \fBHAL_MspDeInit\fP (void)"
+.br
+.RI "DeInitializes the MSP\&. "
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_InitTick\fP (uint32_t TickPriority)"
+.br
+.RI "This function configures the source of the time base\&. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority\&. "
+.ti -1c
+.RI "void \fBHAL_IncTick\fP (void)"
+.br
+.RI "This function is called to increment a global variable 'uwTick' used as application time base\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetTick\fP (void)"
+.br
+.RI "Provides a tick value in millisecond\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetTickPrio\fP (void)"
+.br
+.RI "This function returns a tick priority\&. "
+.ti -1c
+.RI "\fBHAL_StatusTypeDef\fP \fBHAL_SetTickFreq\fP (\fBHAL_TickFreqTypeDef\fP Freq)"
+.br
+.RI "Set new tick Freq\&. "
+.ti -1c
+.RI "\fBHAL_TickFreqTypeDef\fP \fBHAL_GetTickFreq\fP (void)"
+.br
+.RI "Return tick frequency\&. "
+.ti -1c
+.RI "void \fBHAL_Delay\fP (uint32_t Delay)"
+.br
+.RI "This function provides minimum delay (in milliseconds) based on variable incremented\&. "
+.ti -1c
+.RI "void \fBHAL_SuspendTick\fP (void)"
+.br
+.RI "Suspend Tick increment\&. "
+.ti -1c
+.RI "void \fBHAL_ResumeTick\fP (void)"
+.br
+.RI "Resume Tick increment\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetHalVersion\fP (void)"
+.br
+.RI "Returns the HAL revision "
+.ti -1c
+.RI "uint32_t \fBHAL_GetREVID\fP (void)"
+.br
+.RI "Returns the device revision identifier\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetDEVID\fP (void)"
+.br
+.RI "Returns the device identifier\&. "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGSleepMode\fP (void)"
+.br
+.RI "Enable the Debug Module during SLEEP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGSleepMode\fP (void)"
+.br
+.RI "Disable the Debug Module during SLEEP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGStopMode\fP (void)"
+.br
+.RI "Enable the Debug Module during STOP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGStopMode\fP (void)"
+.br
+.RI "Disable the Debug Module during STOP mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_EnableDBGStandbyMode\fP (void)"
+.br
+.RI "Enable the Debug Module during STANDBY mode "
+.ti -1c
+.RI "void \fBHAL_DBGMCU_DisableDBGStandbyMode\fP (void)"
+.br
+.RI "Disable the Debug Module during STANDBY mode "
+.ti -1c
+.RI "void \fBHAL_EnableCompensationCell\fP (void)"
+.br
+.RI "Enables the I/O Compensation Cell\&. "
+.ti -1c
+.RI "void \fBHAL_DisableCompensationCell\fP (void)"
+.br
+.RI "Power-down the I/O Compensation Cell\&. "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw0\fP (void)"
+.br
+.RI "Returns first word of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw1\fP (void)"
+.br
+.RI "Returns second word of the unique device identifier (UID based on 96 bits) "
+.ti -1c
+.RI "uint32_t \fBHAL_GetUIDw2\fP (void)"
+.br
+.RI "Returns third word of the unique device identifier (UID based on 96 bits) "
+.in -1c
+.SS "变量"
+
+.in +1c
+.ti -1c
+.RI "__IO uint32_t \fBuwTick\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBuwTickPrio\fP = (1UL << __NVIC_PRIO_BITS)"
+.br
+.ti -1c
+.RI "\fBHAL_TickFreqTypeDef\fP \fBuwTickFreq\fP = \fBHAL_TICK_FREQ_DEFAULT\fP"
+.br
+.in -1c
+.SH "详细描述"
+.PP 
+HAL module driver\&. This is the common part of the HAL initialization 
+
+
+.PP
+\fB作者\fP
+.RS 4
+MCD Application Team 
+.PP
+.nf
+==============================================================================
+                   ##### How to use this driver #####
+==============================================================================
+  [..]
+  The common HAL driver contains a set of generic and common APIs that can be
+  used by the PPP peripheral drivers and the user to start using the HAL. 
+  [..]
+  The HAL contains two APIs' categories: 
+       (+) Common HAL APIs
+       (+) Services HAL APIs
+.fi
+.PP
+.RE
+.PP
+\fB注意\fP
+.RS 4
+.RE
+.PP
+.SS "(C) Copyright (c) 2017 STMicroelectronics\&. All rights reserved\&."
+.PP
+This software component is licensed by ST under BSD 3-Clause license, the 'License'; You may not use this file except in compliance with the License\&. You may obtain a copy of the License at: opensource\&.org/licenses/BSD-3-Clause 
+.PP
+在文件 \fBstm32f4xx_hal\&.c\fP 中定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 STM32F4_HAL 的 源代码自动生成\&.
