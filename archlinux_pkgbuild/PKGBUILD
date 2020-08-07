@@ -1,0 +1,13 @@
+pkgname=('stm32f4-docs')
+pkgver=1.24.0
+pkgrel=1
+arch=('any')
+url="https://github.com/nicholascw/STM32F4_HAL_Doxygen_Docs"
+source=('man3.tar.gz')
+md5sums=('SKIP')
+
+package() {
+  mkdir -p $pkgdir/usr/share/man/
+  cp -rpf $srcdir/generated_stm32f4_doc/man/man3 $pkgdir/usr/share/man/
+  chmod -R 644 $PKG/usr/share/man/man3/*
+}
